@@ -61,7 +61,7 @@ export default function Branches() {
           </h2>
           <p className="text-slate-500 text-base lg:text-lg font-medium max-w-2xl leading-relaxed">
             Visit our physical locations to experience how we merge industrial
-            logic with creative engineering across Tamil Nadu.
+            logic with creative engineering across Tamil Nadu
           </p>
         </div>
 

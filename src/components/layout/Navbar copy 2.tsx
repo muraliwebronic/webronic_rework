@@ -103,7 +103,7 @@ export default function Navbar() {
           >
             {/* Ensure your logo works on white background or switch to a dark version here */}
             <Image
-              src="/assets/webonic2.png"
+              src="./assets/webonic2.png"
               alt="Logo"
               width={120}
               height={28}
@@ -192,7 +192,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between px-8 pt-10 pb-6">
             <div className="flex flex-col">
               {/* Ensure logo is visible on white */}
-              <Image src="/assets/webronic.png" alt="Logo" width={110} height={26} className="object-contain" />
+              <Image src="./assets/webronic.png" alt="Logo" width={110} height={26} className="object-contain" />
             </div>
             <button 
               onClick={() => setOpen(false)} 

@@ -21,7 +21,7 @@ export default function ServiceCarousel() {
         title: "Custom Software Development",
         description:
           "Build enterprise-grade applications tailored to your unique requirements. Full-stack development expertise across web, mobile, and IoT platforms",
-        image: "/assets/images/appdevelopment.png",
+        image: "./assets/images/appdevelopment.png",
         path: "/service-section/custom-software", // Dummy path
       },
       {
@@ -30,7 +30,7 @@ export default function ServiceCarousel() {
         title: "AI & Machine Learning",
         description:
           "Transform your business with intelligent automation and predictive analytics. Our AI-first approach embeds machine learning across all solutions.",
-        image: "/assets/images/webdevelopment.png",
+        image: "./assets/images/webdevelopment.png",
         path: "/service-section/ai-machine-learning", // Dummy path
       },
       {
@@ -39,7 +39,7 @@ export default function ServiceCarousel() {
         title: "Cloud & DevOps",
         description:
           "Accelerate digital transformation with cloud-native architectures. We design scalable, secure cloud solutions across AWS, Azure, and Google Cloud platforms",
-        image: "/assets/images/domainhosting.png",
+        image: "./assets/images/domainhosting.png",
         path: "/service-section/cloud-devops", // Dummy path
       },
       {
@@ -48,7 +48,7 @@ export default function ServiceCarousel() {
         title: "Digital Transformation",
         description:
           "Reimagine your business processes with cutting-edge technology. From strategy to execution, we guide organizations through comprehensive digital evolution",
-        image: "/assets/images/digitalmarketing.png",
+        image: "./assets/images/digitalmarketing.png",
         path: "/service-section/digital-transformation", // Dummy path
       },
       {
@@ -57,7 +57,7 @@ export default function ServiceCarousel() {
         title: "Cybersecurity",
         description:
           "Protect your digital assets with enterprise-grade security solutions. From threat assessment to managed security operations, we safeguard your business",
-        image: "/assets/images/seo.png",
+        image: "./assets/images/seo.png",
         path: "/service-section/cybersecurity", // Dummy path
       },
       {
@@ -66,7 +66,7 @@ export default function ServiceCarousel() {
         title: "IoT & Industry 4.0",
         description:
           "Connect your operations with intelligent IoT ecosystems. Real-time monitoring, predictive maintenance, and automated workflows for manufacturing excellence",
-        image: "/assets/images/iot.png",
+        image: "./assets/images/iot.png",
         path: "/service-section/iot-industry-4", // Dummy path
       },
     ];

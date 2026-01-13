@@ -67,7 +67,7 @@ export default function CareerPage() {
                 </h3>
                 <p className="text-slate-500 text-sm font-medium leading-relaxed mb-8 opacity-80">
                   Perfect for students and recent graduates looking to gain
-                  hands-on experience in high-impact tech environments.
+                  hands-on experience in high-impact tech environments
                 </p>
               </div>
 

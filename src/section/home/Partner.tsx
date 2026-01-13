@@ -18,42 +18,42 @@ const ITEMS: IntegrationItem[] = [
   { 
     name: "24SJU", 
     description: "Healthcare simplified. Digital solutions for modern patient care.", 
-    image: "/assets/24sju-se.png", 
+    image: "./assets/24sju-se.png", 
     link: "https://24-sju.se/",
     color: "#2776ea" // Primary Blue
   },
   { 
     name: "ValueFlow", 
     description: "Business intelligence that flows. Visualize your data potential.", 
-    image: "/assets/images/valuechart.png", 
+    image: "./assets/images/valuechart.png", 
     link: "https://www.valueflowsoft.com/",
     color: "#76ea27" // Secondary Green
   },
   { 
     name: "Tanlux", 
     description: "Illuminating the future with smart lighting technologies.", 
-    image: "/assets/images/tanluxlogo.png", 
+    image: "./assets/images/tanluxlogo.png", 
     link: "https://tanlux.se/",
     color: "#2776ea" 
   },
   { 
     name: "FP Analyzer", 
     description: "Precision analytics for financial performance and growth.", 
-    image: "/assets/images/fpanalyzer.png", 
+    image: "./assets/images/fpanalyzer.png", 
     link: "https://www.fpanalyzer.se/",
     color: "#76ea27"
   },
   { 
     name: "StoreTech", 
     description: "Retail evolution. Connecting stores with digital efficiency.", 
-    image: "/assets/images/storetech-logo1.png", 
+    image: "./assets/images/storetech-logo1.png", 
     link: "https://store-tech.se/",
     color: "#2776ea"
   },
   { 
     name: "ThingsAtWeb", 
     description: "The Internet of Things, realized. Connecting devices smarter.", 
-    image: "/assets/images/thingsatweb.png", 
+    image: "./assets/images/thingsatweb.png", 
     link: "https://www.thingsatweb.com/",
     color: "#76ea27"
   },

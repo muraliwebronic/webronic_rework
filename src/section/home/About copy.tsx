@@ -26,7 +26,7 @@ export default function About() {
 
             <div className="relative p-8 md:p-12 transition-transform duration-700 group-hover:scale-105">
               <Image
-                src="/assets/images/hero-dashboard.png"
+                src="./assets/images/hero-dashboard.png"
                 alt="Webronic Company Logo"
                 width={400}
                 height={400}

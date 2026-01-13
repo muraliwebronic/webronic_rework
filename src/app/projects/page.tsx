@@ -28,7 +28,7 @@ export default function Projects() {
           </h2>
           <p className="text-slate-500 text-base lg:text-lg font-medium max-w-2xl leading-relaxed">
             From industrial automation to high-conversion retail, we build
-            digital architectures that drive tangible business growth.
+            digital architectures that drive tangible business growth
           </p>
         </div>
 

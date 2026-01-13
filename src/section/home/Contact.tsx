@@ -158,7 +158,7 @@ export default function Contact() {
                     >
                         <div className="relative h-8 w-32 grayscale opacity-70 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100">
                             <Image
-                                src="/assets/images/thingsatweb.png"
+                                src="./assets/images/thingsatweb.png"
                                 alt="ThingsAtWeb"
                                 fill
                                 className="object-contain"

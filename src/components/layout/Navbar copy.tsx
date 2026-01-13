@@ -102,7 +102,7 @@ export default function Navbar() {
             className="flex items-center shrink-0 transition-transform active:scale-95"
           >
             <Image
-              src="/assets/webonic2.png"
+              src="./assets/webonic2.png"
               alt="Logo"
               width={120}
               height={28}
@@ -186,7 +186,7 @@ export default function Navbar() {
         >
           <div className="flex items-center justify-between px-8 pt-10 pb-6">
             <div className="flex flex-col">
-                <Image src="/assets/webronic.png" alt="Logo" width={110} height={26} className="object-contain brightness-125" />
+                <Image src="./assets/webronic.png" alt="Logo" width={110} height={26} className="object-contain brightness-125" />
             </div>
             <button 
               onClick={() => setOpen(false)} 

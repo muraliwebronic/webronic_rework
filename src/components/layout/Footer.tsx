@@ -32,19 +32,19 @@ export default function Footer() {
 
   const socialIcons = [
     {
-      src: "/assets/icons/facebook.png",
+      src: "./assets/icons/facebook.png",
       href: "https://www.facebook.com/thingsatweb",
     },
     {
-      src: "/assets/icons/instagram.png",
+      src: "./assets/icons/instagram.png",
       href: "https://www.instagram.com/thingsatweb/",
     },
     {
-      src: "/assets/icons/youtube.png",
+      src: "./assets/icons/youtube.png",
       href: "https://www.youtube.com/channel/UCp53pdpbd7qL-JNoAkAW0Ag",
     },
     {
-      src: "/assets/icons/linkedin.png",
+      src: "./assets/icons/linkedin.png",
       href: "https://www.linkedin.com/company/thingsatweb/",
     },
   ];
@@ -72,7 +72,7 @@ export default function Footer() {
             <div className="flex justify-start">
               {/* Ensure you use a logo version that works on white background */}
               <Image
-                src="/assets/webonic2.png" 
+                src="./assets/webonic2.png" 
                 alt="WEBRONIC"
                 width={140}
                 height={40}
@@ -303,7 +303,7 @@ export default function Footer() {
               className="opacity-70 hover:opacity-100 transition-opacity"
             >
               <Image
-                src="/assets/images/thingsatweb.png"
+                src="./assets/images/thingsatweb.png"
                 alt="ThingsAtWeb"
                 width={100}
                 height={28}

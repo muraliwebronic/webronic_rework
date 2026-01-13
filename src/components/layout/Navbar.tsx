@@ -107,7 +107,7 @@ export default function Navbar() {
             className="flex items-center shrink-0 transition-transform active:scale-95"
           >
             <Image
-              src="/assets/webonic2.png"
+              src="./assets/webonic2.png"
               alt="Logo"
               width={130}
               height={30}

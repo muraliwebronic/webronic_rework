@@ -5,17 +5,18 @@ import { useState } from "react";
 import {
   ChevronDown,
   X,
-  Send,
   User,
   Mail,
   Phone,
   MessageSquare,
   ArrowRight,
-  CheckCircle2,
-  Briefcase,
+  Check,
+  Layers,
+  Sparkles,
 } from "lucide-react";
 import { services, type Service } from "@/app/service/components/data";
 
+// --- ENQUIRY MODAL (Kept the same "Glass Panel" design) ---
 const EnquiryModal = ({
   service,
   onClose,
@@ -33,128 +34,66 @@ const EnquiryModal = ({
 
   return (
     <div
-      className="fixed inset-0 z-100 flex items-center justify-center bg-slate-900/60 backdrop-blur-md p-4 transition-all  "
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/40 backdrop-blur-sm p-4 transition-all duration-300"
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-lg overflow-hidden rounded-3xl md:rounded-4xl bg-white shadow-2xl ring-1 ring-black/5 animate-modal-pop font-sora"
+        className="relative w-full max-w-lg overflow-hidden rounded-[2rem] bg-white shadow-2xl ring-1 ring-white/20 animate-in fade-in zoom-in-95 duration-300 font-sora"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="bg-[#2776ea] p-6 md:p-8 text-white">
-          <div className="flex items-center justify-between">
-            <h3 className="text-xl md:text-2xl font-extrabold tracking-tight">
-              Start a Project
-            </h3>
-            <button
-              onClick={onClose}
-              className="rounded-full bg-white/10 p-2 hover:bg-white/40 transition-colors"
-            >
-              <X size={18} />
-            </button>
-          </div>
-          <p className="mt-2 text-blue-50 text-xs md:text-sm opacity-90 font-medium">
-            Consulting for{" "}
-            <span className="font-bold underline decoration-[#76ea27]">
-              {service.title}
-            </span>
-          </p>
+        <div className="relative overflow-hidden bg-slate-900 px-8 py-8 text-white">
+            <div className="absolute top-0 right-0 -mt-10 -mr-10 h-40 w-40 rounded-full bg-[#2776ea]/20 blur-3xl" />
+            <div className="relative z-10 flex items-start justify-between">
+                <div>
+                    <h3 className="text-2xl font-bold tracking-tight mb-1">Start Project</h3>
+                    <div className="flex items-center gap-2 text-slate-400 text-sm">
+                        <span>Consulting for:</span>
+                        <span className="text-[#2776ea] font-bold bg-[#2776ea]/10 px-2 py-0.5 rounded text-xs uppercase tracking-wide">
+                            {service.title}
+                        </span>
+                    </div>
+                </div>
+                <button onClick={onClose} className="rounded-full bg-white/10 p-2 text-slate-400 hover:bg-white/20 hover:text-white transition-all">
+                    <X size={20} />
+                </button>
+            </div>
         </div>
 
-        <form
-          onSubmit={handleSubmit}
-          className="p-5 md:p-8 space-y-4 md:space-y-5"
-        >
-          <div className="space-y-1.5">
-            <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
-              Full Name
-            </label>
-            <div className="relative">
-              <User className="absolute left-4 top-3.5 h-4 w-4 md:h-5 md:w-5 text-slate-300" />
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#2776ea] focus:ring-4 focus:ring-blue-50 outline-none transition font-medium text-slate-700"
-                required
-              />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
+        <form onSubmit={handleSubmit} className="p-8 space-y-6">
+          <div className="space-y-5">
             <div className="space-y-1.5">
-              <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
-                Email
-              </label>
-              <div className="relative">
-                <Mail className="absolute left-4 top-3.5 h-4 w-4 md:h-5 md:w-5 text-slate-300" />
-                <input
-                  type="email"
-                  placeholder="company@email.com"
-                  className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#2776ea] focus:ring-4 focus:ring-blue-50 outline-none transition font-medium text-slate-700"
-                  required
-                />
+              <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Full Name</label>
+              <div className="relative group">
+                <User className="absolute left-4 top-3.5 h-4 w-4 text-slate-400 group-focus-within:text-[#2776ea] transition-colors" />
+                <input type="text" placeholder="John Doe" className="w-full rounded-xl bg-slate-50 border border-slate-100 pl-11 p-3 text-sm focus:bg-white focus:border-[#2776ea] focus:ring-4 focus:ring-blue-500/10 outline-none transition-all font-medium text-slate-700 placeholder:text-slate-400" required />
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div className="space-y-1.5">
+                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Email</label>
+                <div className="relative group">
+                  <Mail className="absolute left-4 top-3.5 h-4 w-4 text-slate-400 group-focus-within:text-[#2776ea] transition-colors" />
+                  <input type="email" placeholder="name@company.com" className="w-full rounded-xl bg-slate-50 border border-slate-100 pl-11 p-3 text-sm focus:bg-white focus:border-[#2776ea] focus:ring-4 focus:ring-blue-500/10 outline-none transition-all font-medium text-slate-700 placeholder:text-slate-400" required />
+                </div>
+              </div>
+              <div className="space-y-1.5">
+                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Phone</label>
+                <div className="relative group">
+                  <Phone className="absolute left-4 top-3.5 h-4 w-4 text-slate-400 group-focus-within:text-[#2776ea] transition-colors" />
+                  <input type="tel" placeholder="+91..." className="w-full rounded-xl bg-slate-50 border border-slate-100 pl-11 p-3 text-sm focus:bg-white focus:border-[#2776ea] focus:ring-4 focus:ring-blue-500/10 outline-none transition-all font-medium text-slate-700 placeholder:text-slate-400" required />
+                </div>
               </div>
             </div>
             <div className="space-y-1.5">
-              <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
-                Phone
-              </label>
-              <div className="relative">
-                <Phone className="absolute left-4 top-3.5 h-4 w-4 md:h-5 md:w-5 text-slate-300" />
-                <input
-                  type="tel"
-                  placeholder="+91..."
-                  className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#2776ea] focus:ring-4 focus:ring-blue-50 outline-none transition font-medium text-slate-700"
-                  required
-                />
+              <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Project Goals</label>
+              <div className="relative group">
+                <MessageSquare className="absolute left-4 top-3.5 h-4 w-4 text-slate-400 group-focus-within:text-[#2776ea] transition-colors" />
+                <textarea rows={3} placeholder="Tell us about your requirements..." className="w-full rounded-xl bg-slate-50 border border-slate-100 pl-11 p-3 text-sm focus:bg-white focus:border-[#2776ea] focus:ring-4 focus:ring-blue-500/10 outline-none transition-all resize-none font-medium text-slate-700 placeholder:text-slate-400" required />
               </div>
             </div>
           </div>
-
-          <div className="space-y-1.5">
-            <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
-              Interested Service
-            </label>
-            <div className="relative">
-              <Briefcase className="absolute left-4 top-3.5 h-4 w-4 md:h-5 md:w-5 text-slate-300 pointer-events-none" />
-              <select
-                defaultValue={service.id}
-                className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#2776ea] focus:ring-4 focus:ring-blue-50 outline-none transition font-medium appearance-none bg-white text-slate-700 cursor-pointer"
-                required
-              >
-                {services.map((s) => (
-                  <option key={s.id} value={s.id}>
-                    {s.title}
-                  </option>
-                ))}
-              </select>
-              <ChevronDown className="absolute right-4 top-4 h-4 w-4 text-slate-400 pointer-events-none" />
-            </div>
-          </div>
-
-          <div className="space-y-1.5">
-            <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
-              Requirement
-            </label>
-            <div className="relative">
-              <MessageSquare className="absolute left-4 top-3.5 h-4 w-4 md:h-5 md:w-5 text-slate-300" />
-              <textarea
-                rows={2}
-                placeholder="Tell us about your goals..."
-                className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#2776ea] focus:ring-4 focus:ring-blue-50 outline-none transition resize-none font-medium text-slate-700"
-                required
-              />
-            </div>
-          </div>
-
-          <button
-            type="submit"
-            className="group mt-2 flex w-full items-center justify-center gap-3 rounded-xl md:rounded-2xl bg-[#2776ea] py-3.5 md:py-4 text-xs md:text-sm font-extrabold uppercase tracking-widest text-white shadow-xl shadow-blue-200 hover:bg-[#3a71c5] transition-all hover:-translate-y-0.5 active:scale-95"
-          >
-            Send Inquiry
-            <Send
-              size={16}
-              className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
-            />
+          <button type="submit" className="group w-full flex items-center justify-center gap-2 rounded-xl bg-[#2776ea] py-4 text-xs font-bold uppercase tracking-widest text-white shadow-lg shadow-blue-500/25 transition-all hover:bg-slate-900 hover:shadow-slate-900/20 active:scale-[0.98]">
+            Send Request <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </button>
         </form>
       </div>
@@ -162,6 +101,7 @@ const EnquiryModal = ({
   );
 };
 
+// --- CLEAN REWORKED SERVICE CARD ---
 const ServiceCard = ({
   service,
   isOpen,
@@ -178,142 +118,144 @@ const ServiceCard = ({
   return (
     <div
       style={{ animationDelay: `${(index + 1) * 150}ms` }}
-      className="animate-on-load group relative overflow-hidden rounded-3xl md:rounded-[2.5rem] border border-slate-100 bg-white p-6 md:p-12 shadow-xl shadow-slate-200/50 transition-all duration-700 hover:shadow-2xl hover:shadow-[#2776ea]/10 hover:-translate-y-2 opacity-0 font-sora"
+      className="group relative w-full rounded-[2.5rem] bg-white border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-500 hover:shadow-[0_20px_40px_-12px_rgba(0,0,0,0.1)] hover:border-[#2776ea]/20 animate-in slide-in-from-bottom-8 fade-in font-sora"
     >
-      <div className="absolute top-0 right-0 -mr-16 -mt-16 h-64 w-64 rounded-full bg-blue-50/50 blur-3xl transition-opacity group-hover:opacity-100 hidden md:block" />
-
-      <div className="grid gap-8 md:gap-12 lg:grid-cols-[1.3fr_0.7fr] items-center">
-        <div className="flex flex-col h-full relative z-10">
-          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 md:gap-6 text-center sm:text-left">
-            <div className="flex h-14 w-14 md:h-16 md:w-16 shrink-0 items-center justify-center rounded-xl md:rounded-2xl bg-[#2776ea] text-white shadow-lg shadow-blue-100 transition-all duration-500 group-hover:rotate-12 group-hover:scale-110">
-              {service.icon}
-            </div>
-            <div>
-              <div className="flex items-center justify-center sm:justify-start gap-2 mb-1.5 md:mb-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#76ea27]" />
-                <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-[#76ea27]">
+      <div className="flex flex-col lg:flex-row">
+        
+        {/* LEFT: CONTENT AREA */}
+        <div className="flex-1 p-8 md:p-12 lg:p-14 flex flex-col justify-center">
+          
+          {/* Header */}
+          <div className="mb-8">
+            <div className="flex items-center gap-3 mb-4">
+               <div className="h-10 w-10 flex items-center justify-center rounded-xl bg-blue-50 text-[#2776ea] group-hover:bg-[#2776ea] group-hover:text-white transition-all duration-500">
+                  {service.icon}
+               </div>
+               <span className="px-3 py-1 rounded-full bg-slate-50 border border-slate-100 text-[10px] font-black uppercase tracking-widest text-slate-500">
                   {service.tagline}
-                </p>
-              </div>
-              <h3 className="text-xl md:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                {service.title}
-              </h3>
+               </span>
             </div>
+            
+            <h3 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-4 group-hover:text-[#2776ea] transition-colors">
+              {service.title}
+            </h3>
+            
+            <p className="text-slate-500 text-base md:text-lg leading-relaxed font-medium max-w-xl">
+              {service.description}
+            </p>
           </div>
 
-          <p className="mt-4 md:mt-8 text-slate-500 text-center sm:text-left leading-relaxed text-sm md:text-lg font-medium max-w-xl">
-            {service.description}
-          </p>
-
-          <div className="mt-6 md:mt-10 grid grid-cols-1 sm:grid-cols-2 gap-y-3 md:gap-y-4 gap-x-8">
+          {/* Clean Checkpoints */}
+          <div className="flex flex-wrap gap-x-8 gap-y-3 mb-10">
             {service.points.map((point, idx) => (
-              <div key={idx} className="flex items-center gap-3 group/point">
-                <div className="flex h-5 w-5 md:h-6 md:w-6 items-center justify-center rounded-full bg-blue-50 text-[#2776ea] transition-colors group-hover/point:bg-[#76ea27] group-hover/point:text-white shrink-0">
-                  <CheckCircle2 className="size={10} md:size={14} strokeWidth={4}" />
+              <div key={idx} className="flex items-center gap-2.5">
+                <div className="flex h-5 w-5 items-center justify-center rounded-full bg-green-50 text-[#76ea27]">
+                  <Check size={12} strokeWidth={4} />
                 </div>
-                <span className="text-xs md:text-sm font-bold text-slate-700">
+                <span className="text-sm font-bold text-slate-700">
                   {point}
                 </span>
               </div>
             ))}
           </div>
 
-          <div className="mt-auto pt-8 md:pt-12">
+          {/* Action Row */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mt-auto">
             <button
-              onClick={onToggle}
-              className="flex items-center justify-center cursor-pointer sm:justify-start w-full sm:w-auto gap-2 text-[13px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-[#2776ea] transition-colors"
+              onClick={() => onCtaClick(service)}
+              className="relative overflow-hidden rounded-full bg-slate-900 px-8 py-3.5 text-xs font-bold uppercase tracking-widest text-white transition-all hover:bg-[#2776ea] hover:shadow-lg active:scale-95"
             >
-              The Stack
-              <ChevronDown
-                className={`h-5 w-5 transition-transform duration-500  ${
-                  isOpen ? "rotate-180 text-[#2776ea]" : ""
-                }`}
-              />
+              Start Project
             </button>
 
-            <div
-              className={`grid transition-all duration-500 ease-in-out ${
-                isOpen
-                  ? "grid-rows-[1fr] mt-4 md:mt-6 opacity-100"
-                  : "grid-rows-[0fr] mt-0 opacity-0"
-              }`}
-            >
-              <div className="overflow-hidden">
-                <div className="flex flex-wrap gap-4 md:gap-6 justify-center sm:justify-start items-center rounded-xl md:rounded-2xl   p-4 md:p-6">
-                  {service.technologies.map((t) => (
-                    <img
-                      key={t.name}
-                      src={t.logo}
-                      alt={t.name}
-                      title={t.name}
-                      className="h-6 md:h-8 w-auto "
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-6 md:mt-10">
-              <button
-                onClick={() => onCtaClick(service)}
-                className="group/btn relative w-full cursor-pointer sm:w-auto inline-flex items-center justify-center gap-3 overflow-hidden rounded-xl md:rounded-2xl bg-[#2776ea] px-8 md:px-10 py-3.5 md:py-4 text-[10px] md:text-xs font-black uppercase tracking-widest text-white shadow-2xl shadow-blue-200 transition-all hover:bg-[#76ea27]"
-              >
-                <span className="relative z-10">{service.cta}</span>
-                <ArrowRight
-                  size={16}
-                  className="relative z-10 transition-transform group-hover/btn:translate-x-1"
+            {/* Tech Stack Toggle */}
+            <div className="relative">
+                <button
+                onClick={onToggle}
+                className="flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.15em] text-slate-400 hover:text-[#2776ea] transition-colors group/toggle"
+                >
+                <Layers size={14} />
+                Technology Stack
+                <ChevronDown
+                    size={14}
+                    className={`transition-transform duration-300 ${
+                    isOpen ? "rotate-180 text-[#2776ea]" : "group-hover/toggle:translate-y-0.5"
+                    }`}
                 />
-              </button>
+                </button>
+                
+                {/* Clean Dropdown */}
+                <div className={`absolute top-full left-0 mt-4 z-20 min-w-[280px] origin-top-left transition-all duration-300 ${
+                    isOpen ? "scale-100 opacity-100 visible" : "scale-95 opacity-0 invisible"
+                }`}>
+                    <div className="p-4 rounded-2xl bg-white border border-slate-100 shadow-xl grid grid-cols-4 gap-4">
+                        {service.technologies.map((t) => (
+                            <div key={t.name} className="flex items-center justify-center h-10 w-10 p-1.5 rounded-lg bg-slate-50 hover:bg-white border border-transparent hover:border-slate-100 transition-all" title={t.name}>
+                                <img src={t.logo} alt={t.name} className="w-full h-full object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all" />
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
           </div>
         </div>
 
-        <div className="relative flex items-center justify-center lg:justify-end order-first lg:order-last">
-          <div className="absolute inset-0 bg-linear-to-tr from-blue-100/40 to-green-100/20 rounded-full blur-2xl md:blur-3xl -z-10 animate-pulse" />
-          <div className="relative p-2 md:p-4">
-            <div className="absolute -inset-1 md:-inset-2 rounded-3xl md:rounded-4xl  " />
-            <img
-              src={service.image}
-              alt={service.title}
-              className="relative z-10 w-full max-w-45 md:max-w-[320px] object-contain animate-float drop-shadow-[0_10px_30px_rgba(72,136,232,0.15)] transition-transform duration-700 group-hover:scale-105"
-            />
-          </div>
+        {/* RIGHT: FLOATING VISUAL (No Box) */}
+        <div className="lg:w-[40%] relative min-h-[320px] lg:min-h-auto flex items-center justify-center overflow-hidden">
+            {/* Soft Organic Blur Background */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-gradient-to-tr from-[#2776ea]/10 to-cyan-400/10 rounded-full blur-[60px] opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
+            
+            {/* Sparkle Decoration */}
+            <Sparkles className="absolute top-12 right-12 text-[#76ea27] opacity-0 group-hover:opacity-100 transition-all duration-500 animate-pulse" size={24} />
+
+            {/* The Image */}
+            <div className="relative z-10 w-[85%] max-w-[360px] transition-transform duration-700 group-hover:-translate-y-4 group-hover:rotate-1">
+                <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-auto object-contain drop-shadow-2xl"
+                />
+            </div>
         </div>
+
       </div>
     </div>
   );
 };
 
+// --- MAIN PAGE ---
 export default function HowWorks() {
   const [openTechId, setOpenTechId] = useState<number | null>(null);
   const [selectedService, setSelectedService] = useState<Service | null>(null);
 
   return (
     <main className="bg-white font-sora overflow-x-hidden">
-      <section className="relative overflow-hidden py-20 md:py-36 bg-slate-50/30">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_100%_0%,rgba(72,136,232,0.05),transparent_25%),radial-gradient(circle_at_0%_100%,rgba(9,177,37,0.05),transparent_25%)]" />
-
+      <section className="relative py-24 lg:py-32">
         <div className="relative container mx-auto px-6 md:px-12 lg:px-24">
-          <div className="mb-12 md:mb-24 text-left max-w-4xl opacity-0 animate-card-entry">
-            <div className="flex items-center gap-4 mb-6">
-              <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#2776ea]">
-                Solutions & Services
-              </span>
+          
+          {/* Header */}
+          <div className="mb-20 lg:mb-28 text-left max-w-3xl">
+            <div className="flex items-center gap-2 mb-6">
+                 <div className="h-1 w-8 bg-[#2776ea] rounded-full" />
+                 <span className="text-[11px] font-black uppercase tracking-[0.3em] text-slate-400">
+                    What We Do
+                 </span>
             </div>
             
-            <h2 className="text-4xl md:text-5xl flex flex-col items-center lg:items-start font-black tracking-tight text-slate-900 leading-[1.1]">
-              Architecting the <br />
-              <span className="bg-linear-to-r from-[#2776ea] to-[#76ea27] bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 leading-[1.15] mb-6">
+              Architecting the <br className="hidden md:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2776ea] to-cyan-500">
                 Digital Future
               </span>
             </h2>
-            <p className="text-sm md:text-xl text-center lg:text-start text-slate-500 leading-relaxed mt-5 max-w-2xl opacity-80">
+            <p className="text-slate-500 text-base lg:text-lg font-medium max-w-2xl leading-relaxed">
               WEBRONIC transforms legacy challenges into competitive advantages
-              using high-performance digital architectures.
+              using high-performance digital architectures
             </p>
           </div>
 
-          <div className="grid gap-10 md:gap-20">
+          {/* Cards Stack */}
+          <div className="flex flex-col gap-12">
             {services.map((service, index) => (
               <ServiceCard
                 key={service.id}

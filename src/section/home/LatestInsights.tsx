@@ -14,7 +14,7 @@ const INSIGHTS = [
     date: "Dec 12, 2025",
     readTime: "5 min read",
     category: "AI & Innovation",
-    image: "/assets/images/blog1.png", 
+    image: "./assets/images/blog1.png", 
     link: "#",
     featured: true
   },
@@ -25,7 +25,7 @@ const INSIGHTS = [
     date: "Nov 28, 2025",
     readTime: "8 min read",
     category: "Cloud",
-    image: "/assets/images/blog2.png", 
+    image: "./assets/images/blog2.png", 
     link: "#",
     featured: false
   },
@@ -36,7 +36,7 @@ const INSIGHTS = [
     date: "Nov 15, 2025",
     readTime: "4 min read",
     category: "IoT",
-    image: "/assets/images/blog3.png", 
+    image: "./assets/images/blog3.png", 
     link: "#",
     featured: false
   },
@@ -47,7 +47,7 @@ const INSIGHTS = [
     date: "Oct 10, 2025",
     readTime: "6 min read",
     category: "Security",
-    image: "/assets/images/blog1.png", // Using placeholder
+    image: "./assets/images/blog1.png", // Using placeholder
     link: "#",
     featured: false
   }

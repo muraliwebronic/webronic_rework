@@ -13,7 +13,7 @@ const CAROUSEL_DATA = [
     description: "Cloud-native platform powering 150+ unmanned stores with AI checkout, IoT inventory management, and integrated loyalty systems. Reduces operational costs by 60%. Proven with 50M+ transactions and 99.7% success rate across European and Indian markets.",
     stats: ["60% Cost Reduction", "99.7% Success Rate", "50M+ transactions"],
     cta: "Explore StoreTech",
-    img: "/assets/images/storetech-logo-black.png",
+    img: "./assets/images/storetech-logo-black.png",
     url: "https://vasanthwebronic-oss.github.io/storetech-portfolio/",
   },
   {
@@ -23,7 +23,7 @@ const CAROUSEL_DATA = [
     description: "Comprehensive ERP enabling 24/7 unmanned tanning studio operations with mobile booking, automated bed management, smart access control, and integrated retail. Leverages StoreTech infrastructure to deliver 70% labor cost reduction and seamless customer experience.",
     stats: ["70% labor cost reduction", "24/7 autonomous operations", "Multi-location scalability"],
     cta: "Explore Tanlux",
-    img: "/assets/images/tanluxlogo.png",
+    img: "./assets/images/tanluxlogo.png",
     url: "https://tanlux.se/",
   },
   {
@@ -33,7 +33,7 @@ const CAROUSEL_DATA = [
     description: "AI-powered diagramming and workflow visualization platform that transforms complex business processes into intelligent, interactive diagrams. Enables teams to map, automate, and optimize operations with enterprise-grade collaboration tools.",
     stats: ["Intelligent process mapping", "Real-time collaboration", "Workflow automation"],
     cta: "Explore Value Charts",
-    img: "/assets/images/valuechart.png",
+    img: "./assets/images/valuechart.png",
     url: "https://www.valueflowsoft.com/",
   },
   {
@@ -43,7 +43,7 @@ const CAROUSEL_DATA = [
     description: "Real-time IoT monitoring platform that tracks OEE (Overall Equipment Effectiveness), eliminates downtime, and optimizes production workflows. Delivers predictive maintenance alerts and actionable process analytics to maximize manufacturing efficiency.",
     stats: ["Real-time OEE tracking ", "Predictive maintenance", "Downtime elimination"],
     cta: "Explore FP Analyzer",
-    img: "/assets/images/fpanalyzer.png",
+    img: "./assets/images/fpanalyzer.png",
     url: "https://www.fpanalyzer.se/",
   },
 ];
