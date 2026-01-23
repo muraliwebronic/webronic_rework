@@ -59,7 +59,7 @@ const ContactCard = ({ label, value, icon: Icon, href, onCopy, copied, isPartner
             {isPartner ? (
                 <div className="h-8 relative w-32 mx-auto grayscale opacity-70 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100">
                     <Image 
-                        src="./assets/images/thingsatweb.png" 
+                        src="/assets/images/thingsatweb.png" 
                         alt="ThingsAtWeb" 
                         fill 
                         className="object-contain" 

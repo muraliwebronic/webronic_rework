@@ -1,6 +1,6 @@
 "use client";
 
-import teamMembers from "@/components/common/TeamData";
+import teamMembers from "@/AllData/About/TeamData";
 
 export default function Team() {
   return (

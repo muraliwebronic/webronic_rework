@@ -36,7 +36,7 @@ export default function MediaCmsStreaming() {
                 return (
                   <div key={index} className="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-[#2776ea]/30 transition-colors">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="p-2 rounded-lg bg-[#2776ea]/10 text-[#2776ea]">
+                      <div className="p-2 rounded-lg bg-[#2776ea]/10 text-white">
                         <section.icon size={20} />
                       </div>
                       <h4 className="font-bold text-slate-900">{section.title}</h4>
@@ -100,7 +100,6 @@ export default function MediaCmsStreaming() {
             <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6">
               {live.title} 
 
-[Image of live streaming architecture diagram]
 
             </h2>
           </div>
@@ -115,7 +114,7 @@ export default function MediaCmsStreaming() {
                 {live.infrastructure.categories.map((cat, index) => (
                   <div key={index} className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
                     <div className="flex items-center gap-3 mb-4">
-                      <cat.icon className="text-[#2776ea]" size={24} />
+                      <cat.icon className="text-white" size={24} />
                       <h4 className="font-bold text-lg text-slate-900">{cat.title}</h4>
                     </div>
                     <ul className="space-y-2">
@@ -164,7 +163,7 @@ export default function MediaCmsStreaming() {
       </div>
 
       {/* --- PART 3: MUSIC STREAMING (Dark Theme) --- */}
-      <div className="bg-slate-900 py-24 text-white relative overflow-hidden">
+      <div className="bg-primary py-24 text-white relative overflow-hidden">
         
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
           <div className="text-center mb-16">
@@ -184,7 +183,7 @@ export default function MediaCmsStreaming() {
                  return (
                   <div key={index} className="bg-white/5 border border-white/10 p-8 rounded-[2rem] hover:bg-white/10 transition-colors">
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="p-3 rounded-xl bg-[#2776ea]/20 text-[#2776ea]">
+                      <div className="p-3 rounded-xl bg-[#2776ea]/20 text-white">
                         <feat.icon size={24} />
                       </div>
                       <h4 className="font-bold text-xl">{feat.title}</h4>
@@ -262,7 +261,7 @@ export default function MediaCmsStreaming() {
             {stack.categories.map((cat, index) => (
               <div key={index} className="p-8 rounded-[2rem] border border-slate-200 hover:shadow-lg transition-all duration-300">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="p-3 rounded-xl bg-slate-50 text-[#2776ea]">
+                  <div className="p-3 rounded-xl bg-slate-50 text-primary">
                     <cat.icon size={24} />
                   </div>
                   <h3 className="font-bold text-lg text-slate-900">{cat.title}</h3>

@@ -9,7 +9,7 @@ export const AI_DATA: ServicePageData = {
     title: "AI & Machine Learning",
     tagline: "Enterprise Intelligence",
     description: "Transform your business with intelligent solutions. We architect, build, and deploy custom AI systems that drive measurable value and competitive advantage.",
-    image: "./assets/services/ai-float.png", // Ensure this path exists
+    image: "/assets/services/ai-float.png", // Ensure this path exists
     icon: "Brain", 
     points: [
       "Custom LLM Integration",

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import teamMembers from "@/components/common/TeamData";
+import teamMembers from "@/AllData/About/TeamData";
 import {
   X,
   ExternalLink,
@@ -11,35 +11,27 @@ import {
   Terminal,
   ArrowRight,
 } from "lucide-react";
+import SectionHeader from "@/components/common/SectionHeader";
 
 type TeamMember = {
   name: string;
   role: string;
 };
 
-export default function TeamPage() {
+export default function TeamComponent() {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
 
   return (
     <section className="relative overflow-hidden bg-white py-16 md:py-28 font-sora">
       <div className="relative mx-auto max-w-5xl px-6 animate-card-entry">
-        <div className="flex items-center gap-4 mb-6">
-          <span className="text-[11px] font-black uppercase tracking-[0.3em] text-[#2776ea]">
-            our Team
-          </span>
-        </div>
-        <div className="mb-16 md:mb-24 text-left border-l-2 border-slate-100 pl-24 ">
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 leading-[1.1]">
-            Our <br />
-            <span className="bg-linear-to-r from-[#2776ea] to-[#76ea27] bg-clip-text text-transparent">
-              Core Team
-            </span>
-          </h2>
-          <p className="mt-4 max-w-xl text-base text-slate-500 font-medium leading-relaxed">
-            A specialized collective of software architects and digital
-            consultants delivering enterprise-grade retail automation solutions.
-          </p>
-        </div>
+        <SectionHeader
+          badge="Our Team"
+          title="Our"
+          highlight="Core Team"
+          description="A specialized collective of software architects and digital consultants delivering enterprise-grade retail automation solutions."
+          centered={false}
+          className="mb-16 md:mb-24 max-w-xl"
+        />
 
         <div className="divide-y divide-slate-100 border-t border-b border-slate-100">
           {teamMembers.map((member, index) => (

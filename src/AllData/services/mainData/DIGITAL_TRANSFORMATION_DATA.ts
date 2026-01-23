@@ -8,7 +8,7 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
     title: "Digital Transformation",
     tagline: "Business Evolution",
     description: "End-to-end digital transformation services. Strategy consulting, process automation, customer experience redesign, and change management for enterprise digital evolution.",
-    image: "./assets/images/digitalmarketing.png", // Ensure path exists
+    image: "/assets/images/digitalmarketing.png", // Ensure path exists
     icon: "RefreshCw",
     points: [
       "Digital Strategy & Roadmap",
@@ -17,16 +17,16 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
       "Change Management"
     ],
    technologies: [
-        { name: "Google Ads", logo: "./assets/icons/googleads.png" },
-        { name: "Google Analytics", logo: "./assets/icons/googleanalytics.png" },
-        { name: "Bing Ads", logo: "./assets/icons/bing.png" },
-        { name: "Facebook Ads", logo: "./assets/icons/facebook.png" },
-        { name: "LinkedIn Ads", logo: "./assets/icons/linkedin.png" },
-        { name: "Instagram", logo: "./assets/icons/instagram.png" },
-        { name: "YouTube", logo: "./assets/icons/youtube.png" },
+        { name: "Google Ads", logo: "/assets/icons/googleads.png" },
+        { name: "Google Analytics", logo: "/assets/icons/googleanalytics.png" },
+        { name: "Bing Ads", logo: "/assets/icons/bing.png" },
+        { name: "Facebook Ads", logo: "/assets/icons/facebook.png" },
+        { name: "LinkedIn Ads", logo: "/assets/icons/linkedin.png" },
+        { name: "Instagram", logo: "/assets/icons/instagram.png" },
+        { name: "YouTube", logo: "/assets/icons/youtube.png" },
         {
           name: "Google Business Profile",
-          logo: "./assets/icons/googlebusprof.png",
+          logo: "/assets/icons/googlebusprof.png",
         },
       ],
   },

@@ -37,7 +37,7 @@ const products: Product[] = [
     icon: <BarChart3 size={24} />,
     color1: "#2776ea",
     color2: "#76ea27",
-    image: "./assets/images/valuechart.png",
+    image: "/assets/images/valuechart.png",
     link: "https://www.valueflowsoft.com/",
   },
   {
@@ -50,7 +50,7 @@ const products: Product[] = [
     icon: <Layers size={24} />,
     color1: "#2776ea",
     color2: "#76ea27",
-    image: "./assets/images/tanluxlogo.png",
+    image: "/assets/images/tanluxlogo.png",
     link: "https://tanlux.se/",
   },
   {
@@ -63,7 +63,7 @@ const products: Product[] = [
     icon: <ChartLine  size={24} />,
     color1: "#2776ea",
     color2: "#76ea27",
-    image: "./assets/images/fpanalyzer.png",
+    image: "/assets/images/fpanalyzer.png",
     link: "https://www.fpanalyzer.se/",
   },
   {
@@ -76,7 +76,7 @@ const products: Product[] = [
     icon: <Store size={24} />,
     color1: "#2776ea",
     color2: "#76ea27",
-    image: "./assets/images/storetech-logo1.png",
+    image: "/assets/images/storetech-logo1.png",
     link: "https://store-tech.se/",
   },
 ];

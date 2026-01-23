@@ -104,7 +104,7 @@ export default function Navbar() {
         }`}>
           
           <Link href="/#hero" className="relative z-[101] flex items-center">
-            <Image src="./assets/webonic2.png" alt="Logo" width={130} height={30} priority className="w-28 lg:w-32" />
+            <Image src="/assets/webonic2.png" alt="Logo" width={130} height={30} priority className="w-28 lg:w-32" />
           </Link>
 
           <div className="hidden lg:flex items-center gap-2">

@@ -19,10 +19,11 @@ import {
   Activity,
   Layers,
 } from "lucide-react";
-import { ABOUT_PAGE_DATA } from "./ABOUT_PAGE_DATA";
+import { ABOUT_PAGE_DATA } from "@/AllData/About/ABOUT_PAGE_DATA";
 import SectionHeader from "@/components/common/SectionHeader";
 import Link from "next/link";
-import { motion } from "framer-motion"; // Added for scroll animations
+import { motion } from "framer-motion"; 
+import TeamComponent from "./TeamCompont";
 
 export default function AboutPageContent() {
   const {
@@ -322,6 +323,8 @@ export default function AboutPageContent() {
           </div>
         </div>
       </section>
+
+      <TeamComponent />
 
       {/* --- METRICS (Blue Strip) --- */}
       <section className="py-20 bg-[#2776ea] text-white relative overflow-hidden">
