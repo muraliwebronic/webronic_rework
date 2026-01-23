@@ -8,7 +8,7 @@ export const ANALYTICS_DATA: ServicePageData = {
     title: "Data Analytics",
     tagline: "Actionable Insights",
     description: "Data analytics and business intelligence services: data warehousing, BI dashboards, advanced analytics, big data processing, and data governance.",
-    image: "/assets/services/data-analytics.png", // Ensure path exists
+    image: "./assets/services/data-analytics.png", // Ensure path exists
     icon: "BarChart3",
     points: [
       "Modern Data Warehousing",

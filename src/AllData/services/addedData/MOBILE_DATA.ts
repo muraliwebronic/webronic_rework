@@ -6,7 +6,7 @@ export const MOBILE_DATA: ServicePageData = {
     title: "Mobile Development",
     tagline: "iOS & Android Apps",
     description: "Native and cross-platform mobile app development. iOS, Android, Flutter, and React Native solutions for consumer and enterprise.",
-    image: "/assets/services/mobile.png",
+    image: "./assets/services/mobile.png",
     icon: "Smartphone",
     points: ["Native iOS & Android", "Cross-Platform (Flutter)", "Enterprise Mobility", "Progressive Web Apps"],
     technologies: [

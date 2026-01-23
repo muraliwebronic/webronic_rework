@@ -146,7 +146,7 @@ export default function Hero() {
                 className="group relative inline-flex items-center gap-6 rounded-2xl border border-slate-100 bg-white px-8 py-5 shadow-xl transition-all hover:-translate-y-1"
               >
                 <Image
-                  src="/assets/images/storetech-logo-black.png"
+                  src="./assets/images/storetech-logo-black.png"
                   alt="StoreTech"
                   width={140}
                   height={36}

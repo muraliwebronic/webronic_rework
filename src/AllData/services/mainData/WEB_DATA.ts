@@ -8,7 +8,7 @@ export const WEB_DATA: ServicePageData = {
     title: "Web Development",
     tagline: "High-Performance Experiences",
     description: "Build high-performance websites that drive measurable business growth. We deliver solutions that load in under 2 seconds and rank on the first page of Google.",
-    image: "/assets/images/webdevelopment.png",
+    image: "./assets/images/webdevelopment.png",
     icon: "Layout",
     points: [
       "Next.js & React Applications",
@@ -17,15 +17,15 @@ export const WEB_DATA: ServicePageData = {
       "High-Conversion E-commerce"
     ],
     technologies: [
-        { name: "HTML", logo: "/assets/icons/html.png" },
-        { name: "CSS", logo: "/assets/icons/css.png" },
-        { name: "Magento", logo: "/assets/icons/magneto.png" },
-        { name: "WordPress", logo: "/assets/icons/wordpress.png" },
-        { name: "PHP", logo: "/assets/icons/php.png" },
-        { name: "MySQL", logo: "/assets/icons/mysql.png" },
-        { name: "Node.js", logo: "/assets/icons/node.png" },
-        { name: "WooCommerce", logo: "/assets/icons/woocom.png" },
-        { name: "jQuery", logo: "/assets/icons/jquery.png" },
+        { name: "HTML", logo: "./assets/icons/html.png" },
+        { name: "CSS", logo: "./assets/icons/css.png" },
+        { name: "Magento", logo: "./assets/icons/magneto.png" },
+        { name: "WordPress", logo: "./assets/icons/wordpress.png" },
+        { name: "PHP", logo: "./assets/icons/php.png" },
+        { name: "MySQL", logo: "./assets/icons/mysql.png" },
+        { name: "Node.js", logo: "./assets/icons/node.png" },
+        { name: "WooCommerce", logo: "./assets/icons/woocom.png" },
+        { name: "jQuery", logo: "./assets/icons/jquery.png" },
       ],
   },
 

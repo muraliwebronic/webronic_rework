@@ -6,7 +6,7 @@ export const APP_SERVICES_DATA: ServicePageData = {
     title: "Application Services",
     tagline: "Lifecycle Management",
     description: "Comprehensive application lifecycle management: ERP/CRM implementation, integration, modernization, and 24/7 support.",
-    image: "/assets/services/app-services.png",
+    image: "./assets/services/app-services.png",
     icon: "Grid",
     points: ["ERP & CRM Implementation", "Application Integration (iPaaS)", "Legacy Modernization", "24/7 Application Support"],
     technologies: [
