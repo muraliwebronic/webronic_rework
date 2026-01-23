@@ -1,0 +1,58 @@
+export const SERVICES_DATA = [
+  {
+    id: 1,
+    title: "Custom Software Development",
+    description: "Build enterprise-grade applications tailored to your unique requirements. Full-stack development expertise across web, mobile, and IoT platforms",
+    image: "./assets/images/appdevelopment.png",
+    path: "/service-section/custom-software",
+  },
+  {
+    id: 2,
+    title: "AI & Machine Learning",
+    description: "Transform your business with intelligent automation and predictive analytics. Our AI-first approach embeds machine learning across all solutions",
+    image: "./assets/images/webdevelopment.png",
+    path: "/service-section/ai-machine-learning",
+  },
+  {
+    id: 3,
+    title: "Cloud Services",
+    description: "Accelerate digital transformation with cloud-native architectures. We design scalable, secure cloud solutions across AWS, Azure, and Google Cloud platforms",
+    image: "./assets/images/domainhosting.png",
+    path: "/service-section/cloud-services",
+  },
+  {
+    id: 4,
+    title: "Digital Transformation",
+    description: "Reimagine your business processes with cutting-edge technology. From strategy to execution, we guide organizations through comprehensive digital evolution",
+    image: "./assets/images/digitalmarketing.png",
+    path: "/service-section/digital-transformation",
+  },
+  {
+    id: 5,
+    title: "IoT & Industry 4.0",
+    description: "Connect your operations with intelligent IoT ecosystems. Real-time monitoring, predictive maintenance, and automated workflows for manufacturing excellence",
+    image: "./assets/images/iot.png",
+    path: "/service-section/iot-industry-4",
+  },
+  {
+    id: 6,
+    title: "Website Development & E-Commerce",
+    description: "Build high-performance websites and online stores that drive measurable growth. We specialize in Next.js, WordPress, and WooCommerce solutions optimized for speed",
+    image: "./assets/images/digitalmarketing.png",
+    path: "/service-section/website-development",
+  },
+  {
+    id: 7,
+    title: "DevOps & Site Reliability",
+    description: "Streamline your development lifecycle with automated CI/CD pipelines and infrastructure as code. Ensure system reliability, scalability, and faster time-to-market",
+    image: "./assets/images/appdevelopment.png",
+    path: "/service-section/devops-sre",
+  },
+  {
+    id: 8,
+    title: "Data Analytics & BI",
+    description: "Turn raw data into actionable business insights. We implement comprehensive data strategies, visualization dashboards, and Business Intelligence tools for informed decision-making",
+    image: "./assets/images/domainhosting.png",
+    path: "/service-section/data-analytics",
+  },
+];

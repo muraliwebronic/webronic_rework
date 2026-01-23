@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Zap, Heart, Coffee, Globe, ArrowUpRight } from "lucide-react";
+import { ArrowRight, Zap, Heart, Coffee, Globe, ArrowUpRight, LucideIcon } from "lucide-react";
 import SectionHeader from "@/components/common/SectionHeader";
 
 const PERKS = [
@@ -27,34 +27,65 @@ const PERKS = [
   },
 ];
 
+// --- CHILD COMPONENT: PERK CARD (Floating 3D Style) ---
+const PerkCard = ({ icon: Icon, title, desc }: { icon: LucideIcon, title: string, desc: string }) => (
+    <div className="group relative  mx-auto max-w-7xl flex flex-col justify-end h-full font-sora pt-12">
+      
+      {/* 1. FLOATING ICON BOX */}
+      <div className="absolute top-0 left-0 right-0 z-20 flex justify-center pointer-events-none">
+        <div className="relative w-20 h-20 bg-white rounded-3xl flex items-center justify-center shadow-[0_10px_30px_-10px_rgba(0,0,0,0.08)] border border-slate-100 transition-transform duration-500 cubic-bezier(0.25, 0.46, 0.45, 0.94) group-hover:-translate-y-4 group-hover:scale-105 group-hover:rotate-3">
+          <Icon size={32} className="text-slate-400 group-hover:text-[#76ea27] transition-colors duration-300" strokeWidth={1.5} />
+        </div>
+      </div>
+
+      {/* 2. PEDESTAL BASE */}
+      <div className="relative h-full w-full bg-white rounded-[2.5rem] border border-slate-100 p-8 pt-16 flex flex-col items-center shadow-sm transition-all duration-500 group-hover:shadow-xl group-hover:shadow-green-900/5 group-hover:border-green-100 overflow-hidden">
+        
+        {/* Fake Floor Shadow */}
+        <div className="absolute top-16 left-1/2 -translate-x-1/2 w-16 h-3 bg-slate-900/5 blur-lg rounded-full transition-all duration-500 group-hover:w-12 group-hover:bg-green-900/10 group-hover:blur-xl" />
+
+        {/* Content Section */}
+        <div className="relative z-10 text-center flex-1 flex flex-col">
+            <h3 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-[#76ea27] transition-colors leading-tight">
+              {title}
+            </h3>
+            
+            <p className="text-sm font-medium text-slate-500 leading-relaxed line-clamp-3">
+              {desc}
+            </p>
+        </div>
+
+        {/* Subtle Hover Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-green-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+      </div>
+    </div>
+);
+
+
 export default function CareerSection() {
   return (
     <section
       id="career"
-      className="relative py-20  lg:px-20 bg-white font-sora overflow-hidden"
+      className="relative py-24 bg-white font-sora overflow-hidden"
     >
-      {/* Background Texture */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#f8fafc_1px,transparent_1px),linear-gradient(to_bottom,#f8fafc_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
-      </div>
-
       <div className="relative container mx-auto px-6 z-10">
-        <div className="grid lg:grid-cols-12 gap-16 lg:gap-8 items-center">
+        <div className="grid lg:grid-cols-12 gap-16 lg:gap-12 items-center">
           
-          {/* LEFT: CONTENT & CTA */}
-          <div className="lg:col-span-5 flex flex-col items-start text-left">
+          {/* --- CONTENT & CTA (ORDER 2 on Desktop/Right Side) --- */}
+          <div className="lg:col-span-5 flex flex-col items-start text-left lg:order-2">
             <SectionHeader
+              badge="Career"
               title="Join the Team"
               highlight="Build the Future"
-              description="We solve complex problems at scale. We are looking for visionaries, engineers, and creators to help us architect high-performance digital solutions"
-              centered={false} // Aligned left
+              description="We solve complex problems at scale. We are looking for visionaries, engineers, and creators to help us architect high-performance digital solutions."
+              centered={false}
               className="mb-10"
             />
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <Link
                 href="/career"
-                className="group inline-flex items-center justify-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider hover:bg-[#2776ea] transition-all shadow-lg hover:shadow-blue-500/25 active:scale-95"
+                className="group inline-flex items-center justify-center gap-3 bg-[#2776ea] text-white px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider hover:bg-[#76ea27] transition-all shadow-lg hover:shadow-blue-500/25 active:scale-95"
               >
                 View Open Roles
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -70,27 +101,15 @@ export default function CareerSection() {
             </div>
           </div>
 
-          {/* RIGHT: PERKS GRID */}
-          <div className="lg:col-span-7">
-            <div className="grid sm:grid-cols-2 gap-6">
+          <div className="lg:col-span-7 lg:order-1">
+            <div className="grid sm:grid-cols-2 gap-x-6 gap-y-12">
               {PERKS.map((perk, i) => (
-                <div
-                  key={i}
-                  className="group relative p-8 rounded-2xl bg-white border border-slate-200 transition-all duration-300 hover:border-[#76ea27] hover:shadow-xl hover:shadow-green-900/5 hover:-translate-y-1"
-                >
-                  {/* Icon Box */}
-                  <div className="h-14 w-14 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-600 mb-6 transition-all duration-300 group-hover:bg-[#76ea27] group-hover:border-[#76ea27] group-hover:text-white group-hover:scale-110">
-                    <perk.icon size={24} strokeWidth={1.5} />
-                  </div>
-
-                  <h3 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-[#76ea27] transition-colors">
-                    {perk.title}
-                  </h3>
-                  
-                  <p className="text-sm font-medium text-slate-500 leading-relaxed">
-                    {perk.desc}
-                  </p>
-                </div>
+                <PerkCard 
+                    key={i}
+                    icon={perk.icon}
+                    title={perk.title}
+                    desc={perk.desc}
+                />
               ))}
             </div>
           </div>

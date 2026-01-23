@@ -1,81 +1,76 @@
 "use client";
-
-import React from "react";
-import { ArrowUpRight, CheckCircle2, LucideIcon } from "lucide-react";
+import { CheckCircle2, LucideIcon } from "lucide-react";
 
 export type IndustryCardProps = {
-  id: number;
   title: string;
   description: string;
   features: string[];
   icon: LucideIcon;
-  color: string; // Hex color for the specific industry accent
-  className?: string;
+  color: string;
 };
 
 export default function IndustryCard({
-  id,
   title,
   description,
   features,
   icon: Icon,
   color,
-  className = "",
 }: IndustryCardProps) {
   return (
-    <div className={`group relative flex flex-col bg-white rounded-2xl border border-slate-200 p-8 transition-all duration-300 hover:border-[#2776ea] hover:shadow-lg hover:shadow-blue-900/5 overflow-hidden h-full ${className}`}>
+    <div className="group relative flex flex-col h-full font-sora">
       
-      {/* 1. Subtle Hover Background (Faint overlay) */}
-      <div className="absolute inset-0 bg-slate-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-
-      {/* Header: Icon & Meta */}
-      <div className="relative z-10 flex items-start justify-between mb-6">
-        {/* Tech Squircle Icon */}
-        <div
-          className="h-14 w-14 flex items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-sm text-slate-600 transition-all duration-300 group-hover:bg-[#2776ea] group-hover:border-[#2776ea] group-hover:text-white group-hover:-translate-y-1"
-        >
-          <Icon size={24} strokeWidth={1.5} />
-        </div>
-        
-        {/* Arrow + Precision Index */}
-        <div className="flex flex-col items-end gap-2">
-            <ArrowUpRight
-            size={20}
-            className="text-slate-300 transition-transform duration-300 group-hover:text-[#2776ea] group-hover:translate-x-1 group-hover:-translate-y-1"
-            />
-            <span className="text-[10px] font-mono font-bold text-slate-300 group-hover:text-[#2776ea]/60 transition-colors">
-            /0{id}
-            </span>
+    
+      <div className="absolute top-0 left-0 right-0 z-20 flex justify-center pointer-events-none">
+        <div className="relative w-24 h-24 bg-white rounded-3xl flex items-center justify-center shadow-[0_10px_30px_-10px_rgba(0,0,0,0.08)] border border-slate-100 transition-transform duration-500 cubic-bezier(0.25, 0.46, 0.45, 0.94) group-hover:-translate-y-4 group-hover:scale-105 group-hover:rotate-3">
+          <Icon 
+            size={36} 
+            className="transition-colors duration-300" 
+            style={{ color: color }} 
+            strokeWidth={1.5} 
+          />
         </div>
       </div>
 
-      {/* Text Content */}
-      <div className="relative z-10 flex-1">
-        <h3 className="text-xl font-bold text-slate-900 mb-3 tracking-tight group-hover:text-[#2776ea] transition-colors">
-            {title}
-        </h3>
+    
+      <div className="mt-12 flex-1 relative bg-white rounded-[2.5rem] border border-slate-100 p-8 flex flex-col shadow-sm transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-blue-900/10 group-hover:border-blue-100 overflow-hidden">
         
-        <p className="text-sm font-medium text-slate-500 leading-relaxed mb-8">
-            {description}
-        </p>
-      </div>
+        {/* Fake Floor Shadow */}
+        <div className="absolute top-16 left-1/2 -translate-x-1/2 w-20 h-3 bg-blue-900/5 blur-lg rounded-full transition-all duration-500 group-hover:w-16 group-hover:bg-blue-900/10 group-hover:blur-xl" />
 
-      {/* Feature List (Clean Tech Style) */}
-      <div className="relative z-10 mt-auto pt-6 border-t border-slate-100 group-hover:border-slate-200/60 transition-colors">
-        <div className="space-y-3">
-          {features.map((feature, i) => (
-            <div key={i} className="flex items-center gap-3">
-              <CheckCircle2
-                size={14}
-                className="shrink-0"
-                style={{ color: color }} // Uses specific industry color
-              />
-              <span className="text-[11px] font-bold text-slate-600 uppercase tracking-widest">
-                {feature}
-              </span>
+        {/* Content Section */}
+        {/* pt-16: Internal padding to clear the bottom half of the floating icon */}
+        <div className="pt-16 relative z-10 flex-1 flex flex-col">
+            
+            {/* Title: No fixed height, allows natural wrapping */}
+            <h3 className="text-xl font-bold text-slate-900 mb-4 text-center group-hover:text-[#2776ea] transition-colors leading-tight">
+              {title}
+            </h3>
+            
+            {/* Description: Allowed to grow, but keeps good readability spacing */}
+            <p className="text-sm font-medium text-slate-500 leading-relaxed text-center mb-8">
+              {description}
+            </p>
+
+            {/* Features List: Pushed to bottom with mt-auto */}
+            <div className="mt-auto px-1 w-full">
+                <div className="space-y-3 p-4 ">
+                    {features.map((feature, i) => (
+                        <div key={i} className="flex items-start gap-3">
+                            {/* Shrink-0 prevents the icon from squishing if text wraps */}
+                            <div className="shrink-0 mt-0.5">
+                                <CheckCircle2 size={14} className="text-[#76ea27]" />
+                            </div>
+                            <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider group-hover:text-slate-700 transition-colors leading-snug">
+                                {feature}
+                            </span>
+                        </div>
+                    ))}
+                </div>
             </div>
-          ))}
         </div>
+
+        {/* Subtle Hover Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
       </div>
     </div>
   );

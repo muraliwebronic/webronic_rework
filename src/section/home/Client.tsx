@@ -1,229 +1,240 @@
 "use client";
 
-import { useState } from "react";
-import { Quote, Factory, ShoppingBag, Landmark, HeartPulse, Layers, ChevronDown, BarChart3, Users } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import {BarChart3, Users } from "lucide-react";
 import SectionHeader from "@/components/common/SectionHeader";
+import { motion, useMotionValue, animate } from "framer-motion";
+import Image from "next/image";
+import { INDUSTRIES, LOGOS, TESTIMONIALS } from "@/AllData/Home/ClientsData";
 
-const logos: string[] = [
-  "./assets/images/fpanalyzer.png",
-  "./assets/images/ekoion.png",
-  "./assets/images/bovalls.png",
-  "./assets/images/bluewaters.png",
-  "./assets/images/snus24.png",
-  "./assets/images/iit.png",
-  "./assets/images/akashavani.png",
-  "./assets/images/annauniv.png",
-  "./assets/images/locumap.png",
-  "./assets/images/rorstrand.png",
-  "./assets/images/hindustan.png",
-  "./assets/images/sciotech.png",
-  "./assets/images/tamilnadu.png",
-  "./assets/images/smartstoring.png",
-  "./assets/images/bharathwaj.png",
-  "./assets/images/valueflow.png",
-  "./assets/images/bluewaters.png",
-  "./assets/images/tsf.png",
-  "./assets/images/elshaddai.png",
-  "./assets/images/24sju.png",
-  "./assets/images/sahaya.png",
-  "./assets/images/sribalaji.png",
-  "./assets/images/atthi.png",
-  "./assets/images/cumi.png",
-];
+// --- DATA ---
 
-// Removed background colors, keeping hex only for subtle text/icon tints
-const INDUSTRIES = [
-  { name: "Manufacturing", percent: 35, icon: Factory, color: "#2776ea" },
-  { name: "Retail & E-comm", percent: 25, icon: ShoppingBag, color: "#76ea27" },
-  { name: "Finance", percent: 20, icon: Landmark, color: "#2776ea" },
-  { name: "Healthcare", percent: 10, icon: HeartPulse, color: "#76ea27" },
-  { name: "Others", percent: 10, icon: Layers, color: "#94a3b8" },
-];
 
-const TESTIMONIALS = [
-  {
-    text: "Webronic transformed our retail operations with StoreTech. The autonomous checkout system has reduced operational costs by 60% while improving customer satisfaction.",
-    author: "Jocke Assarsson",
-    role: "CEO, 24-Sju Snabbköp Sverige AB",
-  },
-  {
-    text: "Their AI-powered predictive maintenance solution has prevented over $2M in potential equipment failures and reduced downtime by 75%.",
-    author: "Carl Magnus Tang",
-    role: "FP Analyzer",
-  },
-  {
-    text: "The Tanlux platform enabled us to operate 24/7 unmanned studios, expanding our business model and increasing revenue by 200%.",
-    author: "Markus Front",
-    role: "Founder, Tanlux AB",
-  },
-];
+
+// --- TESTIMONIAL CARD ---
+const TestimonialCard = ({ item }: { item: typeof TESTIMONIALS[0] }) => (
+  <div className="group relative flex flex-col justify-end w-full h-full font-sora select-none">
+    
+    {/* Floating Avatar Box */}
+    <div className="absolute -top-10 left-0 right-0 z-20 flex justify-center pointer-events-none">
+        <div className="relative w-16 h-16 md:w-20 md:h-20 bg-white rounded-2xl md:rounded-3xl flex items-center justify-center shadow-[0_10px_30px_-10px_rgba(0,0,0,0.08)] border border-slate-100 transition-transform duration-500 group-hover:-translate-y-2 group-hover:rotate-2">
+            <div className="text-lg md:text-xl font-black text-[#2776ea] bg-slate-50 w-full h-full rounded-2xl md:rounded-3xl flex items-center justify-center">
+                {item.author.charAt(0)}
+            </div>
+        </div>
+    </div>
+
+    {/* Pedestal Base */}
+    <div className="relative h-full bg-white rounded-[2rem] md:rounded-[2.5rem] border border-slate-100 p-6 pt-12 md:p-8 md:pt-16 flex flex-col items-center shadow-sm transition-all duration-500 group-hover:shadow-xl group-hover:shadow-blue-900/5 group-hover:border-blue-100 overflow-hidden text-center">
+        
+        {/* Fake Floor Shadow */}
+        <div className="absolute top-16 left-1/2 -translate-x-1/2 w-12 h-3 bg-slate-900/5 blur-lg rounded-full transition-all duration-500 group-hover:w-16 group-hover:bg-blue-900/10 group-hover:blur-xl" />
+
+        {/* Content */}
+        <div className="relative z-10 mb-6 flex-1 flex items-center mt-4">
+            <p className="text-xs md:text-sm font-medium text-slate-600 leading-relaxed italic line-clamp-4">
+                "{item.text}"
+            </p>
+        </div>
+
+        {/* Author */}
+        <div className="relative z-10 mt-auto border-t border-slate-50 pt-4 w-full">
+            <h4 className="text-sm md:text-base font-bold text-slate-900 group-hover:text-[#2776ea] transition-colors">
+                {item.author}
+            </h4>
+            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-1">
+                {item.role}
+            </p>
+        </div>
+
+        {/* Hover Glow */}
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+    </div>
+  </div>
+);
+
+// --- CAROUSEL CONTAINER ---
+function TestimonialCarousel() {
+    const [width, setWidth] = useState(0);
+    const carouselRef = useRef<HTMLDivElement>(null);
+    const x = useMotionValue(0);
+    const [isDragging, setIsDragging] = useState(false);
+
+    useEffect(() => {
+        if (carouselRef.current) {
+            setWidth(carouselRef.current.scrollWidth - carouselRef.current.offsetWidth);
+        }
+    }, []);
+
+    useEffect(() => {
+        let controls: any;
+        const startAutoScroll = () => {
+            if (isDragging || width === 0) return;
+            controls = animate(x, -width, {
+                duration: 25, // Slowed down slightly for better readability on mobile
+                ease: "linear",
+                repeat: Infinity,
+                repeatType: "mirror", 
+            });
+        };
+        startAutoScroll();
+        return () => controls?.stop();
+    }, [isDragging, width, x]);
+
+    return (
+        <div className="w-full overflow-hidden cursor-grab active:cursor-grabbing">
+            <motion.div 
+                ref={carouselRef}
+                // Reduced padding on mobile (py-12) vs desktop (py-24) to reduce whitespace
+                className="flex gap-4 md:gap-8 py-12 md:py-24 pl-4 md:pl-0" 
+                drag="x"
+                dragConstraints={{ right: 0, left: -width }}
+                style={{ x }}
+                onDragStart={() => setIsDragging(true)}
+                onDragEnd={() => setIsDragging(false)}
+                whileTap={{ scale: 0.98 }}
+            >
+                {TESTIMONIALS.map((t, i) => (
+                    <motion.div 
+                        key={i} 
+                        // Mobile: 85vw width for peek effect. Desktop: Fixed 340px
+                        className="min-w-[85vw] md:min-w-[340px] h-[360px] md:h-[420px]" 
+                    >
+                        <TestimonialCard item={t} />
+                    </motion.div>
+                ))}
+            </motion.div>
+        </div>
+    );
+}
 
 export default function Clients() {
-  const [activeTestimonial, setActiveTestimonial] = useState(0); 
-  const firstRow = logos.slice(0, Math.ceil(logos.length / 2));
-  const secondRow = logos.slice(Math.ceil(logos.length / 2));
+  const half = Math.ceil(LOGOS.length / 2);
+  const firstRow = LOGOS.slice(0, half);
+  const secondRow = LOGOS.slice(half);
 
   return (
-    <section id="client" className="relative overflow-hidden bg-white py-20 lg:py-28 font-sora px-5 lg:px-10">
-      
-      {/* Background Decor (Very Subtle) */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#f8fafc_1px,transparent_1px),linear-gradient(to_bottom,#f8fafc_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-      </div>
+    <section id="client" className="relative overflow-hidden bg-white py-12 md:py-24 font-sora">
+      <div className="absolute inset-0 pointer-events-none bg-slate-50/30" />
 
-      <div className="relative mx-auto max-w-7xl px-6 z-10">
+      <div className="relative mx-auto max-w-7xl px-4 md:px-6 z-10">
         
-        {/* HEADER */}
         <SectionHeader 
+         badge="clients"
           title="Trusted by"
           highlight="Industry Leaders"
           description="Empowering organizations worldwide with scalable, mission-critical digital infrastructure."
           centered={true}
-          className="max-w-3xl mx-auto mb-16"
+          className="max-w-3xl mx-auto mb-12 md:mb-20"
         />
 
-        {/* --- 1. MINIMALIST LOGO MARQUEE --- */}
-        <div className="relative mt-12 space-y-6 mb-24">
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-32 bg-gradient-to-r from-white via-white/90 to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-32 bg-gradient-to-l from-white via-white/90 to-transparent" />
+        {/* LOGO MARQUEE */}
+        <div className="relative space-y-8 md:space-y-12 mb-16 md:mb-32">
+          {/* Gradients to fade edges */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 md:w-40 bg-gradient-to-r from-white via-white/80 to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 md:w-40 bg-gradient-to-l from-white via-white/80 to-transparent" />
 
-          {/* Forward Row */}
+          {/* Row 1 */}
           <div className="flex overflow-hidden">
-            <div className="animate-marquee flex w-max items-center gap-10 py-2">
+            <motion.div 
+              className="flex w-max items-center gap-8 md:gap-16"
+              animate={{ x: [0, -1000] }}
+              transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
+            >
               {[...firstRow, ...firstRow].map((src, i) => (
-                <LogoCard key={`row1-${i}`} src={src} />
+                <LogoCard key={`r1-${i}`} src={src} />
               ))}
-            </div>
+            </motion.div>
           </div>
 
-          {/* Reverse Row */}
+          {/* Row 2 */}
           <div className="flex overflow-hidden">
-            <div className="animate-scroll-review-xrev flex w-max items-center gap-10 py-2">
+             <motion.div 
+              className="flex w-max items-center gap-8 md:gap-16"
+              animate={{ x: [-1000, 0] }}
+              transition={{ repeat: Infinity, duration: 45, ease: "linear" }}
+            >
               {[...secondRow, ...secondRow].map((src, i) => (
-                <LogoCard key={`row2-${i}`} src={src} />
+                <LogoCard key={`r2-${i}`} src={src} />
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
 
-        {/* --- 2. PROFESSIONAL GRID (METRICS & STORIES) --- */}
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 mt-20 border-t border-slate-100 pt-20">
+        {/* STATS & TESTIMONIALS GRID */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           
-          {/* LEFT: SECTOR DISTRIBUTION (Minimal / Professional) */}
-          <div className="lg:col-span-5">
-            <div className="mb-8 flex items-center gap-3">
-                <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-100 text-slate-700">
-                    <BarChart3 size={20} strokeWidth={1.5} />
-                </div>
-                <h3 className="text-lg font-bold text-slate-900 tracking-tight">
-                    Deployment by Sector
-                </h3>
-            </div>
-
-            <div className="space-y-7 pr-4">
-              {INDUSTRIES.map((ind, i) => (
-                <div key={i} className="group">
-                  <div className="flex justify-between items-end mb-2.5">
-                    <div className="flex items-center gap-3">
-                      {/* Icon is Slate by default, colored only on hover */}
-                      <ind.icon 
-                        size={16} 
-                        className="text-slate-400 transition-colors duration-300 group-hover:text-slate-900" 
-                      />
-                      <span className="text-sm font-semibold text-slate-600 group-hover:text-slate-900 transition-colors">
-                        {ind.name}
-                      </span>
+          {/* LEFT: DEPLOYMENT STATS */}
+          <div className="lg:col-span-5 relative pt-10 md:pt-16">
+             <div className="group relative flex flex-col">
+                <div className="absolute -top-10 left-0 right-0 z-20 flex justify-center pointer-events-none">
+                    <div className="relative w-20 h-20 md:w-24 md:h-24 bg-white rounded-2xl md:rounded-3xl flex items-center justify-center shadow-[0_10px_30px_-10px_rgba(0,0,0,0.08)] border border-slate-100 transition-transform duration-500 group-hover:-translate-y-2 group-hover:rotate-2">
+                        <BarChart3 size={28} className="text-[#2776ea] md:w-8 md:h-8" strokeWidth={1.5} />
                     </div>
-                    <span className="text-sm font-mono font-bold text-slate-900">
-                        {ind.percent}%
-                    </span>
-                  </div>
-                  
-                  {/* Progress Bar: Dark Slate Fill (Professional look) */}
-                  <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
-                    <div 
-                      className="h-full bg-slate-800 rounded-full relative transition-all duration-500 group-hover:bg-[#2776ea]" // Turns blue only on hover
-                      style={{ width: `${ind.percent}%` }}
-                    />
-                  </div>
                 </div>
-              ))}
-            </div>
+
+                <div className="relative bg-white rounded-[2rem] md:rounded-[2.5rem] border border-slate-100 p-6 pt-16 md:p-8 md:pt-20 shadow-xl shadow-slate-200/40 overflow-hidden">
+                    <div className="absolute top-20 left-1/2 -translate-x-1/2 w-20 h-4 bg-slate-900/5 blur-xl rounded-full" />
+
+                    <div className="text-center mb-6 md:mb-8 relative z-10">
+                        <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-2">Deployment by Sector</h3>
+                        <p className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">Active Solutions</p>
+                    </div>
+
+                    <div className="space-y-5 md:space-y-6 relative z-10">
+                        {INDUSTRIES.map((ind, i) => (
+                            <div key={i} className="group/item">
+                                <div className="flex justify-between items-center mb-2">
+                                    <div className="flex items-center gap-3">
+                                        <ind.icon size={16} className="text-slate-400 group-hover/item:text-[#2776ea] transition-colors" />
+                                        <span className="text-[10px] md:text-xs font-bold text-slate-600 group-hover/item:text-slate-900 transition-colors uppercase tracking-wider">
+                                            {ind.name}
+                                        </span>
+                                    </div>
+                                    <span className="text-xs md:text-sm font-mono font-bold text-slate-900">
+                                        {ind.percent}%
+                                    </span>
+                                </div>
+                                <div className="h-1.5 w-full bg-slate-50 rounded-full overflow-hidden border border-slate-100/50">
+                                    <motion.div 
+                                        initial={{ width: 0 }}
+                                        whileInView={{ width: `${ind.percent}%` }}
+                                        transition={{ duration: 1, delay: i * 0.1, ease: "easeOut" }}
+                                        className="h-full rounded-full bg-[#2776ea]"
+                                    />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+             </div>
           </div>
 
-          {/* RIGHT: SUCCESS STORIES (Enterprise Accordion) */}
-          <div className="lg:col-span-7">
-            <div className="mb-8 flex items-center gap-3">
-                <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-100 text-slate-700">
-                    <Users size={20} strokeWidth={1.5} />
+       {/* RIGHT: TESTIMONIALS CAROUSEL */}
+          <div className="lg:col-span-7 flex flex-col gap-4 md:gap-8 mt-8 lg:mt-0">
+             
+             {/* FIX: Added 'relative z-30' to ensure this sits ABOVE the carousel gradients */}
+             <div className="relative z-30 flex items-center justify-between mb-2 px-2">
+                <div className="flex items-center gap-3">
+                    <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 text-[#2776ea]">
+                       <Users size={20} />
+                    </div>
+                    <h3 className="text-base md:text-lg font-bold text-slate-900">Executive Feedback</h3>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 tracking-tight">
-                    Executive Feedback
-                </h3>
-            </div>
+                
+             
+             </div>
 
-            <div className="space-y-3">
-              {TESTIMONIALS.map((t, i) => (
-                <div 
-                  key={i} 
-                  className={`group rounded-xl border transition-all duration-300 overflow-hidden ${
-                    activeTestimonial === i 
-                      ? "bg-white border-slate-200 shadow-xl shadow-slate-200/40" // Active: Clean White with shadow
-                      : "bg-white border-transparent hover:bg-slate-50 hover:border-slate-100" // Inactive: Transparent/Flat
-                  }`}
-                >
-                  {/* Header */}
-                  <button 
-                    onClick={() => setActiveTestimonial(activeTestimonial === i ? -1 : i)}
-                    className="w-full flex items-center justify-between p-5 text-left relative"
-                  >
-                    {/* Active Indicator Line (Left Side) - The only strong color accent */}
-                    {activeTestimonial === i && (
-                        <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#2776ea]" />
-                    )}
-
-                    <div className="flex items-center gap-4 pl-2">
-                      {/* Avatar: Slate/Grey by default */}
-                      <div className={`shrink-0 h-10 w-10 rounded-full flex items-center justify-center font-bold text-xs transition-colors duration-300 ${
-                        activeTestimonial === i 
-                            ? "bg-slate-900 text-white" 
-                            : "bg-slate-100 text-slate-500 group-hover:text-slate-700"
-                      }`}>
-                        {t.author.charAt(0)}
-                      </div>
-
-                      <div>
-                        <p className={`text-sm font-bold transition-colors ${activeTestimonial === i ? "text-slate-900" : "text-slate-600"}`}>
-                            {t.author}
-                        </p>
-                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-0.5">
-                            {t.role}
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className={`transition-transform duration-300 ${activeTestimonial === i ? "rotate-180 text-slate-900" : "text-slate-300"}`}>
-                        <ChevronDown size={18} />
-                    </div>
-                  </button>
-
-                  {/* Content */}
-                  <div 
-                    className={`transition-all duration-500 ease-in-out px-5 ${
-                      activeTestimonial === i ? "max-h-40 opacity-100 pb-6" : "max-h-0 opacity-0 pb-0"
-                    }`}
-                  >
-                    <div className="pl-[3.5rem] pr-4">
-                      {/* Quote Icon: Subtle color accent */}
-                      <Quote size={16} className="text-[#2776ea] mb-3 opacity-80" />
-                      <p className="text-sm text-slate-600 font-medium leading-relaxed">
-                        {t.text}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+             {/* Carousel Wrapper */}
+             <div className="w-full relative -mt-4 lg:-mt-16">
+                 {/* LEFT FADE GRADIENT */}
+                 <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 md:w-24 bg-gradient-to-r from-white to-transparent" />
+                 
+                 {/* RIGHT FADE GRADIENT */}
+                 <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 md:w-24 bg-gradient-to-l from-white to-transparent" />
+                 
+                 <TestimonialCarousel />
+             </div>
           </div>
 
         </div>
@@ -232,16 +243,10 @@ export default function Clients() {
   );
 }
 
-// Minimalist Logo Card
 function LogoCard({ src }: { src: string }) {
     return (
-        <div className="flex h-16 w-36 items-center justify-center opacity-70  transition-all duration-500 hover:opacity-100 hover:grayscale-0">
-            <img 
-                src={src} 
-                alt="Client" 
-                className="h-8 w-full object-contain" 
-                loading="lazy" 
-            />
+        <div className="relative h-8 w-24 md:h-10 md:w-28 transition-all duration-300 hover:scale-110 cursor-pointer">
+            <Image src={src} alt="Client Logo" fill className="object-contain" />
         </div>
     );
 }

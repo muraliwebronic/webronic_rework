@@ -12,9 +12,103 @@ import {
   X,
   Send,
   MessageSquare,
-  ArrowUpRight
+  ArrowUpRight,
+  LucideIcon,
+  Globe
 } from "lucide-react";
 import SectionHeader from "@/components/common/SectionHeader";
+
+// --- CHILD COMPONENT: 3D CONTACT CARD ---
+type ContactCardProps = {
+    label: string;
+    value: string;
+    icon: LucideIcon;
+    href?: string;
+    onCopy?: () => void;
+    copied?: boolean;
+    isPartner?: boolean; // New prop to style the partner card slightly differently
+};
+
+const ContactCard = ({ label, value, icon: Icon, href, onCopy, copied, isPartner }: ContactCardProps) => (
+    <div className="group relative flex flex-col justify-end h-full font-sora pt-12">
+      
+      {/* 1. FLOATING ICON BOX */}
+      <div className="absolute top-0 left-0 right-0 z-20 flex justify-center pointer-events-none">
+        <div className={`relative w-20 h-20 bg-white rounded-3xl flex items-center justify-center shadow-[0_10px_30px_-10px_rgba(0,0,0,0.08)] border border-slate-100 transition-transform duration-500 cubic-bezier(0.25, 0.46, 0.45, 0.94) group-hover:-translate-y-4 group-hover:scale-105 group-hover:rotate-3`}>
+          {isPartner ? (
+             <Globe size={32} className="text-slate-400 group-hover:text-[#2776ea] transition-colors duration-300" strokeWidth={1.5} />
+          ) : (
+             <Icon size={32} className="text-slate-400 group-hover:text-[#2776ea] transition-colors duration-300" strokeWidth={1.5} />
+          )}
+        </div>
+      </div>
+
+      {/* 2. PEDESTAL BASE */}
+      <div className="relative h-full w-full bg-white rounded-[2.5rem] border border-slate-100 p-6 pt-16 flex flex-col items-center shadow-sm transition-all duration-500 group-hover:shadow-xl group-hover:shadow-blue-900/5 group-hover:border-blue-100 overflow-hidden">
+        
+        {/* Fake Floor Shadow */}
+        <div className="absolute top-16 left-1/2 -translate-x-1/2 w-16 h-3 bg-slate-900/5 blur-lg rounded-full transition-all duration-500 group-hover:w-12 group-hover:bg-blue-900/10 group-hover:blur-xl" />
+
+        {/* Content Section */}
+        <div className="relative z-10 text-center flex-1 flex flex-col w-full">
+            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">
+                {label}
+            </p>
+            
+            {/* If it's the partner card, we render the Logo image */}
+            {isPartner ? (
+                <div className="h-8 relative w-32 mx-auto grayscale opacity-70 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100">
+                    <Image 
+                        src="./assets/images/thingsatweb.png" 
+                        alt="ThingsAtWeb" 
+                        fill 
+                        className="object-contain" 
+                    />
+                </div>
+            ) : (
+                <>
+                    {href ? (
+                        <a href={href} className="text-lg font-bold text-slate-900 hover:text-[#2776ea] transition-colors leading-tight break-words">
+                            {value}
+                        </a>
+                    ) : (
+                        <p className="text-lg font-bold text-slate-900 leading-tight">
+                            {value}
+                        </p>
+                    )}
+                </>
+            )}
+        </div>
+
+        {/* Bottom Action Bar */}
+        <div className="mt-8 w-full pt-4 border-t border-slate-100 group-hover:border-slate-200/60 transition-colors flex items-center justify-between">
+            {onCopy ? (
+                <button 
+                    onClick={onCopy}
+                    className="flex items-center justify-between w-full text-xs font-bold text-slate-400 hover:text-[#2776ea] transition-colors uppercase tracking-wider"
+                >
+                    <span>{copied ? "Copied!" : "Copy Address"}</span>
+                    {copied ? <Check size={16} /> : <Copy size={16} />}
+                </button>
+            ) : (
+                <a 
+                    href={href}
+                    target={isPartner ? "_blank" : undefined}
+                    rel={isPartner ? "noopener noreferrer" : undefined}
+                    className="flex items-center justify-between w-full text-xs font-bold text-slate-400 hover:text-[#2776ea] transition-colors uppercase tracking-wider"
+                >
+                    <span>{isPartner ? "Visit Partner" : `${label.split(" ")[0]} Now`}</span>
+                    <ArrowUpRight size={16} />
+                </a>
+            )}
+        </div>
+
+        {/* Subtle Hover Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+      </div>
+    </div>
+);
+
 
 export default function Contact() {
   const [copied, setCopied] = useState<string | null>(null);
@@ -40,6 +134,14 @@ export default function Contact() {
       value: "Mylapore, Chennai, TN 600004.",
       icon: MapPin,
     },
+    // We add the partner link here to balance the grid
+    {
+      label: "Global Partner",
+      value: "ThingsAtWeb",
+      icon: Globe,
+      href: "https://www.thingsatweb.com/",
+      isPartner: true
+    }
   ];
 
   const handleCopy = (text: string, id: string) => {
@@ -60,73 +162,13 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-white py-24 font-sora"
+      className="relative overflow-hidden bg-white py-24 lg:py-32 font-sora"
     >
-      {/* Background Texture */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#f8fafc_1px,transparent_1px),linear-gradient(to_bottom,#f8fafc_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
-      </div>
-
       <div className="relative mx-auto max-w-7xl px-6 z-10">
-        <div className="grid lg:grid-cols-12 gap-16 lg:gap-8 items-start">
+        <div className="grid lg:grid-cols-12 gap-16 lg:gap-20 items-start">
           
-          {/* --- LEFT COLUMN: CONTACT CARDS --- */}
-          <div className="lg:col-span-7 order-2 lg:order-1">
-            <div className="grid gap-5">
-              {contactDetails.map((item, i) => (
-                <div
-                  key={i}
-                  className="group relative flex items-center justify-between p-6 md:p-8 rounded-2xl bg-white border border-slate-200 transition-all duration-300 hover:border-[#2776ea] hover:shadow-xl hover:shadow-blue-900/5 hover:-translate-y-1"
-                >
-                  {/* Subtle Hover Overlay */}
-                  <div className="absolute inset-0 bg-slate-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl" />
-
-                  <div className="relative z-10 flex items-center gap-6">
-                    {/* Tech Squircle Icon */}
-                    <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 text-slate-600 transition-all duration-300 group-hover:bg-[#2776ea] group-hover:border-[#2776ea] group-hover:text-white group-hover:scale-105">
-                      <item.icon size={26} strokeWidth={1.5} />
-                    </div>
-                    
-                    <div>
-                      <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-1.5">
-                        {item.label}
-                      </p>
-                      {item.href ? (
-                        <a
-                          href={item.href}
-                          className="text-lg md:text-xl font-bold text-slate-900 hover:text-[#2776ea] transition-colors"
-                        >
-                          {item.value}
-                        </a>
-                      ) : (
-                        <p className="text-lg md:text-xl font-bold text-slate-900 leading-snug">
-                          {item.value}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Copy Action */}
-                  <div className="relative z-10 hidden sm:block">
-                      <button
-                        onClick={() => handleCopy(item.value, item.label)}
-                        className="flex h-10 w-10 items-center justify-center rounded-xl text-slate-300 hover:bg-slate-100 hover:text-[#2776ea] transition-all"
-                        title="Copy"
-                      >
-                        {copied === item.label ? (
-                          <Check size={20} className="text-[#76ea27]" />
-                        ) : (
-                          <Copy size={20} />
-                        )}
-                      </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* --- RIGHT COLUMN: HEADER & CTA --- */}
-          <div className="lg:col-span-5 flex flex-col items-start text-left order-1 lg:order-2">
+          {/* --- LEFT COLUMN: STICKY HEADER & CTA --- */}
+          <div className="lg:col-span-5 flex flex-col items-start text-left lg:sticky lg:top-24 self-start">
             <SectionHeader
               title="Get in Touch"
               highlight="Let's Collaborate"
@@ -139,35 +181,36 @@ export default function Contact() {
                 {/* Main CTA Button */}
                 <button
                     onClick={() => setIsModalOpen(true)}
-                    className="group inline-flex items-center justify-center gap-3 bg-[#2776ea] text-white px-8 py-5 rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-[#76ea27] transition-all shadow-xl shadow-blue-500/20 active:scale-95 w-full sm:w-fit"
+                    className="group inline-flex items-center justify-center gap-4 bg-[#2776ea] text-white px-8 py-6 rounded-[2rem] text-sm font-black uppercase tracking-widest hover:bg-[#76ea27] transition-all   hover:-translate-y-1 active:scale-95 w-full sm:w-fit"
                 >
-                    Schedule Consultation
-                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                    Start A Project
+                    <div className="bg-white/20 p-1 rounded-full group-hover:translate-x-1 transition-transform">
+                        <ArrowRight size={16} />
+                    </div>
                 </button>
 
-                {/* Partner Logo Box */}
-                <div className="mt-4">
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-4">
-                        Global Technology Partner
-                    </p>
-                    <a
-                        href="https://www.thingsatweb.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group inline-flex items-center gap-5 rounded-2xl border border-slate-200 bg-white p-5 pr-8 transition-all hover:border-[#2776ea] hover:shadow-lg hover:-translate-y-1"
-                    >
-                        <div className="relative h-8 w-32 grayscale opacity-70 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100">
-                            <Image
-                                src="./assets/images/thingsatweb.png"
-                                alt="ThingsAtWeb"
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-                        <div className="h-8 w-px bg-slate-100" />
-                        <ArrowUpRight size={18} className="text-slate-300 group-hover:text-[#2776ea]" />
-                    </a>
-                </div>
+                <p className="text-xs font-medium text-slate-400 leading-relaxed max-w-xs">
+                    Prefer a quick chat? Use the contact details on the right to reach our team directly.
+                </p>
+            </div>
+          </div>
+
+          {/* --- RIGHT COLUMN: BALANCED 2x2 GRID --- */}
+          <div className="lg:col-span-7">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-12">
+              {contactDetails.map((item, i) => (
+                <ContactCard 
+                    key={i}
+                    label={item.label}
+                    value={item.value}
+                    icon={item.icon}
+                    href={item.href}
+                    isPartner={item.isPartner}
+                    // Only pass copy props if it's the address
+                    onCopy={!item.href && !item.isPartner ? () => handleCopy(item.value, item.label) : undefined}
+                    copied={copied === item.label}
+                />
+              ))}
             </div>
           </div>
 
@@ -263,7 +306,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#2776ea] text-white font-black uppercase tracking-[0.2em] text-xs py-5 rounded-2xl hover:bg-[#76ea27] transition-all shadow-xl shadow-blue-500/10 flex items-center justify-center gap-3 disabled:opacity-70 active:scale-95"
+                className="w-full bg-[#2776ea] text-white font-black uppercase tracking-[0.2em] text-xs py-5 rounded-2xl hover:bg-[#76ea27] transition-all  flex items-center justify-center gap-3 disabled:opacity-70 active:scale-95"
               >
                 {isSubmitting ? (
                   "Sending..."

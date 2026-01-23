@@ -4,345 +4,284 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { ChevronDown, Sparkles, X, Menu, ArrowRight, MapPin, Globe, Layers, Briefcase, Users, Handshake, Info } from "lucide-react";
+import { 
+  ChevronDown, X, Menu, ArrowRight, 
+  Globe, Briefcase, Handshake, Info,
+  Code2, Bot, Cloud, Zap, Terminal, Wifi, BarChart3, Store, LayoutGrid 
+} from "lucide-react";
 
-const primaryItems = [
-  { name: "Home", type: "section", id: "hero" },
-  { name: "Services", type: "page", href: "/service" },
+// --- DATA CONFIGURATION ---
+
+// 1. Standalone Links (Home, Projects, etc.)
+const navLinks = [
+  { name: "Home", type: "page", id: "/" },
   { name: "Projects", type: "page", href: "/projects" },
   { name: "Products", type: "page", href: "/products" },
   { name: "Branches", type: "page", href: "/branch" },
 ];
 
-const secondaryItems = [
-  { name: "About", type: "section", id: "about", icon: Info },
-  { name: "Partners", type: "section", id: "partner", icon: Handshake },
-  { name: "Clients", type: "section", id: "client", icon: Globe },
-  { name: "Career", type: "section", id: "career", icon: Briefcase },
-  { name: "Location", type: "section", id: "location", icon: MapPin },
-  { name: "Team", type: "page", href: "/team", icon: Users },
+// 2. Services Group (Updated with "All Services" at the top)
+const serviceItems = [
+  { name: "All Services", href: "/service", icon: LayoutGrid }, // <--- ADDED HERE
+  { name: "Web Development", href: "/services?category=web-development", icon: Code2 },
+  { name: "AI & ML", href: "/services?category=ai-machine-learning", icon: Bot },
+  { name: "Cloud Services", href: "/services?category=cloud-services", icon: Cloud },
+  { name: "Digital Trans.", href: "/services?category=digital-transformation", icon: Zap },
+  { name: "DevOps", href: "/services?category=devops", icon: Terminal },
+  { name: "IoT Solutions", href: "/services?category=iot-solutions", icon: Wifi },
+  { name: "Data Analytics", href: "/services?category=data-analytics", icon: BarChart3 },
+  { name: "StoreTech", href: "/services?category=storetech", icon: Store },
+];
+
+// 3. Company Group (Existing Dropdown Data)
+const companyItems = [
+  { name: "About Us", type: "page", id: "/about", icon: Info },
+  { name: "Industries", type: "page", id: "/industries", icon: Info },
+  { name: "Our Partners", type: "section", id: "Partners", icon: Handshake },
+  { name: "Global Clients", type: "section", id: "client", icon: Globe },
+  { name: "Careers", type: "page", id: "/career", icon: Briefcase },
 ];
 
 export default function Navbar() {
-  const [active, setActive] = useState<string | null>("hero");
+  const [activeSection, setActiveSection] = useState<string>("hero");
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [mobileCompanyOpen, setMobileCompanyOpen] = useState(false);
   const router = useRouter();
   const path = usePathname();
-
+  
+  // Track scroll for background effects
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 30);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Lock body scroll when mobile menu is open
+  // Intersection Observer for section activation
   useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-      // Optional: close the company submenu when closing main menu
-      setTimeout(() => setMobileCompanyOpen(false), 300); 
-    }
-  }, [open]);
+    if (path !== "/") return;
 
-  useEffect(() => {
-    if (!path || path !== "/") {
-      setActive(null);
-      return;
-    }
-    const sections = document.querySelectorAll("section[id]");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActive(entry.target.id);
-        });
-      },
-      { rootMargin: "-40% 0px -50% 0px" }
-    );
-    sections.forEach((section) => observer.observe(section));
+    const observerOptions = {
+      root: null,
+      rootMargin: "-20% 0px -70% 0px",
+      threshold: 0,
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    const sections = ["hero", "about", "partner", "client", "career"];
+    
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
     return () => observer.disconnect();
   }, [path]);
 
   const handleNavClick = (item: any) => {
     setOpen(false);
-    if (item.type === "page") {
-      setActive(item.href);
-      router.push(item.href);
+    
+    // Handle Direct Links (Pages)
+    if (item.type === "page" || item.href) {
+      router.push(item.href || item.id); // Fallback to id if href missing
       return;
     }
-    const el = document.getElementById(item.id);
-    if (el && path === "/") {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-      history.replaceState(null, "", `/#${item.id}`);
-      setActive(item.id);
+    
+    // Handle Section Scroll (Home Page)
+    if (path === "/") {
+      const el = document.getElementById(item.id);
+      if (el) {
+        window.scrollTo({
+          top: el.offsetTop - 90,
+          behavior: "smooth"
+        });
+      }
     } else {
       router.push(`/#${item.id}`);
     }
   };
 
+  const isLinkActive = (item: any) => {
+    if (item.href) return path === item.href;
+    if (item.type === 'section' && path === '/') return activeSection === item.id;
+    return false;
+  };
+
   return (
     <>
-      <header
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 font-sora ${
-          scrolled ? "py-3" : "py-5"
-        }`}
-      >
-        <nav
-          className={`mx-auto flex max-w-[95%] lg:max-w-7xl items-center justify-between px-5 py-3 rounded-2xl transition-all duration-500 border ${
-            scrolled || open
-              ? "bg-white/10 backdrop-blur-3xl border-white/20 shadow-xl shadow-blue-900/5"
-              : "bg-transparent border-transparent"
-          }`}
-        >
-          {/* Logo */}
-          <Link
-            href="/#hero"
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavClick({ type: "section", id: "hero" });
-            }}
-            className="flex items-center shrink-0 transition-transform active:scale-95"
-          >
-            <Image
-              src="./assets/webonic2.png"
-              alt="Logo"
-              width={130}
-              height={30}
-              priority
-              className="object-contain w-28 lg:w-32"
-            />
+      <header className={`fixed inset-x-0 top-0 z-[100] transition-all duration-500 ${scrolled ? "py-3" : "py-6"}`}>
+        <nav className={`mx-auto flex max-w-[95%] lg:max-w-7xl items-center justify-between px-5 py-2.5 rounded-2xl transition-all duration-500 ${
+          scrolled 
+          ? "bg-white/75 backdrop-blur-xl border border-slate-200/40 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)]" 
+          : "bg-transparent border-transparent"
+        }`}>
+          
+          <Link href="/#hero" className="relative z-[101] flex items-center">
+            <Image src="./assets/webonic2.png" alt="Logo" width={130} height={30} priority className="w-28 lg:w-32" />
           </Link>
 
-          {/* Desktop Menu */}
-          <ul className="hidden lg:flex items-center gap-1 bg-primary-50/50 p-1.5 rounded-full border border-slate-100">
-            {primaryItems.map((item) => (
-              <DesktopNavItem
-                key={item.name}
-                item={item}
-                active={active}
-                path={path}
-                onClick={handleNavClick}
-              />
-            ))}
+          <div className="hidden lg:flex items-center gap-2">
+            <ul className="flex items-center gap-1 mr-4">
+              
+              {/* 1. HOME (First Item) */}
+              <li>
+                <button
+                  onClick={() => handleNavClick(navLinks[0])}
+                  className={`text-[11px] font-bold uppercase tracking-wider px-4 py-2 rounded-xl transition-all duration-300 ${
+                    isLinkActive(navLinks[0]) ? "text-[#2776ea] bg-[#2776ea]/8" : "text-slate-600 hover:text-slate-900 hover:bg-slate-50" 
+                  }`}
+                >
+                  {navLinks[0].name}
+                </button>
+              </li>
 
-            <li className="relative group ml-1">
-              <button
-                className={`flex items-center gap-1.5 px-5 py-2.5 text-[12px] font-bold transition-all cursor-pointer uppercase tracking-widest rounded-full hover:bg-white hover:shadow-sm text-slate-500 hover:text-[#2776ea]`}
-              >
-                More
-                <ChevronDown
-                  size={14}
-                  className="transition-transform duration-300 group-hover:rotate-180"
-                />
-              </button>
-
-              {/* Desktop Dropdown */}
-              <div className="absolute right-0 top-[120%] hidden group-hover:block w-64 pt-2 animate-in fade-in zoom-in-95 duration-200">
-                <div className="rounded-2xl bg-white p-2 shadow-2xl border border-slate-100 ring-1 ring-slate-200/50">
-                  <div className="grid gap-1">
-                    {secondaryItems.map((item) => (
+              {/* 2. SERVICES DROPDOWN (Group) */}
+              <li className="relative group">
+                <button className={`flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider px-4 py-2 transition-all ${
+                    path.includes("/services") ? "text-[#2776ea]" : "text-slate-600 group-hover:text-slate-900"
+                }`}>
+                  Services <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
+                </button>
+                
+                {/* Services Dropdown Panel */}
+                <div className="absolute top-full left-0 mt-3 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-3 group-hover:translate-y-0">
+                  <div className="bg-white/95 backdrop-blur-xl border border-slate-100 rounded-2xl p-2 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] flex flex-col gap-1 max-h-[80vh] overflow-y-auto">
+                    {serviceItems.map((item, index) => (
                       <button
                         key={item.name}
                         onClick={() => handleNavClick(item)}
-                        className="flex items-center gap-3 w-full rounded-xl px-4 py-3 text-[11px] cursor-pointer font-bold uppercase tracking-wider text-slate-500 hover:bg-slate-50 hover:text-[#2776ea] transition group/item text-left"
+                        className={`flex items-center gap-3 w-full p-2.5 rounded-xl text-left transition-all hover:bg-slate-50 group/item ${
+                            // Special styling for the first "All Services" item
+                            index === 0 ? "bg-slate-50/80 border-b border-slate-100 mb-1" : ""
+                        }`}
                       >
-                         <div className="h-8 w-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 group-hover/item:bg-[#2776ea]/10 group-hover/item:text-[#2776ea] transition-colors">
-                            {item.icon && <item.icon size={14} />}
-                         </div>
-                        <span>{item.name}</span>
+                        <div className={`h-8 w-8 rounded-lg flex items-center justify-center transition-colors ${
+                            index === 0 ? "bg-[#2776ea] text-white" : "bg-slate-50 text-slate-500 group-hover/item:text-[#2776ea] group-hover/item:bg-[#2776ea]/10"
+                        }`}>
+                          <item.icon size={16} />
+                        </div>
+                        <span className={`text-[10px] font-bold uppercase ${index === 0 ? "text-[#2776ea]" : "text-slate-700"}`}>
+                            {item.name}
+                        </span>
                       </button>
                     ))}
                   </div>
                 </div>
-              </div>
-            </li>
-          </ul>
+              </li>
 
-          {/* CTA & Mobile Toggle */}
-          <div className="flex items-center gap-3">
+              {/* 3. REST OF NAV LINKS (Projects, Products, Branches) */}
+              {navLinks.slice(1).map((item) => {
+                const active = isLinkActive(item);
+                return (
+                  <li key={item.name}>
+                    <button
+                      onClick={() => handleNavClick(item)}
+                      className={`text-[11px] font-bold uppercase tracking-wider px-4 py-2 rounded-xl transition-all duration-300 ${
+                        active 
+                        ? "text-[#2776ea] bg-[#2776ea]/8" 
+                        : "text-slate-600 hover:text-slate-900 hover:bg-slate-50" 
+                      }`}
+                    >
+                      {item.name}
+                    </button>
+                  </li>
+                );
+              })}
+              
+              {/* 4. COMPANY DROPDOWN (Existing Group) */}
+              <li className="relative group">
+                <button className="flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider px-4 py-2 text-slate-600 group-hover:text-slate-900 transition-all">
+                  Company <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
+                </button>
+                
+                <div className="absolute top-full right-0 mt-3 w-60 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-3 group-hover:translate-y-0">
+                  <div className="bg-white/95 backdrop-blur-xl border border-slate-100 rounded-2xl p-2 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)]">
+                    {companyItems.map((item) => (
+                      <button
+                        key={item.name}
+                        onClick={() => handleNavClick(item)}
+                        className={`flex items-center gap-3 w-full p-2.5 rounded-xl text-left transition-all group/item ${
+                          activeSection === item.id && path === '/' ? "bg-slate-50" : "hover:bg-slate-50"
+                        }`}
+                      >
+                        <div className={`h-8 w-8 rounded-lg flex items-center justify-center transition-colors ${
+                          activeSection === item.id && path === '/' ? "bg-[#2776ea] text-white" : "bg-slate-50 text-slate-500 group-hover/item:text-[#2776ea] group-hover/item:bg-[#2776ea]/10"
+                        }`}>
+                          <item.icon size={16} />
+                        </div>
+                        <span className={`text-[11px] font-bold uppercase ${activeSection === item.id && path === '/' ? "text-[#2776ea]" : "text-slate-700"}`}>{item.name}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </li>
+            </ul>
+
             <Link
               href="/contact"
-              className="hidden sm:inline-flex items-center justify-center rounded-xl bg-[#2776ea] px-6 py-2.5 text-[11px] uppercase tracking-[0.15em] text-white font-bold shadow-lg shadow-blue-500/25 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-blue-600/30 active:translate-y-0 active:scale-95"
+              className="bg-[#2776ea] text-white px-7 py-3 rounded-xl text-[11px] font-bold uppercase tracking-widest hover:bg-[#1e5ebf] hover:scale-[1.02] transition-all shadow-md shadow-blue-500/10 active:scale-95"
             >
-              Get Started
+              Start Project
             </Link>
-
-            <button
-              onClick={() => setOpen(!open)}
-              className={`lg:hidden p-2.5 cursor-pointer rounded-xl border transition-all active:scale-90 ${
-                 open 
-                 ? "bg-slate-100 text-slate-900 border-slate-200"
-                 : "bg-white/60 text-slate-600 border-white/40 hover:text-[#2776ea]"
-              }`}
-            >
-              {open ? <X size={22} /> : <Menu size={22} />}
-            </button>
           </div>
+
+          <button onClick={() => setOpen(!open)} className="lg:hidden p-2 text-slate-900 relative z-[101]">
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </nav>
       </header>
 
-      {/* --- FLOATING MOBILE MENU --- */}
-      <div
-        className={`fixed inset-0 z-[49] lg:hidden transition-all duration-500 ${
-          open ? "visible pointer-events-auto" : "invisible pointer-events-none"
-        }`}
-      >
-        {/* Backdrop */}
-        <div
-          className={`absolute inset-0 bg-slate-900/20 backdrop-blur-sm transition-opacity duration-500 ${
-            open ? "opacity-100" : "opacity-0"
-          }`}
-          onClick={() => setOpen(false)}
-        />
-
-        {/* Floating Island Container */}
-        <div
-          className={`absolute top-24 left-4 right-4 max-h-[80vh] overflow-y-auto bg-white rounded-[2rem] shadow-2xl shadow-slate-200/50 ring-1 ring-slate-100 transition-all duration-500 cubic-bezier(0.34, 1.56, 0.64, 1) ${
-            open
-              ? "opacity-100 translate-y-0 scale-100"
-              : "opacity-0 -translate-y-8 scale-95"
-          }`}
-        >
-          <div className="p-2 space-y-1">
-            {/* Primary Navigation */}
-            <div className="p-4 grid gap-2">
-              <p className="px-4 text-[10px] font-black uppercase tracking-[0.2em] text-slate-300 mb-2">
-                Menu
-              </p>
-              {primaryItems.map((item) => (
-                <MobileNavItem
-                  key={item.name}
-                  item={item}
-                  active={active}
-                  path={path}
-                  onClick={handleNavClick}
-                />
-              ))}
-            </div>
-
-            {/* Separator */}
-            <div className="h-px bg-slate-100 mx-6" />
-
-            {/* Secondary / Company Navigation */}
-            <div className="p-4">
-               <button
-                  onClick={() => setMobileCompanyOpen(!mobileCompanyOpen)}
-                  className={`flex items-center justify-between w-full px-5 py-4 rounded-2xl transition-all ${
-                      mobileCompanyOpen ? "bg-slate-50" : "hover:bg-slate-50"
-                  }`}
-               >
-                  <div className="flex items-center gap-3">
-                      <div className="h-8 w-8 rounded-full bg-[#2776ea]/10 flex items-center justify-center text-[#2776ea]">
-                          <Layers size={14} />
-                      </div>
-                      <span className="text-sm font-bold text-slate-700">Company Information</span>
-                  </div>
-                  <ChevronDown
-                    size={16}
-                    className={`text-slate-400 transition-transform duration-300 ${
-                      mobileCompanyOpen ? "rotate-180 text-[#2776ea]" : ""
-                    }`}
-                  />
-               </button>
-
-               {/* Accordion Content */}
-               <div 
-                  className={`grid transition-all duration-300 ease-in-out overflow-hidden ${
-                      mobileCompanyOpen ? "grid-rows-[1fr] opacity-100 mt-2" : "grid-rows-[0fr] opacity-0 mt-0"
-                  }`}
-               >
-                  <div className="min-h-0 bg-slate-50 rounded-2xl border border-slate-100 p-2 grid grid-cols-2 gap-2">
-                      {secondaryItems.map((item) => (
-                        <button
-                          key={item.name}
-                          onClick={() => handleNavClick(item)}
-                          className="flex flex-col items-center justify-center p-3 rounded-xl bg-white shadow-sm border border-slate-100 active:scale-95 transition-transform"
-                        >
-                            {item.icon && <item.icon size={16} className="text-[#2776ea] mb-2" />}
-                            <span className="text-[10px] font-bold text-slate-600 uppercase tracking-wider">{item.name}</span>
-                        </button>
-                      ))}
-                  </div>
-               </div>
-            </div>
-
-            {/* Bottom CTA */}
-            <div className="p-2 mt-2">
-              <Link
-                href="/contact"
-                onClick={() => setOpen(false)}
-                className="flex items-center justify-between w-full rounded-2xl p-5 bg-[#2776ea] text-white shadow-lg shadow-blue-500/30 active:scale-[0.98] transition-all group"
-              >
-                <div className="flex flex-col">
-                    <span className="text-[10px] font-medium opacity-80 uppercase tracking-widest mb-1">Have a project?</span>
-                    <span className="text-sm font-bold">Contact Us</span>
-                </div>
-                <div className="h-10 w-10 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-[#2776ea] transition-colors">
-                    <ArrowRight size={18} />
-                </div>
-              </Link>
-            </div>
+      {/* --- MOBILE MENU --- */}
+      <div className={`fixed inset-0 z-[99] lg:hidden bg-white/98 backdrop-blur-2xl transition-all duration-500 ${open ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+        <div className="flex flex-col h-full pt-28 px-8 overflow-y-auto pb-10">
+          
+          {/* Main Links */}
+          <div className="space-y-1 mb-8">
+            {navLinks.map((item) => (
+              <button key={item.name} onClick={() => handleNavClick(item)} className="flex items-center justify-between w-full py-4 text-left border-b border-slate-50">
+                <span className={`text-xl font-black tracking-tight ${isLinkActive(item) ? "text-[#2776ea]" : "text-slate-900"}`}>{item.name}</span>
+                <ArrowRight size={20} className={isLinkActive(item) ? "text-[#2776ea]" : "text-slate-300"} />
+              </button>
+            ))}
           </div>
+          
+          {/* Services Grid (Mobile) */}
+          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em] mb-4">Services</p>
+          <div className="grid grid-cols-2 gap-3 mb-8">
+            {serviceItems.map((item, index) => (
+              <button 
+                key={item.name} 
+                onClick={() => handleNavClick(item)} 
+                className={`p-3 bg-slate-50 rounded-xl flex flex-col gap-3 border border-slate-100/50 hover:bg-white hover:border-[#2776ea]/30 transition-all text-left ${index === 0 ? "col-span-2 bg-[#2776ea]/5 border-[#2776ea]/20" : ""}`}
+              >
+                <item.icon size={20} className={index === 0 ? "text-[#2776ea]" : "text-slate-500"} />
+                <span className={`text-[9px] font-bold uppercase tracking-wider leading-tight ${index === 0 ? "text-[#2776ea]" : "text-slate-700"}`}>
+                    {item.name}
+                </span>
+              </button>
+            ))}
+          </div>
+
+          {/* Company Grid (Mobile) */}
+          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em] mb-4">Company</p>
+          <div className="grid grid-cols-2 gap-3">
+            {companyItems.map((item) => (
+              <button key={item.name} onClick={() => handleNavClick(item)} className="p-3 bg-slate-50 rounded-xl flex flex-col gap-3 border border-slate-100/50 hover:bg-white hover:border-[#2776ea]/30 transition-all text-left">
+                <item.icon size={20} className="text-[#2776ea]" />
+                <span className="text-[9px] font-bold uppercase text-slate-700 tracking-wider">{item.name}</span>
+              </button>
+            ))}
+          </div>
+
         </div>
       </div>
     </>
-  );
-}
-
-// --- SUB-COMPONENTS ---
-
-function DesktopNavItem({ item, active, path, onClick }: any) {
-  const isActive =
-    item.type === "section"
-      ? active === item.id && path === "/"
-      : path === item.href;
-
-  return (
-    <li>
-      <button
-        onClick={() => onClick(item)}
-        className={`relative px-5 py-2.5 text-[12px] font-bold uppercase tracking-widest transition-all duration-300 rounded-full cursor-pointer ${
-          isActive
-            ? "bg-white text-[#2776ea] shadow-sm"
-            : "text-slate-500 hover:text-[#2776ea] hover:bg-white/50"
-        }`}
-      >
-        {item.name}
-      </button>
-    </li>
-  );
-}
-
-function MobileNavItem({ item, active, path, onClick }: any) {
-  const isActive =
-    item.type === "section"
-      ? active === item.id && path === "/"
-      : path === item.href;
-
-  return (
-    <button
-      onClick={() => onClick(item)}
-      className={`group flex items-center justify-between w-full text-left rounded-2xl px-5 py-4 transition-all duration-300 ${
-        isActive
-          ? "bg-[#2776ea] text-white shadow-md shadow-blue-500/20" // NEW ACTIVE STYLE: SOLID BLUE PILL
-          : "hover:bg-slate-50 text-slate-500"
-      }`}
-    >
-      <span className={`text-[13px] font-bold uppercase tracking-widest ${isActive ? "text-white" : ""}`}>
-        {item.name}
-      </span>
-
-      {isActive ? (
-        <Sparkles size={16} className="text-white animate-pulse" />
-      ) : (
-        <ArrowRight
-          size={14}
-          className="text-slate-300 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"
-        />
-      )}
-    </button>
   );
 }
