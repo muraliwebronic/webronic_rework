@@ -8,7 +8,7 @@ export const CLOUD_DATA: ServicePageData = {
     title: "Cloud Services",
     tagline: "Scalable Infrastructure",
     description: "Enterprise cloud solutions across AWS, Azure, and Google Cloud. Cloud migration, cloud-first development, multi-cloud management, and hybrid cloud architecture",
-    image: "/assets/services/cloud-computing.png", // Ensure this path exists
+    image: "./assets/services/cloud-computing.png", // Ensure this path exists
     icon: "Cloud",
     points: [
       "Seamless Cloud Migration",

@@ -8,7 +8,7 @@ export const SOFTWARE_DATA: ServicePageData = {
     title: "Custom Software",
     tagline: "Enterprise Engineering",
     description: "Custom software development for web, mobile, and desktop. Full stack development, API-first integration, and legacy modernization using Agile methodology",
-    image: "/assets/services/software-dev.png", // Ensure path exists
+    image: "./assets/services/software-dev.png", // Ensure path exists
     icon: "Code",
     points: [
       "Full-Stack Web & Mobile",

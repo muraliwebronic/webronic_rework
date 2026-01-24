@@ -6,7 +6,7 @@ export const BLOCKCHAIN_DATA: ServicePageData = {
     title: "Blockchain Dev",
     tagline: "Decentralized Solutions",
     description: "Enterprise blockchain, smart contracts, dApps, and NFT marketplaces. Expertise in Ethereum, Hyperledger, and Solana",
-    image: "/assets/services/blockchain.png",
+    image: "./assets/services/blockchain.png",
     icon: "Link",
     points: ["Smart Contract Development", "dApp Development", "Enterprise Blockchain", "NFT & DeFi Solutions"],
     technologies: [

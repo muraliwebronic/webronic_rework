@@ -14,7 +14,7 @@ export const CAROUSEL_DATA = [
       "Cloud-native cross-platform solution powering 150+ unmanned stores with AI checkout, IoT inventory management, and integrated loyalty systems. Proven with 50M+ transactions and a 99.7% success rate",
     stats: ["60% Cost Reduction", "99.7% Success Rate", "50M+ Transactions"],
     cta: "Explore StoreTech",
-    img: "/assets/images/storetech-logo-black.png",
+    img: "./assets/images/storetech-logo-black.png",
     url: "https://vasanthwebronic-oss.github.io/storetech-portfolio/",
   },
   {
@@ -29,7 +29,7 @@ export const CAROUSEL_DATA = [
       "Multi-tenant Scalability",
     ],
     cta: "Explore Tanlux",
-    img: "/assets/images/tanluxlogo.png",
+    img: "./assets/images/tanluxlogo.png",
     url: "https://tanlux.se/",
   },
   {
@@ -44,7 +44,7 @@ export const CAROUSEL_DATA = [
       "Workflow Automation",
     ],
     cta: "Explore Value Charts",
-    img: "/assets/images/valuechart.png",
+    img: "./assets/images/valuechart.png",
     url: "https://www.valueflowsoft.com/",
   },
   {
@@ -59,7 +59,7 @@ export const CAROUSEL_DATA = [
       "Downtime Elimination",
     ],
     cta: "Explore FP Analyzer",
-    img: "/assets/images/fpanalyzer.png",
+    img: "./assets/images/fpanalyzer.png",
     url: "https://www.fpanalyzer.se/",
   },
   {
@@ -74,7 +74,7 @@ export const CAROUSEL_DATA = [
       "No-Code Builder",
     ],
     cta: "Explore VirtualTour360",
-    img: "/assets/images/liveTourimg.png",
+    img: "./assets/images/liveTourimg.png",
     url: "https://virtualtour360.ai/",
   },
 ];

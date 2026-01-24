@@ -179,7 +179,7 @@ useEffect(() => {
         >
           <Link href="/#hero" className="relative z-[101] flex items-center">
             <Image
-              src="/assets/webonic2.png"
+              src="./assets/webonic2.png"
               alt="Logo"
               width={130}
               height={30}

@@ -6,7 +6,7 @@ export const CONSULTING_DATA: ServicePageData = {
     title: "IT Consulting",
     tagline: "Strategic Advisory",
     description: "Align IT investments with business objectives through C-level advisory, digital strategy, and technology roadmaps",
-    image: "/assets/services/consulting.png",
+    image: "./assets/services/consulting.png",
     icon: "Compass",
     points: ["IT Strategy & Planning", "Enterprise Architecture", "M&A Tech Due Diligence", "Fractional CIO Services"],
     technologies: [

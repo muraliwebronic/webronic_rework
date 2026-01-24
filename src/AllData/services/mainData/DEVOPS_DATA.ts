@@ -8,7 +8,7 @@ export const DEVOPS_DATA: ServicePageData = {
     title: "DevOps & SRE",
     tagline: "Accelerate Delivery",
     description: "DevOps consulting and implementation: CI/CD pipelines, infrastructure as code, Kubernetes, Docker, automated testing, monitoring. Accelerate deployment, improve reliability",
-    image: "/assets/services/devops.png", // Ensure path exists
+    image: "./assets/services/devops.png", // Ensure path exists
     icon: "Infinity",
     points: [
       "Automated CI/CD Pipelines",
