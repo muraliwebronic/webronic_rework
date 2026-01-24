@@ -1,66 +1,74 @@
 "use client";
 
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import React from "react";
+import { ArrowRight, MoveRight } from "lucide-react";
 import { MANUFACTURING_SOLUTIONS_DATA } from "../data/MANUFACTURING_SOLUTIONS_DATA";
 import SectionHeader from "@/components/common/SectionHeader";
+import { motion } from "framer-motion";
 
 export default function ManufacturingSolutions() {
   const { mainTitle, section1 } = MANUFACTURING_SOLUTIONS_DATA;
 
-  // 1. Assign the icon to a Capitalized variable to satisfy React/JSX rules
+  // Assign the icon for the intro decoration
   const DecoIcon = section1.sensorDeployment.categories[0].icon;
 
   return (
-    <section className=" py-24 lg:py-32 font-sora" id="solutions">
-      <div className="container mx-auto px-6 max-w-7xl">
+    <section className="py-20 lg:py-28 font-sora bg-white relative overflow-hidden" id="solutions">
+      {/* Background Decor */}
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-50/40 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+      
+      <div className="container mx-auto px-6 max-w-6xl relative z-10">
         
         {/* --- Main Section Header --- */}
-        <SectionHeader 
-          title={mainTitle}
-          centered={true}
-          className="mb-24"
-        />
+        <div className="mb-16 lg:mb-20">
+          <SectionHeader 
+            title={mainTitle}
+            centered={true}
+          />
+        </div>
 
         {/* --- Section 1: Industry 4.0 --- */}
-        <div className="space-y-16">
+        <div className="space-y-16 lg:space-y-24">
           
-          {/* Intro Block (Clean Pedestal) */}
+          {/* 1. Intro Block (Two-Column Pedestal) */}
           <div className="grid lg:grid-cols-12 gap-8 items-center">
-             <div className="lg:col-span-4">
-                <div className="inline-flex items-center gap-2 text-[#2776ea] font-black uppercase tracking-widest text-xs mb-4">
-                  <span className="h-px w-8 bg-[#2776ea]" />
+             <div className="lg:col-span-5">
+                <div className="inline-flex items-center gap-2 text-[#2776ea] font-bold uppercase tracking-[0.2em] text-[9px] mb-4">
+                  <span className="h-[1.5px] w-8 bg-[#2776ea]" />
                   Section 01
                 </div>
-                <h3 className="text-3xl lg:text-4xl font-black text-slate-900 leading-tight">
+                <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 leading-tight tracking-tight">
                   {section1.title}
                 </h3>
              </div>
-             <div className="lg:col-span-8">
-                <div className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-slate-100 relative overflow-hidden">
-                  
-                  {/* --- CORRECTED LINE BELOW --- */}
-                  <div className="absolute top-0 right-0 p-8 opacity-[0.03] pointer-events-none">
-                    <DecoIcon size={120} strokeWidth={1} />
-                  </div>
-                  {/* ----------------------------- */}
 
-                  <h4 className="text-xl font-bold text-[#2776ea] mb-4">
-                    {section1.intro.title}
-                  </h4>
-                  <p className="text-lg text-slate-500 font-medium leading-relaxed relative z-10">
-                    {section1.intro.description}
-                  </p>
+             <div className="lg:col-span-7">
+                <div className="group relative bg-slate-50/50 rounded-[2rem] p-8 lg:p-10 border border-slate-100 transition-all duration-500 hover:bg-white hover:shadow-xl hover:shadow-blue-500/5">
+                  {/* Watermark Icon */}
+                  <div className="absolute top-4 right-4 text-[#2776ea] opacity-[0.04] group-hover:opacity-[0.06] transition-opacity duration-500">
+                    <DecoIcon size={100} strokeWidth={1} />
+                  </div>
+
+                  <div className="relative z-10">
+                    <h4 className="text-lg font-bold text-[#2776ea] mb-3 flex items-center gap-2">
+                      <MoveRight size={18} />
+                      {section1.intro.title}
+                    </h4>
+                    <p className="text-base text-slate-500 font-medium leading-relaxed">
+                      {section1.intro.description}
+                    </p>
+                  </div>
                 </div>
              </div>
           </div>
 
-          {/* Sensor Deployment Grid */}
-          <div className="pt-12">
-            <div className="flex flex-col items-center mb-16">
-               <h4 className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-4">
+          {/* 2. Technical Architecture Grid */}
+          <div className="relative">
+            <div className="flex flex-col items-center text-center mb-12">
+               <span className="text-[9px] font-black text-slate-400 uppercase tracking-[0.3em] mb-3">
                  Technical Architecture
-               </h4>
-               <h2 className="text-2xl md:text-3xl font-black text-slate-900">
+               </span>
+               <h2 className="text-xl md:text-2xl font-bold text-slate-900 tracking-tight">
                  {section1.sensorDeployment.title}
                </h2>
             </div>
@@ -72,39 +80,45 @@ export default function ManufacturingSolutions() {
                 const accentBg = isBlue ? "bg-[#2776ea]/10" : "bg-[#76ea27]/10";
                 const borderHover = isBlue ? "hover:border-[#2776ea]/30" : "hover:border-[#76ea27]/30";
                 const bulletColor = isBlue ? "bg-[#2776ea]" : "bg-[#76ea27]";
-
-                // Assigning local cat icon to a capitalized variable for mapping
+                
                 const CatIcon = cat.icon;
 
                 return (
-                  <div 
+                  <motion.div 
                     key={index}
-                    className={`group bg-white rounded-[2.5rem] p-8 border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 ${borderHover} flex flex-col h-full hover:-translate-y-2`}
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className={`group relative bg-white rounded-[2rem] p-8 border border-slate-100 shadow-sm transition-all duration-500 ${borderHover} flex flex-col h-full hover:-translate-y-2 hover:shadow-lg hover:shadow-slate-200/50`}
                   >
                     <div className="flex items-center justify-between mb-8">
-                      <div className={`h-14 w-14 rounded-2xl ${accentBg} flex items-center justify-center ${accentColor} shrink-0 shadow-sm group-hover:scale-110 transition-transform duration-500`}>
-                        <CatIcon size={28} strokeWidth={1.5} />
+                      <div className={`h-12 w-12 rounded-xl ${accentBg} flex items-center justify-center ${accentColor} shrink-0 shadow-sm group-hover:scale-110 transition-all duration-500`}>
+                        <CatIcon size={24} strokeWidth={1.5} />
                       </div>
-                      <div className="h-8 w-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-300 group-hover:text-[#2776ea] transition-colors">
-                        <ArrowRight size={16} className="-rotate-45" />
+                      <div className="h-8 w-8 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-300 group-hover:text-[#2776ea] transition-all">
+                        <ArrowRight size={14} className="-rotate-45" />
                       </div>
                     </div>
 
-                    <h5 className="text-xl font-black text-slate-900 mb-6">
+                    <h5 className="text-lg font-bold text-slate-900 mb-6 tracking-tight">
                       {cat.title}
                     </h5>
 
                     <ul className="space-y-4 flex-grow">
                       {cat.items.map((item, i) => (
-                        <li key={i} className="flex items-start gap-3">
-                          <span className={`mt-2 h-1.5 w-1.5 rounded-full ${bulletColor} shrink-0 shadow-[0_0_8px_rgba(39,118,234,0.3)]`} />
-                          <span className="text-sm font-semibold text-slate-600 leading-relaxed">
+                        <li key={i} className="flex items-start gap-3 group/item">
+                          <span className={`mt-2 h-1.5 w-1.5 rounded-full ${bulletColor} shrink-0 opacity-40 group-hover/item:opacity-100 transition-opacity`} />
+                          <span className="text-xs font-bold text-slate-600 leading-relaxed group-hover/item:text-slate-900 transition-colors">
                             {item}
                           </span>
                         </li>
                       ))}
                     </ul>
-                  </div>
+
+                    {/* Subtle bottom accent line */}
+                    <div className={`absolute bottom-0 left-8 right-8 h-[2px] rounded-t-full transition-all duration-500 opacity-0 group-hover:opacity-100 ${bulletColor}`} />
+                  </motion.div>
                 );
               })}
             </div>

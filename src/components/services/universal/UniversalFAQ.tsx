@@ -23,7 +23,7 @@ export default function UniversalFAQ({ data }: { data: ServicePageData['faq'] })
         <SectionHeader 
           badge="FAQ"
           title={data.heading}
-          description="Answers to common questions about our process and deliverables."
+          description="Answers to common questions about our process and deliverables"
           centered={true}
           className="mb-12"
           size="default" // Using standard size

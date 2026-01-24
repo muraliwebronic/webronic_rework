@@ -56,22 +56,22 @@ export default function Contact() {
 
   const socials = [
     {
-      src: "./assets/icons/facebook.png",
+      src: "/assets/icons/facebook.png",
       href: "https://www.facebook.com/thingsatweb",
       alt: "Facebook",
     },
     {
-      src: "./assets/icons/instagram.png",
+      src: "/assets/icons/instagram.png",
       href: "https://www.instagram.com/thingsatweb/",
       alt: "Instagram",
     },
     {
-      src: "./assets/icons/youtube.png",
+      src: "/assets/icons/youtube.png",
       href: "https://www.youtube.com/channel/UCp53pdpbd7qL-JNoAkAW0Ag",
       alt: "YouTube",
     },
     {
-      src: "./assets/icons/linkedin.png",
+      src: "/assets/icons/linkedin.png",
       href: "https://www.linkedin.com/company/thingsatweb/",
       alt: "LinkedIn",
     },
@@ -195,7 +195,7 @@ export default function Contact() {
                   className="mt-12 flex items-center justify-center gap-6 opacity-60 hover:opacity-100 transition-opacity cursor-pointer group"
                 >
                   <Image
-                    src="./assets/images/thingsatweb.png"
+                    src="/assets/images/thingsatweb.png"
                     alt="Partner"
                     width={110}
                     height={30}

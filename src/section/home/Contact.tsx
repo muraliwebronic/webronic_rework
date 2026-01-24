@@ -59,7 +59,7 @@ const ContactCard = ({ label, value, icon: Icon, href, onCopy, copied, isPartner
             {isPartner ? (
                 <div className="h-8 relative w-32 mx-auto grayscale opacity-70 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100">
                     <Image 
-                        src="./assets/images/thingsatweb.png" 
+                        src="/assets/images/thingsatweb.png" 
                         alt="ThingsAtWeb" 
                         fill 
                         className="object-contain" 
@@ -131,7 +131,7 @@ export default function Contact() {
     },
     {
       label: "Registered Office",
-      value: "Mylapore, Chennai, TN 600004.",
+      value: "Mylapore, Chennai, TN 600004",
       icon: MapPin,
     },
     // We add the partner link here to balance the grid
@@ -172,7 +172,7 @@ export default function Contact() {
             <SectionHeader
               title="Get in Touch"
               highlight="Let's Collaborate"
-              description="Ready to transform your business? Our solution architects are here to design custom digital infrastructure tailored to your goals."
+              description="Ready to transform your business? Our solution architects are here to design custom digital infrastructure tailored to your goals"
               centered={false}
               className="mb-10"
             />
@@ -297,7 +297,7 @@ export default function Contact() {
                 </label>
                 <textarea
                   rows={4}
-                  placeholder="Tell us about your requirements..."
+                  placeholder="Tell us about your requirements.."
                   className="w-full rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm focus:ring-2 focus:ring-[#2776ea] outline-none transition resize-none font-medium text-slate-700 placeholder:text-slate-400"
                   required
                 />
@@ -309,7 +309,7 @@ export default function Contact() {
                 className="w-full bg-[#2776ea] text-white font-black uppercase tracking-[0.2em] text-xs py-5 rounded-2xl hover:bg-[#76ea27] transition-all  flex items-center justify-center gap-3 disabled:opacity-70 active:scale-95"
               >
                 {isSubmitting ? (
-                  "Sending..."
+                  "Sending.."
                 ) : (
                   <>
                     Send Request <Send size={16} />

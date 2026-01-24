@@ -5,7 +5,7 @@ export const GET_STARTED_DATA = {
     badge: "Get Started",
     title: "Start Your Cloud",
     titleHighlight: "Transformation",
-    description: "Choose the path that fits your current needs. Whether you're ready to migrate or just exploring options, we're here to help."
+    description: "Choose the path that fits your current needs. Whether you're ready to migrate or just exploring options, we're here to help"
   },
   cards: [
     {

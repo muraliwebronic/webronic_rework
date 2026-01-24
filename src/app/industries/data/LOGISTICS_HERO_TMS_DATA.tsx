@@ -22,7 +22,7 @@ import {
 export const LOGISTICS_HERO_TMS_DATA = {
   hero: {
     h1: "Logistics & Supply Chain Technology Solutions",
-    description: "Transform logistics operations with AI-powered route optimization, real-time tracking, warehouse automation, and predictive analytics delivering 30% cost reduction and 99% on-time delivery.",
+    description: "Transform logistics operations with AI-powered route optimization, real-time tracking, warehouse automation, and predictive analytics delivering 30% cost reduction and 99% on-time delivery",
     stats: [
       { value: "75+", label: "Logistics implementations", icon: Truck },
       { value: "30%", label: "Average transportation cost reduction", icon: TrendingDown },
@@ -33,45 +33,45 @@ export const LOGISTICS_HERO_TMS_DATA = {
   },
   overview: {
     title: "Industry Overview",
-    content: "Logistics and supply chain management faces unprecedented complexity. E-commerce drives demand for same-day delivery, customers expect real-time visibility, fuel costs fluctuate, driver shortages persist, and global supply chains grow increasingly vulnerable to disruption.",
+    content: "Logistics and supply chain management faces unprecedented complexity. E-commerce drives demand for same-day delivery, customers expect real-time visibility, fuel costs fluctuate, driver shortages persist, and global supply chains grow increasingly vulnerable to disruption",
     challenges: {
       title: "Critical Logistics Challenges:",
       items: [
         {
           title: "Last-Mile Delivery",
-          description: "Most expensive segment (28% of total shipping cost), urban congestion, failed deliveries, customer expectations for free/fast delivery.",
+          description: "Most expensive segment (28% of total shipping cost), urban congestion, failed deliveries, customer expectations for free/fast delivery",
           icon: MapPin
         },
         {
           title: "Visibility Gaps",
-          description: "Lack of real-time tracking across multi-modal shipments (ocean, air, rail, truck), delays in information flow, inability to proactively address issues.",
+          description: "Lack of real-time tracking across multi-modal shipments (ocean, air, rail, truck), delays in information flow, inability to proactively address issues",
           icon: Eye
         },
         {
           title: "Cost Pressure",
-          description: "Rising fuel costs, driver wage increases, tolls, insurance, equipment maintenance, competitive pricing pressure.",
+          description: "Rising fuel costs, driver wage increases, tolls, insurance, equipment maintenance, competitive pricing pressure",
           icon: DollarSign
         },
         {
           title: "Driver Shortage",
-          description: "Aging workforce, high turnover (90% annual in US), recruiting challenges, retention issues, compensation expectations.",
+          description: "Aging workforce, high turnover (90% annual in US), recruiting challenges, retention issues, compensation expectations",
           icon: Users
         },
         {
           title: "Capacity Constraints",
-          description: "Peak season demand (holidays, promotions), equipment availability, warehouse space limitations, port congestion.",
+          description: "Peak season demand (holidays, promotions), equipment availability, warehouse space limitations, port congestion",
           icon: Warehouse
         },
         {
           title: "Regulatory Compliance",
-          description: "Hours of Service (HOS) regulations, customs documentation, hazmat handling, cross-border compliance, environmental regulations.",
+          description: "Hours of Service (HOS) regulations, customs documentation, hazmat handling, cross-border compliance, environmental regulations",
           icon: FileCheck
         }
       ]
     },
     expertise: {
       title: "Our Logistics Expertise:",
-      description: "We’ve implemented 75+ logistics solutions for freight forwarders, 3PLs, last-mile delivery companies, warehouse operators, and supply chain consultants.",
+      description: "We’ve implemented 75+ logistics solutions for freight forwarders, 3PLs, last-mile delivery companies, warehouse operators, and supply chain consultants",
       resultsTitle: "Our solutions deliver:",
       results: [
         { text: "30% transportation cost reduction through route optimization", icon: TrendingDown },

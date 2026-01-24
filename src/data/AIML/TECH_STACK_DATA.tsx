@@ -4,41 +4,41 @@ export const TECH_STACK_DATA = {
   mlFrameworks: [
     {
       name: "TensorFlow & Keras",
-      desc: "Google’s comprehensive deep learning platform for building and deploying ML models. We use TensorFlow for complex neural networks, computer vision systems, and production ML pipelines.",
+      desc: "Google’s comprehensive deep learning platform for building and deploying ML models. We use TensorFlow for complex neural networks, computer vision systems, and production ML pipelines",
     },
     {
       name: "PyTorch",
-      desc: "Preferred framework for research and production ML with dynamic computational graphs. Excellent for NLP applications and custom model architectures.",
+      desc: "Preferred framework for research and production ML with dynamic computational graphs. Excellent for NLP applications and custom model architectures",
     },
     {
       name: "scikit-learn",
-      desc: "Industry-standard library for classical machine learning algorithms including regression, classification, clustering, and dimensionality reduction.",
+      desc: "Industry-standard library for classical machine learning algorithms including regression, classification, clustering, and dimensionality reduction",
     },
     {
       name: "XGBoost / LightGBM / CatBoost",
-      desc: "Gradient boosting frameworks for structured data problems. These tools consistently deliver state of the art results in predictive modeling competitions.",
+      desc: "Gradient boosting frameworks for structured data problems. These tools consistently deliver state of the art results in predictive modeling competitions",
     },
     {
       name: "Hugging Face Transformers",
-      desc: "Access to thousands of pre-trained language models for NLP tasks. We fine-tune BERT, GPT, T5, and other transformer models for custom applications.",
+      desc: "Access to thousands of pre-trained language models for NLP tasks. We fine-tune BERT, GPT, T5, and other transformer models for custom applications",
     },
   ],
   llms: [
     {
       name: "OpenAI GPT-4/GPT-3.5",
-      desc: "Advanced language models for text generation, summarization, question answering, and code generation. We implement GPT-4 for complex reasoning tasks and GPT-3.5 for cost-effective applications.",
+      desc: "Advanced language models for text generation, summarization, question answering, and code generation. We implement GPT-4 for complex reasoning tasks and GPT-3.5 for cost-effective applications",
     },
     {
       name: "Anthropic Claude",
-      desc: "Constitutional AI for safe, helpful, and honest interactions. Excellent for applications requiring nuanced understanding and ethical decision-making.",
+      desc: "Constitutional AI for safe, helpful, and honest interactions. Excellent for applications requiring nuanced understanding and ethical decision-making",
     },
     {
       name: "Google PaLM/Gemini",
-      desc: "Multimodal AI capabilities handling text, images, and code. We leverage Gemini for applications requiring cross-modal understanding.",
+      desc: "Multimodal AI capabilities handling text, images, and code. We leverage Gemini for applications requiring cross-modal understanding",
     },
     {
       name: "Open-Source Models",
-      desc: "Llama 2 for on premise deployment, Mistral for efficient inference, Falcon for specialized applications, and Custom fine-tuned models.",
+      desc: "Llama 2 for on premise deployment, Mistral for efficient inference, Falcon for specialized applications, and Custom fine-tuned models",
     },
   ],
   mlOps: [

@@ -292,19 +292,19 @@ export default function PrivacyPolicy() {
                 {[
                   {
                     t: "Contract Performance",
-                    d: "To fulfill our contractual obligations to you.",
+                    d: "To fulfill our contractual obligations to you",
                   },
                   {
                     t: "Legal Obligation",
-                    d: "To comply with legal and regulatory requirements.",
+                    d: "To comply with legal and regulatory requirements",
                   },
                   {
                     t: "Explicit Consent",
-                    d: "When you have given us clear permission for a specific purpose.",
+                    d: "When you have given us clear permission for a specific purpose",
                   },
                   {
                     t: "Legitimate Interests",
-                    d: "For business operations and service improvement.",
+                    d: "For business operations and service improvement",
                   },
                 ].map((item, i) => (
                   <div
@@ -558,19 +558,19 @@ export default function PrivacyPolicy() {
                 {[
                   {
                     t: "Essential Cookies",
-                    d: "Necessary for website and system functionality.",
+                    d: "Necessary for website and system functionality",
                   },
                   {
                     t: "Analytics Cookies",
-                    d: "Help us understand traffic and user behavior.",
+                    d: "Help us understand traffic and user behavior",
                   },
                   {
                     t: "Functional Cookies",
-                    d: "Remember your login and interface preferences.",
+                    d: "Remember your login and interface preferences",
                   },
                   {
                     t: "Marketing Cookies",
-                    d: "Used for targeted notifications and insights.",
+                    d: "Used for targeted notifications and insights",
                   },
                 ].map((item, i) => (
                   <div

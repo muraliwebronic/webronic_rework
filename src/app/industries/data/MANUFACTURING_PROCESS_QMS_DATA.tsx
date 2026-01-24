@@ -62,7 +62,7 @@ export const MANUFACTURING_PROCESS_QMS_DATA = {
   qms: {
     title: "Quality Management System (QMS) Integration",
     subTitle: "End-to-End Quality",
-    description: "Integrate inspection data, SPC, non-conformances, and corrective actions into comprehensive quality management system.",
+    description: "Integrate inspection data, SPC, non-conformances, and corrective actions into comprehensive quality management system",
     functions: [
       {
         title: "Non-Conformance Management",

@@ -7,8 +7,8 @@ export const CLOUD_DATA: ServicePageData = {
   preview: {
     title: "Cloud Services",
     tagline: "Scalable Infrastructure",
-    description: "Enterprise cloud solutions across AWS, Azure, and Google Cloud. Cloud migration, cloud-first development, multi-cloud management, and hybrid cloud architecture.",
-    image: "./assets/services/cloud-computing.png", // Ensure this path exists
+    description: "Enterprise cloud solutions across AWS, Azure, and Google Cloud. Cloud migration, cloud-first development, multi-cloud management, and hybrid cloud architecture",
+    image: "/assets/services/cloud-computing.png", // Ensure this path exists
     icon: "Cloud",
     points: [
       "Seamless Cloud Migration",
@@ -30,7 +30,7 @@ export const CLOUD_DATA: ServicePageData = {
     badge: "Enterprise Cloud Computing",
     titlePrefix: "Accelerate Digital Transformation with",
     titleHighlight: "Scalable Infrastructure",
-    description: "Webronic Industries delivers comprehensive cloud services guiding organizations through every stage of their cloud journey. Achieve faster time-to-market, enhanced security, and significant cost advantages.",
+    description: "Webronic Industries delivers comprehensive cloud services guiding organizations through every stage of their cloud journey. Achieve faster time-to-market, enhanced security, and significant cost advantages",
     features: [
       "Seamless cloud migration with zero downtime",
       "Multi-cloud expertise (AWS, Azure, Google Cloud)",
@@ -47,33 +47,33 @@ export const CLOUD_DATA: ServicePageData = {
     heading: "Cloud Computing as a",
     highlight: "Business Imperative",
     content: [
-      "Cloud computing has evolved from a technology trend into a fundamental business imperative. Organizations leveraging cloud infrastructure achieve faster time-to-market, improved scalability, enhanced security, and significant cost advantages over traditional on-premises deployments.",
-      "Webronic Industries delivers comprehensive cloud services that guide organizations through every stage of their cloud journey—from initial strategy and migration planning through implementation, optimization, and ongoing management. We've successfully migrated over 500 applications to the cloud and manage multi-cloud environments processing billions of transactions monthly."
+      "Cloud computing has evolved from a technology trend into a fundamental business imperative. Organizations leveraging cloud infrastructure achieve faster time-to-market, improved scalability, enhanced security, and significant cost advantages over traditional on-premises deployments",
+      "Webronic Industries delivers comprehensive cloud services that guide organizations through every stage of their cloud journey—from initial strategy and migration planning through implementation, optimization, and ongoing management. We've successfully migrated over 500 applications to the cloud and manage multi-cloud environments processing billions of transactions monthly"
     ],
     differentiators: [
       {
         title: "Strategic Consulting",
-        description: "Aligning cloud initiatives with business objectives to maximize ROI.",
+        description: "Aligning cloud initiatives with business objectives to maximize ROI",
         icon: "Lightbulb"
       },
       {
         title: "Expert Implementation",
-        description: "Leveraging cloud-native services and best practices for optimal performance.",
+        description: "Leveraging cloud-native services and best practices for optimal performance",
         icon: "CheckCircle"
       },
       {
         title: "Continuous Optimization",
-        description: "Ensuring maximum value from cloud investments through ongoing tuning.",
+        description: "Ensuring maximum value from cloud investments through ongoing tuning",
         icon: "TrendingUp"
       },
       {
         title: "Certified Partnerships",
-        description: "Advanced status with AWS, Azure, and Google Cloud Platform.",
+        description: "Advanced status with AWS, Azure, and Google Cloud Platform",
         icon: "Award"
       },
       {
         title: "Multi-Cloud Focus",
-        description: "Expertise preventing vendor lock-in across all major providers.",
+        description: "Expertise preventing vendor lock-in across all major providers",
         icon: "Globe"
       }
     ]
@@ -84,46 +84,46 @@ export const CLOUD_DATA: ServicePageData = {
     badge: "Core Services",
     titleLine1: "Comprehensive",
     titleHighlight: "Cloud Capabilities",
-    description: "Whether you're migrating legacy applications, building cloud-native solutions, or optimizing existing environments, we provide strategic guidance and technical execution.",
+    description: "Whether you're migrating legacy applications, building cloud-native solutions, or optimizing existing environments, we provide strategic guidance and technical execution",
     cards: [
       {
         title: "Cloud Strategy & Consulting",
-        desc: "Navigate the complex cloud landscape. We provide readiness assessments, TCO analysis, and architectural design to align technology with business goals.",
+        desc: "Navigate the complex cloud landscape. We provide readiness assessments, TCO analysis, and architectural design to align technology with business goals",
         icon: "Compass",
         color: "text-blue-600",
         bg: "bg-blue-50"
       },
       {
         title: "Cloud Migration Services",
-        desc: "Seamless transitions with minimal risk. We utilize Rehost, Replatform, and Refactor strategies to ensure zero data loss and minimal downtime.",
+        desc: "Seamless transitions with minimal risk. We utilize Rehost, Replatform, and Refactor strategies to ensure zero data loss and minimal downtime",
         icon: "ArrowRightLeft",
         color: "text-indigo-600",
         bg: "bg-indigo-50"
       },
       {
         title: "Cloud Native Development",
-        desc: "Build scalable applications using microservices, containerization (Kubernetes), and serverless computing for maximum agility.",
+        desc: "Build scalable applications using microservices, containerization (Kubernetes), and serverless computing for maximum agility",
         icon: "Code2",
         color: "text-purple-600",
         bg: "bg-purple-50"
       },
       {
         title: "Multi-Cloud & Hybrid",
-        desc: "Avoid vendor lock-in. Optimize workload placement across AWS, Azure, and GCP while integrating seamlessly with on-premises infrastructure.",
+        desc: "Avoid vendor lock-in. Optimize workload placement across AWS, Azure, and GCP while integrating seamlessly with on-premises infrastructure",
         icon: "Network",
         color: "text-green-600",
         bg: "bg-green-50"
       },
       {
         title: "Cost Optimization",
-        desc: "Reduce cloud spending by 30-50%. We implement right-sizing, reserved instances, and auto-scaling to maximize efficiency.",
+        desc: "Reduce cloud spending by 30-50%. We implement right-sizing, reserved instances, and auto-scaling to maximize efficiency",
         icon: "DollarSign",
         color: "text-emerald-600",
         bg: "bg-emerald-50"
       },
       {
         title: "Security & Compliance",
-        desc: "Enterprise-grade security. Identity management, encryption, and compliance with GDPR, HIPAA, PCI DSS, and SOC 2.",
+        desc: "Enterprise-grade security. Identity management, encryption, and compliance with GDPR, HIPAA, PCI DSS, and SOC 2",
         icon: "ShieldCheck",
         color: "text-red-600",
         bg: "bg-red-50"
@@ -146,7 +146,7 @@ export const CLOUD_DATA: ServicePageData = {
   // 4. PROCESS SECTION
   process: {
     title: "Webronic Cloud Transformation Framework",
-    description: "Our proven migration methodology ensures seamless transitions with minimal risk and disruption, guiding you from assessment to ongoing optimization.",
+    description: "Our proven migration methodology ensures seamless transitions with minimal risk and disruption, guiding you from assessment to ongoing optimization",
     phases: [
       {
         phase: "Phase 1",
@@ -279,19 +279,19 @@ export const CLOUD_DATA: ServicePageData = {
   // 5. TECH STACK SECTION
   techStack: {
     heading: "Cloud Platforms Expertise",
-    description: "We hold advanced partnership status with all major cloud providers and bring deep expertise across their ecosystems.",
+    description: "We hold advanced partnership status with all major cloud providers and bring deep expertise across their ecosystems",
     frameworks: [
-      { name: "Kubernetes", desc: "EKS, AKS, GKE for container orchestration." },
-      { name: "Docker", desc: "Containerization standard for cloud-native apps." },
-      { name: "Terraform", desc: "Infrastructure as Code for multi-cloud management." },
-      { name: "Serverless", desc: "Lambda, Azure Functions, Cloud Functions." },
-      { name: "Kafka", desc: "Event streaming and message queues." }
+      { name: "Kubernetes", desc: "EKS, AKS, GKE for container orchestration" },
+      { name: "Docker", desc: "Containerization standard for cloud-native apps" },
+      { name: "Terraform", desc: "Infrastructure as Code for multi-cloud management" },
+      { name: "Serverless", desc: "Lambda, Azure Functions, Cloud Functions" },
+      { name: "Kafka", desc: "Event streaming and message queues" }
     ],
     llms: [
-      { name: "Amazon RDS", desc: "Managed relational database services." },
-      { name: "Cosmos DB", desc: "Azure's globally distributed database." },
-      { name: "BigQuery", desc: "Serverless enterprise data warehouse." },
-      { name: "Redshift", desc: "Petabyte-scale data warehousing." }
+      { name: "Amazon RDS", desc: "Managed relational database services" },
+      { name: "Cosmos DB", desc: "Azure's globally distributed database" },
+      { name: "BigQuery", desc: "Serverless enterprise data warehouse" },
+      { name: "Redshift", desc: "Petabyte-scale data warehousing" }
     ],
     mlOps: ["Datadog", "New Relic", "CloudHealth", "Prometheus", "Grafana"],
     cloudPlatforms: [
@@ -316,18 +316,18 @@ export const CLOUD_DATA: ServicePageData = {
   // 6. INDUSTRIES SECTION
   industries: {
     heading: "Industries We Transform",
-    description: "Cloud solutions tailored to the unique regulatory and operational needs of key sectors.",
+    description: "Cloud solutions tailored to the unique regulatory and operational needs of key sectors",
     items: [
       {
         id: "retail",
         label: "Retail & E-commerce",
         icon: "ShoppingBag",
         theme: "blue",
-        description: "Scalable infrastructure for peak traffic events like Black Friday.",
+        description: "Scalable infrastructure for peak traffic events like Black Friday",
         features: [
           {
             title: "Auto-Scaling",
-            desc: "Scaled from 5K to 50K concurrent users seamlessly.",
+            desc: "Scaled from 5K to 50K concurrent users seamlessly",
             icon: "TrendingUp",
             caseStudy: {
               title: "Retail Giant",
@@ -336,7 +336,7 @@ export const CLOUD_DATA: ServicePageData = {
           },
           {
             title: "Global CDN",
-            desc: "Reduced page load time from 3.2s to 0.8s.",
+            desc: "Reduced page load time from 3.2s to 0.8s",
             icon: "Globe"
           }
         ]
@@ -346,11 +346,11 @@ export const CLOUD_DATA: ServicePageData = {
         label: "Healthcare",
         icon: "Activity",
         theme: "green",
-        description: "HIPAA-compliant platforms for patient engagement.",
+        description: "HIPAA-compliant platforms for patient engagement",
         features: [
           {
             title: "Compliance",
-            desc: "Full HIPAA compliance with encryption and access controls.",
+            desc: "Full HIPAA compliance with encryption and access controls",
             icon: "ShieldCheck",
             caseStudy: {
               title: "HealthTech Startup",
@@ -359,7 +359,7 @@ export const CLOUD_DATA: ServicePageData = {
           },
           {
             title: "Data Security",
-            desc: "Secure patient data management with DynamoDB.",
+            desc: "Secure patient data management with DynamoDB",
             icon: "Lock"
           }
         ]
@@ -370,7 +370,7 @@ export const CLOUD_DATA: ServicePageData = {
   // 7. CASE STUDIES SECTION
   caseStudies: {
     heading: "Cloud Success Stories",
-    description: "Real-world examples of cloud migration and optimization driving business value.",
+    description: "Real-world examples of cloud migration and optimization driving business value",
     items: [
       {
         id: 1,
@@ -379,8 +379,8 @@ export const CLOUD_DATA: ServicePageData = {
         title: "E-commerce Platform Migration",
         icon: "ShoppingBag",
         color: "text-orange-600",
-        challenge: "Legacy on-premise infrastructure limited scalability, costing $800K annually with frequent outages during peak sales.",
-        solution: "Migrated to AWS microservices architecture with auto-scaling, Aurora PostgreSQL, and Global CloudFront CDN.",
+        challenge: "Legacy on-premise infrastructure limited scalability, costing $800K annually with frequent outages during peak sales",
+        solution: "Migrated to AWS microservices architecture with auto-scaling, Aurora PostgreSQL, and Global CloudFront CDN",
         implementation: [
           "Microservices Architecture",
           "Auto-scaling Implementation",
@@ -392,7 +392,7 @@ export const CLOUD_DATA: ServicePageData = {
           { label: "Availability", value: "99.97%" },
           { label: "Load Time", value: "0.8s" }
         ],
-        quote: "We scaled from 5K to 50K concurrent users seamlessly on Black Friday while cutting our infrastructure bill in half.",
+        quote: "We scaled from 5K to 50K concurrent users seamlessly on Black Friday while cutting our infrastructure bill in half",
         author: "CTO, Retail Brand"
       },
       {
@@ -402,8 +402,8 @@ export const CLOUD_DATA: ServicePageData = {
         title: "SaaS Patient Platform",
         icon: "Activity",
         color: "text-blue-600",
-        challenge: "Build a scalable, HIPAA-compliant patient engagement platform serving 500K+ patients.",
-        solution: "Built cloud-native architecture on AWS using Serverless Lambda, API Gateway, and encrypted DynamoDB.",
+        challenge: "Build a scalable, HIPAA-compliant patient engagement platform serving 500K+ patients",
+        solution: "Built cloud-native architecture on AWS using Serverless Lambda, API Gateway, and encrypted DynamoDB",
         implementation: [
           "Serverless Backend",
           "Infrastructure as Code",
@@ -415,7 +415,7 @@ export const CLOUD_DATA: ServicePageData = {
           { label: "Uptime", value: "99.99%" },
           { label: "Cost Efficiency", value: "80% Savings" }
         ],
-        quote: "Launching in 4 months instead of 12 gave us a massive competitive advantage. The platform scales automatically with our growth.",
+        quote: "Launching in 4 months instead of 12 gave us a massive competitive advantage. The platform scales automatically with our growth",
         author: "VP of Engineering"
       },
       {
@@ -425,8 +425,8 @@ export const CLOUD_DATA: ServicePageData = {
         title: "Multi-Cloud Cost Optimization",
         icon: "DollarSign",
         color: "text-green-600",
-        challenge: "Rapid, uncontrolled cloud cost growth reaching $2.5M annually without visibility.",
-        solution: "Comprehensive audit followed by right-sizing, reserved instances, and automated resource lifecycle management.",
+        challenge: "Rapid, uncontrolled cloud cost growth reaching $2.5M annually without visibility",
+        solution: "Comprehensive audit followed by right-sizing, reserved instances, and automated resource lifecycle management",
         implementation: [
           "Right-sizing Analysis",
           "Reserved Instance Strategy",
@@ -438,7 +438,7 @@ export const CLOUD_DATA: ServicePageData = {
           { label: "Compute Savings", value: "42%" },
           { label: "Storage Savings", value: "35%" }
         ],
-        quote: "We reduced our cloud spend by nearly a million dollars annually without sacrificing a single bit of performance.",
+        quote: "We reduced our cloud spend by nearly a million dollars annually without sacrificing a single bit of performance",
         author: "CFO, Financial Services"
       }
     ]
@@ -450,23 +450,23 @@ export const CLOUD_DATA: ServicePageData = {
     items: [
       {
         question: "How long does cloud migration take?",
-        answer: "Timeline depends on complexity. Small migrations (10-20 apps) typically take 3-6 months, while large enterprise migrations can take 12-24 months. We use phased approaches to deliver value early."
+        answer: "Timeline depends on complexity. Small migrations (10-20 apps) typically take 3-6 months, while large enterprise migrations can take 12-24 months. We use phased approaches to deliver value early"
       },
       {
         question: "Will migration cause downtime?",
-        answer: "Most migrations are executed with zero or minimal downtime using strategies like blue-green deployment. Critical applications typically experience less than 4 hours of downtime during the final cutover."
+        answer: "Most migrations are executed with zero or minimal downtime using strategies like blue-green deployment. Critical applications typically experience less than 4 hours of downtime during the final cutover"
       },
       {
         question: "How much will cloud migration cost?",
-        answer: "Migration costs typically range from 10-20% of annual infrastructure spend. However, post-migration savings usually recover this investment within 12-18 months."
+        answer: "Migration costs typically range from 10-20% of annual infrastructure spend. However, post-migration savings usually recover this investment within 12-18 months"
       },
       {
         question: "Is cloud more secure than on-premise?",
-        answer: "Yes, provided it is configured correctly. Cloud platforms offer enterprise-grade security tools. We implement comprehensive security controls and Shared Responsibility Models to ensure high security."
+        answer: "Yes, provided it is configured correctly. Cloud platforms offer enterprise-grade security tools. We implement comprehensive security controls and Shared Responsibility Models to ensure high security"
       },
       {
         question: "Can we migrate back to on-premise if needed?",
-        answer: "Yes, though it is rare. We design architectures to avoid vendor lock-in where possible, but reversing a migration can be complex depending on the cloud-native services used."
+        answer: "Yes, though it is rare. We design architectures to avoid vendor lock-in where possible, but reversing a migration can be complex depending on the cloud-native services used"
       }
     ]
   },
@@ -475,12 +475,12 @@ export const CLOUD_DATA: ServicePageData = {
   getStarted: {
     badge: "Start Your Journey",
     titleLines: ["Accelerate Your", "Cloud Transformation"],
-    description: "Receive a complimentary analysis including current infrastructure cost analysis, cloud projections, and migration complexity assessment.",
+    description: "Receive a complimentary analysis including current infrastructure cost analysis, cloud projections, and migration complexity assessment",
     cards: [
       {
         id: "assessment",
         title: "Free Cloud Assessment",
-        description: "A comprehensive analysis of your current infrastructure and cloud readiness.",
+        description: "A comprehensive analysis of your current infrastructure and cloud readiness",
         icon: "BarChart",
         theme: "light",
         list: [
@@ -494,7 +494,7 @@ export const CLOUD_DATA: ServicePageData = {
       {
         id: "workshop",
         title: "Cloud Readiness Workshop",
-        description: "Half-day interactive session with our architects to define your strategy.",
+        description: "Half-day interactive session with our architects to define your strategy",
         icon: "Users",
         theme: "dark",
         list: [

@@ -123,7 +123,7 @@ export default function Clients() {
          badge="clients"
           title="Trusted by"
           highlight="Industry Leaders"
-          description="Empowering organizations worldwide with scalable, mission-critical digital infrastructure."
+          description="Empowering organizations worldwide with scalable, mission-critical digital infrastructure"
           centered={true}
           className="max-w-3xl mx-auto mb-12 md:mb-20"
         />

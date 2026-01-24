@@ -12,13 +12,13 @@ export const WHY_WEBRONIC_DATA = {
     badge: "Why Webronic?",
     title: "More Than Just a Job",
     titleHighlight: "A Career Journey",
-    description: "At Webronic Industries, we don't just build software. We solve real-world problems that impact millions of lives. From autonomous retail stores serving customers 24/7 in Sweden to manufacturing plants optimizing production in real-time, our solutions make a tangible difference."
+    description: "At Webronic Industries, we don't just build software. We solve real-world problems that impact millions of lives. From autonomous retail stores serving customers 24/7 in Sweden to manufacturing plants optimizing production in real-time, our solutions make a tangible difference"
   },
   features: [
     {
       id: 1,
       title: "Work on Cutting-Edge Technology",
-      description: "We don't maintain legacy systems. We build the future with the latest frameworks and tools like TensorFlow, PyTorch, React, Node.js, Kubernetes, and Cloud Platforms.",
+      description: "We don't maintain legacy systems. We build the future with the latest frameworks and tools like TensorFlow, PyTorch, React, Node.js, Kubernetes, and Cloud Platforms",
       icon: Cpu,
       color: "blue", // Internal flag for UI styling
       details: [
@@ -32,7 +32,7 @@ export const WHY_WEBRONIC_DATA = {
     {
       id: 2,
       title: "Real Impact, Real Results",
-      description: "Your work directly impacts businesses and people. We measure success in quantifiable outcomes like 68% downtime reduction and 99.2% quality inspection accuracy.",
+      description: "Your work directly impacts businesses and people. We measure success in quantifiable outcomes like 68% downtime reduction and 99.2% quality inspection accuracy",
       icon: TrendingUp,
       color: "green",
       details: [
@@ -45,7 +45,7 @@ export const WHY_WEBRONIC_DATA = {
     {
       id: 3,
       title: "Global Reach with Local Culture",
-      description: "Headquartered in Chennai with offices in Madurai and Salem, and partnerships in Sweden. Work on international projects while enjoying the vibrant culture of India.",
+      description: "Headquartered in Chennai with offices in Madurai and Salem, and partnerships in Sweden. Work on international projects while enjoying the vibrant culture of India",
       icon: Globe2,
       color: "blue",
       details: [
@@ -58,7 +58,7 @@ export const WHY_WEBRONIC_DATA = {
     {
       id: 4,
       title: "Innovation-Driven Environment",
-      description: "We encourage experimentation and learning. We sponsor relevant tech conferences and provide financial support for AWS, Azure, and GCP certifications.",
+      description: "We encourage experimentation and learning. We sponsor relevant tech conferences and provide financial support for AWS, Azure, and GCP certifications",
       icon: Zap,
       color: "green",
       details: [
@@ -71,7 +71,7 @@ export const WHY_WEBRONIC_DATA = {
     {
       id: 5,
       title: "Career Growth & Development",
-      description: "Clear career progression paths promoting from within. Many of our senior leaders started as developers and engineers.",
+      description: "Clear career progression paths promoting from within. Many of our senior leaders started as developers and engineers",
       icon: GitMerge,
       color: "blue",
       details: [
@@ -84,7 +84,7 @@ export const WHY_WEBRONIC_DATA = {
     {
       id: 6,
       title: "Work-Life Balance",
-      description: "Technology is demanding, but burnout helps no one. We offer a supportive environment where emergencies are rare.",
+      description: "Technology is demanding, but burnout helps no one. We offer a supportive environment where emergencies are rare",
       icon: HeartHandshake,
       color: "green",
       details: [

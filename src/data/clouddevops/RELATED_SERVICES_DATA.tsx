@@ -15,28 +15,28 @@ export const RELATED_SERVICES_DATA = {
     {
       id: "devops",
       title: "DevOps & Site Reliability",
-      description: "Streamline delivery pipelines and ensure system reliability.",
+      description: "Streamline delivery pipelines and ensure system reliability",
       icon: Infinity,
       link: "/services/devops"
     },
     {
       id: "security",
       title: "Cybersecurity Services",
-      description: "Protect your digital assets with enterprise-grade security.",
+      description: "Protect your digital assets with enterprise-grade security",
       icon: ShieldAlert,
       link: "/services/cybersecurity"
     },
     {
       id: "analytics",
       title: "Data Analytics",
-      description: "Turn raw data into actionable business intelligence.",
+      description: "Turn raw data into actionable business intelligence",
       icon: BarChart3,
       link: "/services/data-analytics"
     },
     {
       id: "ai",
       title: "AI & Machine Learning",
-      description: "Innovate with predictive models and intelligent automation.",
+      description: "Innovate with predictive models and intelligent automation",
       icon: BrainCircuit,
       link: "/services/ai-ml"
     }

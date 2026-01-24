@@ -17,7 +17,7 @@ export default function DigitalTwinImplementation() {
           <SectionHeader
             badge="Process Roadmap"
             title={sectionTitle}
-            description="A structured approach to deploying your digital enterprise simulation."
+            description="A structured approach to deploying your digital enterprise simulation"
             centered={true}
             className="mb-24"
           />
@@ -81,7 +81,7 @@ export default function DigitalTwinImplementation() {
           <SectionHeader
             badge="Applications"
             title={useCases.title}
-            description="Real-world scenarios where digital twins drive value."
+            description="Real-world scenarios where digital twins drive value"
             centered={true}
             isWhite={true}
             className="mb-20"

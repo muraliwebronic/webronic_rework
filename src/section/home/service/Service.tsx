@@ -126,7 +126,7 @@ export default function ServiceHorizontal() {
                    badge="Services"
                    title="Our Capabilities"
                    highlight="Built for Scale"
-                   description="We engineer scalable digital ecosystems. Explore our suite of services designed for high-growth enterprises."
+                   description="We engineer scalable digital ecosystems. Explore our suite of services designed for high-growth enterprises"
                    centered={false} 
                  />
       

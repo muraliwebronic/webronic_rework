@@ -24,7 +24,7 @@ export const MEDIA_STREAMING_DATA = {
     section: "Core Media Solutions",
     title: "1. Streaming Platform Development",
     subTitle: "OTT (Over-The-Top) Video Platform",
-    description: "Build Netflix-style streaming services with comprehensive features."
+    description: "Build Netflix-style streaming services with comprehensive features"
   },
   infrastructure: {
     title: "Video Streaming Infrastructure",

@@ -14,7 +14,7 @@ export const CASE_STUDIES_DATA = {
     badge: "Case Studies",
     title: "Proven",
     titleHighlight: "Results",
-    description: "Real-world examples of how we've helped organizations transform their infrastructure and achieve measurable business outcomes."
+    description: "Real-world examples of how we've helped organizations transform their infrastructure and achieve measurable business outcomes"
   },
   cases: [
     {
@@ -22,7 +22,7 @@ export const CASE_STUDIES_DATA = {
       navTitle: "E-commerce Migration",
       icon: ShoppingCart,
       client: "Multi-brand retail company with $200M annual online revenue",
-      challenge: "Legacy on-premise infrastructure limiting scalability, costing $800K annually, experiencing frequent outages during peak sales.",
+      challenge: "Legacy on-premise infrastructure limiting scalability, costing $800K annually, experiencing frequent outages during peak sales",
       solution: [
         "Migrated to AWS using microservices architecture",
         "Implemented auto-scaling for traffic spikes",
@@ -42,7 +42,7 @@ export const CASE_STUDIES_DATA = {
       navTitle: "Healthcare SaaS",
       icon: Activity,
       client: "Healthcare technology startup building patient engagement platform",
-      challenge: "Build scalable, HIPAA-compliant platform serving 500K+ patients across multiple healthcare systems.",
+      challenge: "Build scalable, HIPAA-compliant platform serving 500K+ patients across multiple healthcare systems",
       solution: [
         "Built cloud-first architecture on AWS",
         "Serverless backend using Lambda and API Gateway",
@@ -59,10 +59,10 @@ export const CASE_STUDIES_DATA = {
     },
     {
       id: "fintech",
-      navTitle: "FinTech Cost Opt.",
+      navTitle: "FinTech Cost Opt",
       icon: PieChart,
       client: "Financial services firm with $2.5M annual cloud spending",
-      challenge: "Rapid, uncontrolled cloud cost growth without visibility or optimization strategies.",
+      challenge: "Rapid, uncontrolled cloud cost growth without visibility or optimization strategies",
       solution: [
         "Comprehensive cloud cost audit",
         "Right-sizing recommendations implementation",

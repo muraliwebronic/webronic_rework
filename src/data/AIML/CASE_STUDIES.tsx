@@ -12,7 +12,7 @@ export const CASE_STUDIES = [
     title: "Computer Vision Quality Inspection",
     icon: Factory,
     color: "text-[#2776ea]",
-    challenge: "Manual quality inspection missing 3-5% of defects, leading to costly warranty claims and brand damage.",
+    challenge: "Manual quality inspection missing 3-5% of defects, leading to costly warranty claims and brand damage",
     solution: "Deployed computer vision system using custom-trained CNN models to inspect circuit boards for 47 different defect types. [Image of computer vision defect detection system architecture]",
     implementation: [
       "Collected and labeled 500,000 training images",
@@ -34,7 +34,7 @@ export const CASE_STUDIES = [
        { label: "Inspection Speed", value: "4x Faster" },
        { label: "Annual Savings", value: "$8.5M" }
     ],
-    quote: "The computer vision system has transformed our quality control. We’re catching defects we never saw before and doing it 4x faster.",
+    quote: "The computer vision system has transformed our quality control. We’re catching defects we never saw before and doing it 4x faster",
     author: "Director of Manufacturing Operations",
   },
   {
@@ -44,7 +44,7 @@ export const CASE_STUDIES = [
     title: "Predictive Maintenance for Chemical Plant",
     icon: FlaskConical,
     color: "text-[#76ea27]",
-    challenge: "Unplanned equipment failures causing average 120 hours downtime yearly, costing $2.5M in lost production.",
+    challenge: "Unplanned equipment failures causing average 120 hours downtime yearly, costing $2.5M in lost production",
     solution: "Implemented ML-powered predictive maintenance system using IoT sensor data. [Image of IoT predictive maintenance system architecture]",
     implementation: [
       "Installed 250 IoT sensors on critical equipment",
@@ -57,7 +57,7 @@ export const CASE_STUDIES = [
       { label: "Prediction Accuracy", value: "87%" },
       { label: "Unplanned Downtime", value: "-72%" },
       { label: "Maintenance Costs", value: "-28%" },
-      { label: "Production Inc.", value: "+4%" },
+      { label: "Production Inc", value: "+4%" },
       { label: "Annual Savings", value: "$2.1M" }
     ],
     highlightResults: [
@@ -65,7 +65,7 @@ export const CASE_STUDIES = [
       { label: "Maintenance Cost", value: "-28%" },
       { label: "Annual Savings", value: "$2.1M" }
     ],
-    quote: "We now fix equipment before it breaks. The system paid for itself in the first year through reduced downtime alone.",
+    quote: "We now fix equipment before it breaks. The system paid for itself in the first year through reduced downtime alone",
     author: "Plant Operations Manager",
   },
   {
@@ -75,7 +75,7 @@ export const CASE_STUDIES = [
     title: "NLP-Powered Customer Service",
     icon: ShieldCheck,
     color: "text-[#2776ea]",
-    challenge: "Customer service center receiving 50,000 monthly inquiries with 45-minute average response time.",
+    challenge: "Customer service center receiving 50,000 monthly inquiries with 45-minute average response time",
     solution: "Built AI chatbot using GPT-4 and custom NLP models. [Image of generative AI chatbot architecture]",
     implementation: [
       "Fine-tuned GPT-4 on insurance knowledge base",
@@ -96,7 +96,7 @@ export const CASE_STUDIES = [
       { label: "Response Time", value: "<2 Min" },
       { label: "Cost Savings", value: "$3.2M" }
     ],
-    quote: "Our AI assistant handles routine questions instantly while our agents focus on complex cases that need human expertise.",
+    quote: "Our AI assistant handles routine questions instantly while our agents focus on complex cases that need human expertise",
     author: "VP of Customer Experience",
   },
 ];

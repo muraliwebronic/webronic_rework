@@ -20,7 +20,7 @@ export const MEDIA_CONTENT_PRODUCTION_DATA = {
     section: "2. Content Production & AI Automation",
     title: "AI-Powered Video Editing",
     subTitle: "Automated Editing",
-    description: "Reduce post-production time and costs with AI."
+    description: "Reduce post-production time and costs with AI"
   },
   videoEditing: {
     categories: [

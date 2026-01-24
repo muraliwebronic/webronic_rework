@@ -508,7 +508,7 @@ export default function CancellationRefundPolicy() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <input
                       type="text"
-                      placeholder="Contract No."
+                      placeholder="Contract No"
                       className="w-full p-4 rounded-xl bg-slate-50 border border-slate-100 text-sm outline-none focus:border-[#2776ea]"
                       required
                     />

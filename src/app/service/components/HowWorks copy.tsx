@@ -102,7 +102,7 @@ const EnquiryModal = ({
                 <Phone className="absolute left-4 top-3.5 h-4 w-4 md:h-5 md:w-5 text-slate-300" />
                 <input
                   type="tel"
-                  placeholder="+91..."
+                  placeholder="+91.."
                   className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#2776ea] focus:ring-4 focus:ring-blue-50 outline-none transition font-medium text-slate-700"
                   required
                 />
@@ -139,7 +139,7 @@ const EnquiryModal = ({
               <MessageSquare className="absolute left-4 top-3.5 h-4 w-4 md:h-5 md:w-5 text-slate-300" />
               <textarea
                 rows={2}
-                placeholder="Tell us about your goals..."
+                placeholder="Tell us about your goals.."
                 className="w-full rounded-xl border border-slate-200 pl-10 md:pl-12 p-3 md:p-3.5 text-sm md:text-base focus:border-[#2776ea] focus:ring-4 focus:ring-blue-50 outline-none transition resize-none font-medium text-slate-700"
                 required
               />

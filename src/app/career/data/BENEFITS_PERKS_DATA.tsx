@@ -16,7 +16,7 @@ export const BENEFITS_PERKS_DATA = {
     badge: "Benefits & Perks",
     title: "Comprehensive Package",
     titleHighlight: "Supporting Your Life Goals",
-    description: "We invest in our people. From financial security to physical well-being and professional growth, our benefits are designed to support you at every stage of life."
+    description: "We invest in our people. From financial security to physical well-being and professional growth, our benefits are designed to support you at every stage of life"
   },
   categories: [
     {

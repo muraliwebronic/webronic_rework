@@ -72,7 +72,7 @@ export default function Branches() {
         <SectionHeader 
             title="Global Presence"
             highlight="Our Network"
-            description="Strategically located across key technology hubs to deliver seamless support and innovation worldwide."
+            description="Strategically located across key technology hubs to deliver seamless support and innovation worldwide"
             centered={true}
             className="max-w-3xl mx-auto mb-16"
         />
@@ -132,7 +132,7 @@ export default function Branches() {
                 <div className="h-full max-h-[160px]">
                     <LocationCard 
                         title="Thingsatweb Sweden AB"
-                        addr="Stockholm Region - Collaborating to bring Scandinavian innovation standards globally."
+                        addr="Stockholm Region - Collaborating to bring Scandinavian innovation standards globally"
                         icon={Globe2}
                         accentColor="#76ea27"
                         tag="Partner"

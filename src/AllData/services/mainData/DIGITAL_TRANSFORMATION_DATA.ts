@@ -7,8 +7,8 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
   preview: {
     title: "Digital Transformation",
     tagline: "Business Evolution",
-    description: "End-to-end digital transformation services. Strategy consulting, process automation, customer experience redesign, and change management for enterprise digital evolution.",
-    image: "./assets/images/digitalmarketing.png", // Ensure path exists
+    description: "End-to-end digital transformation services. Strategy consulting, process automation, customer experience redesign, and change management for enterprise digital evolution",
+    image: "/assets/images/digitalmarketing.png", // Ensure path exists
     icon: "RefreshCw",
     points: [
       "Digital Strategy & Roadmap",
@@ -17,16 +17,16 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
       "Change Management"
     ],
    technologies: [
-        { name: "Google Ads", logo: "./assets/icons/googleads.png" },
-        { name: "Google Analytics", logo: "./assets/icons/googleanalytics.png" },
-        { name: "Bing Ads", logo: "./assets/icons/bing.png" },
-        { name: "Facebook Ads", logo: "./assets/icons/facebook.png" },
-        { name: "LinkedIn Ads", logo: "./assets/icons/linkedin.png" },
-        { name: "Instagram", logo: "./assets/icons/instagram.png" },
-        { name: "YouTube", logo: "./assets/icons/youtube.png" },
+        { name: "Google Ads", logo: "/assets/icons/googleads.png" },
+        { name: "Google Analytics", logo: "/assets/icons/googleanalytics.png" },
+        { name: "Bing Ads", logo: "/assets/icons/bing.png" },
+        { name: "Facebook Ads", logo: "/assets/icons/facebook.png" },
+        { name: "LinkedIn Ads", logo: "/assets/icons/linkedin.png" },
+        { name: "Instagram", logo: "/assets/icons/instagram.png" },
+        { name: "YouTube", logo: "/assets/icons/youtube.png" },
         {
           name: "Google Business Profile",
-          logo: "./assets/icons/googlebusprof.png",
+          logo: "/assets/icons/googlebusprof.png",
         },
       ],
   },
@@ -36,7 +36,7 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
     badge: "Digital Transformation Services",
     titlePrefix: "Transform Your Business for the",
     titleHighlight: "Digital Age",
-    description: "Comprehensive transformation strategy and execution. We adopt a technology-agnostic approach focused on business outcomes, backed by a proven methodology across 200+ transformations.",
+    description: "Comprehensive transformation strategy and execution. We adopt a technology-agnostic approach focused on business outcomes, backed by a proven methodology across 200+ transformations",
     features: [
       "Comprehensive strategy and execution",
       "Proven methodology (200+ projects)",
@@ -53,33 +53,33 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
     heading: "Reimagining Business for the",
     highlight: "Modern Era",
     content: [
-      "Digital transformation is a fundamental business imperative. Organizations that successfully transform achieve faster growth, higher profitability, and improved employee engagement. However, 70% of initiatives fail due to lack of vision or poor execution.",
+      "Digital transformation is a fundamental business imperative. Organizations that successfully transform achieve faster growth, higher profitability, and improved employee engagement. However, 70% of initiatives fail due to lack of vision or poor execution",
       "Webronic's approach is built on 15+ years of experience. We start with business objectives—revenue growth, cost reduction, customer satisfaction—and work backward to technology solutions. "
     ],
     differentiators: [
       {
         title: "Business Outcomes First",
-        description: "Technology serves business goals, not the reverse.",
+        description: "Technology serves business goals, not the reverse",
         icon: "Target"
       },
       {
         title: "Proven Methodology",
-        description: "Battle-tested framework guiding 200+ successful transformations.",
+        description: "Battle-tested framework guiding 200+ successful transformations",
         icon: "CheckCircle"
       },
       {
         title: "Technology Agnostic",
-        description: "We recommend the best solutions for you, not just what we resell.",
+        description: "We recommend the best solutions for you, not just what we resell",
         icon: "Layers"
       },
       {
         title: "Change Management",
-        description: "Embedded throughout to ensure stakeholder buy-in and adoption.",
+        description: "Embedded throughout to ensure stakeholder buy-in and adoption",
         icon: "Users"
       },
       {
         title: "End-to-End Partnership",
-        description: "From strategy through implementation and ongoing optimization.",
+        description: "From strategy through implementation and ongoing optimization",
         icon: "Infinity"
       }
     ]
@@ -90,46 +90,46 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
     badge: "Core Capabilities",
     titleLine1: "Holistic",
     titleHighlight: "Transformation Services",
-    description: "We navigate the complexity of digital evolution by addressing strategy, process, experience, and technology simultaneously.",
+    description: "We navigate the complexity of digital evolution by addressing strategy, process, experience, and technology simultaneously",
     cards: [
       {
         title: "Digital Strategy & Consulting",
-        desc: "Define your digital future. We help articulate vision, identify priorities, and create actionable roadmaps aligned with business objectives.",
+        desc: "Define your digital future. We help articulate vision, identify priorities, and create actionable roadmaps aligned with business objectives",
         icon: "Compass",
         color: "text-blue-600",
         bg: "bg-blue-50"
       },
       {
         title: "Business Process Transformation",
-        desc: "Reimagine how work gets done. We redesign processes to be customer-centric and automate repetitive tasks using RPA and AI.",
+        desc: "Reimagine how work gets done. We redesign processes to be customer-centric and automate repetitive tasks using RPA and AI",
         icon: "Settings",
         color: "text-indigo-600",
         bg: "bg-indigo-50"
       },
       {
         title: "Customer Experience Redesign",
-        desc: "Put customers at the center. Transform touchpoints across web, mobile, and physical channels for seamless, personalized journeys.",
+        desc: "Put customers at the center. Transform touchpoints across web, mobile, and physical channels for seamless, personalized journeys",
         icon: "Heart",
         color: "text-pink-600",
         bg: "bg-pink-50"
       },
       {
         title: "Digital Operating Model",
-        desc: "Transform how you work. Evolve organizational structures and adopt Agile/DevOps methodologies to support innovation.",
+        desc: "Transform how you work. Evolve organizational structures and adopt Agile/DevOps methodologies to support innovation",
         icon: "GitMerge",
         color: "text-purple-600",
         bg: "bg-purple-50"
       },
       {
         title: "Change Management",
-        desc: "Ensure transformation sticks. Our approach ensures stakeholder buy-in, smooth adoption, and sustained culture change.",
+        desc: "Ensure transformation sticks. Our approach ensures stakeholder buy-in, smooth adoption, and sustained culture change",
         icon: "Users",
         color: "text-green-600",
         bg: "bg-green-50"
       },
       {
         title: "Technology Modernization",
-        desc: "Modernize your foundation. Transform legacy landscapes into cloud-native, API-driven architectures.",
+        desc: "Modernize your foundation. Transform legacy landscapes into cloud-native, API-driven architectures",
         icon: "Server",
         color: "text-orange-600",
         bg: "bg-orange-50"
@@ -152,7 +152,7 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
   // 4. PROCESS SECTION
   process: {
     title: "Webronic Digital Transformation Framework",
-    description: "Our proven 6-phase methodology ensures a structured path from vision to value realization.",
+    description: "Our proven 6-phase methodology ensures a structured path from vision to value realization",
     phases: [
       {
         phase: "Phase 1",
@@ -308,17 +308,17 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
     heading: "Transformation Ecosystem",
     description: "We leverage a modern, diverse technology stack to drive digital excellence across the enterprise. ",
     frameworks: [
-      { name: "Agile & Scrum", desc: "Iterative delivery methodologies." },
-      { name: "SAFe", desc: "Scaled Agile Framework for enterprise." },
-      { name: "DevOps", desc: "CI/CD and infrastructure automation." },
-      { name: "RPA", desc: "Robotic Process Automation." },
-      { name: "Design Thinking", desc: "User-centric problem solving." }
+      { name: "Agile & Scrum", desc: "Iterative delivery methodologies" },
+      { name: "SAFe", desc: "Scaled Agile Framework for enterprise" },
+      { name: "DevOps", desc: "CI/CD and infrastructure automation" },
+      { name: "RPA", desc: "Robotic Process Automation" },
+      { name: "Design Thinking", desc: "User-centric problem solving" }
     ],
     llms: [
-      { name: "ServiceNow", desc: "Digital workflow automation." },
-      { name: "Salesforce", desc: "Customer relationship management." },
-      { name: "SAP S/4HANA", desc: "Intelligent enterprise ERP." },
-      { name: "Pega", desc: "Business process management." }
+      { name: "ServiceNow", desc: "Digital workflow automation" },
+      { name: "Salesforce", desc: "Customer relationship management" },
+      { name: "SAP S/4HANA", desc: "Intelligent enterprise ERP" },
+      { name: "Pega", desc: "Business process management" }
     ],
     mlOps: ["Jenkins", "Docker", "Kubernetes", "Terraform", "GitLab"],
     cloudPlatforms: [
@@ -343,18 +343,18 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
   // 6. INDUSTRIES SECTION
   industries: {
     heading: "Industry Transformations",
-    description: "Tailored digital strategies addressing specific challenges in manufacturing, retail, finance, and healthcare.",
+    description: "Tailored digital strategies addressing specific challenges in manufacturing, retail, finance, and healthcare",
     items: [
       {
         id: "manufacturing",
         label: "Manufacturing",
         icon: "Factory",
         theme: "blue",
-        description: "Industry 4.0 implementation with IoT and predictive maintenance.",
+        description: "Industry 4.0 implementation with IoT and predictive maintenance",
         features: [
           {
             title: "Smart Factory",
-            desc: "IoT sensor networks and digital twins.",
+            desc: "IoT sensor networks and digital twins",
             icon: "Cpu",
             caseStudy: {
               title: "Auto Manufacturer",
@@ -363,7 +363,7 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
           },
           {
             title: "Quality Control",
-            desc: "AI-driven inspection reducing defects.",
+            desc: "AI-driven inspection reducing defects",
             icon: "ScanEye"
           }
         ]
@@ -373,11 +373,11 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
         label: "Retail & E-commerce",
         icon: "ShoppingBag",
         theme: "green",
-        description: "Unified omnichannel experiences and inventory management.",
+        description: "Unified omnichannel experiences and inventory management",
         features: [
           {
             title: "Omnichannel",
-            desc: "Seamless buy online, pick up in store.",
+            desc: "Seamless buy online, pick up in store",
             icon: "Smartphone",
             caseStudy: {
               title: "Regional Chain",
@@ -386,7 +386,7 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
           },
           {
             title: "Personalization",
-            desc: "Customer data platforms driving loyalty.",
+            desc: "Customer data platforms driving loyalty",
             icon: "UserCheck"
           }
         ]
@@ -397,7 +397,7 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
   // 7. CASE STUDIES SECTION
   caseStudies: {
     heading: "Real World Impact",
-    description: "See how our digital transformation strategies translate into measurable business value.",
+    description: "See how our digital transformation strategies translate into measurable business value",
     items: [
       {
         id: 1,
@@ -406,8 +406,8 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
         title: "Industry 4.0 Transformation",
         icon: "Factory",
         color: "text-blue-600",
-        challenge: "High quality defect rates (4.5%), limited supply chain visibility, and siloed operations impacting delivery.",
-        solution: "Implemented Cloud ERP (SAP), IoT sensors on 200+ machines, and AI-driven quality inspection.",
+        challenge: "High quality defect rates (4.5%), limited supply chain visibility, and siloed operations impacting delivery",
+        solution: "Implemented Cloud ERP (SAP), IoT sensors on 200+ machines, and AI-driven quality inspection",
         implementation: [
           "Cloud ERP Implementation",
           "IoT Sensor Network",
@@ -419,7 +419,7 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
           { label: "Productivity", value: "+28%" },
           { label: "Annual Savings", value: "$12M" }
         ],
-        quote: "The transformation paid for itself in 2.1 years. We now have real-time visibility into every aspect of production.",
+        quote: "The transformation paid for itself in 2.1 years. We now have real-time visibility into every aspect of production",
         author: "Chief Operating Officer"
       },
       {
@@ -429,8 +429,8 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
         title: "Omnichannel Evolution",
         icon: "ShoppingBag",
         color: "text-green-600",
-        challenge: "Declining foot traffic, no e-commerce presence, and fragmented customer data facing competition from online giants.",
-        solution: "Launched Shopify Plus platform, mobile app, and unified inventory system with a customer data platform.",
+        challenge: "Declining foot traffic, no e-commerce presence, and fragmented customer data facing competition from online giants",
+        solution: "Launched Shopify Plus platform, mobile app, and unified inventory system with a customer data platform",
         implementation: [
           "E-commerce Platform",
           "Unified Inventory",
@@ -442,7 +442,7 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
           { label: "Inventory Turns", value: "+40%" },
           { label: "Retention", value: "+18%" }
         ],
-        quote: "We went from zero online presence to a seamless omnichannel retailer in 18 months.",
+        quote: "We went from zero online presence to a seamless omnichannel retailer in 18 months",
         author: "CEO"
       },
       {
@@ -452,8 +452,8 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
         title: "Digital Banking Overhaul",
         icon: "Landmark",
         color: "text-purple-600",
-        challenge: "Losing customers to digital-first banks due to 30-minute account opening process and limited mobile capabilities.",
-        solution: "Developed new mobile app, automated account opening, and implemented AI chatbots for service.",
+        challenge: "Losing customers to digital-first banks due to 30-minute account opening process and limited mobile capabilities",
+        solution: "Developed new mobile app, automated account opening, and implemented AI chatbots for service",
         implementation: [
           "Mobile App Dev",
           "Account Automation",
@@ -465,7 +465,7 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
           { label: "Digital Adoption", value: "68%" },
           { label: "Cost-to-Serve", value: "-52%" }
         ],
-        quote: "Our customer satisfaction NPS jumped 22 points. We are acquiring customers faster than ever.",
+        quote: "Our customer satisfaction NPS jumped 22 points. We are acquiring customers faster than ever",
         author: "VP of Digital"
       }
     ]
@@ -477,23 +477,23 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
     items: [
       {
         question: "How long does digital transformation take?",
-        answer: "Timelines vary by scope, but typically 18-36 months for enterprise transformation. We use phased approaches (Envision, Strategy, Build, Deploy) to deliver value incrementally throughout the journey."
+        answer: "Timelines vary by scope, but typically 18-36 months for enterprise transformation. We use phased approaches (Envision, Strategy, Build, Deploy) to deliver value incrementally throughout the journey"
       },
       {
         question: "Do we need to replace all our systems?",
-        answer: "Not necessarily. Our approach is to keep systems providing value, integrate legacy systems via APIs, and replace only when necessary. We favor gradual migration over 'rip and replace'."
+        answer: "Not necessarily. Our approach is to keep systems providing value, integrate legacy systems via APIs, and replace only when necessary. We favor gradual migration over 'rip and replace'"
       },
       {
         question: "How do you ensure employee adoption?",
-        answer: "Change management is embedded from day one. We use early stakeholder involvement, comprehensive role-based training, super-user networks, and continuous support to ensure the culture shifts alongside the technology."
+        answer: "Change management is embedded from day one. We use early stakeholder involvement, comprehensive role-based training, super-user networks, and continuous support to ensure the culture shifts alongside the technology"
       },
       {
         question: "Can we transform incrementally?",
-        answer: "Yes. We recommend a phased transformation starting with high-value, lower-risk initiatives to build momentum (quick wins) before expanding scope to core transformation initiatives."
+        answer: "Yes. We recommend a phased transformation starting with high-value, lower-risk initiatives to build momentum (quick wins) before expanding scope to core transformation initiatives"
       },
       {
         question: "How do you measure success?",
-        answer: "We track metrics across four dimensions: Business (Revenue, Cost), Customer (NPS, Retention), Operational (Productivity, Quality), and Financial (ROI, Payback Period)."
+        answer: "We track metrics across four dimensions: Business (Revenue, Cost), Customer (NPS, Retention), Operational (Productivity, Quality), and Financial (ROI, Payback Period)"
       }
     ]
   },
@@ -502,12 +502,12 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
   getStarted: {
     badge: "Start Your Evolution",
     titleLines: ["Ready to Transform", "Your Business?"],
-    description: "Whether you need a maturity assessment or a full transformation roadmap, we have the right engagement model.",
+    description: "Whether you need a maturity assessment or a full transformation roadmap, we have the right engagement model",
     cards: [
       {
         id: "assessment",
         title: "Free Maturity Assessment",
-        description: "Evaluate your current state across technology, process, and culture dimensions.",
+        description: "Evaluate your current state across technology, process, and culture dimensions",
         icon: "BarChart2",
         theme: "light",
         list: [
@@ -521,7 +521,7 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
       {
         id: "workshop",
         title: "Transformation Workshop",
-        description: "Intensive 3-5 day engagement to define your vision and strategy.",
+        description: "Intensive 3-5 day engagement to define your vision and strategy",
         icon: "Users",
         theme: "dark",
         list: [

@@ -7,8 +7,8 @@ export const DEVOPS_DATA: ServicePageData = {
   preview: {
     title: "DevOps & SRE",
     tagline: "Accelerate Delivery",
-    description: "DevOps consulting and implementation: CI/CD pipelines, infrastructure as code, Kubernetes, Docker, automated testing, monitoring. Accelerate deployment, improve reliability.",
-    image: "./assets/services/devops.png", // Ensure path exists
+    description: "DevOps consulting and implementation: CI/CD pipelines, infrastructure as code, Kubernetes, Docker, automated testing, monitoring. Accelerate deployment, improve reliability",
+    image: "/assets/services/devops.png", // Ensure path exists
     icon: "Infinity",
     points: [
       "Automated CI/CD Pipelines",
@@ -30,7 +30,7 @@ export const DEVOPS_DATA: ServicePageData = {
     badge: "DevOps & SRE Services",
     titlePrefix: "Accelerate Software",
     titleHighlight: "Delivery & Reliability",
-    description: "Deploy 10x more frequently with 60x faster recovery. We implement automated pipelines and SRE best practices to break down silos between development and operations.",
+    description: "Deploy 10x more frequently with 60x faster recovery. We implement automated pipelines and SRE best practices to break down silos between development and operations",
     features: [
       "Deploy 10x more frequently",
       "90% reduction in deployment time",
@@ -47,33 +47,33 @@ export const DEVOPS_DATA: ServicePageData = {
     heading: "From Manual Operations to",
     highlight: "Automated Excellence",
     content: [
-      "DevOps represents a fundamental shift in how organizations develop, deploy, and operate software. By breaking down silos between development and operations teams, automating manual processes, and implementing continuous delivery practices, DevOps enables organizations to ship software faster while maintaining high reliability.",
-      "We've implemented DevOps transformations for 100+ organizations, helping them achieve daily deployments, 90% reduction in lead time, and 95% faster incident recovery. Our SRE approach applies software engineering practices to infrastructure, ensuring systems are scalable and maintainable."
+      "DevOps represents a fundamental shift in how organizations develop, deploy, and operate software. By breaking down silos between development and operations teams, automating manual processes, and implementing continuous delivery practices, DevOps enables organizations to ship software faster while maintaining high reliability",
+      "We've implemented DevOps transformations for 100+ organizations, helping them achieve daily deployments, 90% reduction in lead time, and 95% faster incident recovery. Our SRE approach applies software engineering practices to infrastructure, ensuring systems are scalable and maintainable"
     ],
     differentiators: [
       {
         title: "Deployment Speed",
-        description: "From monthly to daily/hourly deployments with automated pipelines.",
+        description: "From monthly to daily/hourly deployments with automated pipelines",
         icon: "Zap"
       },
       {
         title: "Reliability (SRE)",
-        description: "99.9%+ uptime through error budgets and SLO management.",
+        description: "99.9%+ uptime through error budgets and SLO management",
         icon: "ShieldCheck"
       },
       {
         title: "Infrastructure as Code",
-        description: "Consistent, reproducible environments using Terraform and Ansible.",
+        description: "Consistent, reproducible environments using Terraform and Ansible",
         icon: "Code2"
       },
       {
         title: "Fast Recovery",
-        description: "95% faster mean time to recovery (MTTR) via automated rollback.",
+        description: "95% faster mean time to recovery (MTTR) via automated rollback",
         icon: "RefreshCcw"
       },
       {
         title: "Security Integrated",
-        description: "DevSecOps approach with automated security scanning in pipelines.",
+        description: "DevSecOps approach with automated security scanning in pipelines",
         icon: "Lock"
       }
     ]
@@ -84,46 +84,46 @@ export const DEVOPS_DATA: ServicePageData = {
     badge: "Core Services",
     titleLine1: "Comprehensive",
     titleHighlight: "DevOps Capabilities",
-    description: "From pipeline automation to cultural transformation, we provide the technical and strategic services needed to modernize your software delivery.",
+    description: "From pipeline automation to cultural transformation, we provide the technical and strategic services needed to modernize your software delivery",
     cards: [
       {
         title: "CI/CD Pipelines",
-        desc: "Automate build, test, and deployment. Implement Blue-Green and Canary strategies to deploy code with zero downtime.",
+        desc: "Automate build, test, and deployment. Implement Blue-Green and Canary strategies to deploy code with zero downtime",
         icon: "GitMerge",
         color: "text-blue-600",
         bg: "bg-blue-50"
       },
       {
         title: "Infrastructure as Code",
-        desc: "Manage infrastructure using Terraform and CloudFormation. Eliminate configuration drift and enable rapid disaster recovery.",
+        desc: "Manage infrastructure using Terraform and CloudFormation. Eliminate configuration drift and enable rapid disaster recovery",
         icon: "Server",
         color: "text-indigo-600",
         bg: "bg-indigo-50"
       },
       {
         title: "Container Orchestration",
-        desc: "Manage containerized applications with Kubernetes (EKS, AKS, GKE) and Docker. Auto-scaling and self-healing infrastructure.",
+        desc: "Manage containerized applications with Kubernetes (EKS, AKS, GKE) and Docker. Auto-scaling and self-healing infrastructure",
         icon: "Box",
         color: "text-purple-600",
         bg: "bg-purple-50"
       },
       {
         title: "Monitoring & Observability",
-        desc: "Gain deep insights with Prometheus, Grafana, and ELK. Track metrics, logs, and distributed traces to identify bottlenecks.",
+        desc: "Gain deep insights with Prometheus, Grafana, and ELK. Track metrics, logs, and distributed traces to identify bottlenecks",
         icon: "Activity",
         color: "text-orange-600",
         bg: "bg-orange-50"
       },
       {
         title: "Site Reliability Engineering",
-        desc: "Apply software engineering to operations. Define SLOs, manage error budgets, and reduce toil through automation.",
+        desc: "Apply software engineering to operations. Define SLOs, manage error budgets, and reduce toil through automation",
         icon: "TrendingUp",
         color: "text-green-600",
         bg: "bg-green-50"
       },
       {
         title: "DevOps Culture",
-        desc: "Break down silos. Transform your organization with shared responsibility, blameless post-mortems, and a continuous learning mindset.",
+        desc: "Break down silos. Transform your organization with shared responsibility, blameless post-mortems, and a continuous learning mindset",
         icon: "Users",
         color: "text-pink-600",
         bg: "bg-pink-50"
@@ -146,7 +146,7 @@ export const DEVOPS_DATA: ServicePageData = {
   // 4. PROCESS SECTION (Mapped from "DevOps Culture Transformation" phases)
   process: {
     title: "Transformation Framework",
-    description: "Our proven methodology guides your organization from assessment to full-scale DevOps maturity.",
+    description: "Our proven methodology guides your organization from assessment to full-scale DevOps maturity",
     phases: [
       {
         phase: "Phase 1",
@@ -254,20 +254,20 @@ export const DEVOPS_DATA: ServicePageData = {
   // 5. TECH STACK SECTION
   techStack: {
     heading: "DevOps Toolchain",
-    description: "We integrate best-in-class tools to build robust, automated, and secure delivery pipelines.",
+    description: "We integrate best-in-class tools to build robust, automated, and secure delivery pipelines",
     frameworks: [
-      { name: "Jenkins", desc: "Flexible automation server with vast plugin ecosystem." },
-      { name: "GitLab CI", desc: "Integrated DevOps platform for source to prod." },
-      { name: "GitHub Actions", desc: "Native workflow automation for GitHub repositories." },
-      { name: "CircleCI", desc: "Cloud-native CI/CD for speed and scale." },
-      { name: "ArgoCD", desc: "Declarative GitOps continuous delivery for Kubernetes." }
+      { name: "Jenkins", desc: "Flexible automation server with vast plugin ecosystem" },
+      { name: "GitLab CI", desc: "Integrated DevOps platform for source to prod" },
+      { name: "GitHub Actions", desc: "Native workflow automation for GitHub repositories" },
+      { name: "CircleCI", desc: "Cloud-native CI/CD for speed and scale" },
+      { name: "ArgoCD", desc: "Declarative GitOps continuous delivery for Kubernetes" }
     ],
     // Using 'llms' key for IaC & Config Management
     llms: [
-      { name: "Terraform", desc: "Infrastructure as Code for multi-cloud provisioning." },
-      { name: "Ansible", desc: "Agentless configuration management and automation." },
-      { name: "CloudFormation", desc: "AWS-native infrastructure definition." },
-      { name: "Pulumi", desc: "Modern IaC using general-purpose languages." }
+      { name: "Terraform", desc: "Infrastructure as Code for multi-cloud provisioning" },
+      { name: "Ansible", desc: "Agentless configuration management and automation" },
+      { name: "CloudFormation", desc: "AWS-native infrastructure definition" },
+      { name: "Pulumi", desc: "Modern IaC using general-purpose languages" }
     ],
     // Using 'mlOps' key for Containers & Orchestration
     mlOps: ["Kubernetes", "Docker", "Helm", "Istio", "Prometheus", "Grafana", "ELK Stack"],
@@ -293,18 +293,18 @@ export const DEVOPS_DATA: ServicePageData = {
   // 6. INDUSTRIES SECTION
   industries: {
     heading: "Industry Applications",
-    description: "DevOps solutions tailored to high-scale and compliance-heavy sectors.",
+    description: "DevOps solutions tailored to high-scale and compliance-heavy sectors",
     items: [
       {
         id: "ecommerce",
         label: "Retail & E-commerce",
         icon: "ShoppingBag",
         theme: "blue",
-        description: "Handling massive traffic spikes with auto-scaling infrastructure.",
+        description: "Handling massive traffic spikes with auto-scaling infrastructure",
         features: [
           {
             title: "Black Friday Scale",
-            desc: "Handled 10x traffic with auto-scaling Kubernetes.",
+            desc: "Handled 10x traffic with auto-scaling Kubernetes",
             icon: "TrendingUp",
             caseStudy: {
               title: "Online Retailer",
@@ -313,7 +313,7 @@ export const DEVOPS_DATA: ServicePageData = {
           },
           {
             title: "Deployment Speed",
-            desc: "Deployed multiple times daily to stay competitive.",
+            desc: "Deployed multiple times daily to stay competitive",
             icon: "Zap"
           }
         ]
@@ -323,11 +323,11 @@ export const DEVOPS_DATA: ServicePageData = {
         label: "Financial Services",
         icon: "Landmark",
         theme: "green",
-        description: "Ensuring reliability and compliance with SRE practices.",
+        description: "Ensuring reliability and compliance with SRE practices",
         features: [
           {
             title: "Reliability",
-            desc: "Reduced incidents by 85% using SRE error budgets.",
+            desc: "Reduced incidents by 85% using SRE error budgets",
             icon: "ShieldCheck",
             caseStudy: {
               title: "Banking Platform",
@@ -336,7 +336,7 @@ export const DEVOPS_DATA: ServicePageData = {
           },
           {
             title: "Compliance",
-            desc: "Automated security scanning and audit trails.",
+            desc: "Automated security scanning and audit trails",
             icon: "Lock"
           }
         ]
@@ -347,7 +347,7 @@ export const DEVOPS_DATA: ServicePageData = {
   // 7. CASE STUDIES SECTION
   caseStudies: {
     heading: "DevOps Success Stories",
-    description: "See how we've helped organizations accelerate delivery and improve reliability.",
+    description: "See how we've helped organizations accelerate delivery and improve reliability",
     items: [
       {
         id: 1,
@@ -356,8 +356,8 @@ export const DEVOPS_DATA: ServicePageData = {
         title: "DevOps Transformation",
         icon: "ShoppingBag",
         color: "text-blue-600",
-        challenge: "Deployments every 2 weeks were manual and error-prone (30% failure rate). Unable to scale during peak traffic.",
-        solution: "Implemented Jenkins CI/CD, Dockerized microservices on AWS EKS, and Terraform for IaC.",
+        challenge: "Deployments every 2 weeks were manual and error-prone (30% failure rate). Unable to scale during peak traffic",
+        solution: "Implemented Jenkins CI/CD, Dockerized microservices on AWS EKS, and Terraform for IaC",
         implementation: [
           "Jenkins CI/CD Pipeline",
           "Kubernetes on AWS EKS",
@@ -369,7 +369,7 @@ export const DEVOPS_DATA: ServicePageData = {
           { label: "Failure Rate", value: "30% to 5%" },
           { label: "MTTR", value: "15 mins" }
         ],
-        quote: "We went from painful bi-weekly deployments to shipping code multiple times a day with confidence.",
+        quote: "We went from painful bi-weekly deployments to shipping code multiple times a day with confidence",
         author: "VP of Engineering"
       },
       {
@@ -379,8 +379,8 @@ export const DEVOPS_DATA: ServicePageData = {
         title: "SRE Implementation",
         icon: "Landmark",
         color: "text-green-600",
-        challenge: "Frequent outages, no defined SLOs, manual incident response, and team burnout from 24/7 firefighting.",
-        solution: "Defined SLOs and Error Budgets, implemented full observability stack, and automated incident response runbooks.",
+        challenge: "Frequent outages, no defined SLOs, manual incident response, and team burnout from 24/7 firefighting",
+        solution: "Defined SLOs and Error Budgets, implemented full observability stack, and automated incident response runbooks",
         implementation: [
           "SLO/Error Budget Framework",
           "Automated Runbooks",
@@ -392,7 +392,7 @@ export const DEVOPS_DATA: ServicePageData = {
           { label: "Incidents", value: "-85%" },
           { label: "MTTR", value: "12 mins" }
         ],
-        quote: "On-call burnout is gone. We now spend our time engineering reliability instead of fighting fires.",
+        quote: "On-call burnout is gone. We now spend our time engineering reliability instead of fighting fires",
         author: "Head of Infrastructure"
       }
     ]
@@ -404,23 +404,23 @@ export const DEVOPS_DATA: ServicePageData = {
     items: [
       {
         question: "What is the difference between DevOps and SRE?",
-        answer: "DevOps is the culture and philosophy of breaking down silos. SRE (Site Reliability Engineering) is the prescriptive way to do DevOps, applying software engineering to operations with concepts like SLOs and Error Budgets."
+        answer: "DevOps is the culture and philosophy of breaking down silos. SRE (Site Reliability Engineering) is the prescriptive way to do DevOps, applying software engineering to operations with concepts like SLOs and Error Budgets"
       },
       {
         question: "How long does a DevOps transformation take?",
-        answer: "Initial assessment and strategy take 4-6 weeks. A pilot implementation typically takes 2-3 months, while scaling to the entire enterprise is a 6-12 month journey."
+        answer: "Initial assessment and strategy take 4-6 weeks. A pilot implementation typically takes 2-3 months, while scaling to the entire enterprise is a 6-12 month journey"
       },
       {
         question: "What tools do you use?",
-        answer: "We are tool-agnostic but have deep expertise in industry standards like Jenkins, GitLab CI, Terraform, Kubernetes, Docker, Prometheus, and Grafana on AWS, Azure, and GCP."
+        answer: "We are tool-agnostic but have deep expertise in industry standards like Jenkins, GitLab CI, Terraform, Kubernetes, Docker, Prometheus, and Grafana on AWS, Azure, and GCP"
       },
       {
         question: "Will DevOps improve our security?",
-        answer: "Yes. We implement 'DevSecOps', integrating automated security scanning, vulnerability assessments, and compliance checks directly into the CI/CD pipeline."
+        answer: "Yes. We implement 'DevSecOps', integrating automated security scanning, vulnerability assessments, and compliance checks directly into the CI/CD pipeline"
       },
       {
         question: "What are the key metrics you track?",
-        answer: "We focus on the DORA metrics: Deployment Frequency, Lead Time for Changes, Change Failure Rate, and Mean Time to Recovery (MTTR)."
+        answer: "We focus on the DORA metrics: Deployment Frequency, Lead Time for Changes, Change Failure Rate, and Mean Time to Recovery (MTTR)"
       }
     ]
   },
@@ -429,12 +429,12 @@ export const DEVOPS_DATA: ServicePageData = {
   getStarted: {
     badge: "Start Your Transformation",
     titleLines: ["Accelerate Your", "Software Delivery"],
-    description: "Whether you need a maturity assessment or full SRE implementation, we're ready to help.",
+    description: "Whether you need a maturity assessment or full SRE implementation, we're ready to help",
     cards: [
       {
         id: "assessment",
         title: "Free DevOps Assessment",
-        description: "Evaluate your current maturity, identify bottlenecks, and get actionable improvement recommendations.",
+        description: "Evaluate your current maturity, identify bottlenecks, and get actionable improvement recommendations",
         icon: "BarChart",
         theme: "light",
         list: [
@@ -448,7 +448,7 @@ export const DEVOPS_DATA: ServicePageData = {
       {
         id: "consultation",
         title: "SRE Consultation",
-        description: "Discuss how Site Reliability Engineering can improve your uptime and reduce operational toil.",
+        description: "Discuss how Site Reliability Engineering can improve your uptime and reduce operational toil",
         icon: "Shield",
         theme: "dark",
         list: [

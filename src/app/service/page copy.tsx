@@ -30,7 +30,7 @@ const EnquiryModal = ({ service, onClose }: { service: any; onClose: () => void;
   // Just ensure 'service' type is flexible or matches the transformation above
   return (
       // ... (Your modal JSX)
-       <div className="fixed inset-0 ...">
+       <div className="fixed inset-0 ..">
            {/* ... code ... */}
            <span>Regarding: {service.title}</span> 
            {/* ... code ... */}

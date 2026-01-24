@@ -7,8 +7,8 @@ export const IOT_DATA: ServicePageData = {
   preview: {
     title: "IoT Solutions",
     tagline: "Intelligent Connectivity",
-    description: "Enterprise IoT solutions for manufacturing, retail, and healthcare. Industrial IoT, smart buildings, asset tracking, and predictive maintenance with real-time analytics.",
-    image: "./assets/images/iot.png", // Ensure path exists
+    description: "Enterprise IoT solutions for manufacturing, retail, and healthcare. Industrial IoT, smart buildings, asset tracking, and predictive maintenance with real-time analytics",
+    image: "/assets/images/iot.png", // Ensure path exists
     icon: "Wifi",
     points: [
       "Industrial IoT (IIoT)",
@@ -17,13 +17,13 @@ export const IOT_DATA: ServicePageData = {
       "Asset Tracking"
     ],
     technologies: [
-        { name: "Raspberry Pi", logo: "./assets/icons/raspberry.png" },
-        { name: "TensorFlow", logo: "./assets/icons/tensorflow.png" },
-        { name: "NodeMCU", logo: "./assets/icons/nodemcu.png" },
-        { name: "Arduino", logo: "./assets/icons/arduino.png" },
-        { name: "OpenCV", logo: "./assets/icons/opencv.png" },
-        { name: "OpenVINO", logo: "./assets/icons/openvino.png" },
-        { name: "PyTorch", logo: "./assets/icons/pytorch.png" },
+        { name: "Raspberry Pi", logo: "/assets/icons/raspberry.png" },
+        { name: "TensorFlow", logo: "/assets/icons/tensorflow.png" },
+        { name: "NodeMCU", logo: "/assets/icons/nodemcu.png" },
+        { name: "Arduino", logo: "/assets/icons/arduino.png" },
+        { name: "OpenCV", logo: "/assets/icons/opencv.png" },
+        { name: "OpenVINO", logo: "/assets/icons/openvino.png" },
+        { name: "PyTorch", logo: "/assets/icons/pytorch.png" },
       ],
   },
 
@@ -32,7 +32,7 @@ export const IOT_DATA: ServicePageData = {
     badge: "IoT Solutions & Services",
     titlePrefix: "Connect, Monitor, and Optimize with",
     titleHighlight: "Intelligent IoT Ecosystems",
-    description: "Transform your business by connecting physical devices to digital systems. We provide end-to-end implementation from sensors to cloud, enabling real-time monitoring and automation.",
+    description: "Transform your business by connecting physical devices to digital systems. We provide end-to-end implementation from sensors to cloud, enabling real-time monitoring and automation",
     features: [
       "End-to-end implementation (Sensors to Cloud)",
       "Real-time monitoring & predictive analytics",
@@ -49,33 +49,33 @@ export const IOT_DATA: ServicePageData = {
     heading: "The IoT Opportunity:",
     highlight: "Visibility & Control",
     content: [
-      "The Internet of Things (IoT) is transforming industries by connecting physical devices to digital systems, enabling real-time monitoring, automation, and data-driven decision-making. From manufacturing equipment to smart buildings, IoT creates unprecedented visibility.",
+      "The Internet of Things (IoT) is transforming industries by connecting physical devices to digital systems, enabling real-time monitoring, automation, and data-driven decision-making. From manufacturing equipment to smart buildings, IoT creates unprecedented visibility",
       "Webronic Industries specializes in designing enterprise-grade IoT solutions. With our proprietary platforms processing data from thousands of connected devices globally, we bring proven expertise to every engagement. "
     ],
     differentiators: [
       {
         title: "Real-Time Visibility",
-        description: "Monitor assets and processes instantly. Know exactly what's happening at any moment.",
+        description: "Monitor assets and processes instantly. Know exactly what's happening at any moment",
         icon: "Eye"
       },
       {
         title: "Predictive Intelligence",
-        description: "Move from reactive to proactive. Predict equipment failures before they impact operations.",
+        description: "Move from reactive to proactive. Predict equipment failures before they impact operations",
         icon: "BrainCircuit"
       },
       {
         title: "Full-Stack Capability",
-        description: "We handle every layer: Device, Edge, Network, Cloud, and Application.",
+        description: "We handle every layer: Device, Edge, Network, Cloud, and Application",
         icon: "Layers"
       },
       {
         title: "Security-First",
-        description: "Built-in security from device authentication to encrypted cloud communication.",
+        description: "Built-in security from device authentication to encrypted cloud communication",
         icon: "ShieldCheck"
       },
       {
         title: "Proven Platforms",
-        description: "Experience managing 150+ locations and 500+ production machines.",
+        description: "Experience managing 150+ locations and 500+ production machines",
         icon: "Server"
       }
     ]
@@ -86,46 +86,46 @@ export const IOT_DATA: ServicePageData = {
     badge: "Core IoT Services",
     titleLine1: "End-to-End",
     titleHighlight: "IoT Solutions",
-    description: "We deliver comprehensive IoT services ranging from industrial automation to smart environmental monitoring.",
+    description: "We deliver comprehensive IoT services ranging from industrial automation to smart environmental monitoring",
     cards: [
       {
         title: "Industrial IoT (IIoT)",
-        desc: "Transform manufacturing with Industry 4.0. Connect legacy equipment, enable OEE tracking, and automate quality control.",
+        desc: "Transform manufacturing with Industry 4.0. Connect legacy equipment, enable OEE tracking, and automate quality control",
         icon: "Factory",
         color: "text-orange-600",
         bg: "bg-orange-50"
       },
       {
         title: "Smart Buildings",
-        desc: "Optimize operations and comfort. HVAC optimization, smart lighting, occupancy sensing, and energy management.",
+        desc: "Optimize operations and comfort. HVAC optimization, smart lighting, occupancy sensing, and energy management",
         icon: "Building",
         color: "text-blue-600",
         bg: "bg-blue-50"
       },
       {
         title: "Asset Tracking",
-        desc: "Real-time visibility of physical assets. Indoor positioning (BLE/WiFi) and outdoor fleet tracking (GPS/Cellular).",
+        desc: "Real-time visibility of physical assets. Indoor positioning (BLE/WiFi) and outdoor fleet tracking (GPS/Cellular)",
         icon: "MapPin",
         color: "text-green-600",
         bg: "bg-green-50"
       },
       {
         title: "Predictive Maintenance",
-        desc: "Condition-based monitoring using vibration and thermal analysis to predict failures before they occur.",
+        desc: "Condition-based monitoring using vibration and thermal analysis to predict failures before they occur",
         icon: "Activity",
         color: "text-red-600",
         bg: "bg-red-50"
       },
       {
         title: "Environmental Monitoring",
-        desc: "Deploy sensor networks for air quality, water safety, and soil conditions to ensure compliance and safety.",
+        desc: "Deploy sensor networks for air quality, water safety, and soil conditions to ensure compliance and safety",
         icon: "Droplets",
         color: "text-teal-600",
         bg: "bg-teal-50"
       },
       {
         title: "IoT Platform Dev",
-        desc: "Custom IoT platforms for unique requirements. Scalable device management, data ingestion, and analytics engines.",
+        desc: "Custom IoT platforms for unique requirements. Scalable device management, data ingestion, and analytics engines",
         icon: "Cpu",
         color: "text-purple-600",
         bg: "bg-purple-50"
@@ -148,7 +148,7 @@ export const IOT_DATA: ServicePageData = {
   // 4. PROCESS SECTION
   process: {
     title: "Implementation Process",
-    description: "A structured approach to IoT adoption, moving from initial assessment to full-scale enterprise rollout.",
+    description: "A structured approach to IoT adoption, moving from initial assessment to full-scale enterprise rollout",
     phases: [
       {
         phase: "Phase 1",
@@ -256,20 +256,20 @@ export const IOT_DATA: ServicePageData = {
   // 5. TECH STACK SECTION
   techStack: {
     heading: "IoT Technology Stack",
-    description: "We utilize a robust stack of protocols, hardware, and cloud platforms to build scalable and secure IoT ecosystems.",
+    description: "We utilize a robust stack of protocols, hardware, and cloud platforms to build scalable and secure IoT ecosystems",
     frameworks: [
-      { name: "MQTT", desc: "Lightweight publish-subscribe protocol for telemetry." },
-      { name: "CoAP", desc: "RESTful protocol for resource-constrained devices." },
-      { name: "LoRaWAN", desc: "Long-range, low-power wide-area networking." },
-      { name: "WebSocket", desc: "Real-time bidirectional data for dashboards." },
-      { name: "NB-IoT", desc: "Cellular protocol for wide coverage." }
+      { name: "MQTT", desc: "Lightweight publish-subscribe protocol for telemetry" },
+      { name: "CoAP", desc: "RESTful protocol for resource-constrained devices" },
+      { name: "LoRaWAN", desc: "Long-range, low-power wide-area networking" },
+      { name: "WebSocket", desc: "Real-time bidirectional data for dashboards" },
+      { name: "NB-IoT", desc: "Cellular protocol for wide coverage" }
     ],
     // Using 'llms' key for Hardware & Sensors
     llms: [
-      { name: "ESP32 / STM32", desc: "Microcontrollers for edge devices." },
-      { name: "Raspberry Pi", desc: "Edge gateways and local processing." },
-      { name: "Industrial PLCs", desc: "Siemens, Allen-Bradley integration." },
-      { name: "MEMS Sensors", desc: "Vibration, temperature, and motion." }
+      { name: "ESP32 / STM32", desc: "Microcontrollers for edge devices" },
+      { name: "Raspberry Pi", desc: "Edge gateways and local processing" },
+      { name: "Industrial PLCs", desc: "Siemens, Allen-Bradley integration" },
+      { name: "MEMS Sensors", desc: "Vibration, temperature, and motion" }
     ],
     // Using 'mlOps' key for Edge & Analytics
     mlOps: ["AWS Greengrass", "Azure IoT Edge", "TensorFlow Lite", "InfluxDB", "Grafana"],
@@ -295,7 +295,7 @@ export const IOT_DATA: ServicePageData = {
   // 6. INDUSTRIES SECTION
   industries: {
     heading: "Industry Applications",
-    description: "IoT solutions tailored to specific operational needs in manufacturing, buildings, and logistics.",
+    description: "IoT solutions tailored to specific operational needs in manufacturing, buildings, and logistics",
     items: [
       {
         id: "manufacturing",
@@ -305,8 +305,8 @@ export const IOT_DATA: ServicePageData = {
         description: "Predictive maintenance and OEE tracking for smart factories. ",
         features: [
           {
-            title: "Predictive Maint.",
-            desc: "Vibration analysis predicting bearing failures 2 weeks in advance.",
+            title: "Predictive Maint",
+            desc: "Vibration analysis predicting bearing failures 2 weeks in advance",
             icon: "Activity",
             caseStudy: {
               title: "Auto Parts Mfr",
@@ -315,7 +315,7 @@ export const IOT_DATA: ServicePageData = {
           },
           {
             title: "OEE Tracking",
-            desc: "Real-time production visibility vs targets.",
+            desc: "Real-time production visibility vs targets",
             icon: "BarChart"
           }
         ]
@@ -329,16 +329,16 @@ export const IOT_DATA: ServicePageData = {
         features: [
           {
             title: "Fleet Tracking",
-            desc: "GPS/OBD-II tracking reducing fuel costs by 22%.",
+            desc: "GPS/OBD-II tracking reducing fuel costs by 22%",
             icon: "MapPin",
             caseStudy: {
-              title: "Logistics Co.",
+              title: "Logistics Co",
               result: "$340K Annual Savings"
             }
           },
           {
             title: "Cold Chain",
-            desc: "Temperature monitoring for sensitive cargo.",
+            desc: "Temperature monitoring for sensitive cargo",
             icon: "Thermometer"
           }
         ]
@@ -349,7 +349,7 @@ export const IOT_DATA: ServicePageData = {
   // 7. CASE STUDIES SECTION
   caseStudies: {
     heading: "IoT Success Stories",
-    description: "Real-world examples of how connected ecosystems drive efficiency and ROI.",
+    description: "Real-world examples of how connected ecosystems drive efficiency and ROI",
     items: [
       {
         id: 1,
@@ -358,8 +358,8 @@ export const IOT_DATA: ServicePageData = {
         title: "Predictive Maintenance",
         icon: "Factory",
         color: "text-orange-600",
-        challenge: "Frequent unplanned downtime (5 hrs/week/machine) costing $8M annually with no visibility into machine health.",
-        solution: "Implemented IIoT system with vibration/temp sensors on 200 machines, Edge processing, and AWS IoT Core analytics.",
+        challenge: "Frequent unplanned downtime (5 hrs/week/machine) costing $8M annually with no visibility into machine health",
+        solution: "Implemented IIoT system with vibration/temp sensors on 200 machines, Edge processing, and AWS IoT Core analytics",
         implementation: [
           "Vibration & Temp Sensors",
           "Edge Computing Gateways",
@@ -371,7 +371,7 @@ export const IOT_DATA: ServicePageData = {
           { label: "Maint. Costs", value: "-32%" },
           { label: "Annual Savings", value: "$5.4M" }
         ],
-        quote: "We prevented a catastrophic spindle failure that would have cost $200k. The system paid for itself in 8 months.",
+        quote: "We prevented a catastrophic spindle failure that would have cost $200k. The system paid for itself in 8 months",
         author: "Plant Manager"
       },
       {
@@ -381,8 +381,8 @@ export const IOT_DATA: ServicePageData = {
         title: "Energy Management",
         icon: "Building",
         color: "text-blue-600",
-        challenge: "High energy costs ($850K/yr), manual HVAC schedules, and frequent occupant comfort complaints.",
-        solution: "Deployed 1000+ sensors for occupancy-based HVAC and smart lighting, integrated with Azure IoT Hub.",
+        challenge: "High energy costs ($850K/yr), manual HVAC schedules, and frequent occupant comfort complaints",
+        solution: "Deployed 1000+ sensors for occupancy-based HVAC and smart lighting, integrated with Azure IoT Hub",
         implementation: [
           "Occupancy Sensors",
           "Smart Lighting Control",
@@ -394,7 +394,7 @@ export const IOT_DATA: ServicePageData = {
           { label: "Lighting usage", value: "-52%" },
           { label: "Savings", value: "$289K/yr" }
         ],
-        quote: "Not only did we save nearly $300k, but employee comfort complaints dropped significantly.",
+        quote: "Not only did we save nearly $300k, but employee comfort complaints dropped significantly",
         author: "Facilities Director"
       },
       {
@@ -404,8 +404,8 @@ export const IOT_DATA: ServicePageData = {
         title: "Fleet Asset Tracking",
         icon: "Truck",
         color: "text-green-600",
-        challenge: "No real-time visibility, inefficient routing, high fuel costs, and inability to provide accurate ETAs.",
-        solution: "GPS-based fleet tracking with OBD-II integration, route optimization software, and driver mobile app.",
+        challenge: "No real-time visibility, inefficient routing, high fuel costs, and inability to provide accurate ETAs",
+        solution: "GPS-based fleet tracking with OBD-II integration, route optimization software, and driver mobile app",
         implementation: [
           "GPS/OBD-II Trackers",
           "Route Optimization",
@@ -417,7 +417,7 @@ export const IOT_DATA: ServicePageData = {
           { label: "Delivery Time", value: "-27%" },
           { label: "Unauthorized Use", value: "0%" }
         ],
-        quote: "We reduced miles driven by 18% and can finally give customers accurate arrival times.",
+        quote: "We reduced miles driven by 18% and can finally give customers accurate arrival times",
         author: "Fleet Operations VP"
       }
     ]
@@ -429,23 +429,23 @@ export const IOT_DATA: ServicePageData = {
     items: [
       {
         question: "What is the typical ROI for IoT projects?",
-        answer: "Most projects achieve positive ROI within 2 years. Payback varies based on scale and asset criticality, with predictive maintenance often showing ROI in under 12 months."
+        answer: "Most projects achieve positive ROI within 2 years. Payback varies based on scale and asset criticality, with predictive maintenance often showing ROI in under 12 months"
       },
       {
         question: "How secure is your IoT solution?",
-        answer: "Security is critical. We implement device authentication, encrypted communication (TLS/SSL), network segmentation, and regular security updates, following standards like IEC 62443."
+        answer: "Security is critical. We implement device authentication, encrypted communication (TLS/SSL), network segmentation, and regular security updates, following standards like IEC 62443"
       },
       {
         question: "What happens if internet connectivity is lost?",
-        answer: "Our edge computing solutions store data locally during outages and automatically sync when connectivity is restored. Critical alerts can be sent via backup channels."
+        answer: "Our edge computing solutions store data locally during outages and automatically sync when connectivity is restored. Critical alerts can be sent via backup channels"
       },
       {
         question: "Can you integrate with existing legacy equipment?",
-        answer: "Yes. We use retrofit sensors and gateways to connect legacy machines without replacing them, enabling smart features on older equipment."
+        answer: "Yes. We use retrofit sensors and gateways to connect legacy machines without replacing them, enabling smart features on older equipment"
       },
       {
         question: "Do I need IT staff to manage the system?",
-        answer: "Not necessarily. We offer fully managed services including monitoring, updates, and troubleshooting, or we can train your existing team."
+        answer: "Not necessarily. We offer fully managed services including monitoring, updates, and troubleshooting, or we can train your existing team"
       }
     ]
   },
@@ -454,12 +454,12 @@ export const IOT_DATA: ServicePageData = {
   getStarted: {
     badge: "Connect Your Business",
     titleLines: ["Ready to Deploy", "Intelligent IoT?"],
-    description: "Start with a risk-free assessment or a rapid Proof of Concept to validate ROI.",
+    description: "Start with a risk-free assessment or a rapid Proof of Concept to validate ROI",
     cards: [
       {
         id: "assessment",
         title: "Free IoT Assessment",
-        description: "Identify high-value use cases and get a technical feasibility analysis for your facility.",
+        description: "Identify high-value use cases and get a technical feasibility analysis for your facility",
         icon: "ClipboardCheck",
         theme: "light",
         list: [
@@ -473,7 +473,7 @@ export const IOT_DATA: ServicePageData = {
       {
         id: "poc",
         title: "IoT Proof of Concept",
-        description: "A limited 8-12 week pilot deployment to demonstrate value with real data.",
+        description: "A limited 8-12 week pilot deployment to demonstrate value with real data",
         icon: "Zap",
         theme: "dark",
         list: [

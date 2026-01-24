@@ -8,7 +8,7 @@ import {
 
 export const MANUFACTURING_HERO_DATA = {
   h1: "Manufacturing & Industrial IT Solutions",
-  description: "Transform your manufacturing operations with Industry 4.0 technologies. Smart factories, predictive maintenance, quality automation, and supply chain optimization delivering 68% downtime reduction and 99.2% inspection accuracy.",
+  description: "Transform your manufacturing operations with Industry 4.0 technologies. Smart factories, predictive maintenance, quality automation, and supply chain optimization delivering 68% downtime reduction and 99.2% inspection accuracy",
   stats: [
     {
       value: "100+",

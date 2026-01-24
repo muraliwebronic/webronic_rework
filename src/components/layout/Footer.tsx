@@ -16,14 +16,14 @@ import {
   Users,
   Handshake,
   Info,
-  Code2, 
-  Bot, 
-  Cloud, 
-  Zap, 
-  Terminal, 
-  Wifi, 
-  BarChart3, 
-  Store, 
+  Code2,
+  Bot,
+  Cloud,
+  Zap,
+  Terminal,
+  Wifi,
+  BarChart3,
+  Store,
   LayoutGrid
 } from "lucide-react";
 import Link from "next/link";
@@ -31,21 +31,24 @@ import { usePathname, useRouter } from "next/navigation";
 
 // --- DATA FROM NAVBAR (Synchronized) ---
 
+// Removed StoreTech from here
 const serviceItems = [
   { name: "Web Development", href: "/services?category=web-development", icon: Code2 },
   { name: "AI & ML", href: "/services?category=ai-machine-learning", icon: Bot },
   { name: "Cloud Services", href: "/services?category=cloud-services", icon: Cloud },
-  { name: "Digital Trans.", href: "/services?category=digital-transformation", icon: Zap },
+  { name: "Digital Trans", href: "/services?category=digital-transformation", icon: Zap },
   { name: "DevOps", href: "/services?category=devops", icon: Terminal },
   { name: "IoT Solutions", href: "/services?category=iot-solutions", icon: Wifi },
   { name: "Data Analytics", href: "/services?category=data-analytics", icon: BarChart3 },
-  { name: "StoreTech", href: "/services?category=storetech", icon: Store },
 ];
 
+// Added StoreTech and All Products here to match Navbar
 const quickLinks = [
+  // Products
+  { name: "StoreTech", type: "page", href: "/product?category=storetech", icon: Store },
+  { name: "All Products", type: "page", href: "/products", icon: LayoutGrid },
   // Standalone Pages
-  { name: "Projects", type: "page", href: "/projects", icon: LayoutGrid },
-  { name: "Products", type: "page", href: "/products", icon: Store },
+  { name: "Projects", type: "page", href: "/projects", icon: Code2 },
   { name: "Branches", type: "page", href: "/branch", icon: MapPin },
   // Sections (Home Scroll)
   { name: "About Us", type: "section", id: "about", icon: Info },
@@ -81,10 +84,10 @@ export default function Footer() {
   };
 
   const socialIcons = [
-    { src: "./assets/icons/facebook.png", href: "https://www.facebook.com/thingsatweb" },
-    { src: "./assets/icons/instagram.png", href: "https://www.instagram.com/thingsatweb/" },
-    { src: "./assets/icons/youtube.png", href: "https://www.youtube.com/channel/UCp53pdpbd7qL-JNoAkAW0Ag" },
-    { src: "./assets/icons/linkedin.png", href: "https://www.linkedin.com/company/thingsatweb/" },
+    { src: "/assets/icons/facebook.png", href: "https://www.facebook.com/thingsatweb" },
+    { src: "/assets/icons/instagram.png", href: "https://www.instagram.com/thingsatweb/" },
+    { src: "/assets/icons/youtube.png", href: "https://www.youtube.com/channel/UCp53pdpbd7qL-JNoAkAW0Ag" },
+    { src: "/assets/icons/linkedin.png", href: "https://www.linkedin.com/company/thingsatweb/" },
   ];
 
   const policyLinks = [
@@ -112,7 +115,7 @@ export default function Footer() {
             <div className="flex justify-start">
               <Link href="/">
                 <Image
-                  src="./assets/webonic2.png" 
+                  src="/assets/webonic2.png" 
                   alt="WEBRONIC"
                   width={140}
                   height={40}
@@ -122,7 +125,7 @@ export default function Footer() {
             </div>
             <p className="text-slate-500 leading-relaxed text-xs md:text-sm font-medium max-w-sm">
               Architecting scalable, secure, and future-ready digital
-              foundations. Engineering innovation from concept to global impact.
+              foundations. Engineering innovation from concept to global impact
             </p>
             <div className="flex gap-3">
               {socialIcons.map((social, i) => (
@@ -162,10 +165,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* COLUMN 3: QUICK LINKS */}
+          {/* COLUMN 3: QUICK LINKS (Includes Products) */}
           <div className="space-y-4 md:space-y-6">
             <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#2776ea]">
-              Quick Links
+              Products & Links
             </h4>
             <ul className="space-y-3">
               {quickLinks.map((item) => (
@@ -176,9 +179,11 @@ export default function Footer() {
                   >
                     <item.icon
                       size={13}
-                      className="mr-2 text-slate-400 group-hover:text-[#2776ea] transition-colors shrink-0"
+                      className={`mr-2 transition-colors shrink-0 ${item.name === "StoreTech" ? "text-[#2776ea]" : "text-slate-400 group-hover:text-[#2776ea]"}`}
                     />
-                    {item.name}
+                    <span className={item.name === "StoreTech" ? "font-bold text-[#2776ea]" : ""}>
+                       {item.name}
+                    </span>
                   </button>
                 </li>
               ))}
@@ -238,7 +243,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* --- REGIONAL HUBS (UPDATED DATA) --- */}
+        {/* --- REGIONAL HUBS --- */}
         <div className="mt-16 pt-12 border-t border-slate-100">
           <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[#2776ea] mb-8 text-center md:text-left">
             Our Centers
@@ -298,7 +303,7 @@ export default function Footer() {
                 className="opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
               >
                 <Image
-                  src="./assets/images/thingsatweb.png"
+                  src="/assets/images/thingsatweb.png"
                   alt="ThingsAtWeb"
                   width={100}
                   height={28}

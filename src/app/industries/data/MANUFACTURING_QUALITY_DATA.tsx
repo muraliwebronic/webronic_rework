@@ -15,7 +15,7 @@ export const MANUFACTURING_QUALITY_DATA = {
     title: "Quality Management & Inspection Automation",
     subTitle: "Computer Vision Quality Inspection",
     introTitle: "AI-Powered Automated Visual Inspection",
-    description: "Replace inconsistent, slow, and error-prone manual inspection with computer vision systems delivering superhuman accuracy, 100% inspection speed, and comprehensive documentation."
+    description: "Replace inconsistent, slow, and error-prone manual inspection with computer vision systems delivering superhuman accuracy, 100% inspection speed, and comprehensive documentation"
   },
   applications: {
     title: "Inspection Applications",

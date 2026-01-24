@@ -10,7 +10,7 @@ export const CAREERS_HERO_DATA = {
   header: {
     badge: "Build Your Career",
     h1: "Shape the Future of Technology",
-    subHeadline: "Join a team of 200+ innovators delivering cutting-edge solutions to 500+ clients across 50+ countries. Work on real-world problems using AI, Cloud, IoT, and emerging technologies."
+    subHeadline: "Join a team of 200+ innovators delivering cutting-edge solutions to 500+ clients across 50+ countries. Work on real-world problems using AI, Cloud, IoT, and emerging technologies"
   },
   ctas: {
     primary: {

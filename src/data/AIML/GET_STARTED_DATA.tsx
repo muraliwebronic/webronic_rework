@@ -10,7 +10,7 @@ export const GET_STARTED_DATA = {
   header: {
     badge: "Take the Next Step",
     titleLines: ["Ready to start your", "AI Journey?"],
-    description: "Whether you're exploring possibilities or ready to build, we have the right engagement model for you."
+    description: "Whether you're exploring possibilities or ready to build, we have the right engagement model for you"
   },
   cards: [
     {

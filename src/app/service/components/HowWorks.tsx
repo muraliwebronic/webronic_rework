@@ -80,7 +80,7 @@ const EnquiryModal = ({
                 <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Phone</label>
                 <div className="relative group">
                   <Phone className="absolute left-4 top-3.5 h-4 w-4 text-slate-400 group-focus-within:text-[#2776ea] transition-colors" />
-                  <input type="tel" placeholder="+91..." className="w-full rounded-xl bg-slate-50 border border-slate-100 pl-11 p-3 text-sm focus:bg-white focus:border-[#2776ea] focus:ring-4 focus:ring-blue-500/10 outline-none transition-all font-medium text-slate-700 placeholder:text-slate-400" required />
+                  <input type="tel" placeholder="+91.." className="w-full rounded-xl bg-slate-50 border border-slate-100 pl-11 p-3 text-sm focus:bg-white focus:border-[#2776ea] focus:ring-4 focus:ring-blue-500/10 outline-none transition-all font-medium text-slate-700 placeholder:text-slate-400" required />
                 </div>
               </div>
             </div>
@@ -88,7 +88,7 @@ const EnquiryModal = ({
               <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Project Goals</label>
               <div className="relative group">
                 <MessageSquare className="absolute left-4 top-3.5 h-4 w-4 text-slate-400 group-focus-within:text-[#2776ea] transition-colors" />
-                <textarea rows={3} placeholder="Tell us about your requirements..." className="w-full rounded-xl bg-slate-50 border border-slate-100 pl-11 p-3 text-sm focus:bg-white focus:border-[#2776ea] focus:ring-4 focus:ring-blue-500/10 outline-none transition-all resize-none font-medium text-slate-700 placeholder:text-slate-400" required />
+                <textarea rows={3} placeholder="Tell us about your requirements.." className="w-full rounded-xl bg-slate-50 border border-slate-100 pl-11 p-3 text-sm focus:bg-white focus:border-[#2776ea] focus:ring-4 focus:ring-blue-500/10 outline-none transition-all resize-none font-medium text-slate-700 placeholder:text-slate-400" required />
               </div>
             </div>
           </div>

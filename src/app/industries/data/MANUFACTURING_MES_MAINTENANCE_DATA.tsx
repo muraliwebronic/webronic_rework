@@ -22,7 +22,7 @@ export const MANUFACTURING_MES_MAINTENANCE_DATA = {
   mes: {
     title: "Manufacturing Execution System (MES)",
     subTitle: "Bridging ERP and Shop Floor",
-    description: "MES fills the critical gap between enterprise resource planning (ERP) systems handling business functions and shop floor control systems (SCADA, PLCs) managing equipment, providing real-time manufacturing intelligence and execution control.",
+    description: "MES fills the critical gap between enterprise resource planning (ERP) systems handling business functions and shop floor control systems (SCADA, PLCs) managing equipment, providing real-time manufacturing intelligence and execution control",
     functions: [
       {
         title: "1. Production Scheduling & Dispatching",

@@ -170,7 +170,7 @@ export const MANUFACTURING_STACK_CASES_DATA = {
       {
         title: "Case Study 2: Electronics Manufacturer - AI-Powered Quality Inspection",
         icon: Smartphone,
-        client: "Client: Consumer electronics manufacturer producing smartphones, tablets, laptops. 5 million units annually, $2B revenue.",
+        client: "Client: Consumer electronics manufacturer producing smartphones, tablets, laptops. 5 million units annually, $2B revenue",
         challenge: {
           items: [
             "Manual visual inspection by 200 human inspectors",
@@ -283,7 +283,7 @@ export const MANUFACTURING_STACK_CASES_DATA = {
       {
         title: "Case Study 3: Food & Beverage - OEE Improvement & Production Optimization",
         icon: Activity,
-        client: "Client: Beverage manufacturer producing soft drinks, juices, energy drinks. 12 high-speed production lines, 300M liters annually, $300M revenue.",
+        client: "Client: Beverage manufacturer producing soft drinks, juices, energy drinks. 12 high-speed production lines, 300M liters annually, $300M revenue",
         challenge: {
           items: [
             "Overall Equipment Effectiveness (OEE) averaging 62% (industry target: 85%)",

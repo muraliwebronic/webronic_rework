@@ -109,7 +109,7 @@ const EnquiryModal = ({
               <textarea
                 rows={4}
                 className="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-[#2776ea] focus:ring-1 focus:ring-[#2776ea] font-medium text-slate-800 transition-all resize-none"
-                placeholder="Briefly describe your requirements..."
+                placeholder="Briefly describe your requirements.."
               />
             </div>
             <button className="w-full py-4 bg-[#2776ea] text-white font-bold rounded-xl hover:bg-[#1a65d8] transition-all shadow-lg shadow-[#2776ea]/20 active:scale-[0.98]">

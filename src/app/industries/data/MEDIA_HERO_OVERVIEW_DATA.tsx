@@ -17,7 +17,7 @@ import {
 export const MEDIA_HERO_OVERVIEW_DATA = {
   hero: {
     h1: "Media & Entertainment Technology Solutions",
-    description: "Digital content platforms, streaming infrastructure, content management systems, and AI-powered production tools transforming media creation, distribution, and monetization.",
+    description: "Digital content platforms, streaming infrastructure, content management systems, and AI-powered production tools transforming media creation, distribution, and monetization",
     stats: [
       {
         value: "50+",
@@ -43,45 +43,45 @@ export const MEDIA_HERO_OVERVIEW_DATA = {
   },
   overview: {
     title: "Industry Overview",
-    content: "The media and entertainment industry faces unprecedented disruption. Traditional broadcast models give way to streaming, linear viewing shifts to on-demand, and content consumption fragments across devices. Meanwhile, production costs rise, advertising models evolve, and audiences demand personalized, interactive experiences.",
+    content: "The media and entertainment industry faces unprecedented disruption. Traditional broadcast models give way to streaming, linear viewing shifts to on-demand, and content consumption fragments across devices. Meanwhile, production costs rise, advertising models evolve, and audiences demand personalized, interactive experiences",
     challenges: {
       title: "Critical Media & Entertainment Challenges:",
       items: [
         {
           title: "Content Overload",
-          description: "Thousands of hours uploaded daily, discovery becomes critical for engagement and monetization.",
+          description: "Thousands of hours uploaded daily, discovery becomes critical for engagement and monetization",
           icon: Layers
         },
         {
           title: "Distribution Complexity",
-          description: "Multi-platform delivery (web, mobile, smart TV, gaming consoles, VR), varying codecs, adaptive bitrate requirements, global CDN management.",
+          description: "Multi-platform delivery (web, mobile, smart TV, gaming consoles, VR), varying codecs, adaptive bitrate requirements, global CDN management",
           icon: Globe
         },
         {
           title: "Monetization Pressure",
-          description: "Declining traditional revenue (cable subscriptions, theatrical), evolving models (SVOD, AVOD, TVOD, hybrid), ad-blocking, subscription fatigue.",
+          description: "Declining traditional revenue (cable subscriptions, theatrical), evolving models (SVOD, AVOD, TVOD, hybrid), ad-blocking, subscription fatigue",
           icon: DollarSign
         },
         {
           title: "Production Costs",
-          description: "Rising content production budgets (premium series cost $10M-$20M per episode), competition for talent, location constraints, post-production complexity.",
+          description: "Rising content production budgets (premium series cost $10M-$20M per episode), competition for talent, location constraints, post-production complexity",
           icon: Clapperboard
         },
         {
           title: "Piracy",
-          description: "Content theft, illegal streaming sites, screener leaks costing billions in lost revenue.",
+          description: "Content theft, illegal streaming sites, screener leaks costing billions in lost revenue",
           icon: ShieldAlert
         },
         {
           title: "Personalization Expectations",
-          description: "Netflix-level recommendations expected, algorithmic content curation, individualized advertising, interactive storytelling.",
+          description: "Netflix-level recommendations expected, algorithmic content curation, individualized advertising, interactive storytelling",
           icon: UserCheck
         }
       ]
     },
     expertise: {
       title: "Our Media & Entertainment Expertise:",
-      description: "We’ve delivered 50+ media technology solutions for streaming platforms, production studios, broadcasters, music labels, gaming companies, and publishing houses.",
+      description: "We’ve delivered 50+ media technology solutions for streaming platforms, production studios, broadcasters, music labels, gaming companies, and publishing houses",
       resultsTitle: "Our solutions enable:",
       results: [
         { text: "Streaming platforms serving 10M+ concurrent users", icon: PlayCircle },

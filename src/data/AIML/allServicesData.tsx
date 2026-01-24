@@ -85,54 +85,54 @@ export const servicesData = [
     badge: "Visual Intelligence",
     titleLine1: "Computer Vision",
     titleHighlight: "Solutions",
-    description: "Transform visual data into actionable insights with cutting-edge computer vision systems powered by deep learning."
+    description: "Transform visual data into actionable insights with cutting-edge computer vision systems powered by deep learning"
   },
   cards: [
     {
       title: "Object Detection & Recognition",
-      desc: "Identify and locate objects in images and video streams with bounding box precision. Applications include retail inventory management, security surveillance, quality inspection, and autonomous systems.",
+      desc: "Identify and locate objects in images and video streams with bounding box precision. Applications include retail inventory management, security surveillance, quality inspection, and autonomous systems",
       icon: "Scan",
       color: "text-[#2776ea]",
       bg: "bg-[#2776ea]/10"
     },
     {
       title: "Image Classification",
-      desc: "Categorize images into predefined classes for applications including medical diagnosis, product categorization, content moderation, and defect classification.",
+      desc: "Categorize images into predefined classes for applications including medical diagnosis, product categorization, content moderation, and defect classification",
       icon: "ImageIcon",
       color: "text-[#76ea27]",
       bg: "bg-[#76ea27]/10"
     },
     {
       title: "Semantic Segmentation",
-      desc: "Pixel-level understanding of images for precise object delineation. Use cases include medical imaging analysis, autonomous driving, satellite imagery analysis, and agricultural monitoring.",
+      desc: "Pixel-level understanding of images for precise object delineation. Use cases include medical imaging analysis, autonomous driving, satellite imagery analysis, and agricultural monitoring",
       icon: "Layers",
       color: "text-[#2776ea]",
       bg: "bg-[#2776ea]/10"
     },
     {
       title: "Facial Recognition & Analysis",
-      desc: "Detect, recognize, and analyze faces for security access control, customer analytics, attendance systems, and personalized experiences (with appropriate privacy controls).",
+      desc: "Detect, recognize, and analyze faces for security access control, customer analytics, attendance systems, and personalized experiences (with appropriate privacy controls)",
       icon: "ScanFace",
       color: "text-[#76ea27]",
       bg: "bg-[#76ea27]/10"
     },
     {
       title: "Optical Character Recognition (OCR)",
-      desc: "Extract text from images and documents including invoices, receipts, forms, handwritten notes, and signage with 99%+ accuracy.",
+      desc: "Extract text from images and documents including invoices, receipts, forms, handwritten notes, and signage with 99%+ accuracy",
       icon: "FileText",
       color: "text-[#2776ea]",
       bg: "bg-[#2776ea]/10"
     },
     {
       title: "Anomaly Detection",
-      desc: "Identify defects, damage, or anomalies in manufacturing quality control, infrastructure inspection, medical imaging, and security monitoring.",
+      desc: "Identify defects, damage, or anomalies in manufacturing quality control, infrastructure inspection, medical imaging, and security monitoring",
       icon: "AlertTriangle",
       color: "text-[#76ea27]",
       bg: "bg-[#76ea27]/10"
     },
     {
       title: "Video Analytics",
-      desc: "Real time analysis of video streams for complex applications.",
+      desc: "Real time analysis of video streams for complex applications",
       list: [
         "Crowd counting & behavior analysis",
         "Traffic monitoring & management",
@@ -145,7 +145,7 @@ export const servicesData = [
     },
     {
       title: "3D Computer Vision",
-      desc: "Depth estimation, 3D reconstruction, and spatial understanding for robotics, augmented reality, and autonomous systems.",
+      desc: "Depth estimation, 3D reconstruction, and spatial understanding for robotics, augmented reality, and autonomous systems",
       icon: "Cuboid",
       color: "text-[#76ea27]",
       bg: "bg-[#76ea27]/10"
@@ -183,47 +183,47 @@ export const servicesData = [
     badge: "Future Intelligence",
     titleLine1: "Predictive Analytics",
     titleHighlight: "& Forecasting",
-    description: "Anticipate future trends, behaviors, and outcomes with advanced predictive modeling and forecasting systems."
+    description: "Anticipate future trends, behaviors, and outcomes with advanced predictive modeling and forecasting systems"
   },
   cards: [
     {
       title: "Demand Forecasting",
-      desc: "Predict future demand with statistical and machine learning models that account for seasonality, trends, promotions, and external factors. Reduce inventory costs by 20-30% while maintaining service levels.",
+      desc: "Predict future demand with statistical and machine learning models that account for seasonality, trends, promotions, and external factors. Reduce inventory costs by 20-30% while maintaining service levels",
       icon: "TrendingUp",
       color: "text-[#2776ea]",
       bg: "bg-[#2776ea]/10"
     },
     {
       title: "Customer Churn Prediction",
-      desc: "Identify customers at risk of churning before they leave. Our models analyze behavioral patterns, engagement metrics, and satisfaction indicators to predict churn probability with 85%+ accuracy.",
+      desc: "Identify customers at risk of churning before they leave. Our models analyze behavioral patterns, engagement metrics, and satisfaction indicators to predict churn probability with 85%+ accuracy",
       icon: "UserMinus",
       color: "text-[#76ea27]",
       bg: "bg-[#76ea27]/10"
     },
     {
       title: "Predictive Maintenance",
-      desc: "Forecast equipment failures before they occur using sensor data, maintenance history, and operational conditions. Reduce unplanned downtime by 50-75% and optimize maintenance schedules.",
+      desc: "Forecast equipment failures before they occur using sensor data, maintenance history, and operational conditions. Reduce unplanned downtime by 50-75% and optimize maintenance schedules",
       icon: "Wrench",
       color: "text-[#2776ea]",
       bg: "bg-[#2776ea]/10"
     },
     {
       title: "Financial Forecasting",
-      desc: "Predict revenue, cash flow, profitability, and key financial metrics using time series analysis and machine learning. Support strategic planning with scenario modeling and sensitivity analysis.",
+      desc: "Predict revenue, cash flow, profitability, and key financial metrics using time series analysis and machine learning. Support strategic planning with scenario modeling and sensitivity analysis",
       icon: "Banknote",
       color: "text-[#76ea27]",
       bg: "bg-[#76ea27]/10"
     },
     {
       title: "Risk Scoring & Assessment",
-      desc: "Assess credit risk, fraud risk, operational risk, and other business risks using predictive models trained on historical data and real time indicators.",
+      desc: "Assess credit risk, fraud risk, operational risk, and other business risks using predictive models trained on historical data and real time indicators",
       icon: "ShieldAlert",
       color: "text-[#2776ea]",
       bg: "bg-[#2776ea]/10"
     },
     {
       title: "Price Optimization",
-      desc: "Determine optimal pricing strategies using demand elasticity models, competitive analysis, and revenue optimization algorithms.",
+      desc: "Determine optimal pricing strategies using demand elasticity models, competitive analysis, and revenue optimization algorithms",
       icon: "Tag",
       color: "text-[#76ea27]",
       bg: "bg-[#76ea27]/10"
@@ -261,33 +261,33 @@ export const servicesData = [
     badge: "Efficiency Redefined",
     titleLine1: "Intelligent Process",
     titleHighlight: "Automation",
-    description: "Combine AI with automation to transform business processes and reduce manual effort."
+    description: "Combine AI with automation to transform business processes and reduce manual effort"
   },
   cards: [
     {
       title: "Robotic Process Automation (RPA) with AI",
-      desc: "Enhance traditional RPA with AI capabilities including document understanding, intelligent decision-making, and exception handling. Automate complex processes that require cognitive capabilities.",
+      desc: "Enhance traditional RPA with AI capabilities including document understanding, intelligent decision-making, and exception handling. Automate complex processes that require cognitive capabilities",
       icon: "Bot",
       color: "text-[#2776ea]",
       bg: "bg-[#2776ea]/10"
     },
     {
       title: "Intelligent Document Processing",
-      desc: "Automatically extract, classify, and process information from documents including invoices, contracts, forms, and reports. Reduce document processing time by 80-90%.",
+      desc: "Automatically extract, classify, and process information from documents including invoices, contracts, forms, and reports. Reduce document processing time by 80-90%",
       icon: "FileText",
       color: "text-[#76ea27]",
       bg: "bg-[#76ea27]/10"
     },
     {
       title: "Workflow Automation",
-      desc: "Design and implement intelligent workflows that route, process, and manage tasks based on AI driven decisions. Integrate with existing systems including ERP, CRM, and custom applications.",
+      desc: "Design and implement intelligent workflows that route, process, and manage tasks based on AI driven decisions. Integrate with existing systems including ERP, CRM, and custom applications",
       icon: "Workflow",
       color: "text-[#2776ea]",
       bg: "bg-[#2776ea]/10"
     },
     {
       title: "Business Process Automation",
-      desc: "Automate end to end business processes including invoice processing, customer onboarding, claims processing, order fulfillment, and HR processes.",
+      desc: "Automate end to end business processes including invoice processing, customer onboarding, claims processing, order fulfillment, and HR processes",
       list: [
         "Invoice processing & Accounts Payable",
         "Customer onboarding & KYC",
@@ -301,14 +301,14 @@ export const servicesData = [
     },
     {
       title: "AI powered Chatbots & Virtual Assistants",
-      desc: "Build conversational AI systems that handle customer inquiries, provide support, and automate routine interactions. Our chatbots resolve 70-80% of common queries without human intervention.",
+      desc: "Build conversational AI systems that handle customer inquiries, provide support, and automate routine interactions. Our chatbots resolve 70-80% of common queries without human intervention",
       icon: "MessageSquare",
       color: "text-[#2776ea]",
       bg: "bg-[#2776ea]/10"
     },
     {
       title: "Email Automation & Routing",
-      desc: "Automatically classify, route, and respond to emails using NLP and machine learning. Prioritize urgent messages and draft responses for agent review.",
+      desc: "Automatically classify, route, and respond to emails using NLP and machine learning. Prioritize urgent messages and draft responses for agent review",
       icon: "Mail",
       color: "text-[#76ea27]",
       bg: "bg-[#76ea27]/10"

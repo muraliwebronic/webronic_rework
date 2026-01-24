@@ -41,7 +41,7 @@ export default function ManufacturingOverview() {
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
           <SectionHeader 
             title={challenges.title}
-            description="Navigating the complexities of modern industrial environments."
+            description="Navigating the complexities of modern industrial environments"
             centered={true}
             className="mb-16"
           />

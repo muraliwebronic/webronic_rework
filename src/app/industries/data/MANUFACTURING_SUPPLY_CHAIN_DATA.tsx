@@ -15,7 +15,7 @@ export const MANUFACTURING_SUPPLY_CHAIN_DATA = {
     section: "4. Supply Chain Optimization",
     title: "Demand Forecasting with AI",
     subTitle: "Predictive Demand Planning",
-    description: "Leverage machine learning to predict product demand with 85-90% accuracy, enabling optimal inventory levels, production planning, and customer service."
+    description: "Leverage machine learning to predict product demand with 85-90% accuracy, enabling optimal inventory levels, production planning, and customer service"
   },
   methodologies: {
     title: "Forecasting Methodologies",

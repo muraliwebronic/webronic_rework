@@ -28,7 +28,7 @@ export default function TeamComponent() {
           badge="Our Team"
           title="Our"
           highlight="Core Team"
-          description="A specialized collective of software architects and digital consultants delivering enterprise-grade retail automation solutions."
+          description="A specialized collective of software architects and digital consultants delivering enterprise-grade retail automation solutions"
           centered={false}
           className="mb-16 md:mb-24 max-w-xl"
         />

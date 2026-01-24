@@ -25,7 +25,7 @@ export default function Projects() {
                 badge="Portfolio"
                 title="Our Technical &"
                 highlight="Creative Impact"
-                description="From industrial automation to high-conversion retail, we build digital architectures that drive tangible business growth."
+                description="From industrial automation to high-conversion retail, we build digital architectures that drive tangible business growth"
                 centered={false}
                 className="max-w-3xl"
             />

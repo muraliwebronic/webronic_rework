@@ -7,8 +7,8 @@ export const STORETECH_DATA: ServicePageData = {
   preview: {
     title: "StoreTech",
     tagline: "Autonomous Retail",
-    description: "Cloud-native autonomous retail infrastructure powering unmanned stores, smart self-checkout, and IoT vending across 150+ locations.",
-    image: "./assets/platforms/storetech-preview.png", // Ensure path exists
+    description: "Cloud-native autonomous retail infrastructure powering unmanned stores, smart self-checkout, and IoT vending across 150+ locations",
+    image: "/assets/platforms/storetech-preview.png", // Ensure path exists
     icon: "ShoppingCart",
     points: [
       "Unmanned Store Infrastructure",
@@ -30,7 +30,7 @@ export const STORETECH_DATA: ServicePageData = {
     badge: "Automated Retail Ecosystem",
     titlePrefix: "Cloud-Native",
     titleHighlight: "Autonomous Retail",
-    description: "Consolidate traditional multi-vendor retail technology stacks into a single platform. Reduce deployment time from weeks to 10 days while cutting operational costs by 60%.",
+    description: "Consolidate traditional multi-vendor retail technology stacks into a single platform. Reduce deployment time from weeks to 10 days while cutting operational costs by 60%",
     features: [
       "150+ active locations processed 50M+ transactions",
       "99.7% transaction success rate",
@@ -48,32 +48,32 @@ export const STORETECH_DATA: ServicePageData = {
     highlight: "Retail Automation",
     content: [
       "StoreTech is a comprehensive, cloud-native platform powering unmanned convenience stores, smart self-checkouts, and intelligent vending machines across Europe and India. Unlike complex multi-vendor stacks, StoreTech consolidates everything into a unified system built on PAX IM30 Android terminals. ",
-      "With over 50 million transactions processed, our platform proves that autonomous retail is superior to staffed operations in efficiency and consistency. We offer a 10-day deployment timeline with a single point of contact for hardware, software, and payments."
+      "With over 50 million transactions processed, our platform proves that autonomous retail is superior to staffed operations in efficiency and consistency. We offer a 10-day deployment timeline with a single point of contact for hardware, software, and payments"
     ],
     differentiators: [
       {
         title: "Unified Platform",
-        description: "Replaces POS, Payment Gateway, Inventory, and Access Control with one system.",
+        description: "Replaces POS, Payment Gateway, Inventory, and Access Control with one system",
         icon: "Layers"
       },
       {
         title: "Deployment Speed",
-        description: "Deploy fully autonomous stores in 10 days vs typical 4-6 weeks.",
+        description: "Deploy fully autonomous stores in 10 days vs typical 4-6 weeks",
         icon: "Zap"
       },
       {
         title: "Reliability",
-        description: "99.7% success rate with zero critical downtime in 5 years.",
+        description: "99.7% success rate with zero critical downtime in 5 years",
         icon: "ShieldCheck"
       },
       {
         title: "Hardware Agnostic",
-        description: "Built on robust PAX IM30 Android terminals and standard IoT sensors.",
+        description: "Built on robust PAX IM30 Android terminals and standard IoT sensors",
         icon: "Smartphone"
       },
       {
         title: "Global Compliance",
-        description: "GDPR compliant with specific integrations like BankID for Sweden.",
+        description: "GDPR compliant with specific integrations like BankID for Sweden",
         icon: "Globe"
       }
     ]
@@ -84,46 +84,46 @@ export const STORETECH_DATA: ServicePageData = {
     badge: "Core Features",
     titleLine1: "Intelligent",
     titleHighlight: "Retail Modules",
-    description: "Modular components that can be deployed individually or as a complete autonomous store ecosystem.",
+    description: "Modular components that can be deployed individually or as a complete autonomous store ecosystem",
     cards: [
       {
         title: "AI Checkout System",
-        desc: "PAX IM30-based self-checkout with barcode scanning, computer vision product recognition, and automated fraud detection algorithms.",
+        desc: "PAX IM30-based self-checkout with barcode scanning, computer vision product recognition, and automated fraud detection algorithms",
         icon: "Scan",
         color: "text-blue-600",
         bg: "bg-blue-50"
       },
       {
         title: "Inventory Cloud",
-        desc: "Real-time synchronization across smart fridges, vending machines, and warehouses using MQTT. Predictive reordering based on demand.",
+        desc: "Real-time synchronization across smart fridges, vending machines, and warehouses using MQTT. Predictive reordering based on demand",
         icon: "Cloud",
         color: "text-purple-600",
         bg: "bg-purple-50"
       },
       {
         title: "IoT Smart Vending",
-        desc: "Centralized management for vending networks with cashless payments, remote monitoring, and dynamic pricing capabilities.",
+        desc: "Centralized management for vending networks with cashless payments, remote monitoring, and dynamic pricing capabilities",
         icon: "Box",
         color: "text-orange-600",
         bg: "bg-orange-50"
       },
       {
         title: "Smart Fridges",
-        desc: "Temperature-controlled autonomous sales units. Unlock with app/card, grab items, and auto-pay upon door close.",
+        desc: "Temperature-controlled autonomous sales units. Unlock with app/card, grab items, and auto-pay upon door close",
         icon: "Thermometer",
         color: "text-teal-600",
         bg: "bg-teal-50"
       },
       {
         title: "Loyalty & App",
-        desc: "Native mobile app with digital wallet, tiered rewards, personalized AI promotions, and subscription plans.",
+        desc: "Native mobile app with digital wallet, tiered rewards, personalized AI promotions, and subscription plans",
         icon: "Smartphone",
         color: "text-pink-600",
         bg: "bg-pink-50"
       },
       {
         title: "Access Control",
-        desc: "Secure entry systems integrating BankID, QR codes, and RFID for 24/7 unmanned store security.",
+        desc: "Secure entry systems integrating BankID, QR codes, and RFID for 24/7 unmanned store security",
         icon: "Key",
         color: "text-green-600",
         bg: "bg-green-50"
@@ -146,7 +146,7 @@ export const STORETECH_DATA: ServicePageData = {
   // 4. PROCESS SECTION (Implementation)
   process: {
     title: "Implementation Process",
-    description: "From site assessment to go-live in as little as 3-4 weeks.",
+    description: "From site assessment to go-live in as little as 3-4 weeks",
     phases: [
       {
         phase: "Phase 1",
@@ -279,20 +279,20 @@ export const STORETECH_DATA: ServicePageData = {
   // 5. TECH STACK SECTION
   techStack: {
     heading: "StoreTech Ecosystem",
-    description: "A robust, cloud-native stack designed for reliability, security, and scalability in retail environments.",
+    description: "A robust, cloud-native stack designed for reliability, security, and scalability in retail environments",
     frameworks: [
-      { name: "Flutter", desc: "Cross-platform mobile apps for iOS/Android." },
-      { name: "Node.js", desc: "Microservices backend architecture." },
-      { name: "MQTT", desc: "Lightweight IoT device communication." },
-      { name: "React", desc: "Admin dashboard and analytics interface." },
-      { name: "TensorFlow", desc: "Computer vision for fraud detection." }
+      { name: "Flutter", desc: "Cross-platform mobile apps for iOS/Android" },
+      { name: "Node.js", desc: "Microservices backend architecture" },
+      { name: "MQTT", desc: "Lightweight IoT device communication" },
+      { name: "React", desc: "Admin dashboard and analytics interface" },
+      { name: "TensorFlow", desc: "Computer vision for fraud detection" }
     ],
     // Using 'llms' key for Hardware
     llms: [
-      { name: "PAX IM30", desc: "Android-based unattended payment terminal." },
-      { name: "Smart Sensors", desc: "Temperature, motion, and door sensors." },
-      { name: "Cameras", desc: "AI-enabled security monitoring." },
-      { name: "BankID", desc: "Digital ID hardware integration." }
+      { name: "PAX IM30", desc: "Android-based unattended payment terminal" },
+      { name: "Smart Sensors", desc: "Temperature, motion, and door sensors" },
+      { name: "Cameras", desc: "AI-enabled security monitoring" },
+      { name: "BankID", desc: "Digital ID hardware integration" }
     ],
     // Using 'mlOps' key for Cloud & Infra
     mlOps: ["AWS IoT Core", "DynamoDB", "Redis", "Docker", "AWS Lambda"],
@@ -318,7 +318,7 @@ export const STORETECH_DATA: ServicePageData = {
   // 6. INDUSTRIES / USE CASES
   industries: {
     heading: "Deployment Models",
-    description: "Versatile configurations for different retail environments.",
+    description: "Versatile configurations for different retail environments",
     items: [
       {
         id: "unmanned",
@@ -329,7 +329,7 @@ export const STORETECH_DATA: ServicePageData = {
         features: [
           {
             title: "Cost Reduction",
-            desc: "60% lower operational costs vs staffed stores.",
+            desc: "60% lower operational costs vs staffed stores",
             icon: "TrendingDown",
             caseStudy: {
               title: "Swedish Suburbs",
@@ -338,7 +338,7 @@ export const STORETECH_DATA: ServicePageData = {
           },
           {
             title: "Access",
-            desc: "Secure entry via BankID or App QR.",
+            desc: "Secure entry via BankID or App QR",
             icon: "Key"
           }
         ]
@@ -352,7 +352,7 @@ export const STORETECH_DATA: ServicePageData = {
         features: [
           {
             title: "Convenience",
-            desc: "24/7 access to fresh food and drinks.",
+            desc: "24/7 access to fresh food and drinks",
             icon: "Clock",
             caseStudy: {
               title: "Indian Tech Parks",
@@ -361,7 +361,7 @@ export const STORETECH_DATA: ServicePageData = {
           },
           {
             title: "Wallet",
-            desc: "Integrated employee expense wallets.",
+            desc: "Integrated employee expense wallets",
             icon: "CreditCard"
           }
         ]
@@ -372,7 +372,7 @@ export const STORETECH_DATA: ServicePageData = {
   // 7. CASE STUDIES (Synthesized from "Use Cases & Deployments" section)
   caseStudies: {
     heading: "Success Stories",
-    description: "Real-world impact of the StoreTech platform.",
+    description: "Real-world impact of the StoreTech platform",
     items: [
       {
         id: 1,
@@ -381,8 +381,8 @@ export const STORETECH_DATA: ServicePageData = {
         title: "24/7 Suburban Stores",
         icon: "MapPin",
         color: "text-blue-600",
-        challenge: "Providing retail access to suburban communities was unprofitable with staffed hours.",
-        solution: "Deployed 15 unmanned convenience stores using StoreTech platform with BankID access.",
+        challenge: "Providing retail access to suburban communities was unprofitable with staffed hours",
+        solution: "Deployed 15 unmanned convenience stores using StoreTech platform with BankID access",
         implementation: [
           "BankID Integration",
           "PAX Self-Checkout",
@@ -394,7 +394,7 @@ export const STORETECH_DATA: ServicePageData = {
           { label: "Hours", value: "24/7" },
           { label: "Payback", value: "18 Months" }
         ],
-        quote: "We serve 10,000 residents who previously had to drive 20 minutes for milk. The stores are profitable and secure.",
+        quote: "We serve 10,000 residents who previously had to drive 20 minutes for milk. The stores are profitable and secure",
         author: "Operations Director"
       },
       {
@@ -404,8 +404,8 @@ export const STORETECH_DATA: ServicePageData = {
         title: "Campus Smart Vending",
         icon: "Building",
         color: "text-green-600",
-        challenge: "Providing quality food options for 24-hour shift workers without running a full cafeteria.",
-        solution: "Installed network of 25 smart fridges and vending units managed by one dashboard.",
+        challenge: "Providing quality food options for 24-hour shift workers without running a full cafeteria",
+        solution: "Installed network of 25 smart fridges and vending units managed by one dashboard",
         implementation: [
           "Smart Fridges",
           "Employee App Wallet",
@@ -417,7 +417,7 @@ export const STORETECH_DATA: ServicePageData = {
           { label: "Spoilage", value: "-25%" },
           { label: "Satisfaction", value: "4.8/5" }
         ],
-        quote: "Our employees love the fresh food access at 3 AM. The app wallet makes payment seamless.",
+        quote: "Our employees love the fresh food access at 3 AM. The app wallet makes payment seamless",
         author: "Facility Manager"
       }
     ]
@@ -429,23 +429,23 @@ export const STORETECH_DATA: ServicePageData = {
     items: [
       {
         question: "How do you handle age verification for restricted items?",
-        answer: "We integrate with digital ID systems like BankID (in Sweden) or use AI-based document scanning with remote staff override for edge cases, ensuring full regulatory compliance."
+        answer: "We integrate with digital ID systems like BankID (in Sweden) or use AI-based document scanning with remote staff override for edge cases, ensuring full regulatory compliance"
       },
       {
         question: "What happens if the internet goes down?",
-        answer: "The PAX terminals and mobile apps have offline capabilities. Transactions are stored locally and synced to the cloud immediately once connectivity is restored."
+        answer: "The PAX terminals and mobile apps have offline capabilities. Transactions are stored locally and synced to the cloud immediately once connectivity is restored"
       },
       {
         question: "How does the system prevent theft?",
-        answer: "We use a multi-layered approach: secure access control (know who is inside), AI camera monitoring, and smart inventory tracking. Theft rates are typically 45% lower than staffed stores."
+        answer: "We use a multi-layered approach: secure access control (know who is inside), AI camera monitoring, and smart inventory tracking. Theft rates are typically 45% lower than staffed stores"
       },
       {
         question: "Can I use my existing suppliers?",
-        answer: "Yes. Our Inventory Cloud supports API integrations and EDI to connect with your existing suppliers for automated reordering."
+        answer: "Yes. Our Inventory Cloud supports API integrations and EDI to connect with your existing suppliers for automated reordering"
       },
       {
         question: "What is the cost model?",
-        answer: "We operate on a SaaS model with a monthly platform fee per location, plus a small transaction processing fee. Hardware can be purchased upfront or leased."
+        answer: "We operate on a SaaS model with a monthly platform fee per location, plus a small transaction processing fee. Hardware can be purchased upfront or leased"
       }
     ]
   },
@@ -454,12 +454,12 @@ export const STORETECH_DATA: ServicePageData = {
   getStarted: {
     badge: "Launch Your Store",
     titleLines: ["Ready to Automate", "Your Retail?"],
-    description: "Schedule a demo or visit one of our live locations to see the future of retail.",
+    description: "Schedule a demo or visit one of our live locations to see the future of retail",
     cards: [
       {
         id: "demo",
         title: "Request Demo",
-        description: "30-minute virtual walkthrough of the platform and admin dashboard.",
+        description: "30-minute virtual walkthrough of the platform and admin dashboard",
         icon: "Monitor",
         theme: "light",
         list: [
@@ -473,7 +473,7 @@ export const STORETECH_DATA: ServicePageData = {
       {
         id: "pilot",
         title: "Start Pilot",
-        description: "Deploy a single test location with full support to validate ROI.",
+        description: "Deploy a single test location with full support to validate ROI",
         icon: "Rocket",
         theme: "dark",
         list: [

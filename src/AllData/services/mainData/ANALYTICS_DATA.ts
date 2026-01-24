@@ -7,8 +7,8 @@ export const ANALYTICS_DATA: ServicePageData = {
   preview: {
     title: "Data Analytics",
     tagline: "Actionable Insights",
-    description: "Data analytics and business intelligence services: data warehousing, BI dashboards, advanced analytics, big data processing, and data governance.",
-    image: "./assets/services/data-analytics.png", // Ensure path exists
+    description: "Data analytics and business intelligence services: data warehousing, BI dashboards, advanced analytics, big data processing, and data governance",
+    image: "/assets/services/data-analytics.png", // Ensure path exists
     icon: "BarChart3",
     points: [
       "Modern Data Warehousing",
@@ -30,7 +30,7 @@ export const ANALYTICS_DATA: ServicePageData = {
     badge: "Data Analytics & BI Services",
     titlePrefix: "Transform Data into",
     titleHighlight: "Strategic Insights",
-    description: "Most organizations are data-rich but insights-poor. We consolidate data from multiple sources, analyze it efficiently, and deliver insights through intuitive dashboards that drive better business outcomes.",
+    description: "Most organizations are data-rich but insights-poor. We consolidate data from multiple sources, analyze it efficiently, and deliver insights through intuitive dashboards that drive better business outcomes",
     features: [
       "Real-time dashboards for data-driven decisions",
       "Scalable warehouses processing billions of records",
@@ -47,33 +47,33 @@ export const ANALYTICS_DATA: ServicePageData = {
     heading: "From Data Silos to",
     highlight: "Unified Intelligence",
     content: [
-      "Data is your organization's most valuable asset, but only if you can transform it into actionable insights. Many businesses struggle with data trapped in silos (ERP, CRM, spreadsheets), manual reporting bottlenecks, and scalability issues.",
-      "Our modern approach utilizes cloud-native data warehouses like Snowflake and BigQuery to handle massive scale efficiently. We implement unified data platforms with automated ETL pipelines, empowering users with self-service BI and advanced predictive analytics."
+      "Data is your organization's most valuable asset, but only if you can transform it into actionable insights. Many businesses struggle with data trapped in silos (ERP, CRM, spreadsheets), manual reporting bottlenecks, and scalability issues",
+      "Our modern approach utilizes cloud-native data warehouses like Snowflake and BigQuery to handle massive scale efficiently. We implement unified data platforms with automated ETL pipelines, empowering users with self-service BI and advanced predictive analytics"
     ],
     differentiators: [
       {
         title: "Modern Architecture",
-        description: "Cloud-native warehouses (Snowflake, Redshift) for massive scale and cost efficiency.",
+        description: "Cloud-native warehouses (Snowflake, Redshift) for massive scale and cost efficiency",
         icon: "Database"
       },
       {
         title: "Unified Platform",
-        description: "Consolidate all data sources into a single source of truth with automated pipelines.",
+        description: "Consolidate all data sources into a single source of truth with automated pipelines",
         icon: "Merge"
       },
       {
         title: "Self-Service BI",
-        description: "Empower business users to create reports without IT dependency.",
+        description: "Empower business users to create reports without IT dependency",
         icon: "UserCheck"
       },
       {
         title: "Advanced Analytics",
-        description: "Go beyond descriptive reporting to predictive AI/ML insights.",
+        description: "Go beyond descriptive reporting to predictive AI/ML insights",
         icon: "BrainCircuit"
       },
       {
         title: "Proven ROI",
-        description: "Helping clients achieve ROI within 12-18 months with faster decision making.",
+        description: "Helping clients achieve ROI within 12-18 months with faster decision making",
         icon: "TrendingUp"
       }
     ]
@@ -84,46 +84,46 @@ export const ANALYTICS_DATA: ServicePageData = {
     badge: "Core Analytics Services",
     titleLine1: "End-to-End",
     titleHighlight: "Data Solutions",
-    description: "From raw data ingestion to advanced visualization, we cover the entire data lifecycle.",
+    description: "From raw data ingestion to advanced visualization, we cover the entire data lifecycle",
     cards: [
       {
         title: "Data Warehousing",
-        desc: "Modern cloud warehouses (Snowflake, Redshift, BigQuery) optimized for analytical queries and massive scale.",
+        desc: "Modern cloud warehouses (Snowflake, Redshift, BigQuery) optimized for analytical queries and massive scale",
         icon: "Server",
         color: "text-blue-600",
         bg: "bg-blue-50"
       },
       {
         title: "BI Dashboards",
-        desc: "Interactive dashboards using Tableau, Power BI, and Looker. Visualizing KPIs for executives, sales, and operations.",
+        desc: "Interactive dashboards using Tableau, Power BI, and Looker. Visualizing KPIs for executives, sales, and operations",
         icon: "LayoutDashboard",
         color: "text-purple-600",
         bg: "bg-purple-50"
       },
       {
         title: "ETL/ELT Pipelines",
-        desc: "Automated data movement using Airflow, Fivetran, and dbt. Transforming raw data into analysis-ready models.",
+        desc: "Automated data movement using Airflow, Fivetran, and dbt. Transforming raw data into analysis-ready models",
         icon: "Workflow",
         color: "text-orange-600",
         bg: "bg-orange-50"
       },
       {
         title: "Advanced Analytics",
-        desc: "Predictive modeling for sales forecasting, churn prediction, and fraud detection using Python and ML.",
+        desc: "Predictive modeling for sales forecasting, churn prediction, and fraud detection using Python and ML",
         icon: "LineChart",
         color: "text-green-600",
         bg: "bg-green-50"
       },
       {
         title: "Big Data Processing",
-        desc: "Handling massive volumes and velocity with Apache Spark, Kafka, and Data Lakes for real-time insights.",
+        desc: "Handling massive volumes and velocity with Apache Spark, Kafka, and Data Lakes for real-time insights",
         icon: "HardDrive",
         color: "text-teal-600",
         bg: "bg-teal-50"
       },
       {
         title: "Data Governance",
-        desc: "Ensuring data quality, security, and compliance (GDPR, HIPAA). Data catalogs and lineage tracking.",
+        desc: "Ensuring data quality, security, and compliance (GDPR, HIPAA). Data catalogs and lineage tracking",
         icon: "ShieldCheck",
         color: "text-red-600",
         bg: "bg-red-50"
@@ -146,7 +146,7 @@ export const ANALYTICS_DATA: ServicePageData = {
   // 4. PROCESS SECTION (Mapped from Data Warehouse Implementation phases)
   process: {
     title: "Analytics Implementation Process",
-    description: "A structured approach to building a robust data platform, from requirements to deployment.",
+    description: "A structured approach to building a robust data platform, from requirements to deployment",
     phases: [
       {
         phase: "Phase 1",
@@ -256,18 +256,18 @@ export const ANALYTICS_DATA: ServicePageData = {
     heading: "Modern Data Stack",
     description: "We leverage best-in-class tools for every layer of the data stack to ensure scalability and performance. ",
     frameworks: [
-      { name: "dbt", desc: "SQL-based data transformation in the warehouse." },
-      { name: "Airflow", desc: "Workflow orchestration for complex pipelines." },
-      { name: "Spark", desc: "Unified engine for large-scale data processing." },
-      { name: "Kafka", desc: "Distributed event streaming platform." },
-      { name: "Python", desc: "Advanced analytics and ML scripting." }
+      { name: "dbt", desc: "SQL-based data transformation in the warehouse" },
+      { name: "Airflow", desc: "Workflow orchestration for complex pipelines" },
+      { name: "Spark", desc: "Unified engine for large-scale data processing" },
+      { name: "Kafka", desc: "Distributed event streaming platform" },
+      { name: "Python", desc: "Advanced analytics and ML scripting" }
     ],
     // Using 'llms' key for Data Warehouses
     llms: [
-      { name: "Snowflake", desc: "Cloud-native warehouse with separate compute/storage." },
-      { name: "BigQuery", desc: "Serverless, highly scalable data warehouse." },
-      { name: "Redshift", desc: "AWS-native warehouse with deep integration." },
-      { name: "Databricks", desc: "Unified data analytics platform." }
+      { name: "Snowflake", desc: "Cloud-native warehouse with separate compute/storage" },
+      { name: "BigQuery", desc: "Serverless, highly scalable data warehouse" },
+      { name: "Redshift", desc: "AWS-native warehouse with deep integration" },
+      { name: "Databricks", desc: "Unified data analytics platform" }
     ],
     // Using 'mlOps' key for BI & Visualization
     mlOps: ["Tableau", "Power BI", "Looker", "Metabase", "Superset"],
@@ -293,18 +293,18 @@ export const ANALYTICS_DATA: ServicePageData = {
   // 6. INDUSTRIES SECTION
   industries: {
     heading: "Industry Analytics",
-    description: "Tailored data solutions addressing specific analytical challenges in retail and manufacturing.",
+    description: "Tailored data solutions addressing specific analytical challenges in retail and manufacturing",
     items: [
       {
         id: "retail",
         label: "Retail Analytics",
         icon: "ShoppingBag",
         theme: "blue",
-        description: "Unified view of sales, inventory, and customers across channels.",
+        description: "Unified view of sales, inventory, and customers across channels",
         features: [
           {
-            title: "Inventory Opt.",
-            desc: "30% reduction in excess inventory.",
+            title: "Inventory Opt",
+            desc: "30% reduction in excess inventory",
             icon: "TrendingDown",
             caseStudy: {
               title: "Multi-channel Retailer",
@@ -313,7 +313,7 @@ export const ANALYTICS_DATA: ServicePageData = {
           },
           {
             title: "Sales Insights",
-            desc: "Real-time revenue tracking.",
+            desc: "Real-time revenue tracking",
             icon: "DollarSign"
           }
         ]
@@ -326,8 +326,8 @@ export const ANALYTICS_DATA: ServicePageData = {
         description: "Predictive maintenance and equipment health monitoring. ",
         features: [
           {
-            title: "Predictive Maint.",
-            desc: "87% failure prediction accuracy.",
+            title: "Predictive Maint",
+            desc: "87% failure prediction accuracy",
             icon: "Activity",
             caseStudy: {
               title: "Equipment Mfr",
@@ -335,8 +335,8 @@ export const ANALYTICS_DATA: ServicePageData = {
             }
           },
           {
-            title: "Downtime Red.",
-            desc: "68% reduction in equipment downtime.",
+            title: "Downtime Red",
+            desc: "68% reduction in equipment downtime",
             icon: "Clock"
           }
         ]
@@ -347,7 +347,7 @@ export const ANALYTICS_DATA: ServicePageData = {
   // 7. CASE STUDIES SECTION
   caseStudies: {
     heading: "Analytics Success Stories",
-    description: "Real-world examples of how data transformation drives measurable business value.",
+    description: "Real-world examples of how data transformation drives measurable business value",
     items: [
       {
         id: 1,
@@ -356,8 +356,8 @@ export const ANALYTICS_DATA: ServicePageData = {
         title: "Unified Analytics Platform",
         icon: "ShoppingBag",
         color: "text-blue-600",
-        challenge: "Data silos across POS, ERP, and e-commerce led to 40 hours/week of manual reporting and no unified view.",
-        solution: "Implemented Snowflake warehouse with Fivetran for ELT and Tableau for dashboards.",
+        challenge: "Data silos across POS, ERP, and e-commerce led to 40 hours/week of manual reporting and no unified view",
+        solution: "Implemented Snowflake warehouse with Fivetran for ELT and Tableau for dashboards",
         implementation: [
           "Snowflake Data Warehouse",
           "Fivetran Connectors",
@@ -369,7 +369,7 @@ export const ANALYTICS_DATA: ServicePageData = {
           { label: "Inventory", value: "-30% Excess" },
           { label: "ROI", value: "14 Months" }
         ],
-        quote: "We reduced reporting time from 40 hours to 2 hours a week and found $5M in revenue opportunities.",
+        quote: "We reduced reporting time from 40 hours to 2 hours a week and found $5M in revenue opportunities",
         author: "VP of Operations"
       },
       {
@@ -379,8 +379,8 @@ export const ANALYTICS_DATA: ServicePageData = {
         title: "Predictive Maintenance",
         icon: "Factory",
         color: "text-green-600",
-        challenge: "Equipment failures causing significant downtime and $10M in annual losses. Only reactive maintenance available.",
-        solution: "Deployed IoT sensors collecting data into Spark for ML-based failure prediction models.",
+        challenge: "Equipment failures causing significant downtime and $10M in annual losses. Only reactive maintenance available",
+        solution: "Deployed IoT sensors collecting data into Spark for ML-based failure prediction models",
         implementation: [
           "IoT Sensor Data",
           "Apache Spark Processing",
@@ -392,7 +392,7 @@ export const ANALYTICS_DATA: ServicePageData = {
           { label: "Maint. Cost", value: "-32%" },
           { label: "Annual Savings", value: "$6.8M" }
         ],
-        quote: "Our prediction accuracy is 87%, allowing us to fix machines before they break and saving millions.",
+        quote: "Our prediction accuracy is 87%, allowing us to fix machines before they break and saving millions",
         author: "Plant Manager"
       }
     ]
@@ -404,23 +404,23 @@ export const ANALYTICS_DATA: ServicePageData = {
     items: [
       {
         question: "What is the difference between ETL and ELT?",
-        answer: "ETL transforms data before loading it (good for legacy on-prem systems). ELT loads raw data first and then transforms it in the warehouse (better for modern cloud warehouses like Snowflake)."
+        answer: "ETL transforms data before loading it (good for legacy on-prem systems). ELT loads raw data first and then transforms it in the warehouse (better for modern cloud warehouses like Snowflake)"
       },
       {
         question: "How long does it take to build a data warehouse?",
-        answer: "A typical implementation takes 12-16 weeks. We use a phased approach: Requirements (2-3 weeks), Design (3-4 weeks), Build (6-12 weeks), and Deploy (2-3 weeks)."
+        answer: "A typical implementation takes 12-16 weeks. We use a phased approach: Requirements (2-3 weeks), Design (3-4 weeks), Build (6-12 weeks), and Deploy (2-3 weeks)"
       },
       {
         question: "Which BI tool should we use?",
-        answer: "It depends on your ecosystem. Tableau is great for deep visual exploration. Power BI is best if you use Microsoft/Azure. Looker is excellent for embedded analytics and data modeling."
+        answer: "It depends on your ecosystem. Tableau is great for deep visual exploration. Power BI is best if you use Microsoft/Azure. Looker is excellent for embedded analytics and data modeling"
       },
       {
         question: "How do you ensure data security?",
-        answer: "We implement Role-Based Access Control (RBAC), encryption at rest and in transit, and data masking for sensitive fields to ensure compliance with GDPR and HIPAA."
+        answer: "We implement Role-Based Access Control (RBAC), encryption at rest and in transit, and data masking for sensitive fields to ensure compliance with GDPR and HIPAA"
       },
       {
         question: "Can business users create their own reports?",
-        answer: "Yes. Our 'Self-Service BI' approach involves creating clean, user-friendly data models so business users can drag-and-drop to create reports without needing SQL knowledge."
+        answer: "Yes. Our 'Self-Service BI' approach involves creating clean, user-friendly data models so business users can drag-and-drop to create reports without needing SQL knowledge"
       }
     ]
   },
@@ -429,12 +429,12 @@ export const ANALYTICS_DATA: ServicePageData = {
   getStarted: {
     badge: "Unlock Your Data",
     titleLines: ["Ready to Become", "Data Driven?"],
-    description: "Start with a free workshop to assess your data maturity and define a roadmap.",
+    description: "Start with a free workshop to assess your data maturity and define a roadmap",
     cards: [
       {
         id: "workshop",
         title: "Free Data Strategy Workshop",
-        description: "A collaborative session to assess current state and design a high-level architecture.",
+        description: "A collaborative session to assess current state and design a high-level architecture",
         icon: "Lightbulb",
         theme: "light",
         list: [
@@ -448,7 +448,7 @@ export const ANALYTICS_DATA: ServicePageData = {
       {
         id: "consultation",
         title: "Analytics Consultation",
-        description: "Discuss specific challenges like slow reporting, data silos, or predictive needs.",
+        description: "Discuss specific challenges like slow reporting, data silos, or predictive needs",
         icon: "MessageSquare",
         theme: "dark",
         list: [

@@ -105,7 +105,7 @@ export default function ManufacturingMesMaintenance() {
             badge="Asset Health"
             title={maintenance.title}
             highlight={maintenance.subTitle}
-            description="Transitioning from reactive fixes to intelligent foresight."
+            description="Transitioning from reactive fixes to intelligent foresight"
             centered={true}
             className="mb-20"
           />

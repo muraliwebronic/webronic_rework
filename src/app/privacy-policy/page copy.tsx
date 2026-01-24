@@ -184,10 +184,10 @@ export default function PrivacyPolicy() {
               </h3>
               <div className="grid sm:grid-cols-2 gap-4">
                  {[
-                   { t: "Contract Performance", d: "To fulfill our contractual obligations to you." },
-                   { t: "Legal Obligation", d: "To comply with legal and regulatory requirements." },
-                   { t: "Explicit Consent", d: "When you have given us clear permission for a specific purpose." },
-                   { t: "Legitimate Interests", d: "For business operations and service improvement." }
+                   { t: "Contract Performance", d: "To fulfill our contractual obligations to you" },
+                   { t: "Legal Obligation", d: "To comply with legal and regulatory requirements" },
+                   { t: "Explicit Consent", d: "When you have given us clear permission for a specific purpose" },
+                   { t: "Legitimate Interests", d: "For business operations and service improvement" }
                  ].map((item, i) => (
                    <div key={i} className="p-6 rounded-3xl border border-slate-100 bg-white shadow-sm">
                       <p className="text-sm font-black text-[#76ea27] uppercase mb-2">{item.t}</p>
@@ -320,10 +320,10 @@ export default function PrivacyPolicy() {
               </h3>
               <div className="grid sm:grid-cols-2 gap-4">
                  {[
-                   { t: "Essential Cookies", d: "Necessary for website and system functionality." },
-                   { t: "Analytics Cookies", d: "Help us understand traffic and user behavior." },
-                   { t: "Functional Cookies", d: "Remember your login and interface preferences." },
-                   { t: "Marketing Cookies", d: "Used for targeted notifications and insights." }
+                   { t: "Essential Cookies", d: "Necessary for website and system functionality" },
+                   { t: "Analytics Cookies", d: "Help us understand traffic and user behavior" },
+                   { t: "Functional Cookies", d: "Remember your login and interface preferences" },
+                   { t: "Marketing Cookies", d: "Used for targeted notifications and insights" }
                  ].map((item, i) => (
                    <div key={i} className="p-6 rounded-3xl border border-slate-100">
                       <p className="text-sm font-bold text-slate-900 mb-2">{item.t}</p>

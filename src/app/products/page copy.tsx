@@ -32,12 +32,12 @@ const products: Product[] = [
     name: "Value Chart",
     tagline: "Intelligence Platform",
     description:
-      "Enterprise-grade data visualization engine that transforms fragmented metrics into high-fidelity actionable insights for financial leadership.",
+      "Enterprise-grade data visualization engine that transforms fragmented metrics into high-fidelity actionable insights for financial leadership",
     features: ["Real-time Analytics", "Custom Reporting", "Forecasting"],
     icon: <BarChart3 size={24} />,
     color1: "#2776ea",
     color2: "#76ea27",
-    image: "./assets/images/valuechart.png",
+    image: "/assets/images/valuechart.png",
     link: "https://www.valueflowsoft.com/",
   },
   {
@@ -45,12 +45,12 @@ const products: Product[] = [
     name: "Tanlux",
     tagline: "Industrial ERP",
     description:
-      "A specialized ecosystem for manufacturing workflow optimization, integrating IoT monitoring with core resource planning modules.",
+      "A specialized ecosystem for manufacturing workflow optimization, integrating IoT monitoring with core resource planning modules",
     features: ["Supply Chain Sync", "IoT Integration", "Resource Tracking"],
     icon: <Layers size={24} />,
     color1: "#2776ea",
     color2: "#76ea27",
-    image: "./assets/images/tanluxlogo.png",
+    image: "/assets/images/tanluxlogo.png",
     link: "https://tanlux.se/",
   },
   {
@@ -58,12 +58,12 @@ const products: Product[] = [
     name: "Fp analyzer",
     tagline: "Industrial ERP",
     description:
-      "A specialized ecosystem for manufacturing workflow optimization, integrating IoT monitoring with core resource planning modules.",
+      "A specialized ecosystem for manufacturing workflow optimization, integrating IoT monitoring with core resource planning modules",
     features: ["Supply Chain Sync", "IoT Integration", "Resource Tracking"],
     icon: <ChartLine  size={24} />,
     color1: "#2776ea",
     color2: "#76ea27",
-    image: "./assets/images/fpanalyzer.png",
+    image: "/assets/images/fpanalyzer.png",
     link: "https://www.fpanalyzer.se/",
   },
   {
@@ -71,12 +71,12 @@ const products: Product[] = [
     name: "StoreTech",
     tagline: "Automated Retail",
     description:
-      "Cloud-native retail infrastructure providing automated checkout solutions and synchronized inventory management across global storefronts.",
+      "Cloud-native retail infrastructure providing automated checkout solutions and synchronized inventory management across global storefronts",
     features: ["AI Checkout", "Inventory Cloud", "Loyalty Systems"],
     icon: <Store size={24} />,
     color1: "#2776ea",
     color2: "#76ea27",
-    image: "./assets/images/storetech-logo1.png",
+    image: "/assets/images/storetech-logo1.png",
     link: "https://store-tech.se/",
   },
 ];

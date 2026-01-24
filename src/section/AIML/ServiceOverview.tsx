@@ -19,27 +19,27 @@ export default function ServiceOverview() {
   const differentiators = [
     {
       title: "AI-First Methodology",
-      description: "Embedded across all solutions for maximum efficiency.",
+      description: "Embedded across all solutions for maximum efficiency",
       icon: BrainCircuit,
     },
     {
       title: "Global Scale",
-      description: "100+ successful AI implementations across 50+ countries.",
+      description: "100+ successful AI implementations across 50+ countries",
       icon: Globe2,
     },
     {
       title: "Deep Expertise",
-      description: "Cross-industry knowledge spanning 15+ complex sectors.",
+      description: "Cross-industry knowledge spanning 15+ complex sectors",
       icon: Layers,
     },
     {
       title: "Strategic Partnerships",
-      description: "Direct collaboration with OpenAI, Google Cloud, and NVIDIA.",
+      description: "Direct collaboration with OpenAI, Google Cloud, and NVIDIA",
       icon: Network,
     },
     {
       title: "Proprietary Accelerators",
-      description: "Pre-built AI frameworks that reduce time-to-market by 40%.",
+      description: "Pre-built AI frameworks that reduce time-to-market by 40%",
       icon: Cpu,
     },
   ];

@@ -19,7 +19,7 @@ import {
 export const HOSPITALITY_HERO_PMS_DATA = {
   hero: {
     h1: "Hospitality & Travel Technology Solutions",
-    description: "Guest experience platforms, contactless services, revenue management, online booking systems, and hotel operations automation.",
+    description: "Guest experience platforms, contactless services, revenue management, online booking systems, and hotel operations automation",
     stats: [
       { value: "80+", label: "Hospitality implementations", icon: Hotel },
       { value: "35%", label: "Revenue increase through dynamic pricing", icon: TrendingUp },
@@ -29,31 +29,31 @@ export const HOSPITALITY_HERO_PMS_DATA = {
   },
   overview: {
     title: "Industry Overview",
-    content: "Hospitality and travel industries embrace digital transformation driven by changing guest expectations, contactless service demand, personalization requirements, and operational efficiency needs.",
+    content: "Hospitality and travel industries embrace digital transformation driven by changing guest expectations, contactless service demand, personalization requirements, and operational efficiency needs",
     challenges: [
       {
         title: "Labor Shortage",
-        desc: "Difficulty hiring and retaining staff, high turnover (73% annual in hospitality), wage pressure, service quality impact.",
+        desc: "Difficulty hiring and retaining staff, high turnover (73% annual in hospitality), wage pressure, service quality impact",
         icon: Users
       },
       {
         title: "Guest Expectations",
-        desc: "Seamless digital experience expected (mobile check-in, keyless entry, in-room tech, personalized service).",
+        desc: "Seamless digital experience expected (mobile check-in, keyless entry, in-room tech, personalized service)",
         icon: Smartphone
       },
       {
         title: "Revenue Management",
-        desc: "Optimizing room rates across seasons, events, demand patterns, channel mix (direct, OTA, corporate).",
+        desc: "Optimizing room rates across seasons, events, demand patterns, channel mix (direct, OTA, corporate)",
         icon: BarChart3
       },
       {
         title: "Operational Efficiency",
-        desc: "Manual processes (check-in, housekeeping coordination, maintenance), communication gaps, inefficient workflows.",
+        desc: "Manual processes (check-in, housekeeping coordination, maintenance), communication gaps, inefficient workflows",
         icon: Settings
       },
       {
         title: "Distribution Costs",
-        desc: "OTA commissions (15-25%), difficulty driving direct bookings, channel management complexity.",
+        desc: "OTA commissions (15-25%), difficulty driving direct bookings, channel management complexity",
         icon: Globe
       }
     ],

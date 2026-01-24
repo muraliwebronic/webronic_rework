@@ -17,7 +17,7 @@ export const MANUFACTURING_SPC_DATA = {
   header: {
     title: "Statistical Process Control (SPC)",
     subTitle: "Real-Time Quality Monitoring",
-    description: "Monitor manufacturing processes in real-time using control charts to detect variations, identify trends, and enable proactive intervention before defects are produced."
+    description: "Monitor manufacturing processes in real-time using control charts to detect variations, identify trends, and enable proactive intervention before defects are produced"
   },
   fundamentals: {
     title: "Control Chart Fundamentals",

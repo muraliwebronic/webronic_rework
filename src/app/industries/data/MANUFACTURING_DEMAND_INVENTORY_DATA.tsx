@@ -56,7 +56,7 @@ export const MANUFACTURING_DEMAND_INVENTORY_DATA = {
   optimization: {
     title: "Inventory Optimization",
     subTitle: "Right Stock at Right Place at Right Time",
-    description: "Balance conflicting objectives: high customer service levels vs. low inventory investment.",
+    description: "Balance conflicting objectives: high customer service levels vs. low inventory investment",
     techniques: [
       {
         title: "ABC Analysis",
@@ -163,7 +163,7 @@ export const MANUFACTURING_DEMAND_INVENTORY_DATA = {
   collaboration: {
     title: "Supplier Collaboration Platforms",
     subTitle: "Connected Supply Chain",
-    description: "Enable real-time collaboration with suppliers through integrated portals and API connections.",
+    description: "Enable real-time collaboration with suppliers through integrated portals and API connections",
     features: [
       {
         title: "Order Management",

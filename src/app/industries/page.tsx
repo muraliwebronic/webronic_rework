@@ -117,7 +117,7 @@ export default function Page() {
             <ManufacturingOverview />
             <ManufacturingSolutions />
             <ManufacturingDataCollection />
-            <ManufacturingFPDigitalTwin />
+            {/* <ManufacturingFPDigitalTwin /> */}
             <DigitalTwinImplementation />
             <ManufacturingMesMaintenance />
             <ManufacturingMonitoring />

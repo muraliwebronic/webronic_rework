@@ -18,7 +18,7 @@ export default function UniversalRelatedResources({ data }: { data: ServicePageD
           <SectionHeader
             badge="Ecosystem"
             title="Related Capabilities"
-            description="Explore complementary services."
+            description="Explore complementary services"
             centered={true}
             className="max-w-3xl mx-auto mb-10"
             size="default"

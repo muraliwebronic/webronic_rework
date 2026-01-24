@@ -20,7 +20,7 @@ export default function IndustryFocus() {
             badge="Industry Focus"
             title="Specialized Solutions for"
             highlight="Diverse Sectors"
-            description="Webronic Industries serves organizations across diverse sectors, delivering specialized solutions that address industry-specific challenges."
+            description="Webronic Industries serves organizations across diverse sectors, delivering specialized solutions that address industry-specific challenges"
             centered={true}
             className="max-w-3xl mx-auto"
             />

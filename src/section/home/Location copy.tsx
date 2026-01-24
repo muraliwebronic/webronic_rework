@@ -32,7 +32,7 @@ export default function Branches() {
         <SectionHeader 
             title="Global Presence"
             highlight="Our Network"
-            description="Strategically located across key technology hubs to deliver seamless support and innovation worldwide."
+            description="Strategically located across key technology hubs to deliver seamless support and innovation worldwide"
             centered={true}
             className="max-w-3xl mx-auto mb-16"
         />

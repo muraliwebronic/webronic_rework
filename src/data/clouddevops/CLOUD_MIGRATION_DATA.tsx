@@ -11,7 +11,7 @@ export const CLOUD_MIGRATION_DATA = {
     badge: "Our Methodology",
     title: "Webronic Cloud",
     titleHighlight: "Transformation Framework",
-    description: "A structured, low-risk approach to migrating your mission-critical workloads to the cloud, ensuring business continuity and immediate value realization."
+    description: "A structured, low-risk approach to migrating your mission-critical workloads to the cloud, ensuring business continuity and immediate value realization"
   },
   phases: [
     {
@@ -19,7 +19,7 @@ export const CLOUD_MIGRATION_DATA = {
       name: "Assess",
       duration: "Weeks 1-4",
       icon: ClipboardList,
-      description: "We analyze your current estate to build a data-driven business case for migration.",
+      description: "We analyze your current estate to build a data-driven business case for migration",
       activities: [
         "Application discovery and inventory",
         "Dependency mapping",
@@ -33,7 +33,7 @@ export const CLOUD_MIGRATION_DATA = {
       name: "Plan",
       duration: "Weeks 5-10",
       icon: Map,
-      description: "We design the target architecture and create a detailed roadmap for execution.",
+      description: "We design the target architecture and create a detailed roadmap for execution",
       activities: [
         "Migration strategy definition",
         "Wave planning",
@@ -47,7 +47,7 @@ export const CLOUD_MIGRATION_DATA = {
       name: "Pilot",
       duration: "Weeks 11-18",
       icon: FlaskConical,
-      description: "We migrate a representative subset of apps to validate our assumptions and processes.",
+      description: "We migrate a representative subset of apps to validate our assumptions and processes",
       activities: [
         "Pilot application migration",
         "Process validation",
@@ -61,7 +61,7 @@ export const CLOUD_MIGRATION_DATA = {
       name: "Migrate",
       duration: "Months 5-12",
       icon: Rocket,
-      description: "We execute the migration in waves, ensuring stability and minimal disruption.",
+      description: "We execute the migration in waves, ensuring stability and minimal disruption",
       activities: [
         "Wave-based migration execution",
         "Testing and validation",
@@ -74,7 +74,7 @@ export const CLOUD_MIGRATION_DATA = {
       name: "Optimize",
       duration: "Ongoing",
       icon: TrendingUp,
-      description: "We continuously refine your environment for cost, security, and performance.",
+      description: "We continuously refine your environment for cost, security, and performance",
       activities: [
         "Cost optimization",
         "Performance tuning",

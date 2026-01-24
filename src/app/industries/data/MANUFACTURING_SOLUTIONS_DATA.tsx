@@ -13,7 +13,7 @@ export const MANUFACTURING_SOLUTIONS_DATA = {
     title: "1. Industry 4.0 / Smart Factory Implementation",
     intro: {
       title: "Connected Equipment & IoT Infrastructure",
-      description: "Transform traditional manufacturing facilities into intelligent, interconnected ecosystems where machines communicate status, production equipment self-optimizes, and operators receive real-time insights enabling data-driven decision-making."
+      description: "Transform traditional manufacturing facilities into intelligent, interconnected ecosystems where machines communicate status, production equipment self-optimizes, and operators receive real-time insights enabling data-driven decision-making"
     },
     sensorDeployment: {
       title: "Comprehensive IoT Sensor Deployment",

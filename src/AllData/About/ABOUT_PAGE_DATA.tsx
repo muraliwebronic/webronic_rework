@@ -31,30 +31,30 @@ export const ABOUT_PAGE_DATA = {
   overview: {
     title: "Company Overview",
     content: [
-      "Webronic Industries Private Limited is a global technology services company specializing in AI-driven digital transformation, cloud computing, and enterprise software development. Founded in 2010, we've grown from a small software development team in Chennai to a global organization serving over 500 clients across 50+ countries.",
-      "Our mission is simple yet powerful: Transform businesses through intelligent technology solutions that drive measurable results. We achieve this by combining deep technical expertise with industry knowledge, delivering solutions that don't just meet requirements but exceed expectations and create competitive advantages."
+      "Webronic Industries Private Limited is a global technology services company specializing in AI-driven digital transformation, cloud computing, and enterprise software development. Founded in 2010, we've grown from a small software development team in Chennai to a global organization serving over 500 clients across 50+ countries",
+      "Our mission is simple yet powerful: Transform businesses through intelligent technology solutions that drive measurable results. We achieve this by combining deep technical expertise with industry knowledge, delivering solutions that don't just meet requirements but exceed expectations and create competitive advantages"
     ],
     differentiators: {
       title: "What Sets Us Apart",
       items: [
         {
           title: "AI-First Approach",
-          desc: "Unlike traditional IT service companies, we embed artificial intelligence and machine learning across all our solutions. From predictive analytics in our ERP systems to computer vision in our retail automation platforms, AI isn't an add-on but fundamental to how we build technology.",
+          desc: "Unlike traditional IT service companies, we embed artificial intelligence and machine learning across all our solutions. From predictive analytics in our ERP systems to computer vision in our retail automation platforms, AI isn't an add-on but fundamental to how we build technology",
           icon: Brain
         },
         {
           title: "Product + Services Model",
-          desc: "We're not just consultants but also product innovators. Our proprietary platforms (StoreTech, Tanlux, Value Charts) serve thousands of users globally, giving us real-time insights that inform our consulting and custom development work.",
+          desc: "We're not just consultants but also product innovators. Our proprietary platforms (StoreTech, Tanlux, Value Charts) serve thousands of users globally, giving us real-time insights that inform our consulting and custom development work",
           icon: Layers
         },
         {
           title: "Global Reach, Local Presence",
-          desc: "Operating from India and Europe (through our partnership with Thingsatweb Sweden AB), we combine Indian innovation and cost-effectiveness with European quality standards and market access.",
+          desc: "Operating from India and Europe (through our partnership with Thingsatweb Sweden AB), we combine Indian innovation and cost-effectiveness with European quality standards and market access",
           icon: Globe2
         },
         {
           title: "Industry Specialization",
-          desc: "We don’t try to be everything to everyone. Our deep expertise in manufacturing, retail, financial services, and healthcare allows us to deliver solutions that address industry-specific challenges with proven approaches.",
+          desc: "We don’t try to be everything to everyone. Our deep expertise in manufacturing, retail, financial services, and healthcare allows us to deliver solutions that address industry-specific challenges with proven approaches",
           icon: Briefcase
         }
       ]
@@ -62,11 +62,11 @@ export const ABOUT_PAGE_DATA = {
     values: {
       title: "Our Values",
       items: [
-        { title: "Innovation First", desc: "We continuously explore emerging technologies and incorporate them into our solutions. Our R&D investment exceeds industry averages.", icon: Lightbulb },
-        { title: "Client Success", desc: "Your success is our success. We measure ourselves not by projects delivered but by business outcomes achieved.", icon: Target },
-        { title: "Excellence in Execution", desc: "Quality isn’t negotiable. Our rigorous development processes and comprehensive testing ensure every solution meets the highest standards.", icon: Award },
-        { title: "Transparency & Integrity", desc: "We build long-term partnerships based on trust. Honest communication and ethical practices guide every client interaction.", icon: ShieldCheck },
-        { title: "Continuous Learning", desc: "Technology evolves rapidly. Our team dedicates 10% of time to learning new technologies and earning certifications.", icon: Zap }
+        { title: "Innovation First", desc: "We continuously explore emerging technologies and incorporate them into our solutions. Our R&D investment exceeds industry averages", icon: Lightbulb },
+        { title: "Client Success", desc: "Your success is our success. We measure ourselves not by projects delivered but by business outcomes achieved", icon: Target },
+        { title: "Excellence in Execution", desc: "Quality isn’t negotiable. Our rigorous development processes and comprehensive testing ensure every solution meets the highest standards", icon: Award },
+        { title: "Transparency & Integrity", desc: "We build long-term partnerships based on trust. Honest communication and ethical practices guide every client interaction", icon: ShieldCheck },
+        { title: "Continuous Learning", desc: "Technology evolves rapidly. Our team dedicates 10% of time to learning new technologies and earning certifications", icon: Zap }
       ]
     }
   },
@@ -74,15 +74,15 @@ export const ABOUT_PAGE_DATA = {
     title: "Our Story",
     subtitle: "The Journey from Startup to Global Enterprise",
     timeline: [
-      { year: "2010", title: "The Beginning", desc: "Webronic Industries was founded in Chennai by a team of software engineers passionate about using technology to solve real business problems. Our first project was a custom inventory management system for a local manufacturer." },
-      { year: "2012-2014", title: "Building Expertise", desc: "We expanded our service offerings into web development, mobile applications, and ERP systems. Early projects in manufacturing automation gave us deep expertise in Industry 4.0 technologies." },
-      { year: "2015", title: "International Expansion", desc: "Secured our first international client and established operations in Madurai and Salem. This geographic expansion allowed us to tap into diverse talent pools across Tamil Nadu." },
-      { year: "2016-2017", title: "Product Innovation", desc: "Launched Value Charts, our business intelligence platform, marking our evolution from pure services to a product and services model. The platform gained traction with SMBs seeking affordable BI solutions." },
-      { year: "2018", title: "European Market Entry", desc: "Partnered with Thingsatweb Sweden AB to serve European markets. This partnership provided access to Nordic and European clients while maintaining development efficiency in India." },
-      { year: "2019-2020", title: "Retail Automation Breakthrough", desc: "Developed StoreTech, our autonomous retail platform, initially for Swedish unmanned convenience stores. The platform’s success during COVID-19 accelerated adoption." },
-      { year: "2021", title: "AI Practice Launch", desc: "Established dedicated AI/ML practice with partnerships with OpenAI, Google AI, and NVIDIA. Began delivering advanced AI solutions including computer vision quality inspection." },
-      { year: "2022", title: "Tanlux Platform", desc: "Launched Tanlux ERP specifically for tanning studios, demonstrating our ability to create vertical-specific solutions. Platform now powers autonomous tanning studios across Sweden." },
-      { year: "2023-Present", title: "Global Growth", desc: "Expanded to serve Fortune 500 enterprises while maintaining our startup agility. Our client portfolio now includes manufacturers, retailers, financial institutions, and healthcare providers across five continents." }
+      { year: "2010", title: "The Beginning", desc: "Webronic Industries was founded in Chennai by a team of software engineers passionate about using technology to solve real business problems. Our first project was a custom inventory management system for a local manufacturer" },
+      { year: "2012-2014", title: "Building Expertise", desc: "We expanded our service offerings into web development, mobile applications, and ERP systems. Early projects in manufacturing automation gave us deep expertise in Industry 4.0 technologies" },
+      { year: "2015", title: "International Expansion", desc: "Secured our first international client and established operations in Madurai and Salem. This geographic expansion allowed us to tap into diverse talent pools across Tamil Nadu" },
+      { year: "2016-2017", title: "Product Innovation", desc: "Launched Value Charts, our business intelligence platform, marking our evolution from pure services to a product and services model. The platform gained traction with SMBs seeking affordable BI solutions" },
+      { year: "2018", title: "European Market Entry", desc: "Partnered with Thingsatweb Sweden AB to serve European markets. This partnership provided access to Nordic and European clients while maintaining development efficiency in India" },
+      { year: "2019-2020", title: "Retail Automation Breakthrough", desc: "Developed StoreTech, our autonomous retail platform, initially for Swedish unmanned convenience stores. The platform’s success during COVID-19 accelerated adoption" },
+      { year: "2021", title: "AI Practice Launch", desc: "Established dedicated AI/ML practice with partnerships with OpenAI, Google AI, and NVIDIA. Began delivering advanced AI solutions including computer vision quality inspection" },
+      { year: "2022", title: "Tanlux Platform", desc: "Launched Tanlux ERP specifically for tanning studios, demonstrating our ability to create vertical-specific solutions. Platform now powers autonomous tanning studios across Sweden" },
+      { year: "2023-Present", title: "Global Growth", desc: "Expanded to serve Fortune 500 enterprises while maintaining our startup agility. Our client portfolio now includes manufacturers, retailers, financial institutions, and healthcare providers across five continents" }
     ]
   },
   leadership: {
@@ -91,21 +91,21 @@ export const ABOUT_PAGE_DATA = {
       {
         name: "RAJA SM",
         role: "Chief Technology Officer",
-        bio: "With over 18 years of experience in software architecture and technology innovation, Raja leads Webronic's technology strategy and product development. He pioneered our AI first approach and oversees our R&D initiatives.",
+        bio: "With over 18 years of experience in software architecture and technology innovation, Raja leads Webronic's technology strategy and product development. He pioneered our AI first approach and oversees our R&D initiatives",
         expertise: "Cloud architecture, AI/ML systems, enterprise software design",
         education: "M.Tech in Computer Science"
       },
       {
         name: "SURYANARAYANAN D",
         role: "Chief Executive Officer",
-        bio: "Suryanarayanan brings strategic vision and operational excellence to Webronic. He’s responsible for global business development, client relationships, and organizational growth.",
+        bio: "Suryanarayanan brings strategic vision and operational excellence to Webronic. He’s responsible for global business development, client relationships, and organizational growth",
         expertise: "Business strategy, client management, operational excellence",
         education: "MBA, B.E. in Electronics & Communication"
       },
       {
         name: "VEERAMANIKANDAN V",
         role: "Director of R&D & Lead Technology Engineer",
-        bio: "Veeramanikandan drives innovation through research and development of emerging technologies. He leads technical teams developing our proprietary platforms and exploring next-generation solutions.",
+        bio: "Veeramanikandan drives innovation through research and development of emerging technologies. He leads technical teams developing our proprietary platforms and exploring next-generation solutions",
         expertise: "IoT systems, embedded engineering, industrial automation",
         education: "B.E. in Electronics & Instrumentation"
       }
@@ -121,7 +121,7 @@ export const ABOUT_PAGE_DATA = {
     ],
     europe: {
       partner: "Thingsatweb Sweden AB",
-      desc: "Serving Nordic and European markets with local presence, support, and compliance with EU regulations including GDPR."
+      desc: "Serving Nordic and European markets with local presence, support, and compliance with EU regulations including GDPR"
     },
     regions: [
       "North America: USA, Canada",
@@ -182,7 +182,7 @@ export const ABOUT_PAGE_DATA = {
   },
   culture: {
     title: "Our Culture",
-    desc: "Remote-First, People-Centered. We believe great work happens when people have flexibility and autonomy.",
+    desc: "Remote-First, People-Centered. We believe great work happens when people have flexibility and autonomy",
     points: [
       "Work-Life Balance",
       "Learning & Development",
@@ -196,19 +196,19 @@ export const ABOUT_PAGE_DATA = {
   whyChoose: {
     title: "Why Choose Webronic",
     points: [
-      { title: "1. Proven Track Record", desc: "15+ years delivering successful projects across industries and geographies." },
-      { title: "2. Technical Excellence", desc: "Deep expertise in AI/ML, cloud, IoT. 100+ professional certifications." },
-      { title: "3. Industry Knowledge", desc: "Specialized in manufacturing, retail, finance, and healthcare." },
-      { title: "4. End-to-End Services", desc: "Strategy, consulting, development, deployment, and support." },
-      { title: "5. Global Delivery", desc: "Cultural understanding with cost-effective development." },
-      { title: "6. Innovation Focus", desc: "Continuous investment in R&D and emerging technologies." },
-      { title: "7. Transparent Communication", desc: "Honest assessments and realistic commitments." },
-      { title: "8. Long-Term Partnership", desc: "Average client relationship exceeds 5 years." }
+      { title: "1. Proven Track Record", desc: "15+ years delivering successful projects across industries and geographies" },
+      { title: "2. Technical Excellence", desc: "Deep expertise in AI/ML, cloud, IoT. 100+ professional certifications" },
+      { title: "3. Industry Knowledge", desc: "Specialized in manufacturing, retail, finance, and healthcare" },
+      { title: "4. End-to-End Services", desc: "Strategy, consulting, development, deployment, and support" },
+      { title: "5. Global Delivery", desc: "Cultural understanding with cost-effective development" },
+      { title: "6. Innovation Focus", desc: "Continuous investment in R&D and emerging technologies" },
+      { title: "7. Transparent Communication", desc: "Honest assessments and realistic commitments" },
+      { title: "8. Long-Term Partnership", desc: "Average client relationship exceeds 5 years" }
     ]
   },
   careers: {
     title: "Join Our Team",
-    desc: "Webronic is always looking for talented individuals passionate about technology and innovation.",
+    desc: "Webronic is always looking for talented individuals passionate about technology and innovation",
     positions: [
       "Senior Full-Stack Engineers",
       "AI/ML Engineers",

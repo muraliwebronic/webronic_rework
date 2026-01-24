@@ -2,7 +2,7 @@ export const OPEN_POSITIONS_DATA = {
   header: {
     badge: "Current Opportunities",
     title: "Join Our Growing Team",
-    description: "We’re actively hiring across multiple roles and experience levels. All positions are based in Chennai, Madurai, or Salem with hybrid work options."
+    description: "We’re actively hiring across multiple roles and experience levels. All positions are based in Chennai, Madurai, or Salem with hybrid work options"
   },
   categories: [
     "All",
@@ -24,7 +24,7 @@ export const OPEN_POSITIONS_DATA = {
       location: "Chennai, Hybrid",
       experience: "2-5 years",
       skills: ["Node.js", "React", "MongoDB/PostgreSQL", "AWS/Azure"],
-      description: "Build scalable web applications for enterprise clients. Collaborate with UX designers and product managers to deliver high-quality software.",
+      description: "Build scalable web applications for enterprise clients. Collaborate with UX designers and product managers to deliver high-quality software",
       details: {
         whatYouWillDo: [
           "Build scalable web applications for enterprise clients",
@@ -44,7 +44,7 @@ export const OPEN_POSITIONS_DATA = {
       location: "Chennai/Madurai, Hybrid",
       experience: "2-4 years",
       skills: ["Flutter/React Native", "Dart/JS", "REST APIs", "Firebase"],
-      description: "Develop cross-platform mobile applications with offline capabilities and optimized performance.",
+      description: "Develop cross-platform mobile applications with offline capabilities and optimized performance",
       details: {
         whatYouWillDo: [
           "Develop cross-platform mobile applications",
@@ -64,7 +64,7 @@ export const OPEN_POSITIONS_DATA = {
       location: "Chennai, Hybrid",
       experience: "3-6 years",
       skills: ["Python", "Django/FastAPI", "PostgreSQL", "Redis", "Celery"],
-      description: "Design and develop high-performance backend systems and data processing pipelines.",
+      description: "Design and develop high-performance backend systems and data processing pipelines",
       details: {
         whatYouWillDo: [
           "Design and develop high-performance backend systems",
@@ -85,7 +85,7 @@ export const OPEN_POSITIONS_DATA = {
       experience: "3-7 years",
       salary: "₹12-25 LPA",
       skills: ["Python", "TensorFlow/PyTorch", "ML Algorithms", "Deep Learning"],
-      description: "Develop ML models for predictive analytics, computer vision, and NLP. Deploy models to production.",
+      description: "Develop ML models for predictive analytics, computer vision, and NLP. Deploy models to production",
       details: {
         whatYouWillDo: [
           "Develop ML models for predictive analytics, computer vision, NLP",
@@ -105,7 +105,7 @@ export const OPEN_POSITIONS_DATA = {
       location: "Chennai/Salem, Hybrid",
       experience: "2-5 years",
       skills: ["Python/R", "SQL", "Statistics", "Tableau/Power BI", "ML Modeling"],
-      description: "Analyze complex datasets to extract business insights and build statistical models.",
+      description: "Analyze complex datasets to extract business insights and build statistical models",
       details: {
         whatYouWillDo: [
           "Analyze complex datasets to extract business insights",
@@ -125,7 +125,7 @@ export const OPEN_POSITIONS_DATA = {
       location: "Chennai, Hybrid",
       experience: "3-6 years",
       skills: ["Linux", "Docker", "Kubernetes", "CI/CD", "AWS/Azure/GCP"],
-      description: "Design and maintain CI/CD pipelines, manage Kubernetes clusters, and optimize cloud infrastructure.",
+      description: "Design and maintain CI/CD pipelines, manage Kubernetes clusters, and optimize cloud infrastructure",
       details: {
         whatYouWillDo: [
           "Design and maintain CI/CD pipelines",
@@ -146,7 +146,7 @@ export const OPEN_POSITIONS_DATA = {
       experience: "7-12 years",
       salary: "₹25-40 LPA",
       skills: ["Multi-cloud Architecture", "Microservices", "High Availability", "Security"],
-      description: "Design enterprise cloud architectures and lead migration projects for Fortune 500 clients.",
+      description: "Design enterprise cloud architectures and lead migration projects for Fortune 500 clients",
       details: {
         whatYouWillDo: [
           "Design enterprise cloud architectures",
@@ -166,7 +166,7 @@ export const OPEN_POSITIONS_DATA = {
       location: "Chennai, Hybrid",
       experience: "4-8 years",
       skills: ["Penetration Testing", "Vulnerability Assessment", "SIEM", "OWASP"],
-      description: "Conduct security assessments, monitor events, and implement controls to protect enterprise assets.",
+      description: "Conduct security assessments, monitor events, and implement controls to protect enterprise assets",
       details: {
         whatYouWillDo: [
           "Conduct security assessments and penetration tests",
@@ -186,7 +186,7 @@ export const OPEN_POSITIONS_DATA = {
       location: "Chennai, Madurai",
       experience: "5-10 years",
       skills: ["Agile/Scrum", "Jira/Asana", "Stakeholder Management", "Budgeting"],
-      description: "Lead end-to-end project delivery, manage cross-functional teams, and ensure client satisfaction.",
+      description: "Lead end-to-end project delivery, manage cross-functional teams, and ensure client satisfaction",
       details: {
         whatYouWillDo: [
           "Lead end-to-end project delivery (planning, execution, closure)",
@@ -206,7 +206,7 @@ export const OPEN_POSITIONS_DATA = {
       location: "Salem, Hybrid",
       experience: "3-6 years",
       skills: ["Embedded C/C++", "MQTT", "Microcontrollers", "AWS/Azure IoT"],
-      description: "Design and develop IoT solutions, integrating sensors with cloud platforms and developing firmware.",
+      description: "Design and develop IoT solutions, integrating sensors with cloud platforms and developing firmware",
       details: {
         whatYouWillDo: [
           "Design and develop IoT solutions",
@@ -226,7 +226,7 @@ export const OPEN_POSITIONS_DATA = {
       location: "Chennai, Hybrid",
       experience: "3-5 years",
       skills: ["Selenium/Cypress", "Java/Python/JS", "API Testing", "CI/CD Integration"],
-      description: "Design automated test frameworks and write test scripts for web, mobile, and API applications.",
+      description: "Design automated test frameworks and write test scripts for web, mobile, and API applications",
       details: {
         whatYouWillDo: [
           "Design and implement automated test frameworks",
@@ -245,7 +245,7 @@ export const OPEN_POSITIONS_DATA = {
       location: "Chennai, Hybrid",
       experience: "2-5 years",
       skills: ["Figma", "User Research", "Prototyping", "Visual Design", "WCAG"],
-      description: "Create intuitive user interfaces and conduct user research to design exceptional digital experiences.",
+      description: "Create intuitive user interfaces and conduct user research to design exceptional digital experiences",
       details: {
         whatYouWillDo: [
           "Conduct user research and usability testing",
@@ -266,7 +266,7 @@ export const OPEN_POSITIONS_DATA = {
       experience: "Final Year / Recent Grad",
       salary: "Stipend: ₹15k-25k/mo",
       skills: ["Programming (Java/Python/JS)", "DSA", "OOP", "SQL", "Git"],
-      description: "6-month internship with potential for full-time conversion. Learn professional development practices.",
+      description: "6-month internship with potential for full-time conversion. Learn professional development practices",
       details: {
         whatYouWillDo: [
           "Professional software development practices",
@@ -285,7 +285,7 @@ export const OPEN_POSITIONS_DATA = {
       experience: "Final Year / Recent Grad",
       salary: "Stipend: ₹15k-20k/mo",
       skills: ["Python/R", "SQL", "Excel", "Data Visualization"],
-      description: "6-month internship focusing on data analysis, SQL querying, and BI tools.",
+      description: "6-month internship focusing on data analysis, SQL querying, and BI tools",
       details: {
         whatYouWillDo: [
           "Data analysis and reporting",

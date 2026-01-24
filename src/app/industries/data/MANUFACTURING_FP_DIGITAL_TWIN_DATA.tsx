@@ -83,7 +83,7 @@ export const MANUFACTURING_FP_DIGITAL_TWIN_DATA = {
   digitalTwin: {
     title: "Digital Twin Technology",
     subTitle: "Virtual Factory Replication",
-    description: "Create software models mirroring physical manufacturing assets, continuously updated with real-time sensor data, enabling virtual testing, optimization, and predictive simulation without disrupting actual production.",
+    description: "Create software models mirroring physical manufacturing assets, continuously updated with real-time sensor data, enabling virtual testing, optimization, and predictive simulation without disrupting actual production",
     definition: {
       title: "What is a Digital Twin?",
       content: "A digital twin is a virtual representation of a physical object or system, synchronized with real-time data from IoT sensors, enabling:"

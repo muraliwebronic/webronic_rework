@@ -26,7 +26,7 @@ export const HIRING_PROCESS_DATA = {
       title: "Application Review",
       duration: "1-3 days",
       icon: FileText,
-      description: "Submit resume/CV via our careers portal.",
+      description: "Submit resume/CV via our careers portal",
       details: [
         "Our talent team reviews all applications",
         "Relevant applications move forward within 3 business days",
@@ -38,7 +38,7 @@ export const HIRING_PROCESS_DATA = {
       title: "Initial Screening",
       duration: "30 minutes",
       icon: Phone,
-      description: "Phone or video call with HR/Recruiter to discuss your background, interests, and salary expectations.",
+      description: "Phone or video call with HR/Recruiter to discuss your background, interests, and salary expectations",
       details: [
         "Overview of role and company",
         "Answer your initial questions",
@@ -50,7 +50,7 @@ export const HIRING_PROCESS_DATA = {
       title: "Technical Assessment",
       duration: "1-2 hours",
       icon: Code2,
-      description: "Practical evaluation of skills relevant to the role.",
+      description: "Practical evaluation of skills relevant to the role",
       subSections: [
         {
           heading: "For Engineering Roles:",
@@ -76,7 +76,7 @@ export const HIRING_PROCESS_DATA = {
       title: "Technical Interview",
       duration: "1-2 rounds, 1 hour each",
       icon: Users,
-      description: "Video call with senior engineers/team leads to deep-dive into technical skills.",
+      description: "Video call with senior engineers/team leads to deep-dive into technical skills",
       details: [
         "Discuss past projects and experiences",
         "Pair programming or system design (for senior roles)",
@@ -88,7 +88,7 @@ export const HIRING_PROCESS_DATA = {
       title: "Cultural Fit Interview",
       duration: "45 minutes",
       icon: HeartHandshake,
-      description: "Meet with hiring manager or department head to assess alignment with company values.",
+      description: "Meet with hiring manager or department head to assess alignment with company values",
       details: [
         "Discuss career goals and aspirations",
         "Your questions about team, projects, culture",
@@ -100,7 +100,7 @@ export const HIRING_PROCESS_DATA = {
       title: "Final Discussion",
       duration: "30 minutes (Optional)",
       icon: UserCheck,
-      description: "Final alignment meeting.",
+      description: "Final alignment meeting",
       details: [
         "For senior/leadership roles: meet with VP/CTO",
         "For all roles: opportunity to meet potential teammates",
@@ -112,7 +112,7 @@ export const HIRING_PROCESS_DATA = {
       title: "Offer",
       duration: "1-2 days after final interview",
       icon: Gift,
-      description: "We extend a formal offer to join the team.",
+      description: "We extend a formal offer to join the team",
       details: [
         "Verbal offer call (salary, benefits discussion)",
         "Written offer letter (24-48 hours)",
@@ -137,22 +137,22 @@ export const HIRING_PROCESS_DATA = {
   commitments: [
     {
       title: "Respectful Communication",
-      desc: "Timely responses, clear expectations.",
+      desc: "Timely responses, clear expectations",
       icon: MessageSquare
     },
     {
       title: "No Ghosting",
-      desc: "Everyone gets closure.",
+      desc: "Everyone gets closure",
       icon: Ghost
     },
     {
       title: "Feedback Provided",
-      desc: "If requested, we share interview feedback.",
+      desc: "If requested, we share interview feedback",
       icon: CheckCircle
     },
     {
       title: "Transparent Process",
-      desc: "No surprises, no hidden steps.",
+      desc: "No surprises, no hidden steps",
       icon: Eye // Importing Lucide Eye directly in component or mapping here
     }
   ]

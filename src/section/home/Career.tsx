@@ -8,22 +8,22 @@ const PERKS = [
   {
     icon: Globe,
     title: "Remote-First DNA",
-    desc: "Work from anywhere. We value output and impact over hours and location.",
+    desc: "Work from anywhere. We value output and impact over hours and location",
   },
   {
     icon: Zap,
     title: "Cutting-Edge Stack",
-    desc: "Access to the latest hardware and software tools to fuel your creativity.",
+    desc: "Access to the latest hardware and software tools to fuel your creativity",
   },
   {
     icon: Heart,
     title: "Holistic Wellness",
-    desc: "Comprehensive health coverage and mental wellness support for you and your family.",
+    desc: "Comprehensive health coverage and mental wellness support for you and your family",
   },
   {
     icon: Coffee,
     title: "Zero-Ego Culture",
-    desc: "A collaborative environment where the best ideas win, regardless of title.",
+    desc: "A collaborative environment where the best ideas win, regardless of title",
   },
 ];
 
@@ -77,7 +77,7 @@ export default function CareerSection() {
               badge="Career"
               title="Join the Team"
               highlight="Build the Future"
-              description="We solve complex problems at scale. We are looking for visionaries, engineers, and creators to help us architect high-performance digital solutions."
+              description="We solve complex problems at scale. We are looking for visionaries, engineers, and creators to help us architect high-performance digital solutions"
               centered={false}
               className="mb-10"
             />

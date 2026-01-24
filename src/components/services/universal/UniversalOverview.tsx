@@ -23,7 +23,6 @@ export default function UniversalOverview({ data }: { data: ServicePageData['ove
               highlight={data.highlight}
               centered={false}
               className="mb-8"
-              size="default"
             />
 
             <div className="space-y-6 text-slate-600 font-medium leading-relaxed text-base">

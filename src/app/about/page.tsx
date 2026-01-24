@@ -214,7 +214,7 @@ export default function AboutPageContent() {
                 <SectionHeader
                   badge="Our Core"
                   title={overview.values.title}
-                  description="The principles that guide every decision we make."
+                  description="The principles that guide every decision we make"
                   centered={true}
                   isWhite={true}
                 />
@@ -352,7 +352,7 @@ export default function AboutPageContent() {
           <SectionHeader
             badge="Team"
             title={leadership.title}
-            description="The visionaries guiding our path."
+            description="The visionaries guiding our path"
             centered={true}
             className="mb-16"
           />
@@ -445,7 +445,7 @@ export default function AboutPageContent() {
               <SectionHeader
                 badge="Global Operations"
                 title={presence.title}
-                description="Connecting dots across continents to serve you better."
+                description="Connecting dots across continents to serve you better"
                 centered={false}
                 isWhite={true}
                 className="mb-12"

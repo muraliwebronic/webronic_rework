@@ -7,8 +7,8 @@ export const WEB_DATA: ServicePageData = {
   preview: {
     title: "Web Development",
     tagline: "High-Performance Experiences",
-    description: "Build high-performance websites that drive measurable business growth. We deliver solutions that load in under 2 seconds and rank on the first page of Google.",
-    image: "./assets/images/webdevelopment.png",
+    description: "Build high-performance websites that drive measurable business growth. We deliver solutions that load in under 2 seconds and rank on the first page of Google",
+    image: "/assets/images/webdevelopment.png",
     icon: "Layout",
     points: [
       "Next.js & React Applications",
@@ -17,15 +17,15 @@ export const WEB_DATA: ServicePageData = {
       "High-Conversion E-commerce"
     ],
     technologies: [
-        { name: "HTML", logo: "./assets/icons/html.png" },
-        { name: "CSS", logo: "./assets/icons/css.png" },
-        { name: "Magento", logo: "./assets/icons/magneto.png" },
-        { name: "WordPress", logo: "./assets/icons/wordpress.png" },
-        { name: "PHP", logo: "./assets/icons/php.png" },
-        { name: "MySQL", logo: "./assets/icons/mysql.png" },
-        { name: "Node.js", logo: "./assets/icons/node.png" },
-        { name: "WooCommerce", logo: "./assets/icons/woocom.png" },
-        { name: "jQuery", logo: "./assets/icons/jquery.png" },
+        { name: "HTML", logo: "/assets/icons/html.png" },
+        { name: "CSS", logo: "/assets/icons/css.png" },
+        { name: "Magento", logo: "/assets/icons/magneto.png" },
+        { name: "WordPress", logo: "/assets/icons/wordpress.png" },
+        { name: "PHP", logo: "/assets/icons/php.png" },
+        { name: "MySQL", logo: "/assets/icons/mysql.png" },
+        { name: "Node.js", logo: "/assets/icons/node.png" },
+        { name: "WooCommerce", logo: "/assets/icons/woocom.png" },
+        { name: "jQuery", logo: "/assets/icons/jquery.png" },
       ],
   },
 
@@ -34,7 +34,7 @@ export const WEB_DATA: ServicePageData = {
     badge: "Web Development Services",
     titlePrefix: "High-Performance",
     titleHighlight: "Digital Experiences",
-    description: "Your website should work as hard as you do. We build websites that load in under 2 seconds, rank on the first page of Google, and turn visitors into customers.",
+    description: "Your website should work as hard as you do. We build websites that load in under 2 seconds, rank on the first page of Google, and turn visitors into customers",
     features: [
       "Sub-2 second load times",
       "Mobile-first architecture",
@@ -51,33 +51,33 @@ export const WEB_DATA: ServicePageData = {
     heading: "Performance That Actually",
     highlight: "Matters",
     content: [
-      "Most businesses lose customers before they even make contact. A slow website, poor mobile experience, or outdated design sends potential clients straight to your competitors. We optimize every element from image compression to server response times to keep visitors engaged.",
-      "Whether you need a lightning-fast Next.js application, a content-rich WordPress site, or a complete WooCommerce store, we deliver solutions that generate real results, not just pretty designs."
+      "Most businesses lose customers before they even make contact. A slow website, poor mobile experience, or outdated design sends potential clients straight to your competitors. We optimize every element from image compression to server response times to keep visitors engaged",
+      "Whether you need a lightning-fast Next.js application, a content-rich WordPress site, or a complete WooCommerce store, we deliver solutions that generate real results, not just pretty designs"
     ],
     differentiators: [
       {
         title: "Speed First",
-        description: "Optimized for sub-2 second load times to prevent user abandonment.",
+        description: "Optimized for sub-2 second load times to prevent user abandonment",
         icon: "Zap"
       },
       {
         title: "SEO Native",
-        description: "Semantic HTML and schema markup built-in from day one.",
+        description: "Semantic HTML and schema markup built-in from day one",
         icon: "Search"
       },
       {
         title: "Mobile Experiences",
-        description: "Seamless functionality across every device and screen size.",
+        description: "Seamless functionality across every device and screen size",
         icon: "Smartphone"
       },
       {
         title: "Strategic UX",
-        description: "User flows mapped specifically to drive conversions.",
+        description: "User flows mapped specifically to drive conversions",
         icon: "Compass"
       },
       {
         title: "Scalable Scale",
-        description: "Architecture that handles traffic spikes without crashing.",
+        description: "Architecture that handles traffic spikes without crashing",
         icon: "Server"
       }
     ]
@@ -88,46 +88,46 @@ export const WEB_DATA: ServicePageData = {
     badge: "Core Capabilities",
     titleLine1: "Full-Cycle",
     titleHighlight: "Web Solutions",
-    description: "From modern web applications to enterprise content management, we have the right technology for your specific business goals.",
+    description: "From modern web applications to enterprise content management, we have the right technology for your specific business goals",
     cards: [
       {
         title: "Next.js Development",
-        desc: "Modern web applications built for speed and scale. Instant page loads, perfect SEO, and the flexibility to build complex platforms.",
+        desc: "Modern web applications built for speed and scale. Instant page loads, perfect SEO, and the flexibility to build complex platforms",
         icon: "Code2",
         color: "text-black",
         bg: "bg-gray-100"
       },
       {
         title: "Enterprise WordPress",
-        desc: "Custom theme development and block editor integration. Secure, performant, and easy for your team to manage.",
+        desc: "Custom theme development and block editor integration. Secure, performant, and easy for your team to manage",
         icon: "FileText",
         color: "text-blue-600",
         bg: "bg-blue-50"
       },
       {
         title: "WooCommerce Stores",
-        desc: "Turn your site into a complete online store. Inventory tracking, multiple payment gateways, and conversion-optimized checkout.",
+        desc: "Turn your site into a complete online store. Inventory tracking, multiple payment gateways, and conversion-optimized checkout",
         icon: "ShoppingCart",
         color: "text-purple-600",
         bg: "bg-purple-50"
       },
       {
         title: "Headless CMS & JAMstack",
-        desc: "Decouple your frontend for maximum flexibility. Deliver content to web, mobile, and IoT from a single source.",
+        desc: "Decouple your frontend for maximum flexibility. Deliver content to web, mobile, and IoT from a single source",
         icon: "Layers",
         color: "text-orange-600",
         bg: "bg-orange-50"
       },
       {
         title: "Design & UX/UI",
-        desc: "Visual appeal combined with strategic UX. Wireframing, prototyping, and mobile-first design that guides users toward action.",
+        desc: "Visual appeal combined with strategic UX. Wireframing, prototyping, and mobile-first design that guides users toward action",
         icon: "Palette",
         color: "text-pink-600",
         bg: "bg-pink-50"
       },
       {
         title: "SEO & Performance",
-        desc: "Technical SEO foundation, Core Web Vitals optimization, and schema implementation to rank higher and load faster.",
+        desc: "Technical SEO foundation, Core Web Vitals optimization, and schema implementation to rank higher and load faster",
         icon: "BarChart",
         color: "text-green-600",
         bg: "bg-green-50"
@@ -150,7 +150,7 @@ export const WEB_DATA: ServicePageData = {
   // 4. PROCESS SECTION (Fixed: Added activities and deliverables)
   process: {
     title: "Development Process",
-    description: "From initial discovery to post-launch support, our structured approach ensures a seamless build and measurable results.",
+    description: "From initial discovery to post-launch support, our structured approach ensures a seamless build and measurable results",
     phases: [
       {
         phase: "Phase 1",
@@ -308,19 +308,19 @@ export const WEB_DATA: ServicePageData = {
   // 5. TECH STACK
   techStack: {
     heading: "Modern Technology Stack",
-    description: "We leverage the most reliable and performant tools in the industry to build websites that scale with your business.",
+    description: "We leverage the most reliable and performant tools in the industry to build websites that scale with your business",
     frameworks: [
-      { name: "Next.js 14+", desc: "App Router & Server Components for speed." },
-      { name: "React 18+", desc: "Interactive UIs with component architecture." },
-      { name: "Vue.js", desc: "Progressive framework for flexible apps." },
-      { name: "Tailwind CSS", desc: "Utility-first styling for custom designs." },
-      { name: "TypeScript", desc: "Type-safe code for reliability." }
+      { name: "Next.js 14+", desc: "App Router & Server Components for speed" },
+      { name: "React 18+", desc: "Interactive UIs with component architecture" },
+      { name: "Vue.js", desc: "Progressive framework for flexible apps" },
+      { name: "Tailwind CSS", desc: "Utility-first styling for custom designs" },
+      { name: "TypeScript", desc: "Type-safe code for reliability" }
     ],
     llms: [
-      { name: "WordPress", desc: "Powers 43% of the web, optimized by us." },
-      { name: "Contentful", desc: "Cloud-based headless CMS for omnichannel." },
-      { name: "Sanity", desc: "Real-time structured content platform." },
-      { name: "Strapi", desc: "Open-source Node.js headless CMS." }
+      { name: "WordPress", desc: "Powers 43% of the web, optimized by us" },
+      { name: "Contentful", desc: "Cloud-based headless CMS for omnichannel" },
+      { name: "Sanity", desc: "Real-time structured content platform" },
+      { name: "Strapi", desc: "Open-source Node.js headless CMS" }
     ],
     mlOps: ["Git", "GitHub Actions", "Docker", "Figma", "Lighthouse"],
     cloudPlatforms: [
@@ -345,18 +345,18 @@ export const WEB_DATA: ServicePageData = {
   // 6. INDUSTRIES
   industries: {
     heading: "Industries We Serve",
-    description: "Our web solutions are tailored to meet the specific challenges of diverse business sectors.",
+    description: "Our web solutions are tailored to meet the specific challenges of diverse business sectors",
     items: [
       {
         id: "ecommerce",
         label: "Retail & E-commerce",
         icon: "ShoppingBag",
         theme: "blue",
-        description: "High-conversion stores with seamless checkout experiences.",
+        description: "High-conversion stores with seamless checkout experiences",
         features: [
           {
             title: "Mobile Shopping",
-            desc: "70% of e-commerce is mobile. We optimize for thumb-scrolling.",
+            desc: "70% of e-commerce is mobile. We optimize for thumb-scrolling",
             icon: "Smartphone",
             caseStudy: {
               title: "Fashion Retailer",
@@ -365,7 +365,7 @@ export const WEB_DATA: ServicePageData = {
           },
           {
             title: "Cart Recovery",
-            desc: "Automated systems to recover 10-30% of lost sales.",
+            desc: "Automated systems to recover 10-30% of lost sales",
             icon: "RefreshCw"
           }
         ]
@@ -375,11 +375,11 @@ export const WEB_DATA: ServicePageData = {
         label: "B2B & SaaS",
         icon: "Server",
         theme: "green",
-        description: "Professional platforms that build trust and generate qualified leads.",
+        description: "Professional platforms that build trust and generate qualified leads",
         features: [
           {
             title: "Lead Generation",
-            desc: "Strategic funnels and gated resources to capture enterprise leads.",
+            desc: "Strategic funnels and gated resources to capture enterprise leads",
             icon: "Magnet",
             caseStudy: {
               title: "Enterprise SaaS",
@@ -388,7 +388,7 @@ export const WEB_DATA: ServicePageData = {
           },
           {
             title: "Performance",
-            desc: "Sub-second load times for better ad quality scores.",
+            desc: "Sub-second load times for better ad quality scores",
             icon: "Zap"
           }
         ]
@@ -399,7 +399,7 @@ export const WEB_DATA: ServicePageData = {
   // 7. CASE STUDIES
   caseStudies: {
     heading: "Client Success Stories",
-    description: "See how our web development solutions translate into measurable business growth.",
+    description: "See how our web development solutions translate into measurable business growth",
     items: [
       {
         id: 1,
@@ -408,8 +408,8 @@ export const WEB_DATA: ServicePageData = {
         title: "Mobile-First Store Launch",
         icon: "ShoppingBag",
         color: "text-pink-600",
-        challenge: "Launch a complete online store in 8 weeks with a limited budget. Needed to compete with established retailers while building a brand from scratch.",
-        solution: "Built a WooCommerce store with custom mobile-first theme, integrated 500 variable products, and implemented abandoned cart recovery.",
+        challenge: "Launch a complete online store in 8 weeks with a limited budget. Needed to compete with established retailers while building a brand from scratch",
+        solution: "Built a WooCommerce store with custom mobile-first theme, integrated 500 variable products, and implemented abandoned cart recovery",
         implementation: [
           "Custom Mobile-First Theme",
           "Real-time Shipping Rates",
@@ -421,18 +421,18 @@ export const WEB_DATA: ServicePageData = {
           { label: "Conversion Rate", value: "3.2%" },
           { label: "Mobile Traffic", value: "72%" }
         ],
-        quote: "Webronic built us a beautiful, fast store that exceeded our expectations. The investment paid for itself in the first quarter.",
+        quote: "Webronic built us a beautiful, fast store that exceeded our expectations. The investment paid for itself in the first quarter",
         author: "Founder, Online Boutique"
       },
       {
         id: 2,
         category: "B2B SaaS",
-        client: "Enterprise Software Co.",
+        client: "Enterprise Software Co",
         title: "Next.js Platform Migration",
         icon: "Code",
         color: "text-blue-600",
-        challenge: "Outdated website taking 8+ seconds to load, hurting SEO and brand perception. Difficult for marketing team to update content.",
-        solution: "Built a Next.js application with Contentful CMS and server-side rendering. Created dynamic product pages and gated resources.",
+        challenge: "Outdated website taking 8+ seconds to load, hurting SEO and brand perception. Difficult for marketing team to update content",
+        solution: "Built a Next.js application with Contentful CMS and server-side rendering. Created dynamic product pages and gated resources",
         implementation: [
           "Next.js & Contentful",
           "Server-Side Rendering",
@@ -444,7 +444,7 @@ export const WEB_DATA: ServicePageData = {
           { label: "Organic Traffic", value: "+250%" },
           { label: "Lead Gen", value: "+180%" }
         ],
-        quote: "The new site transformed our online presence. We're finally showing up on the first page of Google for our target keywords.",
+        quote: "The new site transformed our online presence. We're finally showing up on the first page of Google for our target keywords",
         author: "VP of Marketing"
       },
       {
@@ -454,8 +454,8 @@ export const WEB_DATA: ServicePageData = {
         title: "SEO-Driven Transformation",
         icon: "Scale",
         color: "text-green-600",
-        challenge: "Generic template site with zero local SEO presence. Getting only 50-100 visitors/month and losing leads to competitors.",
-        solution: "Custom WordPress site with 50+ practice area pages, LocalBusiness schema, and aggressive content strategy.",
+        challenge: "Generic template site with zero local SEO presence. Getting only 50-100 visitors/month and losing leads to competitors",
+        solution: "Custom WordPress site with 50+ practice area pages, LocalBusiness schema, and aggressive content strategy",
         implementation: [
           "Local SEO Schema",
           "Practice Area Landing Pages",
@@ -467,7 +467,7 @@ export const WEB_DATA: ServicePageData = {
           { label: "Monthly Leads", value: "100+" },
           { label: "ROI", value: "20x" }
         ],
-        quote: "The website has become our number one source of new clients. We've even hired additional attorneys to handle the new client volume.",
+        quote: "The website has become our number one source of new clients. We've even hired additional attorneys to handle the new client volume",
         author: "Managing Partner"
       }
     ]
@@ -479,23 +479,23 @@ export const WEB_DATA: ServicePageData = {
     items: [
       {
         question: "How do I know if I need WordPress or Next.js?",
-        answer: "Choose WordPress for ease of content updates and budget-friendliness. Choose Next.js when performance is critical (sub-2s loads), you need complex web app features, or require perfect SEO foundation."
+        answer: "Choose WordPress for ease of content updates and budget-friendliness. Choose Next.js when performance is critical (sub-2s loads), you need complex web app features, or require perfect SEO foundation"
       },
       {
         question: "Can I update website content myself?",
-        answer: "Yes. For WordPress, you get an intuitive admin panel. For Next.js, we integrate headless CMSs like Contentful or Sanity. We provide training so you can manage text, images, and pages."
+        answer: "Yes. For WordPress, you get an intuitive admin panel. For Next.js, we integrate headless CMSs like Contentful or Sanity. We provide training so you can manage text, images, and pages"
       },
       {
         question: "Will my website work on mobile devices?",
-        answer: "Absolutely. We use a mobile-first approach. Every site is tested on real iPhones, Androids, and tablets to ensure 60%+ of your mobile traffic converts seamlessly."
+        answer: "Absolutely. We use a mobile-first approach. Every site is tested on real iPhones, Androids, and tablets to ensure 60%+ of your mobile traffic converts seamlessly"
       },
       {
         question: "Do you handle SEO?",
-        answer: "We build the technical SEO foundation (Semantic HTML, Schema, Meta Tags, Speed). For ongoing rankings, we offer separate SEO services for keyword strategy and content creation."
+        answer: "We build the technical SEO foundation (Semantic HTML, Schema, Meta Tags, Speed). For ongoing rankings, we offer separate SEO services for keyword strategy and content creation"
       },
       {
         question: "Do I own the website?",
-        answer: "Yes, 100%. Upon final payment, you receive full source code, design files, and admin access. No vendor lock-in."
+        answer: "Yes, 100%. Upon final payment, you receive full source code, design files, and admin access. No vendor lock-in"
       }
     ]
   },
@@ -504,12 +504,12 @@ export const WEB_DATA: ServicePageData = {
   getStarted: {
     badge: "Start Building",
     titleLines: ["Ready to upgrade your", "Digital Presence?"],
-    description: "Whether you need a high-performance web app or a conversion-focused corporate site, we're ready to build.",
+    description: "Whether you need a high-performance web app or a conversion-focused corporate site, we're ready to build",
     cards: [
       {
         id: "consultation",
         title: "Free Website Consultation",
-        description: "Discuss your goals, review competitors, and get a recommended platform approach.",
+        description: "Discuss your goals, review competitors, and get a recommended platform approach",
         icon: "MessageSquare",
         theme: "light",
         list: [
@@ -523,7 +523,7 @@ export const WEB_DATA: ServicePageData = {
       {
         id: "proposal",
         title: "Request Detailed Proposal",
-        description: "Get a comprehensive project plan including timeline, technical specs, and itemized costs.",
+        description: "Get a comprehensive project plan including timeline, technical specs, and itemized costs",
         icon: "FileText",
         theme: "dark",
         list: [

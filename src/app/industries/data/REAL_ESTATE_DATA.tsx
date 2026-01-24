@@ -21,7 +21,7 @@ import {
 export const REAL_ESTATE_DATA = {
   hero: {
     h1: "Real Estate & Construction Technology Solutions",
-    description: "Digital transformation for property management, construction project management, BIM (Building Information Modeling), and smart building automation.",
+    description: "Digital transformation for property management, construction project management, BIM (Building Information Modeling), and smart building automation",
     stats: [
       { value: "60+", label: "Real estate technology implementations", icon: Building2 },
       { value: "35%", label: "Project cost reduction through BIM", icon: TrendingDown },
@@ -31,31 +31,31 @@ export const REAL_ESTATE_DATA = {
   },
   overview: {
     title: "Industry Overview",
-    content: "Real estate and construction industries undergo digital transformation driven by smart buildings, BIM, IoT sensors, AI analytics, and property management automation.",
+    content: "Real estate and construction industries undergo digital transformation driven by smart buildings, BIM, IoT sensors, AI analytics, and property management automation",
     challenges: [
       {
         title: "Project Delays",
-        desc: "Construction projects average 20% over budget, 40% delayed (poor planning, communication gaps, resource constraints).",
+        desc: "Construction projects average 20% over budget, 40% delayed (poor planning, communication gaps, resource constraints)",
         icon: Clock
       },
       {
         title: "Operational Costs",
-        desc: "Building operations (HVAC, lighting, maintenance) represent 60-80% of total lifecycle costs.",
+        desc: "Building operations (HVAC, lighting, maintenance) represent 60-80% of total lifecycle costs",
         icon: DollarSign
       },
       {
         title: "Tenant Experience",
-        desc: "Modern tenants expect smart amenities (mobile access, online services, smart controls).",
+        desc: "Modern tenants expect smart amenities (mobile access, online services, smart controls)",
         icon: Users
       },
       {
         title: "Sustainability",
-        desc: "Green building certifications (LEED, WELL), energy efficiency mandates, carbon reduction goals.",
+        desc: "Green building certifications (LEED, WELL), energy efficiency mandates, carbon reduction goals",
         icon: Leaf
       },
       {
         title: "Property Management Complexity",
-        desc: "Managing hundreds of units, maintenance requests, tenant communications, rent collection.",
+        desc: "Managing hundreds of units, maintenance requests, tenant communications, rent collection",
         icon: LayoutDashboard
       }
     ],

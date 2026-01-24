@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Webronic | Technical Solutions",
-  description: "Intelligent digital solutions designed to scale, automate, and future-proof your business.",
+  description: "Intelligent digital solutions designed to scale, automate, and future-proof your business",
   icons: {
     icon: "./favicon.png", 
   },

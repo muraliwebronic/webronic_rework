@@ -99,7 +99,7 @@ export const MANUFACTURING_CSA_ML_DATA = {
   mlModels: {
     title: "Machine Learning Predictive Models",
     subTitle: "Data-Driven Failure Prediction",
-    description: "Move beyond simple threshold alarming to sophisticated machine learning models that learn normal equipment behavior patterns and detect subtle anomalies indicating impending failure.",
+    description: "Move beyond simple threshold alarming to sophisticated machine learning models that learn normal equipment behavior patterns and detect subtle anomalies indicating impending failure",
     steps: [
       {
         step: "Step 1",

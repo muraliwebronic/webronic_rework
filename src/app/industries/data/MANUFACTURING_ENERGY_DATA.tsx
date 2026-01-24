@@ -24,7 +24,7 @@ export const MANUFACTURING_ENERGY_DATA = {
     section: "5. Energy Management",
     title: "Real-Time Energy Monitoring",
     subTitle: "Facility Energy Tracking",
-    description: "Monitor energy consumption in real-time at facility, production line, and equipment levels to identify waste and optimization opportunities."
+    description: "Monitor energy consumption in real-time at facility, production line, and equipment levels to identify waste and optimization opportunities"
   },
   architecture: {
     title: "Monitoring Architecture",

@@ -12,7 +12,7 @@ export default function Branches() {
       city: "Salem",
       type: "Headquarters",
       address:
-        "1-718, Sannasi Muniyappan Kovil, Surappalli (PO), Mettur (TK), Jalakandapuram, Salem - 636501.",
+        "1-718, Sannasi Muniyappan Kovil, Surappalli (PO), Mettur (TK), Jalakandapuram, Salem - 636501",
       contact: "+91 72000 88500",
       mapUrl: "https://maps.google.com/?q=Surappalli+Salem",
     },
@@ -20,7 +20,7 @@ export default function Branches() {
       city: "Madurai",
       type: "Regional Branch",
       address:
-        "2nd Floor, 3/92B JS TOWER, Alanganallur Main Road, Sikkandar Savadi, Madurai, Tamil Nadu 625018.",
+        "2nd Floor, 3/92B JS TOWER, Alanganallur Main Road, Sikkandar Savadi, Madurai, Tamil Nadu 625018",
       contact: "+91 63833 26928",
       mapUrl: "https://maps.google.com/?q=Sikkandar+Savadi+Madurai",
     },
@@ -28,7 +28,7 @@ export default function Branches() {
       city: "Chennai",
       type: "Digital Hub",
       address:
-        "A1 - No. 20, Sakthi Apartments, Cenotoph Road, Rathna Nagar, Teynampet, Chennai, Tamil Nadu 600004.",
+        "A1 - No. 20, Sakthi Apartments, Cenotoph Road, Rathna Nagar, Teynampet, Chennai, Tamil Nadu 600004",
       contact: "+91 72000 88500",
       mapUrl: "https://maps.google.com/?q=Teynampet+Chennai",
     },
@@ -47,7 +47,7 @@ export default function Branches() {
                 badge="Network Coverage"
                 title="Strategic Digital"
                 highlight="Operations Hubs"
-                description="Visit our physical locations to experience how we merge industrial logic with creative engineering across Tamil Nadu."
+                description="Visit our physical locations to experience how we merge industrial logic with creative engineering across Tamil Nadu"
                 centered={false}
                 className="max-w-3xl"
             />

@@ -15,14 +15,14 @@ export const CLOUD_PLATFORMS_DATA = {
     badge: "Technical Stack",
     title: "Multi-Cloud",
     titleHighlight: "Expertise",
-    description: "Our engineers are certified and experienced across the top three public cloud providers, enabling us to deliver truly agnostic and optimized cloud solutions."
+    description: "Our engineers are certified and experienced across the top three public cloud providers, enabling us to deliver truly agnostic and optimized cloud solutions"
   },
   platforms: [
     {
       id: "aws",
       name: "Amazon Web Services",
       shortName: "AWS",
-      description: "The world's most comprehensive and broadly adopted cloud platform.",
+      description: "The world's most comprehensive and broadly adopted cloud platform",
       color: "from-[#FF9900] to-[#FFC46D]", // AWS Orange-ish gradient adaptation
       stats: "200+ Services",
       coreServices: [
@@ -54,7 +54,7 @@ export const CLOUD_PLATFORMS_DATA = {
       id: "azure",
       name: "Microsoft Azure",
       shortName: "Azure",
-      description: "Open and flexible cloud computing platform tailored for enterprise.",
+      description: "Open and flexible cloud computing platform tailored for enterprise",
       color: "from-[#0078D4] to-[#5EA0EE]", // Azure Blue gradient adaptation
       stats: "Enterprise Ready",
       coreServices: [
@@ -86,7 +86,7 @@ export const CLOUD_PLATFORMS_DATA = {
       id: "gcp",
       name: "Google Cloud Platform",
       shortName: "GCP",
-      description: "High-performance infrastructure for data analytics and machine learning.",
+      description: "High-performance infrastructure for data analytics and machine learning",
       color: "from-[#4285F4] to-[#34A853]", // Google Blue/Green gradient adaptation
       stats: "Data & AI Leader",
       coreServices: [

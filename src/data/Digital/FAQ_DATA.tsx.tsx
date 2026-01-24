@@ -5,14 +5,14 @@ export const FAQ_DATA = [
     id: "q2",
     question: "How long does digital transformation take?",
     answer: {
-      text: "Transformation timelines vary based on scope and organizational readiness. We use phased approaches delivering value throughout the journey, not just at the end."
+      text: "Transformation timelines vary based on scope and organizational readiness. We use phased approaches delivering value throughout the journey, not just at the end"
     }
   },
   {
     id: "q3-cost",
     question: "What does digital transformation cost?",
     answer: {
-      text: "Investment depends on organization size and scope. We provide detailed cost estimates after initial assessment."
+      text: "Investment depends on organization size and scope. We provide detailed cost estimates after initial assessment"
     }
   },
   {
@@ -107,7 +107,7 @@ export const FAQ_DATA = [
         "Budget limitations",
         "Risk-averse cultures"
       ],
-      outro: "Our methodology accommodates real-world constraints."
+      outro: "Our methodology accommodates real-world constraints"
     }
   },
   {
@@ -123,7 +123,7 @@ export const FAQ_DATA = [
         "Emerging technology adoption",
         "Continuous improvement culture"
       ],
-      outro: "We offer ongoing partnership or transition to your team."
+      outro: "We offer ongoing partnership or transition to your team"
     }
   }
 ];

@@ -21,7 +21,7 @@ export const CORE_SERVICES_DATA = [
     icon: Compass,
     content: [
       { type: 'heading', text: "Define Your Digital Future" },
-      { type: 'paragraph', text: "Successful transformation starts with a clear strategy. We help you articulate your digital vision, identify transformation priorities, and create actionable roadmaps that align technology investments with business objectives." },
+      { type: 'paragraph', text: "Successful transformation starts with a clear strategy. We help you articulate your digital vision, identify transformation priorities, and create actionable roadmaps that align technology investments with business objectives" },
       
       { type: 'heading', text: "Digital Maturity Assessment" },
       { type: 'paragraph', text: "Understand your current state across key dimensions:" },
@@ -33,7 +33,7 @@ export const CORE_SERVICES_DATA = [
       { type: 'list', title: "People & Culture:", items: ["Digital skills gap analysis", "Change readiness assessment", "Innovation capability", "Collaboration effectiveness"] },
       { type: 'list', title: "Data & Analytics:", items: ["Data quality and accessibility", "Analytics maturity", "Decision-making processes", "AI/ML readiness"] },
       { type: 'subheading', text: "Assessment Deliverable:" },
-      { type: 'paragraph', text: "Comprehensive report with maturity scores across all dimensions, peer benchmarking, and prioritized improvement opportunities." },
+      { type: 'paragraph', text: "Comprehensive report with maturity scores across all dimensions, peer benchmarking, and prioritized improvement opportunities" },
 
       { type: 'heading', text: "Digital Vision Development" },
       { type: 'paragraph', text: "Define where you want to be:" },
@@ -65,7 +65,7 @@ export const CORE_SERVICES_DATA = [
     icon: Workflow,
     content: [
       { type: 'heading', text: "Reimagine How Work Gets Done" },
-      { type: 'paragraph', text: "Digital transformation requires rethinking business processes from the ground up. We help you redesign processes to be faster, more efficient, more customer-centric, and more automated." },
+      { type: 'paragraph', text: "Digital transformation requires rethinking business processes from the ground up. We help you redesign processes to be faster, more efficient, more customer-centric, and more automated" },
       
       { type: 'heading', text: "Process Discovery & Analysis" },
       { type: 'list', title: "Current State Mapping:", items: ["Document existing processes from end to end", "Identify all process participants and handoffs", "Measure current performance including cycle time, cost, and quality", "Capture pain points and inefficiencies", "Map supporting systems and data flows"] },
@@ -107,7 +107,7 @@ export const CORE_SERVICES_DATA = [
     icon: HeartHandshake,
     content: [
       { type: 'heading', text: "Put Customers at the Center" },
-      { type: 'paragraph', text: "Transform customer experiences across all touchpoints, from awareness through purchase, usage, and support, creating seamless, personalized journeys that build loyalty." },
+      { type: 'paragraph', text: "Transform customer experiences across all touchpoints, from awareness through purchase, usage, and support, creating seamless, personalized journeys that build loyalty" },
       
       { type: 'heading', text: "Customer Journey Mapping" },
       { type: 'image_tag', text: "[Image of customer journey map example]" },
@@ -143,7 +143,7 @@ export const CORE_SERVICES_DATA = [
     icon: Cpu,
     content: [
       { type: 'heading', text: "Transform How You Work" },
-      { type: 'paragraph', text: "Evolve organizational structures, ways of working, and cultural norms to support digital excellence and continuous innovation." },
+      { type: 'paragraph', text: "Evolve organizational structures, ways of working, and cultural norms to support digital excellence and continuous innovation" },
 
       { type: 'heading', text: "Agile Transformation" },
       { type: 'subheading', text: "Transition to Agile:" },
@@ -182,7 +182,7 @@ export const CORE_SERVICES_DATA = [
     icon: Users2,
     content: [
       { type: 'heading', text: "Ensure Transformation Sticks" },
-      { type: 'paragraph', text: "Technology changes are more straightforward compared to people changes. Our change management approach ensures stakeholder buy-in, smooth adoption, and sustained transformation." },
+      { type: 'paragraph', text: "Technology changes are more straightforward compared to people changes. Our change management approach ensures stakeholder buy-in, smooth adoption, and sustained transformation" },
       
       { type: 'heading', text: "Stakeholder Engagement" },
       { type: 'list', title: "Stakeholder Mapping:", items: ["Identify all affected stakeholders", "Assess influence and impact", "Understand concerns and motivations", "Develop engagement strategy"] },
@@ -216,7 +216,7 @@ export const CORE_SERVICES_DATA = [
     icon: CloudCog,
     content: [
       { type: 'heading', text: "Modernize Your Technology Foundation" },
-      { type: 'paragraph', text: "Transform legacy technology landscapes into modern, cloud-native, API-driven architectures that enable agility, scalability, and innovation." },
+      { type: 'paragraph', text: "Transform legacy technology landscapes into modern, cloud-native, API-driven architectures that enable agility, scalability, and innovation" },
 
       { type: 'heading', text: "Legacy System Assessment" },
       { type: 'list', title: "Evaluate existing systems:", items: ["Technology stack inventory", "Business criticality assessment", "Technical debt quantification", "Integration complexity", "Maintenance cost analysis", "Risk assessment"] },
@@ -231,7 +231,7 @@ export const CORE_SERVICES_DATA = [
 
       { type: 'heading', text: "Cloud Migration" },
       { type: 'list', title: "Our comprehensive cloud migration services:", items: ["Multi-cloud strategy for AWS, Azure, and Google Cloud", "Application migration planning and execution", "Data migration with zero data loss", "Network and security design", "Performance optimization", "Cost management"] },
-      { type: 'paragraph', text: "See Cloud Services for additional details." },
+      { type: 'paragraph', text: "See Cloud Services for additional details" },
 
       { type: 'heading', text: "API & Integration" },
       { type: 'list', title: "API Strategy:", items: ["Design API-first architecture", "RESTful and GraphQL APIs", "API gateway implementation", "Developer portal", "API monetization when applicable"] },

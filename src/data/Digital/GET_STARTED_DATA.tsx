@@ -11,12 +11,12 @@ export const GET_STARTED_DATA = {
   header: {
     badge: "Get Started",
     title: "Start Your Transformation",
-    subtitle: "Choose the path that fits your current needs, from initial assessment to full-scale strategy development."
+    subtitle: "Choose the path that fits your current needs, from initial assessment to full-scale strategy development"
   },
   assessment: {
     title: "Free Digital Maturity Assessment",
     badge: "Complimentary",
-    description: "Understand your current standing and identify high-priority opportunities.",
+    description: "Understand your current standing and identify high-priority opportunities",
     icon: ClipboardCheck,
     features: [
       "Current state evaluation across 6 dimensions",
@@ -30,7 +30,7 @@ export const GET_STARTED_DATA = {
     title: "Digital Transformation Workshop",
     price: "$25,000",
     priceSubtext: "Investment",
-    description: "Intensive engagement spanning 3-5 days delivering a complete execution strategy.",
+    description: "Intensive engagement spanning 3-5 days delivering a complete execution strategy",
     icon: Rocket,
     features: [
       "Digital vision and strategy",
