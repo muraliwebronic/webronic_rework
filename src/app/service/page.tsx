@@ -7,7 +7,6 @@ import { X } from "lucide-react";
 import { servicesRegistry } from "./data/servicesRegistry";
 
 // 2. Import Components
-import SecondaryHero from "@/components/common/SecondaryHero";
 import SectionHeader from "@/components/common/SectionHeader"; // Reusable Header
 import { PageServiceCard } from "@/components/services/PageServiceCard";
 import ServiceGrid from "@/components/services/ServiceGrid";
@@ -20,6 +19,7 @@ export interface ServiceCardData {
   description: string;
   image: string;
   icon: string;
+  localIcon?: string;
   points: string[];
   technologies: { name: string; logo: string }[];
 }
@@ -33,7 +33,6 @@ const MAIN_SERVICE_IDS = [
   "devops",
   "iot-solutions",
   "data-analytics",
-  "storetech",
 ];
 
 // Helper to transform registry data to ServiceCardData
@@ -46,6 +45,7 @@ const transformData = (ids: string[]): ServiceCardData[] => {
       title: data.preview.title,
       tagline: data.preview.tagline,
       description: data.preview.description,
+      localIcon: data.preview.localIcon,
       image: data.preview.image,
       icon: data.preview.icon,
       points: data.preview.points,

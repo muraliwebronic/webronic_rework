@@ -49,7 +49,7 @@ const quickLinks = [
   { name: "All Products", type: "page", href: "/products", icon: LayoutGrid },
   // Standalone Pages
   { name: "Projects", type: "page", href: "/projects", icon: Code2 },
-  { name: "Branches", type: "page", href: "/branch", icon: MapPin },
+  { name: "Branches", type: "page", href: "/branchs", icon: MapPin },
   // Sections (Home Scroll)
   { name: "About Us", type: "section", id: "about", icon: Info },
   { name: "Partners", type: "section", id: "partner", icon: Handshake },

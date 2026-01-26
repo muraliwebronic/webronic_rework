@@ -8,7 +8,7 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
     title: "Digital Transformation",
     tagline: "Business Evolution",
     description: "End-to-end digital transformation services. Strategy consulting, process automation, customer experience redesign, and change management for enterprise digital evolution",
-    image: "./assets/images/digitalmarketing.png", // Ensure path exists
+    image: "./assets/images/Service Images/Digital Transforamtion.png", // Ensure path exists
     icon: "RefreshCw",
     points: [
       "Digital Strategy & Roadmap",
@@ -16,17 +16,17 @@ export const DIGITAL_TRANSFORMATION_DATA: ServicePageData = {
       "Customer Experience Design",
       "Change Management"
     ],
-   technologies: [
-        { name: "Google Ads", logo: "./assets/icons/googleads.png" },
-        { name: "Google Analytics", logo: "./assets/icons/googleanalytics.png" },
-        { name: "Bing Ads", logo: "./assets/icons/bing.png" },
-        { name: "Facebook Ads", logo: "./assets/icons/facebook.png" },
-        { name: "LinkedIn Ads", logo: "./assets/icons/linkedin.png" },
-        { name: "Instagram", logo: "./assets/icons/instagram.png" },
-        { name: "YouTube", logo: "./assets/icons/youtube.png" },
+ technologies: [
+        { name: "Google Ads", logo: "./assets/images/Technology/Google_Ads_logo.svg" },
+        { name: "Google Analytics", logo: "./assets/images/Technology/Logo_Google_Analytics.svg" },
+        { name: "Bing Ads", logo: "./assets/images/Technology/Bing_Fluent_Logo_Text.svg" },
+        { name: "Facebook Ads", logo: "./assets/images/Technology/2023_Facebook_icon.svg" },
+        { name: "LinkedIn Ads", logo: "./assets/images/Technology/LinkedIn_icon.svg" },
+        { name: "Instagram", logo: "./assets/images/Technology/Instagram_logo_2022.svg" },
+        { name: "YouTube", logo: "./assets/images/Technology/YouTube_2024.svg" },
         {
           name: "Google Business Profile",
-          logo: "./assets/icons/googlebusprof.png",
+          logo: "./assets/images/Technology/Google-My-Business_logo.svg",
         },
       ],
   },

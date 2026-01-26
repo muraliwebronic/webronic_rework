@@ -8,7 +8,6 @@ import { DIGITAL_TRANSFORMATION_DATA } from "@/AllData/services/mainData/DIGITAL
 import { DEVOPS_DATA } from "@/AllData/services/mainData/DEVOPS_DATA";
 import { IOT_DATA } from "@/AllData/services/mainData/IOT_DATA";
 import { ANALYTICS_DATA } from "@/AllData/services/mainData/ANALYTICS_DATA";
-import { STORETECH_DATA } from "@/AllData/services/mainData/STORETECH_DATA";
 
 // --- NEW ADDITIONAL DATA ---
 // Ensure these paths match exactly where you saved the files
@@ -30,7 +29,6 @@ export const servicesRegistry: Record<string, ServicePageData> = {
   "devops": DEVOPS_DATA,
   "iot-solutions": IOT_DATA,
   "data-analytics": ANALYTICS_DATA,
-  "storetech": STORETECH_DATA,
 
   // Additional Services
   "consulting": CONSULTING_DATA,

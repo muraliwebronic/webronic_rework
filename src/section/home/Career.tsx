@@ -84,7 +84,7 @@ export default function CareerSection() {
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <Link
-                href="/career"
+                href="/careers"
                 className="group inline-flex items-center justify-center gap-3 bg-[#2776ea] text-white px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider hover:bg-[#76ea27] transition-all shadow-lg hover:shadow-blue-500/25 active:scale-95"
               >
                 View Open Roles

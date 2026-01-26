@@ -10,20 +10,21 @@ export const IOT_DATA: ServicePageData = {
     description: "Enterprise IoT solutions for manufacturing, retail, and healthcare. Industrial IoT, smart buildings, asset tracking, and predictive maintenance with real-time analytics",
     image: "./assets/images/iot.png", // Ensure path exists
     icon: "Wifi",
+    localIcon: "./assets/images/Icons/IoT.svg",
     points: [
       "Industrial IoT (IIoT)",
       "Smart Building Automation",
       "Predictive Maintenance",
       "Asset Tracking"
     ],
-    technologies: [
-        { name: "Raspberry Pi", logo: "./assets/icons/raspberry.png" },
-        { name: "TensorFlow", logo: "./assets/icons/tensorflow.png" },
-        { name: "NodeMCU", logo: "./assets/icons/nodemcu.png" },
-        { name: "Arduino", logo: "./assets/icons/arduino.png" },
-        { name: "OpenCV", logo: "./assets/icons/opencv.png" },
-        { name: "OpenVINO", logo: "./assets/icons/openvino.png" },
-        { name: "PyTorch", logo: "./assets/icons/pytorch.png" },
+   technologies: [
+        { name: "Raspberry Pi", logo: "./assets/images/Technology/Raspberry_Pi_Logo.svg" },
+        { name: "TensorFlow", logo: "./assets/images/Technology/TensorFlow_logo.svg" },
+        { name: "NodeMCU", logo: "./assets/images/Technology/nodemcu.png" },
+        { name: "Arduino", logo: "./assets/images/Technology/Arduino_Logo_Registered.svg" },
+        { name: "OpenCV", logo: "./assets/images/Technology/OpenCV_logo_black.svg" },
+        { name: "OpenVINO", logo: "./assets/images/Technology/OpenVINO_logo.svg" },
+        { name: "PyTorch", logo: "./assets/images/Technology/Pytorch_logo.png" },
       ],
   },
 

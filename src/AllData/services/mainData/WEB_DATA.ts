@@ -10,22 +10,23 @@ export const WEB_DATA: ServicePageData = {
     description: "Build high-performance websites that drive measurable business growth. We deliver solutions that load in under 2 seconds and rank on the first page of Google",
     image: "./assets/images/webdevelopment.png",
     icon: "Layout",
+    localIcon: "./assets/images/Icons/Web Development.svg",
     points: [
       "Next.js & React Applications",
       "Enterprise WordPress",
       "Headless CMS Architecture",
       "High-Conversion E-commerce"
     ],
-    technologies: [
-        { name: "HTML", logo: "./assets/icons/html.png" },
-        { name: "CSS", logo: "./assets/icons/css.png" },
-        { name: "Magento", logo: "./assets/icons/magneto.png" },
-        { name: "WordPress", logo: "./assets/icons/wordpress.png" },
-        { name: "PHP", logo: "./assets/icons/php.png" },
-        { name: "MySQL", logo: "./assets/icons/mysql.png" },
-        { name: "Node.js", logo: "./assets/icons/node.png" },
-        { name: "WooCommerce", logo: "./assets/icons/woocom.png" },
-        { name: "jQuery", logo: "./assets/icons/jquery.png" },
+  technologies: [
+        { name: "HTML", logo: "./assets/images/Technology/HTML5_Badge.svg" },
+        { name: "CSS", logo: "./assets/images/Technology/CSS3_logo.svg" },
+        { name: "Magento", logo: "./assets/images/Technology/Magento.svg" },
+        { name: "WordPress", logo: "./assets/images/Technology/Wordpress-Logo.svg" },
+        { name: "PHP", logo: "./assets/images/Technology/PHP-logo.svg" },
+        { name: "MySQL", logo: "./assets/images/Technology/MySQL_textlogo.svg" },
+        { name: "Node.js", logo: "./assets/images/Technology/Node.js_logo.svg" },
+        { name: "WooCommerce", logo: "./assets/images/Technology/WooCommerce_Logo_(2015).svg" },
+        { name: "jQuery", logo: "./assets/images/Technology/JQuery-Logo.svg" },
       ],
   },
 

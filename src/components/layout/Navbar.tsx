@@ -31,7 +31,7 @@ import {
 const navLinks = [
   { name: "Home", type: "page", id: "/" },
   { name: "Projects", type: "page", href: "/projects" },
-  { name: "Branches", type: "page", href: "/branch" },
+  { name: "Branches", type: "page", href: "/branchs" },
 ];
 
 // 2. Services Group (Removed StoreTech from here)
@@ -82,7 +82,7 @@ const companyItems = [
   { name: "Industries", type: "page", id: "/industries", icon: Info },
   { name: "Our Partners", type: "section", id: "Partners", icon: Handshake },
   { name: "Global Clients", type: "section", id: "client", icon: Globe },
-  { name: "Careers", type: "page", id: "/career", icon: Briefcase },
+  { name: "Careers", type: "page", id: "/careers", icon: Briefcase },
 ];
 
 export default function Navbar() {

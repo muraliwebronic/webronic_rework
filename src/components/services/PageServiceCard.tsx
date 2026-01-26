@@ -14,7 +14,8 @@ export interface ServiceCardData {
   tagline: string;
   description: string;
   image: string;
-  icon: string; // Now a string (e.g., "Brain"), not a ReactNode
+  icon: string;
+  localIcon?: string;
   points: string[];
   technologies: { name: string; logo: string }[];
 }
@@ -26,11 +27,16 @@ interface PageServiceCardProps {
   reversed?: boolean;
 }
 
-export const PageServiceCard = ({ service, index, onCtaClick, reversed = false }: PageServiceCardProps) => {
+export const PageServiceCard = ({
+  service,
+  index,
+  onCtaClick,
+  reversed = false,
+}: PageServiceCardProps) => {
   const [showStack, setShowStack] = useState(false);
-  
+
   // Dynamic URL using query param
-  const serviceUrl = `/services?category=${service.id}`; 
+  const serviceUrl = `/services?category=${service.id}`;
 
   return (
     <div
@@ -38,16 +44,28 @@ export const PageServiceCard = ({ service, index, onCtaClick, reversed = false }
       className="group relative w-full font-sora animate-in slide-in-from-bottom-8 fade-in"
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
-        
         {/* --- LEFT COLUMN: CONTENT --- */}
-        <div className={`lg:col-span-7 flex flex-col order-2 ${reversed ? 'lg:order-2' : 'lg:order-1'}`}>
-          
+        <div
+          className={`lg:col-span-7 flex flex-col order-2 ${reversed ? "lg:order-2" : "lg:order-1"}`}
+        >
           {/* Header */}
           <div className="flex items-center gap-4 mb-6">
             <div className="h-14 w-14 flex items-center justify-center rounded-2xl bg-white border border-slate-100 text-[#2776ea] shadow-sm transition-transform duration-500 group-hover:scale-105">
-              {/* FIXED: Use DynamicIcon because service.icon is now a string */}
-              <DynamicIcon name={service.icon} size={28} />
+              {service.localIcon ? (
+                <div
+                  className="h-7 w-7 bg-current
+      [mask-repeat:no-repeat] [mask-position:center] [mask-size:contain]
+      [-webkit-mask-repeat:no-repeat] [-webkit-mask-position:center] [-webkit-mask-size:contain]"
+                  style={{
+                    maskImage: `url('${service.localIcon.replaceAll(" ", "%20")}')`,
+                    WebkitMaskImage: `url('${service.localIcon.replaceAll(" ", "%20")}')`,
+                  }}
+                />
+              ) : (
+                <DynamicIcon name={service.icon} size={28} />
+              )}
             </div>
+
             <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 px-4 py-2 rounded-full border border-slate-100">
               {service.tagline}
             </span>
@@ -77,9 +95,8 @@ export const PageServiceCard = ({ service, index, onCtaClick, reversed = false }
 
           {/* --- ACTION ROW --- */}
           <div className="flex flex-wrap items-center gap-4">
-            
             {/* 1. Start Project */}
-            <button 
+            <button
               onClick={() => onCtaClick(service)}
               className="flex items-center gap-2 pl-6 pr-2 py-2 rounded-full bg-[#2776ea] text-white font-bold text-xs uppercase tracking-widest hover:bg-[#1a5bbd] transition-colors shadow-md shadow-slate-200"
             >
@@ -90,7 +107,7 @@ export const PageServiceCard = ({ service, index, onCtaClick, reversed = false }
             </button>
 
             {/* 2. Explore */}
-            <Link 
+            <Link
               href={serviceUrl}
               className="flex items-center gap-2 pl-6 pr-2 py-2 rounded-full bg-[#76ea27] text-slate-900 font-bold text-xs uppercase tracking-widest hover:bg-[#6bd622] transition-colors shadow-md shadow-slate-200"
             >
@@ -101,69 +118,92 @@ export const PageServiceCard = ({ service, index, onCtaClick, reversed = false }
             </Link>
 
             {/* 3. The Toggle Pill */}
-            <div 
-               onClick={() => setShowStack(!showStack)}
-               className="flex items-center gap-3 pl-2 pr-5 py-1.5 rounded-full border border-slate-200 bg-white cursor-pointer hover:border-[#2776ea] hover:shadow-md transition-all group/toggle ml-0 sm:ml-2"
+            <div
+              onClick={() => setShowStack(!showStack)}
+              className="flex items-center gap-3 pl-2 pr-5 py-1.5 rounded-full border border-slate-200 bg-white cursor-pointer hover:border-[#2776ea] hover:shadow-md transition-all group/toggle ml-0 sm:ml-2"
             >
-               <div className="flex -space-x-2">
-                  {service.technologies.slice(0, 3).map((t, i) => (
-                    <div key={i} className="w-8 h-8 rounded-full bg-slate-50 border border-white p-1.5">
-                       <img src={t.logo} alt={t.name} className="w-full h-full object-contain" />
-                    </div>
-                  ))}
-               </div>
-               
-               <div className="flex items-center gap-2">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 group-hover/toggle:text-[#2776ea] transition-colors">
-                     {showStack ? "Close" : "Stack"}
-                  </span>
-                  <Layers size={14} className="text-slate-400 group-hover/toggle:text-[#2776ea]" />
-               </div>
-            </div>
+              <div className="flex -space-x-2">
+                {service.technologies.slice(0, 3).map((t, i) => (
+                  <div
+                    key={i}
+                    className="w-8 h-8 rounded-full bg-slate-50 border border-white p-1.5"
+                  >
+                    <img
+                      src={t.logo}
+                      alt={t.name}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
 
+              <div className="flex items-center gap-2">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 group-hover/toggle:text-[#2776ea] transition-colors">
+                  {showStack ? "Close" : "Stack"}
+                </span>
+                <Layers
+                  size={14}
+                  className="text-slate-400 group-hover/toggle:text-[#2776ea]"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
         {/* --- RIGHT COLUMN: PEDESTAL --- */}
-        <div className={`lg:col-span-5 h-full min-h-[420px] perspective-1000 order-1 ${reversed ? 'lg:order-1' : 'lg:order-2'}`}>
+        <div
+          className={`lg:col-span-5 h-full min-h-[420px] perspective-1000 order-1 ${reversed ? "lg:order-1" : "lg:order-2"}`}
+        >
           <div className="relative w-full h-full bg-slate-50/50 rounded-[3rem] border border-slate-100 overflow-hidden flex items-center justify-center transition-all duration-700 hover:shadow-xl hover:shadow-slate-200">
-            
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-slate-100/80 rounded-full blur-3xl pointer-events-none" />
-            
+
             <AnimatePresence mode="wait">
               {showStack ? (
                 /* STACK VIEW */
-                <motion.div 
-                    key="stack"
-                    initial={{ opacity: 0, scale: 0.98 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.98 }}
-                    transition={{ duration: 0.3 }}
-                    className="absolute inset-0 z-20 flex flex-col"
+                <motion.div
+                  key="stack"
+                  initial={{ opacity: 0, scale: 0.98 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.98 }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute inset-0 z-20 flex flex-col"
                 >
-                    <div className="flex justify-between items-center px-8 pt-8 pb-4">
-                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">
-                            Technologies
-                        </span>
-                        <button onClick={(e) => { e.stopPropagation(); setShowStack(false); }} className="p-2 bg-white rounded-full border border-slate-100 hover:bg-slate-50 text-slate-400 transition-colors">
-                            <X size={14} />
-                        </button>
-                    </div>
+                  <div className="flex justify-between items-center px-8 pt-8 pb-4">
+                    <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">
+                      Technologies
+                    </span>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setShowStack(false);
+                      }}
+                      className="p-2 bg-white rounded-full border border-slate-100 hover:bg-slate-50 text-slate-400 transition-colors"
+                    >
+                      <X size={14} />
+                    </button>
+                  </div>
 
-                    <div className="flex-1 overflow-y-auto custom-scrollbar p-6 pt-0">
-                         <div className="grid grid-cols-2 gap-3">
-                             {service.technologies.map((t) => (
-                                 <div key={t.name} className="flex flex-col items-center justify-center p-4 bg-white rounded-2xl border border-slate-100/80 shadow-sm hover:border-[#2776ea]/30 hover:shadow-md transition-all duration-300 group/tech cursor-default">
-                                     <div className="w-9 h-9 mb-2 relative">
-                                         <img src={t.logo} alt={t.name} className="object-contain w-full h-full" />
-                                     </div>
-                                     <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wide group-hover/tech:text-[#2776ea] text-center transition-colors">
-                                         {t.name}
-                                     </span>
-                                 </div>
-                             ))}
-                         </div>
+                  <div className="flex-1 overflow-y-auto custom-scrollbar p-6 pt-0">
+                    <div className="grid grid-cols-2 gap-3">
+                      {service.technologies.map((t) => (
+                        <div
+                          key={t.name}
+                          className="flex flex-col items-center justify-center p-4 bg-white rounded-2xl border border-slate-100/80 shadow-sm hover:border-[#2776ea]/30 hover:shadow-md transition-all duration-300 group/tech cursor-default"
+                        >
+                          <div className="w-9 h-9 mb-2 relative">
+                            <img
+                              src={t.logo}
+                              alt={t.name}
+                              className="object-contain w-full h-full"
+                            />
+                          </div>
+                          <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wide group-hover/tech:text-[#2776ea] text-center transition-colors">
+                            {t.name}
+                          </span>
+                        </div>
+                      ))}
                     </div>
+                  </div>
                 </motion.div>
               ) : (
                 /* IMAGE VIEW */
@@ -175,15 +215,15 @@ export const PageServiceCard = ({ service, index, onCtaClick, reversed = false }
                   transition={{ duration: 0.4 }}
                   className="relative z-10 w-full h-full flex items-center justify-center pointer-events-none"
                 >
-                    <div className="relative w-64 h-64 lg:w-72 lg:h-72 transition-transform duration-700 ease-out group-hover:-translate-y-4 group-hover:scale-105 group-hover:rotate-1">
-                        <Image
-                            src={service.image}
-                            alt={service.title}
-                            fill
-                            className="object-contain drop-shadow-[0_20px_20px_rgba(0,0,0,0.1)]"
-                        />
-                    </div>
-                    <div className="absolute bottom-16 w-32 h-3 bg-slate-400/20 blur-lg rounded-full transition-all duration-700 group-hover:w-24 group-hover:translate-y-4 opacity-50" />
+                  <div className="relative w-64 h-64 lg:w-72 lg:h-72 transition-transform duration-700 ease-out group-hover:-translate-y-4 group-hover:scale-105 group-hover:rotate-1">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-contain drop-shadow-[0_20px_20px_rgba(0,0,0,0.1)]"
+                    />
+                  </div>
+                  <div className="absolute bottom-16 w-32 h-3 bg-slate-400/20 blur-lg rounded-full transition-all duration-700 group-hover:w-24 group-hover:translate-y-4 opacity-50" />
                 </motion.div>
               )}
             </AnimatePresence>

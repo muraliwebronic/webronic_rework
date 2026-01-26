@@ -8,7 +8,7 @@ export const CLOUD_DATA: ServicePageData = {
     title: "Cloud Services",
     tagline: "Scalable Infrastructure",
     description: "Enterprise cloud solutions across AWS, Azure, and Google Cloud. Cloud migration, cloud-first development, multi-cloud management, and hybrid cloud architecture",
-    image: "./assets/services/cloud-computing.png", // Ensure this path exists
+    image: "./assets/images/Service Images/Cloud Services.png", // Ensure this path exists
     icon: "Cloud",
     points: [
       "Seamless Cloud Migration",
@@ -16,12 +16,12 @@ export const CLOUD_DATA: ServicePageData = {
       "Cost Optimization",
       "24/7 Operations Support"
     ],
-    technologies: [
-      { name: "AWS", logo: "/tech/aws.svg" },
-      { name: "Azure", logo: "/tech/azure.svg" },
-      { name: "Google Cloud", logo: "/tech/gcp.svg" },
-      { name: "Kubernetes", logo: "/tech/kubernetes.svg" },
-      { name: "Terraform", logo: "/tech/terraform.svg" }
+   technologies: [
+      { name: "AWS", logo: "./assets/images/Technology/Amazon_Web_Services_Logo.svg" },
+      { name: "Azure", logo: "./assets/images/Technology/Microsoft_Azure.svg" },
+      { name: "Google Cloud", logo: "./assets/images/Technology/Google_Cloud_logo.svg" },
+      { name: "Kubernetes", logo: "./assets/images/Technology/Kubernetes_logo_without_workmark.svg" },
+      { name: "Terraform", logo: "./assets/images/Technology/Terraform_Logo.svg" }
     ]
   },
 

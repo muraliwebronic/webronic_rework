@@ -8,7 +8,7 @@ export const ANALYTICS_DATA: ServicePageData = {
     title: "Data Analytics",
     tagline: "Actionable Insights",
     description: "Data analytics and business intelligence services: data warehousing, BI dashboards, advanced analytics, big data processing, and data governance",
-    image: "./assets/services/data-analytics.png", // Ensure path exists
+    image: "./assets/images/Service Images/Data Analytics.png", 
     icon: "BarChart3",
     points: [
       "Modern Data Warehousing",
@@ -16,12 +16,12 @@ export const ANALYTICS_DATA: ServicePageData = {
       "ETL/ELT Pipelines",
       "Predictive Analytics (AI/ML)"
     ],
-    technologies: [
-      { name: "Snowflake", logo: "/tech/snowflake.svg" },
-      { name: "Tableau", logo: "/tech/tableau.svg" },
-      { name: "Power BI", logo: "/tech/powerbi.svg" },
-      { name: "Python", logo: "/tech/python.svg" },
-      { name: "Spark", logo: "/tech/spark.svg" }
+   technologies: [
+      { name: "Snowflake", logo: "./assets/images/Technology/Snowflake_Logo.svg" },
+      { name: "Tableau", logo: "./assets/images/Technology/Tableau_Logo.png" },
+      { name: "Power BI", logo: "./assets/images/Technology/New_Power_BI_Logo.svg" },
+      { name: "Python", logo: "./assets/images/Technology/Python-logo-notext.svg" },
+      { name: "Spark", logo: "./assets/images/Technology/Apache_Spark_logo.svg" }
     ]
   },
 

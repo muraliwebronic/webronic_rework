@@ -9,6 +9,7 @@ export interface ServicePageData {
     description: string;
     image: string;
     icon: string;
+    localIcon?: string;
     points: string[];
     technologies: { name: string; logo: string }[];
   };
