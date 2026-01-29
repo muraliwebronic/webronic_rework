@@ -33,19 +33,19 @@ export default function UniversalGetStarted({ data }: { data: ServicePageData['g
                     <DynamicIcon name={card.icon} size={24} />
                 </div>
                   
-                <h3 className="text-h3 font-black mb-2 text-slate-900">{card.title}</h3>
-                <p className="text-body font-medium mb-8 text-slate-500">{card.description}</p>
+                <h3 className="text-xl font-black mb-2 text-slate-900">{card.title}</h3>
+                <p className="text-sm font-medium mb-8 text-slate-500">{card.description}</p>
 
                 <ul className="space-y-3 mb-8 flex-grow">
                     {card.list.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2 text-caption font-bold text-slate-600">
+                      <li key={i} className="flex items-start gap-2 text-xs font-bold text-slate-600">
                         <CheckCircle2 className={`shrink-0 mt-0.5 ${accentColor}`} size={14} />
                         {item}
                       </li>
                     ))}
                 </ul>
 
-                <a href={card.cta.link} className={`w-full inline-flex items-center justify-center gap-2 text-menu font-bold uppercase tracking-widest py-4 rounded-xl transition-colors text-white ${btnColor}`}>
+                <a href={card.cta.link} className={`w-full inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest py-4 rounded-xl transition-colors text-white ${btnColor}`}>
                     <span>{card.cta.text}</span>
                     <ArrowRight size={16} />
                 </a>

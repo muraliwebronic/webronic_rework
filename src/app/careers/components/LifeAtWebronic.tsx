@@ -41,9 +41,9 @@ export default function LifeAtWebronic() {
                         <story.icon size={28} strokeWidth={1.5} />
                       </div>
                       <div>
-                        <h3 className="font-black text-xl text-slate-900 leading-none mb-1">{story.name}</h3>
-                        <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">{story.role}</p>
-                        <p className="text-[10px] font-medium text-slate-400 mt-1">{story.tenure}</p>
+                        <h3 className="font-black text-h3 text-slate-900 leading-none mb-1">{story.name}</h3>
+                        <p className="text-caption font-bold text-slate-400 uppercase tracking-wider">{story.role}</p>
+                        <p className="text-caption font-medium text-slate-400 mt-1">{story.tenure}</p>
                       </div>
                     </div>
                   </div>
@@ -52,7 +52,7 @@ export default function LifeAtWebronic() {
                   <div className="px-8 flex-grow">
                     <div className="relative">
                       <Quote className="absolute -top-3 -left-2 text-slate-100 w-10 h-10 -z-10" fill="currentColor" />
-                      <p className="text-sm text-slate-600 leading-relaxed italic mb-8 relative z-10">
+                      <p className="text-body text-slate-600 leading-relaxed italic mb-8 relative z-10">
                         "{story.content}"
                       </p>
                     </div>
@@ -63,8 +63,8 @@ export default function LifeAtWebronic() {
                     <div className="flex items-start gap-3">
                       <Heart className={`shrink-0 w-5 h-5 ${accentColor} mt-0.5 fill-current opacity-80`} />
                       <div>
-                        <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">What I Love</p>
-                        <p className="text-xs font-bold text-slate-700 leading-relaxed">
+                        <p className="text-caption font-black uppercase tracking-widest text-slate-400 mb-1">What I Love</p>
+                        <p className="text-submenu font-bold text-slate-700 leading-relaxed">
                           {story.love}
                         </p>
                       </div>
@@ -95,8 +95,8 @@ export default function LifeAtWebronic() {
                   <item.icon size={24} strokeWidth={1.5} />
                 </div>
                 
-                {/* Quote text - Using blue-50 for high legibility */}
-                <p className="text-lg font-medium leading-relaxed mb-8 text-blue-50">
+                {/* Quote text */}
+                <p className="text-body font-medium leading-relaxed mb-8 text-blue-50">
                   "{item.text}"
                 </p>
                 
@@ -106,8 +106,8 @@ export default function LifeAtWebronic() {
                     <User size={18} />
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-white">{item.author}</p>
-                    <p className="text-[10px] text-blue-200 font-bold uppercase tracking-widest">{item.role}</p>
+                    <p className="text-submenu font-bold text-white">{item.author}</p>
+                    <p className="text-caption text-blue-200 font-bold uppercase tracking-widest">{item.role}</p>
                   </div>
                 </div>
               </div>

@@ -31,7 +31,7 @@ export default function UniversalIndustries({ data }: { data: ServicePageData['i
             <button
               key={ind.id}
               onClick={() => setActiveTab(ind.id)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 text-menu font-bold uppercase tracking-wider border ${
+              className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 text-xs font-bold uppercase tracking-wider border ${
                 activeTab === ind.id
                   ? `${ind.theme === 'blue' ? 'bg-[#2776ea] border-[#2776ea]' : 'bg-[#76ea27] border-[#76ea27]'} text-white shadow-md`
                   : "bg-white border-slate-200 text-slate-500 hover:bg-slate-50"
@@ -57,21 +57,21 @@ export default function UniversalIndustries({ data }: { data: ServicePageData['i
                 <div className={`h-8 w-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center shadow-sm ${themeColor}`}>
                   <DynamicIcon name={feature.icon} size={16} strokeWidth={1.5} />
                 </div>
-                <h3 className="text-h3 font-black text-slate-900 leading-tight">{feature.title}</h3>
+                <h3 className="text-base font-black text-slate-900 leading-tight">{feature.title}</h3>
               </div>
 
-              <p className="text-caption font-medium text-slate-500 leading-relaxed mb-6 flex-grow">
+              <p className="text-xs font-medium text-slate-500 leading-relaxed mb-6 flex-grow">
                 {feature.desc}
               </p>
 
               {feature.caseStudy && (
                 <div className="mt-auto pt-3 border-t border-slate-200">
-                   <p className="text-caption font-black uppercase tracking-widest text-[#2776ea] mb-1 flex items-center gap-1">
+                   <p className="text-[9px] font-black uppercase tracking-widest text-[#2776ea] mb-1 flex items-center gap-1">
                       Success Story <ArrowRight size={10} />
                    </p>
                    <div className="flex flex-col gap-0.5">
-                      <p className="text-caption font-bold text-slate-900 truncate">{feature.caseStudy.title}</p>
-                      <span className="text-caption font-bold text-slate-400">{feature.caseStudy.result}</span>
+                      <p className="text-xs font-bold text-slate-900 truncate">{feature.caseStudy.title}</p>
+                      <span className="text-[10px] font-bold text-slate-400">{feature.caseStudy.result}</span>
                    </div>
                 </div>
               )}

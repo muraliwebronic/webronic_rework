@@ -51,7 +51,7 @@ export default function UniversalFAQ({ data }: { data: ServicePageData['faq'] })
 
                   <div className="flex-1">
                     {/* Question */}
-                    <h3 className={`text-h3 font-bold leading-relaxed transition-colors duration-300 ${
+                    <h3 className={`text-base font-bold leading-relaxed transition-colors duration-300 ${
                       isOpen ? "text-[#2776ea]" : "text-slate-900 group-hover:text-slate-700"
                     }`}>
                       {item.question}
@@ -62,7 +62,7 @@ export default function UniversalFAQ({ data }: { data: ServicePageData['faq'] })
                       isOpen ? "grid-rows-[1fr] opacity-100 pt-3" : "grid-rows-[0fr] opacity-0 pt-0"
                     }`}>
                       <div className="overflow-hidden">
-                        <p className="text-slate-500 font-medium leading-relaxed text-body">
+                        <p className="text-slate-500 font-medium leading-relaxed text-sm">
                           {item.answer}
                         </p>
                       </div>
@@ -78,7 +78,7 @@ export default function UniversalFAQ({ data }: { data: ServicePageData['faq'] })
         <div className="mt-12 text-center">
            <a 
              href="/contact" 
-             className="inline-flex items-center gap-2 text-menu font-bold uppercase tracking-widest text-slate-400 hover:text-[#2776ea] transition-colors"
+             className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-[#2776ea] transition-colors"
            >
              <MessageCircle size={14} />
              <span>Still have questions? Contact Support</span>

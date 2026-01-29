@@ -22,11 +22,11 @@ export default function HospitalityStackCasesPricing() {
                   <div className="p-3 rounded-xl bg-[#2776ea]/10 text-[#2776ea]">
                     <cat.icon size={28} />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900">{cat.title}</h3>
+                  <h3 className="text-h3 font-bold text-slate-900">{cat.title}</h3>
                 </div>
                 <ul className="space-y-3">
                   {cat.items.map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm text-slate-600 font-medium">
+                    <li key={i} className="flex items-start gap-3 text-submenu text-slate-600 font-medium">
                       <div className="h-1.5 w-1.5 rounded-full bg-[#76ea27] mt-2 shrink-0" />
                       {item}
                     </li>
@@ -55,8 +55,8 @@ export default function HospitalityStackCasesPricing() {
                         <study.icon size={32} />
                       </div>
                       <div>
-                         <h3 className="text-2xl md:text-3xl font-black text-slate-900">{study.title}</h3>
-                         <p className="text-sm font-bold text-slate-500 mt-1">Client: {study.client}</p>
+                         <h3 className="text-h2 font-black text-slate-900">{study.title}</h3>
+                         <p className="text-submenu font-bold text-slate-500 mt-1">Client: {study.client}</p>
                       </div>
                     </div>
                   </div>
@@ -66,12 +66,12 @@ export default function HospitalityStackCasesPricing() {
                   <div className="grid md:grid-cols-2 gap-12">
                     {/* Challenge */}
                     <div>
-                      <h4 className="flex items-center gap-3 text-lg font-black text-red-500 mb-6 uppercase tracking-wider">
+                      <h4 className="flex items-center gap-3 text-h3 font-black text-red-500 mb-6 uppercase tracking-wider">
                         <AlertTriangle size={20} /> Challenge
                       </h4>
                       <ul className="space-y-3">
                         {study.challenge.items.map((item, i) => (
-                          <li key={i} className="flex items-start gap-3 text-slate-600 text-sm font-medium">
+                          <li key={i} className="flex items-start gap-3 text-slate-600 text-submenu font-medium">
                             <span className="text-red-400 mt-0.5">•</span> {item}
                           </li>
                         ))}
@@ -80,15 +80,15 @@ export default function HospitalityStackCasesPricing() {
 
                     {/* Solution */}
                     <div className="bg-[#2776ea]/5 p-8 rounded-[2rem] border border-[#2776ea]/10">
-                      <h4 className="flex items-center gap-3 text-lg font-black text-[#2776ea] mb-6 uppercase tracking-wider">
+                      <h4 className="flex items-center gap-3 text-h3 font-black text-[#2776ea] mb-6 uppercase tracking-wider">
                         <TrendingUp size={20} /> Solution
                       </h4>
                       <ul className="space-y-3">
                         {/*@ts-ignore*/}
                         {(study.solution.items || []).map((item, j) => (
-                           <li key={j} className="flex items-start gap-2 text-sm text-slate-700 font-medium">
+                           <li key={j} className="flex items-start gap-2 text-submenu text-slate-700 font-medium">
                              <CheckCircle2 size={14} className="text-[#2776ea] shrink-0 mt-0.5" />
-                             <span className="leading-snug">{typeof item === 'string' ? item : item}</span>
+                             <span className="leading-snug">{typeof item === 'string' ? item : ""}</span>
                            </li>
                         ))}
                       </ul>
@@ -97,15 +97,15 @@ export default function HospitalityStackCasesPricing() {
 
                   {/* Results */}
                   <div className="border-t border-slate-100 pt-10">
-                    <h4 className="flex items-center gap-3 text-lg font-black text-[#76ea27] mb-8 uppercase tracking-wider">
+                    <h4 className="flex items-center gap-3 text-h3 font-black text-[#76ea27] mb-8 uppercase tracking-wider">
                       <TrendingUp size={20} /> Impact
                     </h4>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                       {/*@ts-ignore*/}
                       {(study.results.items || []).map((item, i) => (
                         <div key={i} className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                          <p className="text-sm text-slate-600 font-medium">
-                             {typeof item === 'string' ? item : item}
+                          <p className="text-submenu text-slate-600 font-medium">
+                             {typeof item === 'string' ? item : ""}
                           </p>
                         </div>
                       ))}
@@ -131,15 +131,15 @@ export default function HospitalityStackCasesPricing() {
                       <cat.icon size={28} />
                     </div>
                   </div>
-                  <h3 className="text-xl font-black text-slate-900 leading-tight">{cat.title}</h3>
+                  <h3 className="text-h3 font-black text-slate-900 leading-tight">{cat.title}</h3>
                 </div>
                 <div className="p-8">
                   <ul className="space-y-6">
                     {cat.items.map((item, i) => (
                       <li key={i} className="flex flex-col gap-1 pb-4 border-b border-slate-50 last:border-0 last:pb-0">
-                        <span className="text-sm font-medium text-slate-600">{item.label}</span>
+                        <span className="text-submenu font-medium text-slate-600">{item.label}</span>
                         <div className="flex flex-wrap items-baseline gap-2">
-                          <span className="text-lg font-black text-[#2776ea]">{item.price}</span>
+                          <span className="text-h3 font-black text-[#2776ea]">{item.price}</span>
                         </div>
                       </li>
                     ))}

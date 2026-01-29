@@ -25,7 +25,7 @@ export default function UniversalOverview({ data }: { data: ServicePageData['ove
               className="mb-8"
             />
 
-            <div className="space-y-6 text-slate-600 font-medium leading-relaxed text-body">
+            <div className="space-y-6 text-slate-600 font-medium leading-relaxed text-base">
               {data.content.slice(0, 2).map((p, i) => (
                 <p key={i} className="text-slate-600">{p}</p>
               ))}
@@ -39,7 +39,7 @@ export default function UniversalOverview({ data }: { data: ServicePageData['ove
               )}
 
               {data.content.length > 2 && (
-                <button onClick={() => setIsExpanded(!isExpanded)} className="group flex items-center gap-2 text-menu font-bold text-[#2776ea] hover:text-[#1a5bbd] transition-colors mt-4 outline-none uppercase tracking-wider">
+                <button onClick={() => setIsExpanded(!isExpanded)} className="group flex items-center gap-2 text-xs font-bold text-[#2776ea] hover:text-[#1a5bbd] transition-colors mt-4 outline-none uppercase tracking-wider">
                   {isExpanded ? <>Read Less <ChevronUp size={14} /></> : <>Read More <ChevronDown size={14} /></>}
                 </button>
               )}
@@ -56,8 +56,8 @@ export default function UniversalOverview({ data }: { data: ServicePageData['ove
                   <Award size={20} />
                 </div>
                 <div>
-                  <h3 className="text-h3 font-black text-slate-900">Key Differentiators</h3>
-                  <p className="text-caption text-slate-400 font-bold uppercase tracking-widest">Why Webronic?</p>
+                  <h3 className="text-base font-black text-slate-900">Key Differentiators</h3>
+                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Why Webronic?</p>
                 </div>
               </div>
 
@@ -68,10 +68,10 @@ export default function UniversalOverview({ data }: { data: ServicePageData['ove
                       <DynamicIcon name={item.icon} size={16} />
                     </div>
                     <div>
-                      <h4 className="text-submenu font-bold text-slate-900 mb-1">
+                      <h4 className="text-sm font-bold text-slate-900 mb-1">
                         {item.title}
                       </h4>
-                      <p className="text-caption font-medium text-slate-500 leading-relaxed">
+                      <p className="text-xs font-medium text-slate-500 leading-relaxed">
                         {item.description}
                       </p>
                     </div>

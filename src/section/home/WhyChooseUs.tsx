@@ -30,11 +30,11 @@ const WhyChooseCard = ({
 
       {/* Content Section */}
       <div className="pt-16 relative z-10 flex-1 flex flex-col items-center text-center">
-        <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-[#2776ea] transition-colors leading-tight">
+<h3 className="text-h3 font-bold text-slate-900 mb-4 group-hover:text-[#2776ea] transition-colors leading-tight">
           {title}
         </h3>
 
-        <p className="text-sm font-medium text-slate-500 leading-relaxed">
+<p className="text-submenu text-slate-500 leading-relaxed">
           {description}
         </p>
       </div>

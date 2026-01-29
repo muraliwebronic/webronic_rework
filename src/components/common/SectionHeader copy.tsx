@@ -9,6 +9,8 @@ type SectionHeaderProps = {
   description?: string;
   centered?: boolean;
   className?: string;
+  size?: "sm" | "default" | "hero";
+  isWhite?: boolean; // New Prop
 };
 
 export default function SectionHeader({
@@ -18,33 +20,79 @@ export default function SectionHeader({
   description,
   centered = true,
   className = "",
+  size = "default",
+  isWhite = false, // Default to false
 }: SectionHeaderProps) {
+  
+  // Size Configuration
+  const styles = {
+    sm: {
+      badge: "text-[10px] lg:text-xs tracking-[0.15em] mb-3",
+      title: "text-xl md:text-2xl lg:text-3xl mb-4",
+      desc: "text-sm lg:text-base max-w-xl",
+      line: "h-[1.5px] w-6",
+    },
+    default: {
+      badge: "text-xs lg:text-sm tracking-[0.2em] mb-4",
+      title: "text-3xl md:text-4xl lg:text-5xl mb-6",
+      desc: "text-base lg:text-lg max-w-2xl",
+      line: "h-[2px] w-8",
+    },
+    hero: {
+      badge: "text-sm lg:text-base tracking-[0.25em] mb-6",
+      title: "text-4xl md:text-5xl lg:text-6xl tracking-tighter mb-8",
+      desc: "text-lg lg:text-xl leading-relaxed max-w-3xl",
+      line: "h-[3px] w-12",
+    },
+  };
+
+  const currentStyle = styles[size];
+
+  // Dynamic Colors based on isWhite
+  const titleColor = isWhite ? "text-white" : "text-slate-900";
+  const descColor = isWhite ? "text-blue-50" : "text-slate-500";
+  const badgeColor = isWhite ? "text-white" : "text-[#2776ea]";
+  const lineColor = isWhite ? "from-white" : "from-[#2776ea]";
+  const highlightGradient = isWhite 
+    ? "from-[#76ea27] to-emerald-300" // Secondary Green gradient for Dark Backgrounds
+    : "from-[#2776ea] to-cyan-500";   // Primary Blue gradient for Light Backgrounds
+
   return (
-    <div className={`relative z-10 mb-16 lg:mb-24 ${centered ? "text-center mx-auto" : "text-left"} ${className}`}>
+    <div 
+      className={`relative z-10 ${centered ? "text-center mx-auto" : "text-left"} ${className}`}
+    >
       
-      {/* Section Name / Badge */}
+      {/* --- BADGE / TAG --- */}
       {badge && (
-        <div className={`flex items-center gap-3 mb-4 uppercase tracking-[0.2em] text-xs lg:text-sm font-bold font-sora ${centered ? "justify-center" : "justify-start"}`}>
-          <span className="w-8 h-[2px] bg-gradient-to-r from-[#2776ea] to-transparent rounded-full" />
-          <span className="text-[#2776ea]">{badge}</span>
-          {centered && <span className="w-8 h-[2px] bg-gradient-to-l from-[#2776ea] to-transparent rounded-full" />}
+        <div className={`flex items-center gap-3 font-bold font-sora uppercase ${badgeColor} ${currentStyle.badge} ${centered ? "justify-center" : "justify-start"}`}>
+          {/* Left Gradient Line */}
+          <span className={`${currentStyle.line} bg-gradient-to-r ${lineColor} to-transparent rounded-full`} />
+          
+          <span className="whitespace-nowrap">
+            {badge}
+          </span>
+          
+          {/* Right Gradient Line (Only if centered) */}
+          {centered && (
+            <span className={`${currentStyle.line} bg-gradient-to-l ${lineColor} to-transparent rounded-full`} />
+          )}
         </div>
       )}
 
-      {/* Main Heading */}
-      <h2 className="text-2xl lg:text-4xl font-bold tracking-tight text-slate-900 leading-tight mb-6 font-sora">
-        {title} <br className="" />
+      {/* --- MAIN TITLE --- */}
+      <h2 className={`font-black leading-[1.1] font-sora ${titleColor} ${currentStyle.title}`}>
+        {title} <br />
         {highlight && (
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2776ea] to-cyan-500">
-            {highlight}
+          <span className={`text-transparent bg-clip-text bg-gradient-to-r ${highlightGradient}`}>
+           {highlight}
           </span>
         )}
       </h2>
 
-      {/* Description */}
+      {/* --- DESCRIPTION --- */}
       {description && (
-        <p className={`text-slate-500 text-base lg:text-lg font-medium max-w-2xl ${centered ? "mx-auto" : ""}`}>
-           {description.replace(/\s*\.$/, "")}
+        <p className={`font-medium leading-relaxed ${descColor} ${currentStyle.desc} ${centered ? "mx-auto" : ""}`}>
+            {description.replace(/\s*\.$/, "")}
         </p>
       )}
     </div>

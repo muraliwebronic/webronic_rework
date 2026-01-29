@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { 
- 
   X, 
   CheckCircle2,
   ExternalLink,
@@ -14,8 +13,6 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 import SectionHeader from "@/components/common/SectionHeader"; 
 import { Product, products } from "@/AllData/products/PRODUCT_DATA";
-
-
 
 // --- INDIVIDUAL PRODUCT CARD COMPONENT ---
 const ProductCard = ({ product, index }: { product: Product; index: number }) => {
@@ -45,16 +42,16 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
             <div className="h-14 w-14 flex items-center justify-center rounded-2xl bg-white border border-slate-100 text-[#2776ea] shadow-sm transition-transform duration-500 group-hover:scale-105">
               {product.icon}
             </div>
-            <span className="text-[10px] font-bold uppercase tracking-widest px-4 py-2 ">
+            <span className="text-caption font-bold uppercase tracking-widest px-4 py-2 ">
               {product.tagline}
             </span>
           </div>
 
           {/* Title & Description */}
-          <h3 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 group-hover:text-[#2776ea] transition-colors tracking-tight">
+          <h3 className="text-h2 font-bold text-slate-900 mb-6 group-hover:text-[#2776ea] transition-colors tracking-tight">
             {product.name}
           </h3>
-          <p className="text-slate-500 font-medium leading-loose mb-8 text-lg">
+          <p className="text-body text-slate-500 font-medium leading-loose mb-8">
             {product.description}
           </p>
 
@@ -65,7 +62,7 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
             <Link 
               href={product.link}
               target="_blank"
-              className="flex items-center gap-2 pl-6 pr-2 py-2 rounded-full bg-[#2776ea] text-white font-bold text-xs uppercase tracking-widest hover:bg-[#1a5bbd] transition-colors shadow-md shadow-blue-200"
+              className="flex items-center gap-2 pl-6 pr-2 py-2 rounded-full bg-[#2776ea] text-white font-bold text-menu uppercase tracking-widest hover:bg-[#1a5bbd] transition-colors shadow-md shadow-blue-200"
             >
               Visit Site
               <div className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center">
@@ -83,7 +80,7 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
                     : 'border-slate-200 bg-white hover:border-[#76ea27]'
                 }`}
               >
-                <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
+                <span className="text-caption font-bold uppercase tracking-widest text-slate-500">
                   {view === "demo" ? "Close Demo" : "Live Demo"}
                 </span>
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
@@ -103,7 +100,7 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
                    : 'border-slate-200 bg-white hover:border-[#2776ea]'
                }`}
             >
-               <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
+               <span className="text-caption font-bold uppercase tracking-widest text-slate-500">
                    {view === "specs" ? "Close Specs" : "View Specs"}
                </span>
                <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
@@ -155,7 +152,7 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
                     className="absolute inset-0 z-20 flex flex-col h-full p-8 lg:p-12"
                 >
                     <div className="text-center mb-8">
-                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">
+                        <span className="text-caption font-black uppercase tracking-widest text-slate-400">
                             Key Features
                         </span>
                     </div>
@@ -171,7 +168,7 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
                                 <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#76ea27]/10 flex items-center justify-center text-[#5eb820]">
                                     <CheckCircle2 size={16} />
                                 </div>
-                                <span className="text-sm font-bold text-slate-700">
+                                <span className="text-submenu font-bold text-slate-700">
                                     {feature}
                                 </span>
                             </motion.div>

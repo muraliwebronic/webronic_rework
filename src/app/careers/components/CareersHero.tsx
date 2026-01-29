@@ -35,7 +35,7 @@ export default function CareersHero() {
                 <Link 
                   key={i}
                   href={cta.href}
-                  className={`inline-flex items-center justify-center px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all active:scale-95 ${
+                  className={`inline-flex items-center justify-center px-6 py-3 rounded-xl text-menu font-bold uppercase tracking-wider transition-all active:scale-95 ${
                     cta.primary 
                       ? "bg-[#2776ea] text-white hover:bg-[#1a5bbd] shadow-md" 
                       : "bg-slate-50 border border-slate-100 text-slate-600 hover:bg-white hover:border-[#2776ea]/30 hover:text-[#2776ea]"
@@ -52,8 +52,8 @@ export default function CareersHero() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-slate-50">
                {hero.stats.map((stat, i) => (
                   <div key={i}>
-                     <p className="text-2xl font-black text-slate-900">{stat.value}</p>
-                     <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400 mt-1">{stat.label}</p>
+                     <p className="text-h3 font-black text-slate-900">{stat.value}</p>
+                     <p className="text-caption font-bold uppercase tracking-wider text-slate-400 mt-1">{stat.label}</p>
                   </div>
                ))}
             </div>
@@ -79,7 +79,7 @@ export default function CareersHero() {
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                       </span>
-                      <span className="text-[9px] font-bold uppercase tracking-widest text-slate-400">Hiring Active</span>
+                      <span className="text-caption font-bold uppercase tracking-widest text-slate-400">Hiring Active</span>
                    </div>
                 </div>
 
@@ -92,19 +92,19 @@ export default function CareersHero() {
                          <Users size={24} strokeWidth={1.5} />
                       </div>
                       <div>
-                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Department</span>
-                         <span className="text-sm font-bold text-slate-900 leading-tight block">Engineering & Product</span>
+                         <span className="text-caption font-bold text-slate-400 uppercase tracking-widest block mb-1">Department</span>
+                         <span className="text-submenu font-bold text-slate-900 leading-tight block">Engineering & Product</span>
                       </div>
                    </div>
 
-                   {/* Active Roles Stack (Hardcoded logic based on careers context) */}
+                   {/* Active Roles Stack */}
                    <div className="space-y-3">
-                      <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest border-b border-slate-50 pb-2">
+                      <p className="text-caption font-bold text-slate-400 uppercase tracking-widest border-b border-slate-50 pb-2">
                         Priority Roles
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {["Full Stack Dev", "ML Engineer", "DevOps Lead", "Product Designer"].map((role, i) => (
-                           <span key={i} className="inline-flex items-center px-2.5 py-1 rounded-md bg-slate-50 border border-slate-100 text-[10px] font-bold text-slate-600">
+                           <span key={i} className="inline-flex items-center px-2.5 py-1 rounded-md bg-slate-50 border border-slate-100 text-caption font-bold text-slate-600">
                               {role}
                            </span>
                         ))}
@@ -123,8 +123,8 @@ export default function CareersHero() {
                    <Activity size={16} />
                 </div>
                 <div>
-                   <span className="block text-[9px] font-bold text-slate-400 uppercase">Growth</span>
-                   <span className="block text-xs font-bold text-slate-900">200+ Innovators</span>
+                   <span className="block text-caption font-bold text-slate-400 uppercase">Growth</span>
+                   <span className="block text-caption font-bold text-slate-900">200+ Innovators</span>
                 </div>
              </div>
 

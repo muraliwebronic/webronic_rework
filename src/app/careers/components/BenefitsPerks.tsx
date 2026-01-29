@@ -45,7 +45,7 @@ export default function BenefitsPerks() {
                   <cat.icon size={28} strokeWidth={1.5} />
                 </div>
 
-                <h3 className="text-xl font-black text-slate-900 mb-6">
+                <h3 className="text-h3 font-black text-slate-900 mb-6">
                   {cat.title}
                 </h3>
 
@@ -53,12 +53,12 @@ export default function BenefitsPerks() {
                 <div className="space-y-6 flex-grow">
                   {cat.subsections.map((sub, idx) => (
                     <div key={idx}>
-                      <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3 border-b border-slate-50 pb-1">
+                      <h4 className="text-caption font-bold text-slate-400 uppercase tracking-widest mb-3 border-b border-slate-50 pb-1">
                         {sub.title}
                       </h4>
                       <ul className="space-y-2.5">
                         {sub.items.map((item, i) => (
-                          <li key={i} className="flex items-start gap-2.5 text-xs font-bold text-slate-600">
+                          <li key={i} className="flex items-start gap-2.5 text-submenu font-bold text-slate-600">
                             <CheckCircle2 
                               size={14} 
                               className={`shrink-0 mt-0.5 ${accentText}`} 

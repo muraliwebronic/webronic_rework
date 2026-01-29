@@ -271,7 +271,7 @@ export default function HeroStacked() {
 
             <div className="w-full mb-10 hidden lg:flex items-center lg:justify-start h-16">
               <h2 className="text-xl sm:text-2xl font-bold text-slate-600 tracking-tight">
-                <Typewriter text={" "+CAROUSEL_DATA[activeIndex].headline} speed={40} />
+                <Typewriter text={"  "+CAROUSEL_DATA[activeIndex].headline} speed={40} />
               </h2>
             </div>
 

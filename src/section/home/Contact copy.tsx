@@ -51,7 +51,7 @@ const ContactCard = ({ label, value, icon: Icon, href, onCopy, copied, isPartner
 
         {/* Content Section */}
         <div className="relative z-10 text-center flex-1 flex flex-col w-full">
-<p className="text-caption font-black uppercase tracking-[0.2em] text-slate-400 mb-3">
+            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3">
                 {label}
             </p>
             
@@ -68,11 +68,11 @@ const ContactCard = ({ label, value, icon: Icon, href, onCopy, copied, isPartner
             ) : (
                 <>
                     {href ? (
-                        <a href={href} className="text-menu font-bold text-slate-900 hover:text-[#2776ea] transition-colors leading-tight break-words">
+                        <a href={href} className="text-lg font-bold text-slate-900 hover:text-[#2776ea] transition-colors leading-tight break-words">
                             {value}
                         </a>
                     ) : (
-                        <p className="text-menu font-bold text-slate-900 leading-tight">
+                        <p className="text-lg font-bold text-slate-900 leading-tight">
                             {value}
                         </p>
                     )}
@@ -85,7 +85,7 @@ const ContactCard = ({ label, value, icon: Icon, href, onCopy, copied, isPartner
             {onCopy ? (
                 <button 
                     onClick={onCopy}
-                    className="flex items-center justify-between w-full text-submenu font-bold text-slate-400 hover:text-[#2776ea] transition-colors uppercase tracking-wider"
+                    className="flex items-center justify-between w-full text-xs font-bold text-slate-400 hover:text-[#2776ea] transition-colors uppercase tracking-wider"
                 >
                     <span>{copied ? "Copied!" : "Copy Address"}</span>
                     {copied ? <Check size={16} /> : <Copy size={16} />}
@@ -95,7 +95,7 @@ const ContactCard = ({ label, value, icon: Icon, href, onCopy, copied, isPartner
                     href={href}
                     target={isPartner ? "_blank" : undefined}
                     rel={isPartner ? "noopener noreferrer" : undefined}
-                    className="flex items-center justify-between w-full text-submenu font-bold text-slate-400 hover:text-[#2776ea] transition-colors uppercase tracking-wider"
+                    className="flex items-center justify-between w-full text-xs font-bold text-slate-400 hover:text-[#2776ea] transition-colors uppercase tracking-wider"
                 >
                     <span>{isPartner ? "Visit Partner" : `${label.split(" ")[0]} Now`}</span>
                     <ArrowUpRight size={16} />
@@ -181,7 +181,7 @@ export default function Contact() {
                 {/* Main CTA Button */}
                 <button
                     onClick={() => setIsModalOpen(true)}
-                    className="group inline-flex items-center justify-center gap-4 bg-[#2776ea] text-white px-8 py-6 rounded-[2rem] text-menu font-black uppercase tracking-widest hover:bg-[#76ea27] transition-all   hover:-translate-y-1 active:scale-95 w-full sm:w-fit"
+                    className="group inline-flex items-center justify-center gap-4 bg-[#2776ea] text-white px-8 py-6 rounded-[2rem] text-sm font-black uppercase tracking-widest hover:bg-[#76ea27] transition-all   hover:-translate-y-1 active:scale-95 w-full sm:w-fit"
                 >
                     Start A Project
                     <div className="bg-white/20 p-1 rounded-full group-hover:translate-x-1 transition-transform">
@@ -189,8 +189,8 @@ export default function Contact() {
                     </div>
                 </button>
 
-<p className="text-submenu font-medium text-slate-400 leading-relaxed max-w-xs">
-                    Prefer a quick chat? Use the contact details on the right to reach our team directly
+                <p className="text-xs font-medium text-slate-400 leading-relaxed max-w-xs">
+                    Prefer a quick chat? Use the contact details on the right to reach our team directly.
                 </p>
             </div>
           </div>
@@ -240,10 +240,10 @@ export default function Contact() {
                         <MessageSquare size={24} />
                     </div>
                     <div>
-<h3 className="text-h3 font-black tracking-tight leading-none">
+                        <h3 className="text-2xl font-black tracking-tight leading-none">
                         Start Project
                         </h3>
-                        <p className="text-slate-400 text-submenu font-bold uppercase tracking-widest mt-1">
+                        <p className="text-slate-400 text-xs font-bold uppercase tracking-widest mt-1">
                             We respond within 24h
                         </p>
                     </div>
@@ -254,7 +254,7 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="p-8 space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-<label className="text-caption font-black uppercase tracking-widest text-slate-400 ml-1">
+                  <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
                     Full Name
                   </label>
                   <input
@@ -265,7 +265,7 @@ export default function Contact() {
                   />
                 </div>
                 <div className="space-y-2">
-<label className="text-caption font-black uppercase tracking-widest text-slate-400 ml-1">
+                  <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
                     Email Address
                   </label>
                   <input
@@ -278,7 +278,7 @@ export default function Contact() {
               </div>
 
               <div className="space-y-2">
-<label className="text-caption font-black uppercase tracking-widest text-slate-400 ml-1">
+                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
                   Topic
                 </label>
                 <div className="relative">
@@ -292,13 +292,13 @@ export default function Contact() {
               </div>
 
               <div className="space-y-2">
-<label className="text-caption font-black uppercase tracking-widest text-slate-400 ml-1">
+                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">
                   Message
                 </label>
                 <textarea
                   rows={4}
                   placeholder="Tell us about your requirements.."
-                  className="w-full rounded-xl border border-slate-200 bg-slate-50 p-4 text-submenu focus:ring-2 focus:ring-[#2776ea] outline-none transition resize-none font-medium text-slate-700 placeholder:text-slate-400"
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm focus:ring-2 focus:ring-[#2776ea] outline-none transition resize-none font-medium text-slate-700 placeholder:text-slate-400"
                   required
                 />
               </div>
@@ -306,7 +306,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#2776ea] text-white font-black uppercase tracking-[0.2em] text-menu py-5 rounded-2xl hover:bg-[#76ea27] transition-all  flex items-center justify-center gap-3 disabled:opacity-70 active:scale-95"
+                className="w-full bg-[#2776ea] text-white font-black uppercase tracking-[0.2em] text-xs py-5 rounded-2xl hover:bg-[#76ea27] transition-all  flex items-center justify-center gap-3 disabled:opacity-70 active:scale-95"
               >
                 {isSubmitting ? (
                   "Sending.."

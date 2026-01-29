@@ -21,22 +21,22 @@ export default function HiringProcess() {
           className="max-w-3xl mx-auto mb-8"
         />
 
-        {/* Timeline Badge (Content Preservation) */}
+        {/* Timeline Badge */}
         <div className="flex justify-center mb-20">
-            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#2776ea]/5 border border-[#2776ea]/10 text-[#2776ea] text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#2776ea]/5 border border-[#2776ea]/10 text-[#2776ea] text-caption font-bold uppercase tracking-wider">
                 <Clock size={14} />
                 <span>Total Time: {hiringProcess.totalTimeline}</span>
             </div>
         </div>
 
-        {/* --- STACKING CONTAINER ( The Requested Design ) --- */}
+        {/* --- STACKING CONTAINER --- */}
         <div className="flex flex-col gap-6 max-w-4xl mx-auto pb-24">
           
-          {/* Vertical Guide Line (Visual Hint) */}
+          {/* Vertical Guide Line */}
           <div className="absolute left-10 md:left-[88px] top-60 bottom-24 w-0.5 bg-slate-100 -z-10" />
 
           {hiringProcess.steps.map((step, index) => {
-            // Dynamic Top Offset: Cards stick and stack with a small visible tab
+            // Dynamic Top Offset
             const stickyTop = `calc(120px + ${index * 15}px)`;
 
             return (
@@ -55,7 +55,7 @@ export default function HiringProcess() {
                     {/* --- LEFT: STEP INDICATOR --- */}
                     <div className="flex flex-row md:flex-col items-center gap-4 md:w-20 shrink-0">
                         {/* Number */}
-                        <span className="text-4xl font-black text-slate-200 group-hover:text-[#2776ea]/20 transition-colors">
+                        <span className="text-h1 font-black text-slate-200 group-hover:text-[#2776ea]/20 transition-colors">
                             {step.step}
                         </span>
                         
@@ -68,17 +68,17 @@ export default function HiringProcess() {
                     {/* --- RIGHT: CONTENT --- */}
                     <div className="flex-1 pt-1">
                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
-                            <h3 className="text-xl font-black text-slate-900">{step.title}</h3>
+                            <h3 className="text-h3 font-black text-slate-900">{step.title}</h3>
                             
                             {/* Duration Badge */}
                             <div className="flex items-center gap-1.5 px-3 py-1 bg-white rounded-lg border border-slate-200 shadow-sm w-fit">
                                 <Clock size={12} className="text-slate-400" />
-                                <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wide">{step.duration}</span>
+                                <span className="text-caption font-bold text-slate-500 uppercase tracking-wide">{step.duration}</span>
                             </div>
                         </div>
 
                         {/* Description */}
-                        <p className="text-sm font-medium text-slate-500 mb-6 leading-relaxed">
+                        <p className="text-body font-medium text-slate-500 mb-6 leading-relaxed">
                             {step.description}
                         </p>
 
@@ -86,7 +86,7 @@ export default function HiringProcess() {
                         <ul className="grid sm:grid-cols-1 gap-3">
                             {/* Map standard details */}
                             {step.details?.map((item, i) => (
-                                <li key={i} className="flex items-start gap-2.5 text-xs font-semibold text-slate-600 bg-white p-3 rounded-xl border border-slate-100 shadow-sm group-hover:border-[#2776ea]/10 transition-colors">
+                                <li key={i} className="flex items-start gap-2.5 text-submenu font-semibold text-slate-600 bg-white p-3 rounded-xl border border-slate-100 shadow-sm group-hover:border-[#2776ea]/10 transition-colors">
                                     <div className="mt-0.5 w-4 h-4 rounded-full bg-[#2776ea]/10 flex items-center justify-center shrink-0 text-[#2776ea]">
                                         <Check size={8} strokeWidth={4} />
                                     </div>
@@ -97,10 +97,10 @@ export default function HiringProcess() {
                             {/* Map SubSections (Special case for Step 3) */}
                             {step.subSections?.map((sub, i) => (
                                 <li key={`sub-${i}`} className="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
-                                    <span className="block text-[10px] font-black uppercase text-slate-400 mb-2">{sub.heading}</span>
+                                    <span className="block text-caption font-black uppercase text-slate-400 mb-2">{sub.heading}</span>
                                     <div className="space-y-2">
                                         {sub.items.map((item, j) => (
-                                            <div key={j} className="flex items-start gap-2 text-xs font-medium text-slate-600">
+                                            <div key={j} className="flex items-start gap-2 text-submenu font-medium text-slate-600">
                                                 <div className="w-1 h-1 rounded-full bg-[#2776ea] mt-1.5 shrink-0" />
                                                 {item}
                                             </div>
@@ -125,15 +125,15 @@ export default function HiringProcess() {
           })}
         </div>
 
-        {/* --- COMMITMENTS STRIP (Content Preservation) --- */}
+        {/* --- COMMITMENTS STRIP --- */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-slate-100">
             {hiringProcess.commitments.map((item, i) => (
                 <div key={i} className="flex flex-col items-center text-center p-4">
                     <div className="mb-4 p-3 rounded-2xl bg-[#76ea27]/10 text-[#6cd623]">
                         <item.icon size={20} strokeWidth={2} />
                     </div>
-                    <h4 className="text-sm font-bold text-slate-900 mb-1">{item.title}</h4>
-                    <p className="text-xs text-slate-500 font-medium">{item.desc}</p>
+                    <h4 className="text-submenu font-bold text-slate-900 mb-1">{item.title}</h4>
+                    <p className="text-caption text-slate-500 font-medium">{item.desc}</p>
                 </div>
             ))}
         </div>

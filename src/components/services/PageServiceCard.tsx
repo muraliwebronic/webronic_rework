@@ -66,16 +66,16 @@ export const PageServiceCard = ({
               )}
             </div>
 
-            <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 px-4 py-2 rounded-full border border-slate-100">
+            <span className="text-caption font-bold uppercase tracking-widest text-slate-500 bg-slate-50 px-4 py-2 rounded-full border border-slate-100">
               {service.tagline}
             </span>
           </div>
 
           {/* Title & Description */}
-          <h3 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 group-hover:text-[#2776ea] transition-colors tracking-tight">
+          <h3 className="text-h1 font-bold text-slate-900 mb-6 group-hover:text-[#2776ea] transition-colors tracking-tight">
             {service.title}
           </h3>
-          <p className="text-slate-500 font-medium leading-loose mb-8 max-w-xl text-lg">
+          <p className="text-slate-500 font-medium leading-loose mb-8 max-w-xl text-body">
             {service.description}
           </p>
 
@@ -86,7 +86,7 @@ export const PageServiceCard = ({
                 <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#76ea27]/20 flex items-center justify-center mt-1">
                   <Check size={12} className="text-[#5eb820]" strokeWidth={4} />
                 </div>
-                <span className="text-sm font-semibold text-slate-600">
+                <span className="text-submenu font-semibold text-slate-600">
                   {point}
                 </span>
               </div>
@@ -98,7 +98,7 @@ export const PageServiceCard = ({
             {/* 1. Start Project */}
             <button
               onClick={() => onCtaClick(service)}
-              className="flex items-center gap-2 pl-6 pr-2 py-2 rounded-full bg-[#2776ea] text-white font-bold text-xs uppercase tracking-widest hover:bg-[#1a5bbd] transition-colors shadow-md shadow-slate-200"
+              className="flex items-center gap-2 pl-6 pr-2 py-2 rounded-full bg-[#2776ea] text-white font-bold text-menu uppercase tracking-widest hover:bg-[#1a5bbd] transition-colors shadow-md shadow-slate-200"
             >
               Start Project
               <div className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center">
@@ -109,7 +109,7 @@ export const PageServiceCard = ({
             {/* 2. Explore */}
             <Link
               href={serviceUrl}
-              className="flex items-center gap-2 pl-6 pr-2 py-2 rounded-full bg-[#76ea27] text-slate-900 font-bold text-xs uppercase tracking-widest hover:bg-[#6bd622] transition-colors shadow-md shadow-slate-200"
+              className="flex items-center gap-2 pl-6 pr-2 py-2 rounded-full bg-[#76ea27] text-slate-900 font-bold text-menu uppercase tracking-widest hover:bg-[#6bd622] transition-colors shadow-md shadow-slate-200"
             >
               Explore
               <div className="w-8 h-8 bg-black/5 rounded-full flex items-center justify-center">
@@ -138,7 +138,7 @@ export const PageServiceCard = ({
               </div>
 
               <div className="flex items-center gap-2">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 group-hover/toggle:text-[#2776ea] transition-colors">
+                <span className="text-caption font-bold uppercase tracking-widest text-slate-500 group-hover/toggle:text-[#2776ea] transition-colors">
                   {showStack ? "Close" : "Stack"}
                 </span>
                 <Layers
@@ -169,7 +169,7 @@ export const PageServiceCard = ({
                   className="absolute inset-0 z-20 flex flex-col"
                 >
                   <div className="flex justify-between items-center px-8 pt-8 pb-4">
-                    <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">
+                    <span className="text-caption font-black uppercase tracking-widest text-slate-400">
                       Technologies
                     </span>
                     <button
@@ -197,7 +197,7 @@ export const PageServiceCard = ({
                               className="object-contain w-full h-full"
                             />
                           </div>
-                          <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wide group-hover/tech:text-[#2776ea] text-center transition-colors">
+                          <span className="text-caption font-bold text-slate-500 uppercase tracking-wide group-hover/tech:text-[#2776ea] text-center transition-colors">
                             {t.name}
                           </span>
                         </div>

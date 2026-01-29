@@ -24,27 +24,30 @@ export default function SectionHeader({
   isWhite = false, // Default to false
 }: SectionHeaderProps) {
   
-  // Size Configuration
-  const styles = {
-    sm: {
-      badge: "text-[10px] lg:text-xs tracking-[0.15em] mb-3",
-      title: "text-xl md:text-2xl lg:text-3xl mb-4",
-      desc: "text-sm lg:text-base max-w-xl",
-      line: "h-[1.5px] w-6",
-    },
-    default: {
-      badge: "text-xs lg:text-sm tracking-[0.2em] mb-4",
-      title: "text-3xl md:text-4xl lg:text-5xl mb-6",
-      desc: "text-base lg:text-lg max-w-2xl",
-      line: "h-[2px] w-8",
-    },
-    hero: {
-      badge: "text-sm lg:text-base tracking-[0.25em] mb-6",
-      title: "text-4xl md:text-5xl lg:text-6xl tracking-tighter mb-8",
-      desc: "text-lg lg:text-xl leading-relaxed max-w-3xl",
-      line: "h-[3px] w-12",
-    },
-  };
+ // Size Configuration (Using Global Typography Utilities)
+const styles = {
+  sm: {
+    badge: "text-caption tracking-[0.15em] mb-3",
+    title: "text-h3 mb-4",
+    desc: "text-submenu max-w-xl",
+    line: "h-[1.5px] w-6",
+  },
+
+  default: {
+    badge: "text-submenu tracking-[0.2em] mb-4",
+    title: "text-h2 mb-6",
+    desc: "text-body max-w-2xl",
+    line: "h-[2px] w-8",
+  },
+
+  hero: {
+    badge: "text-menu tracking-[0.25em] mb-6",
+    title: "text-h1 mb-8",
+    desc: "text-body max-w-3xl",
+    line: "h-[3px] w-12",
+  },
+};
+
 
   const currentStyle = styles[size];
 
@@ -81,10 +84,10 @@ export default function SectionHeader({
 
       {/* --- MAIN TITLE --- */}
       <h2 className={`font-black leading-[1.1] font-sora ${titleColor} ${currentStyle.title}`}>
-        {title} <br className="hidden md:block" />
+        {title} <br />
         {highlight && (
           <span className={`text-transparent bg-clip-text bg-gradient-to-r ${highlightGradient}`}>
-            {" "}{highlight}
+           {highlight}
           </span>
         )}
       </h2>

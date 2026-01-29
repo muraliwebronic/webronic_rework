@@ -17,7 +17,7 @@ export default function Projects() {
       id="projects"
       className="relative overflow-hidden bg-slate-50 py-24 lg:py-32 font-sora"
     >
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="relative mx-auto container px-6 md:px-12 lg:px-24">
         
         {/* --- HEADER --- */}
         <div className="mb-20 lg:mb-28">
@@ -41,7 +41,7 @@ export default function Projects() {
                 {/* Desktop Title */}
                 <div className="hidden lg:flex items-center gap-2 mb-6 pl-1 text-slate-400">
                     <LayoutGrid size={14} />
-                    <span className="text-[10px] font-black uppercase tracking-[0.2em]">Filter By Sector</span>
+                    <span className="text-caption font-black uppercase tracking-[0.2em]">Filter By Sector</span>
                 </div>
 
                 {/* TAB CONTAINER */}
@@ -54,7 +54,7 @@ export default function Projects() {
                       key={category.id}
                       onClick={() => setActiveTab(category.id)}
                       className={`group relative flex items-center justify-between transition-all duration-300 ease-out
-                        px-5 py-2.5 rounded-full min-w-max border                        lg:w-full lg:px-4 lg:py-3.5 lg:rounded-xl lg:border
+                        px-5 py-2.5 rounded-full min-w-max border                         lg:w-full lg:px-4 lg:py-3.5 lg:rounded-xl lg:border
                         ${
                           activeTab === category.id
                             ? "bg-[#2776ea] text-white border-[#2776ea] shadow-md shadow-blue-500/25 "
@@ -76,13 +76,13 @@ export default function Projects() {
                                 : "text-slate-400 group-hover:text-[#2776ea]"
                           }`}
                         />
-                        <span className="text-sm font-bold tracking-wide">
+                        <span className="text-submenu font-bold tracking-wide">
                           {category.title}
                         </span>
                       </div>
                       
                       {/* Count Badge */}
-                      <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md transition-colors ${
+                      <span className={`text-caption font-bold px-2 py-0.5 rounded-md transition-colors ${
                           activeTab === category.id
                             ? "bg-white/20 text-white"
                             : "hidden lg:block bg-slate-50 text-slate-400 group-hover:bg-slate-100"
@@ -94,7 +94,7 @@ export default function Projects() {
                 </div>
 
                 {/* Mobile Swipe Hint */}
-                <div className="lg:hidden flex items-center gap-1 mt-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest animate-pulse pl-2">
+                <div className="lg:hidden flex items-center gap-1 mt-2 text-caption font-bold text-slate-400 uppercase tracking-widest animate-pulse pl-2">
                   Swipe <ChevronRight size={10} />
                 </div>
              </div>
@@ -107,14 +107,14 @@ export default function Projects() {
                 {/* Category Meta */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-6 border-b border-slate-200/60">
                   <div>
-                    <h4 className="text-2xl font-bold text-slate-900 mb-2">
+                    <h4 className="text-h3 font-bold text-slate-900 mb-2">
                       {activeContent?.title}
                     </h4>
-                    <p className="text-sm text-slate-500 max-w-md font-medium leading-relaxed">
+                    <p className="text-body text-slate-500 max-w-md font-medium leading-relaxed">
                       {activeContent?.description}
                     </p>
                   </div>
-                  <div className="hidden md:flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-600 text-[10px] font-black uppercase tracking-widest whitespace-nowrap">
+                  <div className="hidden md:flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-600 text-caption font-black uppercase tracking-widest whitespace-nowrap">
                         <span className="relative flex h-2 w-2 mr-1">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-500 opacity-75"></span>
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
@@ -147,7 +147,7 @@ export default function Projects() {
                       </div>
 
                       <div className="absolute bottom-4 opacity-0 transform translate-y-2 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
-                        <span className="text-[9px] font-black uppercase tracking-widest text-slate-400 group-hover:text-[#2776ea]">
+                        <span className="text-caption font-black uppercase tracking-widest text-slate-400 group-hover:text-[#2776ea]">
                           View Case
                         </span>
                       </div>

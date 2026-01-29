@@ -33,15 +33,15 @@ export default function WhyWebronic() {
                   <feature.icon size={28} strokeWidth={1.5} />
                 </div>
 
-                <h3 className="text-xl font-black text-slate-900 mb-3">{feature.title}</h3>
-                <p className="text-sm font-medium text-slate-500 leading-relaxed mb-6 flex-grow">
+                <h3 className="text-h3 font-black text-slate-900 mb-3">{feature.title}</h3>
+                <p className="text-body font-medium text-slate-500 leading-relaxed mb-6 flex-grow">
                   {feature.description}
                 </p>
 
                 {/* Details */}
                 <div className="pt-6 border-t border-slate-50 space-y-2">
                    {feature.details.slice(0, 3).map((detail, i) => (
-                      <div key={i} className="flex items-start gap-2 text-xs font-bold text-slate-600">
+                      <div key={i} className="flex items-start gap-2 text-caption font-bold text-slate-600">
                          <CheckCircle2 size={14} className={`shrink-0 mt-0.5 ${accent}`} />
                          <span>{detail}</span>
                       </div>

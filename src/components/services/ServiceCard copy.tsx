@@ -6,7 +6,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 export type ServiceCardProps = {
-  id: number;
+  id: string;
   title: string;
   description: string;
   image: string;

@@ -151,9 +151,10 @@ export default function ServiceHorizontal() {
             />
 
             <div className="mt-12 hidden md:flex items-center gap-4 text-blue-200">
-              <span className="text-xs font-bold uppercase tracking-widest">
+              <span className="text-caption font-bold uppercase tracking-widest">
                 Swipe up to explore
               </span>
+
               <ArrowRight size={16} className="animate-pulse text-white" />
             </div>
           </div>
@@ -191,16 +192,16 @@ export default function ServiceHorizontal() {
             <div className="relative h-[80%] w-full bg-white rounded-[2.5rem] border border-slate-100 p-8 flex flex-col shadow-sm transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-blue-900/10 group-hover:border-blue-100 overflow-hidden">
               <div className="absolute top-24 left-1/2 -translate-x-1/2 w-24 h-4 bg-blue-900/5 blur-xl rounded-full transition-all duration-500 group-hover:w-16 group-hover:bg-blue-900/10 group-hover:blur-2xl" />
               <div className="pt-24 relative z-10 text-center flex-1 flex flex-col justify-center">
-                <h3 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-[#2776ea] transition-colors">
+                <h3 className="text-h3 text-slate-900 mb-2 group-hover:text-[#2776ea] transition-colors">
                   View All
                   <span className="block text-[#2776ea]">Solutions</span>
                 </h3>
-                <p className="text-sm font-medium text-slate-500 mt-2">
+                <p className="text-submenu text-slate-500 mt-2">
                   Explore our full range of engineering capabilities.
                 </p>
               </div>
               <div className="mt-auto pt-6 border-t border-slate-100 group-hover:border-slate-200/60 transition-colors flex justify-center">
-                <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-50 text-slate-600 font-bold text-xs uppercase tracking-wider transition-all duration-300 group-hover:bg-[#2776ea] group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-500/20">
+                <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-50 text-slate-600 font-bold text-menu uppercase tracking-wider transition-all duration-300 group-hover:bg-[#2776ea] group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-500/20">
                   <span>Get Started</span>
                   <ArrowRight
                     size={14}

@@ -37,12 +37,12 @@ export default function Branches() {
   return (
     <section
       id="branches"
-      className="relative overflow-hidden bg-slate-50 py-24 font-sora"
+      className="relative overflow-hidden bg-slate-50 py-24 lg:py-32 font-sora"
     >
       <div className="relative mx-auto container px-6 md:px-12 lg:px-24">
         
         {/* --- HEADER --- */}
-        <div className="mb-16">
+        <div className="mb-20 lg:mb-28">
             <SectionHeader 
                 badge="Network Coverage"
                 title="Strategic Digital"
@@ -63,43 +63,43 @@ export default function Branches() {
               
               <div>
                   {/* Type Label (Clean Text, No Badge) */}
-                  <span className="block text-[10px] font-bold uppercase tracking-widest text-[#2776ea] mb-3">
+                  <span className="block text-caption font-bold uppercase tracking-widest text-[#2776ea] mb-3">
                     {branch.type}
                   </span>
 
                   {/* City Name */}
-                  <h3 className="text-2xl font-black text-slate-900 mb-4 group-hover:text-[#2776ea] transition-colors">
+                  <h3 className="text-h3 font-black text-slate-900 mb-4 group-hover:text-[#2776ea] transition-colors">
                     {branch.city}
                   </h3>
 
                   {/* Address */}
-                  <p className="text-sm font-medium text-slate-500 leading-relaxed">
+                  <p className="text-body font-medium text-slate-500 leading-relaxed">
                     {branch.address}
                   </p>
               </div>
 
               {/* Card Footer: Actions */}
               <div className="mt-8 pt-6 border-t border-slate-100 flex items-center gap-4">
-                 
-                 {/* Call Button */}
-                 <a
-                   href={`tel:${branch.contact.replace(/\s/g, "")}`}
-                   className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-slate-50 text-xs font-bold text-slate-700 hover:bg-[#2776ea] hover:text-white transition-all active:scale-95"
-                 >
-                   <Phone size={14} />
-                   <span>Call Now</span>
-                 </a>
+                  
+                  {/* Call Button */}
+                  <a
+                    href={`tel:${branch.contact.replace(/\s/g, "")}`}
+                    className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-slate-50 text-menu font-bold text-slate-700 hover:bg-[#2776ea] hover:text-white transition-all active:scale-95"
+                  >
+                    <Phone size={14} />
+                    <span>Call Now</span>
+                  </a>
 
-                 {/* Map Icon Button */}
-                 <a
-                   href={branch.mapUrl}
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-slate-200 text-slate-400 hover:border-[#2776ea] hover:text-[#2776ea] transition-all active:scale-95 group/icon"
-                   aria-label="Get Directions"
-                 >
-                   <Navigation size={16} className="group-hover/icon:rotate-45 transition-transform" />
-                 </a>
+                  {/* Map Icon Button */}
+                  <a
+                    href={branch.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-slate-200 text-slate-400 hover:border-[#2776ea] hover:text-[#2776ea] transition-all active:scale-95 group/icon"
+                    aria-label="Get Directions"
+                  >
+                    <Navigation size={16} className="group-hover/icon:rotate-45 transition-transform" />
+                  </a>
               </div>
 
             </div>

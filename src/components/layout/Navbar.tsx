@@ -125,10 +125,7 @@ export default function Navbar() {
       });
     };
 
-    const observer = new IntersectionObserver(
-      observerCallback,
-      observerOptions,
-    );
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
     const sections = ["hero", "about", "partner", "client", "career"];
 
     sections.forEach((id) => {
@@ -164,15 +161,16 @@ export default function Navbar() {
 
   const isLinkActive = (item: any) => {
     if (item.href) return path === item.href;
-    if (item.type === "section" && path === "/")
-      return activeSection === item.id;
+    if (item.type === "section" && path === "/") return activeSection === item.id;
     return false;
   };
 
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-[100] transition-all duration-500 ${scrolled ? "py-3" : "py-6"}`}
+        className={`fixed inset-x-0 top-0 z-[100] transition-all duration-500 ${
+          scrolled ? "py-3" : "py-6"
+        }`}
       >
         <nav
           className={`mx-auto flex max-w-[95%] lg:max-w-7xl items-center justify-between px-5 py-2.5 rounded-2xl transition-all duration-500 ${
@@ -198,7 +196,7 @@ export default function Navbar() {
               <li>
                 <button
                   onClick={() => handleNavClick(navLinks[0])}
-                  className={`text-[11px] font-bold uppercase tracking-wider px-4 py-2 rounded-xl transition-all duration-300 ${
+                  className={`text-menu font-bold uppercase tracking-wider px-4 py-2 rounded-xl transition-all duration-300 ${
                     isLinkActive(navLinks[0])
                       ? "text-[#2776ea] bg-[#2776ea]/8"
                       : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
@@ -211,7 +209,7 @@ export default function Navbar() {
               {/* 2. SERVICES DROPDOWN (Group) */}
               <li className="relative group">
                 <button
-                  className={`flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider px-4 py-2 transition-all ${
+                  className={`flex items-center gap-1 text-menu font-bold uppercase tracking-wider px-4 py-2 transition-all ${
                     path.includes("/services") || path.includes("/service")
                       ? "text-[#2776ea]"
                       : "text-slate-600 group-hover:text-slate-900"
@@ -232,7 +230,6 @@ export default function Navbar() {
                         key={item.name}
                         onClick={() => handleNavClick(item)}
                         className={`flex items-center gap-3 w-full p-2.5 rounded-xl text-left transition-all hover:bg-slate-50 group/item ${
-                          // Special styling for the first "All Services" item
                           index === 0
                             ? "bg-slate-50/80 border-b border-slate-100 mb-1"
                             : ""
@@ -248,7 +245,9 @@ export default function Navbar() {
                           <item.icon size={16} />
                         </div>
                         <span
-                          className={`text-[10px] font-bold uppercase ${index === 0 ? "text-[#2776ea]" : "text-slate-700"}`}
+                          className={`text-submenu font-bold uppercase ${
+                            index === 0 ? "text-[#2776ea]" : "text-slate-700"
+                          }`}
                         >
                           {item.name}
                         </span>
@@ -261,7 +260,7 @@ export default function Navbar() {
               {/* 3. PRODUCTS DROPDOWN (NEW) */}
               <li className="relative group">
                 <button
-                  className={`flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider px-4 py-2 transition-all ${
+                  className={`flex items-center gap-1 text-menu font-bold uppercase tracking-wider px-4 py-2 transition-all ${
                     path.includes("/product")
                       ? "text-[#2776ea]"
                       : "text-slate-600 group-hover:text-slate-900"
@@ -297,7 +296,9 @@ export default function Navbar() {
                           <item.icon size={16} />
                         </div>
                         <span
-                          className={`text-[10px] font-bold uppercase ${index === 0 ? "text-[#2776ea]" : "text-slate-700"}`}
+                          className={`text-submenu font-bold uppercase ${
+                            index === 0 ? "text-[#2776ea]" : "text-slate-700"
+                          }`}
                         >
                           {item.name}
                         </span>
@@ -314,7 +315,7 @@ export default function Navbar() {
                   <li key={item.name}>
                     <button
                       onClick={() => handleNavClick(item)}
-                      className={`text-[11px] font-bold uppercase tracking-wider px-4 py-2 rounded-xl transition-all duration-300 ${
+                      className={`text-menu font-bold uppercase tracking-wider px-4 py-2 rounded-xl transition-all duration-300 ${
                         active
                           ? "text-[#2776ea] bg-[#2776ea]/8"
                           : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
@@ -328,7 +329,7 @@ export default function Navbar() {
 
               {/* 5. COMPANY DROPDOWN (Existing Group) */}
               <li className="relative group">
-                <button className="flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider px-4 py-2 text-slate-600 group-hover:text-slate-900 transition-all">
+                <button className="flex items-center gap-1 text-menu font-bold uppercase tracking-wider px-4 py-2 text-slate-600 group-hover:text-slate-900 transition-all">
                   Company{" "}
                   <ChevronDown
                     size={14}
@@ -358,7 +359,11 @@ export default function Navbar() {
                           <item.icon size={16} />
                         </div>
                         <span
-                          className={`text-[11px] font-bold uppercase ${activeSection === item.id && path === "/" ? "text-[#2776ea]" : "text-slate-700"}`}
+                          className={`text-submenu font-bold uppercase ${
+                            activeSection === item.id && path === "/"
+                              ? "text-[#2776ea]"
+                              : "text-slate-700"
+                          }`}
                         >
                           {item.name}
                         </span>
@@ -371,7 +376,7 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className="bg-[#2776ea] text-white px-7 py-3 rounded-xl text-[11px] font-bold uppercase tracking-widest hover:bg-[#1e5ebf] hover:scale-[1.02] transition-all shadow-md shadow-blue-500/10 active:scale-95"
+              className="bg-[#2776ea] text-white px-7 py-3 rounded-xl text-menu font-bold uppercase tracking-widest hover:bg-[#1e5ebf] hover:scale-[1.02] transition-all shadow-md shadow-blue-500/10 active:scale-95"
             >
               Start Project
             </Link>
@@ -388,7 +393,9 @@ export default function Navbar() {
 
       {/* --- MOBILE MENU --- */}
       <div
-        className={`fixed inset-0 z-[99] lg:hidden bg-white/98 backdrop-blur-2xl transition-all duration-500 ${open ? "opacity-100 visible" : "opacity-0 invisible"}`}
+        className={`fixed inset-0 z-[99] lg:hidden bg-white/98 backdrop-blur-2xl transition-all duration-500 ${
+          open ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
       >
         <div className="flex flex-col h-full pt-28 px-8 overflow-y-auto pb-10">
           {/* Main Links */}
@@ -400,7 +407,9 @@ export default function Navbar() {
                 className="flex items-center justify-between w-full py-4 text-left border-b border-slate-50"
               >
                 <span
-                  className={`text-xl font-black tracking-tight ${isLinkActive(item) ? "text-[#2776ea]" : "text-slate-900"}`}
+                  className={`text-xl font-black tracking-tight ${
+                    isLinkActive(item) ? "text-[#2776ea]" : "text-slate-900"
+                  }`}
                 >
                   {item.name}
                 </span>
@@ -415,7 +424,7 @@ export default function Navbar() {
           </div>
 
           {/* Services Grid (Mobile) */}
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em] mb-4">
+          <p className="text-caption font-bold text-slate-400 uppercase tracking-[0.3em] mb-4">
             Services
           </p>
           <div className="grid grid-cols-2 gap-3 mb-8">
@@ -423,14 +432,20 @@ export default function Navbar() {
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item)}
-                className={`p-3 bg-slate-50 rounded-xl flex flex-col gap-3 border border-slate-100/50 hover:bg-white hover:border-[#2776ea]/30 transition-all text-left ${index === 0 ? "col-span-2 bg-[#2776ea]/5 border-[#2776ea]/20" : ""}`}
+                className={`p-3 bg-slate-50 rounded-xl flex flex-col gap-3 border border-slate-100/50 hover:bg-white hover:border-[#2776ea]/30 transition-all text-left ${
+                  index === 0
+                    ? "col-span-2 bg-[#2776ea]/5 border-[#2776ea]/20"
+                    : ""
+                }`}
               >
                 <item.icon
                   size={20}
                   className={index === 0 ? "text-[#2776ea]" : "text-slate-500"}
                 />
                 <span
-                  className={`text-[9px] font-bold uppercase tracking-wider leading-tight ${index === 0 ? "text-[#2776ea]" : "text-slate-700"}`}
+                  className={`text-caption font-bold uppercase tracking-wider leading-tight ${
+                    index === 0 ? "text-[#2776ea]" : "text-slate-700"
+                  }`}
                 >
                   {item.name}
                 </span>
@@ -439,7 +454,7 @@ export default function Navbar() {
           </div>
 
           {/* Products Grid (Mobile - NEW) */}
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em] mb-4">
+          <p className="text-caption font-bold text-slate-400 uppercase tracking-[0.3em] mb-4">
             Products
           </p>
           <div className="grid grid-cols-2 gap-3 mb-8">
@@ -447,14 +462,20 @@ export default function Navbar() {
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item)}
-                className={`p-3 bg-slate-50 rounded-xl flex flex-col gap-3 border border-slate-100/50 hover:bg-white hover:border-[#2776ea]/30 transition-all text-left ${index === 0 ? "col-span-2 bg-[#2776ea]/5 border-[#2776ea]/20" : ""}`}
+                className={`p-3 bg-slate-50 rounded-xl flex flex-col gap-3 border border-slate-100/50 hover:bg-white hover:border-[#2776ea]/30 transition-all text-left ${
+                  index === 0
+                    ? "col-span-2 bg-[#2776ea]/5 border-[#2776ea]/20"
+                    : ""
+                }`}
               >
                 <item.icon
                   size={20}
                   className={index === 0 ? "text-[#2776ea]" : "text-slate-500"}
                 />
                 <span
-                  className={`text-[9px] font-bold uppercase tracking-wider leading-tight ${index === 0 ? "text-[#2776ea]" : "text-slate-700"}`}
+                  className={`text-caption font-bold uppercase tracking-wider leading-tight ${
+                    index === 0 ? "text-[#2776ea]" : "text-slate-700"
+                  }`}
                 >
                   {item.name}
                 </span>
@@ -463,7 +484,7 @@ export default function Navbar() {
           </div>
 
           {/* Company Grid (Mobile) */}
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em] mb-4">
+          <p className="text-caption font-bold text-slate-400 uppercase tracking-[0.3em] mb-4">
             Company
           </p>
           <div className="grid grid-cols-2 gap-3">
@@ -474,7 +495,7 @@ export default function Navbar() {
                 className="p-3 bg-slate-50 rounded-xl flex flex-col gap-3 border border-slate-100/50 hover:bg-white hover:border-[#2776ea]/30 transition-all text-left"
               >
                 <item.icon size={20} className="text-[#2776ea]" />
-                <span className="text-[9px] font-bold uppercase text-slate-700 tracking-wider">
+                <span className="text-caption font-bold uppercase text-slate-700 tracking-wider">
                   {item.name}
                 </span>
               </button>

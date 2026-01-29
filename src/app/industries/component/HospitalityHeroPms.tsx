@@ -28,10 +28,10 @@ export default function HospitalityHeroPms() {
                 className="mb-8"
               />
               <div className="flex flex-wrap gap-3">
-                <Link href="#solutions" className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#2776ea] text-white text-sm font-bold uppercase tracking-wider hover:bg-[#1a5bbd] transition-all shadow-lg shadow-blue-500/20 active:scale-95">
+                <Link href="#solutions" className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#2776ea] text-white text-menu font-bold uppercase tracking-wider hover:bg-[#1a5bbd] transition-all shadow-lg shadow-blue-500/20 active:scale-95">
                   Elevate Service
                 </Link>
-                <Link href="#case-studies" className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 text-sm font-bold uppercase tracking-wider hover:bg-white hover:border-[#2776ea]/30 hover:text-[#2776ea] transition-all active:scale-95">
+                <Link href="#case-studies" className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 text-menu font-bold uppercase tracking-wider hover:bg-white hover:border-[#2776ea]/30 hover:text-[#2776ea] transition-all active:scale-95">
                   Case Studies <ArrowRight size={16} />
                 </Link>
               </div>
@@ -47,8 +47,8 @@ export default function HospitalityHeroPms() {
                    <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
                    <div className="flex justify-between items-start relative z-10">
                       <div>
-                         <p className="text-xs font-bold text-blue-100 uppercase tracking-wide mb-1">Welcome Back</p>
-                         <h3 className="text-xl font-black">Alex Morgan</h3>
+                         <p className="text-caption font-bold text-blue-100 uppercase tracking-wide mb-1">Welcome Back</p>
+                         <h3 className="text-h3 font-black">Alex Morgan</h3>
                       </div>
                       <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm">
                          <Bell size={18} />
@@ -61,18 +61,18 @@ export default function HospitalityHeroPms() {
                    <div className="grid grid-cols-2 gap-4 mb-6">
                       <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100 flex flex-col items-center gap-2 hover:bg-white hover:shadow-lg transition-all cursor-pointer">
                          <CalendarCheck size={20} className="text-[#2776ea]" />
-                         <span className="text-xs font-bold text-slate-600">Check-In</span>
+                         <span className="text-caption font-bold text-slate-600">Check-In</span>
                       </div>
                       <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100 flex flex-col items-center gap-2 hover:bg-white hover:shadow-lg transition-all cursor-pointer">
                          <Utensils size={20} className="text-[#2776ea]" />
-                         <span className="text-xs font-bold text-slate-600">Dining</span>
+                         <span className="text-caption font-bold text-slate-600">Dining</span>
                       </div>
                    </div>
 
                    <div className="bg-slate-900 rounded-2xl p-4 flex items-center justify-between text-white">
                       <div>
-                         <p className="text-[10px] font-bold text-slate-400 uppercase">Room Key</p>
-                         <p className="text-sm font-bold">Room 402</p>
+                         <p className="text-caption font-bold text-slate-400 uppercase">Room Key</p>
+                         <p className="text-submenu font-bold">Room 402</p>
                       </div>
                       <div className="h-8 w-8 rounded-full bg-[#76ea27] flex items-center justify-center text-slate-900">
                          <ArrowRight size={14} className="-rotate-45" />
@@ -87,8 +87,8 @@ export default function HospitalityHeroPms() {
                   <Star size={20} fill="currentColor" />
                 </div>
                 <div>
-                  <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">Rating</span>
-                  <span className="block text-sm font-black text-slate-900">4.9/5.0</span>
+                  <span className="block text-caption font-bold text-slate-400 uppercase tracking-wider">Rating</span>
+                  <span className="block text-submenu font-black text-slate-900">4.9/5.0</span>
                 </div>
               </div>
             </div>
@@ -105,14 +105,14 @@ export default function HospitalityHeroPms() {
               <SectionHeader title={overview.title} centered={false} />
             </div>
             <div className="lg:w-2/3">
-              <p className="text-lg text-slate-600 leading-relaxed font-medium">
+              <p className="text-body text-slate-600 leading-relaxed font-medium">
                 {overview.content} 
               </p>
             </div>
           </div>
 
           <div className="mb-24">
-            <h3 className="text-2xl font-black text-slate-900 mb-10 text-center">Critical Hospitality Challenges</h3>
+            <h3 className="text-h2 font-black text-slate-900 mb-10 text-center">Critical Hospitality Challenges</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {overview.challenges.map((item, index) => (
                 <div key={index} className="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300">
@@ -120,9 +120,9 @@ export default function HospitalityHeroPms() {
                     <div className="p-3 rounded-xl bg-[#2776ea]/10 text-[#2776ea]">
                       <item.icon size={28} strokeWidth={1.5} />
                     </div>
-                    <h4 className="text-lg font-bold text-slate-900 leading-tight">{item.title}</h4>
+                    <h4 className="text-h3 font-bold text-slate-900 leading-tight">{item.title}</h4>
                   </div>
-                  <p className="text-sm text-slate-600 leading-relaxed font-medium">{item.desc}</p>
+                  <p className="text-submenu text-slate-600 leading-relaxed font-medium">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -131,8 +131,8 @@ export default function HospitalityHeroPms() {
           <div className="bg-[#2776ea] rounded-[3rem] p-10 md:p-16 shadow-2xl relative overflow-hidden text-white">
             <div className="relative z-10">
               <div className="text-center max-w-3xl mx-auto mb-12">
-                <h3 className="text-3xl font-black mb-6">{overview.expertise.title}</h3>
-                <p className="text-lg text-blue-50 leading-relaxed">{overview.expertise.description}</p>
+                <h3 className="text-h2 font-black mb-6">{overview.expertise.title}</h3>
+                <p className="text-body text-blue-50 leading-relaxed">{overview.expertise.description}</p>
               </div>
               <div className="grid md:grid-cols-2 gap-6">
                 {overview.expertise.stats.map((stat, index) => (
@@ -140,7 +140,7 @@ export default function HospitalityHeroPms() {
                     <div className="p-2 rounded-full bg-white text-[#2776ea] shadow-sm shrink-0">
                       <CheckCircle2 size={20} />
                     </div>
-                    <span className="text-sm font-bold text-white">{stat}</span>
+                    <span className="text-submenu font-bold text-white">{stat}</span>
                   </div>
                 ))}
               </div>
@@ -162,15 +162,15 @@ export default function HospitalityHeroPms() {
                 <div className="p-3 rounded-2xl bg-[#2776ea]/10 text-[#2776ea]">
                   <pms.frontOffice.icon size={32} />
                 </div>
-                <h3 className="text-2xl font-black text-slate-900">{pms.frontOffice.title}</h3>
+                <h3 className="text-h2 font-black text-slate-900">{pms.frontOffice.title}</h3>
               </div>
               <div className="grid lg:grid-cols-3 gap-8">
                 {pms.frontOffice.columns.map((col, idx) => (
                   <div key={idx} className="bg-white p-8 rounded-[2rem] border border-slate-200 hover:border-[#2776ea]/30 transition-colors shadow-sm">
-                    <h4 className="font-bold text-lg text-slate-900 mb-6">{col.title}</h4>
+                    <h4 className="font-bold text-h3 text-slate-900 mb-6">{col.title}</h4>
                     <ul className="space-y-3">
                       {col.items.map((item, i) => (
-                        <li key={i} className="flex items-start gap-3 text-sm text-slate-600 font-medium">
+                        <li key={i} className="flex items-start gap-3 text-submenu text-slate-600 font-medium">
                           <span className="h-1.5 w-1.5 rounded-full bg-[#2776ea] mt-1.5 shrink-0" />
                           <span className="leading-relaxed">{item}</span>
                         </li>
@@ -188,15 +188,15 @@ export default function HospitalityHeroPms() {
                   <div className="p-3 rounded-2xl bg-white text-[#2776ea]">
                     <pms.housekeeping.icon size={32} />
                   </div>
-                  <h3 className="text-2xl font-black">{pms.housekeeping.title}</h3>
+                  <h3 className="text-h2 font-black">{pms.housekeeping.title}</h3>
                 </div>
 
                 <div className="grid lg:grid-cols-3 gap-12">
                   <div>
-                    <h4 className="font-bold text-[#76ea27] mb-6 uppercase tracking-wider text-sm">{pms.housekeeping.statusMgmt.title}</h4>
+                    <h4 className="font-bold text-[#76ea27] mb-6 uppercase tracking-wider text-caption">{pms.housekeeping.statusMgmt.title}</h4>
                     <ul className="space-y-3">
                       {pms.housekeeping.statusMgmt.items.map((item, i) => (
-                        <li key={i} className="flex items-start gap-3 text-sm text-blue-50 font-medium">
+                        <li key={i} className="flex items-start gap-3 text-submenu text-blue-50 font-medium">
                           <span className="h-1.5 w-1.5 rounded-full bg-[#76ea27] mt-1.5 shrink-0" />
                           <span className="leading-relaxed">{item}</span>
                         </li>
@@ -205,10 +205,10 @@ export default function HospitalityHeroPms() {
                   </div>
 
                   <div>
-                    <h4 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">{pms.housekeeping.mobileApp.title}</h4>
+                    <h4 className="font-bold text-white mb-6 uppercase tracking-wider text-caption">{pms.housekeeping.mobileApp.title}</h4>
                     <ul className="space-y-3">
                       {pms.housekeeping.mobileApp.items.map((item, i) => (
-                        <li key={i} className="flex items-start gap-3 text-sm text-blue-50 font-medium">
+                        <li key={i} className="flex items-start gap-3 text-submenu text-blue-50 font-medium">
                           <Smartphone size={16} className="text-white shrink-0 mt-0.5" />
                           <span className="leading-relaxed">{item}</span>
                         </li>
@@ -217,12 +217,12 @@ export default function HospitalityHeroPms() {
                   </div>
 
                   <div className="bg-white/10 p-8 rounded-3xl border border-white/20 backdrop-blur-md">
-                    <h4 className="font-bold text-white mb-6 uppercase tracking-wider text-sm flex items-center gap-2">
+                    <h4 className="font-bold text-white mb-6 uppercase tracking-wider text-caption flex items-center gap-2">
                       <TrendingUp size={16} /> {pms.housekeeping.efficiency.title}
                     </h4>
                     <ul className="space-y-4">
                       {pms.housekeeping.efficiency.items.map((item, i) => (
-                        <li key={i} className="flex items-start gap-3 text-sm font-bold text-white">
+                        <li key={i} className="flex items-start gap-3 text-submenu font-bold text-white">
                           <CheckCircle2 size={16} className="text-[#76ea27] shrink-0 mt-0.5" />
                           <span className="leading-relaxed">{item}</span>
                         </li>
@@ -238,18 +238,18 @@ export default function HospitalityHeroPms() {
               <div className="bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm">
                 <div className="flex items-center gap-4 mb-8">
                   <div className="p-3 rounded-2xl bg-[#2776ea]/10 text-[#2776ea]"><pms.pos.icon size={28} /></div>
-                  <h3 className="text-2xl font-black text-slate-900">{pms.pos.title}</h3>
+                  <h3 className="text-h2 font-black text-slate-900">{pms.pos.title}</h3>
                 </div>
                 <div className="space-y-8">
                   {pms.pos.sections.map((sec, idx) => (
                     <div key={idx}>
                       <div className="flex items-center gap-2 mb-4">
                         <sec.icon className="text-[#2776ea]" size={18} />
-                        <h4 className="font-bold text-slate-900">{sec.title}</h4>
+                        <h4 className="font-bold text-slate-900 text-h3">{sec.title}</h4>
                       </div>
                       <ul className="space-y-2 pl-7 border-l-2 border-[#2776ea]/20">
                         {sec.items.map((item, i) => (
-                          <li key={i} className="text-sm text-slate-600 font-medium">{item}</li>
+                          <li key={i} className="text-submenu text-slate-600 font-medium">{item}</li>
                         ))}
                       </ul>
                     </div>
@@ -260,15 +260,15 @@ export default function HospitalityHeroPms() {
               <div className="bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm">
                 <div className="flex items-center gap-4 mb-8">
                   <div className="p-3 rounded-2xl bg-[#76ea27]/10 text-[#76ea27]"><pms.backOffice.icon size={28} /></div>
-                  <h3 className="text-2xl font-black text-slate-900">{pms.backOffice.title}</h3>
+                  <h3 className="text-h2 font-black text-slate-900">{pms.backOffice.title}</h3>
                 </div>
                 <div className="space-y-8">
                   {pms.backOffice.sections.map((sec, idx) => (
                     <div key={idx}>
-                      <h4 className="font-bold text-slate-900 mb-4">{sec.title}</h4>
+                      <h4 className="font-bold text-slate-900 mb-4 text-h3">{sec.title}</h4>
                       <ul className="space-y-2">
                         {sec.items.map((item, i) => (
-                          <li key={i} className="flex items-start gap-2 text-sm text-slate-600 font-medium">
+                          <li key={i} className="flex items-start gap-2 text-submenu text-slate-600 font-medium">
                             <span className="h-1.5 w-1.5 rounded-full bg-[#76ea27] mt-1.5 shrink-0" />
                             <span className="leading-relaxed">{item}</span>
                           </li>
@@ -282,10 +282,10 @@ export default function HospitalityHeroPms() {
 
             {/* Platforms */}
             <div className="text-center">
-              <span className="text-sm font-bold text-slate-500 uppercase tracking-wider block mb-4">PMS Platforms</span>
+              <span className="text-caption font-bold text-slate-500 uppercase tracking-wider block mb-4">PMS Platforms</span>
               <div className="flex flex-wrap justify-center gap-3">
                 {pms.platforms.map((plat, i) => (
-                  <span key={i} className="px-4 py-2 bg-white border border-slate-200 rounded-full text-sm font-bold text-slate-600 shadow-sm hover:border-[#2776ea] transition-colors">
+                  <span key={i} className="px-4 py-2 bg-white border border-slate-200 rounded-full text-submenu font-bold text-slate-600 shadow-sm hover:border-[#2776ea] transition-colors">
                     {plat}
                   </span>
                 ))}

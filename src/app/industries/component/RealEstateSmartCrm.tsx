@@ -17,7 +17,7 @@ export default function RealEstateSmartCrm() {
 
           {/* BMS Grid */}
           <div className="mb-20">
-            <h3 className="text-2xl font-bold mb-8 text-white border-b border-white/20 pb-4">
+            <h3 className="text-h2 font-bold mb-8 text-white border-b border-white/20 pb-4">
               {smartBuilding.bms.title}
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -26,10 +26,10 @@ export default function RealEstateSmartCrm() {
                   <div className="p-3 rounded-xl bg-white text-[#2776ea] w-fit mb-4">
                     <cat.icon size={24} />
                   </div>
-                  <h4 className="font-bold text-lg mb-4">{cat.title}</h4>
+                  <h4 className="font-bold text-h3 mb-4">{cat.title}</h4>
                   <ul className="space-y-2">
                     {cat.items.map((item, i) => (
-                      <li key={i} className="text-xs text-blue-50 leading-relaxed">• {item}</li>
+                      <li key={i} className="text-caption text-blue-50 leading-relaxed">• {item}</li>
                     ))}
                   </ul>
                 </div>
@@ -42,14 +42,14 @@ export default function RealEstateSmartCrm() {
             
             {/* IoT Sensors (White Card) */}
             <div className="bg-white p-8 rounded-[2.5rem] text-slate-900 shadow-2xl">
-              <h3 className="text-xl font-bold mb-6 text-slate-900">{smartBuilding.iot.title}</h3>
+              <h3 className="text-h3 font-bold mb-6 text-slate-900">{smartBuilding.iot.title}</h3>
               <div className="space-y-6">
                 {smartBuilding.iot.items.map((item, i) => (
                   <div key={i}>
-                    <h4 className="font-bold text-[#2776ea] text-sm mb-2">{item.title}</h4>
+                    <h4 className="font-bold text-[#2776ea] text-submenu mb-2">{item.title}</h4>
                     <ul className="space-y-1">
                       {item.details.map((det, j) => (
-                        <li key={j} className="text-sm text-slate-600">• {det}</li>
+                        <li key={j} className="text-submenu text-slate-600">• {det}</li>
                       ))}
                     </ul>
                   </div>
@@ -59,16 +59,16 @@ export default function RealEstateSmartCrm() {
 
             {/* Tenant Experience (Glass Card) */}
             <div className="bg-white/10 border border-white/20 p-8 rounded-[2.5rem] text-white">
-              <h3 className="text-xl font-bold mb-6">{smartBuilding.tenantExp.title}</h3>
+              <h3 className="text-h3 font-bold mb-6">{smartBuilding.tenantExp.title}</h3>
               
               <div className="bg-white/10 p-6 rounded-3xl mb-6 border border-white/10">
                 <div className="flex items-center gap-3 mb-4">
                   <smartBuilding.tenantExp.app.icon />
-                  <h4 className="font-bold">{smartBuilding.tenantExp.app.title}</h4>
+                  <h4 className="font-bold text-submenu">{smartBuilding.tenantExp.app.title}</h4>
                 </div>
                 <ul className="grid sm:grid-cols-2 gap-2">
                   {smartBuilding.tenantExp.app.items.map((item, i) => (
-                    <li key={i} className="text-xs text-blue-100 flex items-start gap-2">
+                    <li key={i} className="text-caption text-blue-100 flex items-start gap-2">
                       <CheckCircle2 size={12} className="shrink-0 mt-0.5 text-[#76ea27]" /> {item}
                     </li>
                   ))}
@@ -76,10 +76,10 @@ export default function RealEstateSmartCrm() {
               </div>
 
               <div>
-                <h4 className="font-bold mb-3 text-blue-100">{smartBuilding.tenantExp.benefits.title}</h4>
+                <h4 className="font-bold mb-3 text-blue-100 text-submenu">{smartBuilding.tenantExp.benefits.title}</h4>
                 <ul className="space-y-2">
                   {smartBuilding.tenantExp.benefits.items.map((item, i) => (
-                    <li key={i} className="text-sm font-bold text-white flex items-center gap-2">
+                    <li key={i} className="text-submenu font-bold text-white flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#76ea27]" /> {item}
                     </li>
                   ))}
@@ -106,17 +106,17 @@ export default function RealEstateSmartCrm() {
                     <div className="p-3 rounded-xl bg-[#2776ea]/10 text-[#2776ea]">
                       <stage.icon size={28} />
                     </div>
-                    <h3 className="text-xl font-bold text-slate-900">{stage.title}</h3>
+                    <h3 className="text-h3 font-bold text-slate-900">{stage.title}</h3>
                   </div>
 
                   {stage.subSections ? (
                     <div className="grid sm:grid-cols-2 gap-6">
                       {stage.subSections.map((sub, i) => (
                         <div key={i}>
-                          <h4 className="font-bold text-slate-700 mb-3 text-sm uppercase tracking-wider">{sub.label}</h4>
+                          <h4 className="font-bold text-slate-700 mb-3 text-caption uppercase tracking-wider">{sub.label}</h4>
                           <ul className="space-y-2">
                             {sub.items.map((item, j) => (
-                              <li key={j} className="text-sm text-slate-600 flex items-start gap-2">
+                              <li key={j} className="text-submenu text-slate-600 flex items-start gap-2">
                                 <span className="text-[#2776ea]">•</span> {item}
                               </li>
                             ))}
@@ -127,7 +127,7 @@ export default function RealEstateSmartCrm() {
                   ) : (
                     <ul className="space-y-3">
                       {stage.items.map((item, i) => (
-                        <li key={i} className="flex items-start gap-3 text-sm text-slate-600 font-medium">
+                        <li key={i} className="flex items-start gap-3 text-submenu text-slate-600 font-medium">
                           <CheckCircle2 size={16} className="text-[#2776ea] shrink-0 mt-0.5" />
                           <span className="leading-snug">{item}</span>
                         </li>
@@ -147,11 +147,11 @@ export default function RealEstateSmartCrm() {
                 <div key={index} className="bg-white p-6 rounded-[2rem] border border-slate-200 hover:border-[#2776ea] transition-colors">
                   <div className="flex items-center gap-3 mb-4">
                     <cat.icon className="text-[#2776ea]" size={24} />
-                    <h4 className="font-bold text-slate-900">{cat.title}</h4>
+                    <h4 className="font-bold text-slate-900 text-h3">{cat.title}</h4>
                   </div>
                   <ul className="space-y-2 border-t border-slate-100 pt-4">
                     {cat.items.map((item, i) => (
-                      <li key={i} className="text-sm text-slate-600 leading-snug">
+                      <li key={i} className="text-submenu text-slate-600 leading-snug">
                         {item}
                       </li>
                     ))}
@@ -179,8 +179,8 @@ export default function RealEstateSmartCrm() {
                     <div className="flex items-center gap-4">
                     
                        <div>
-                          <h3 className="text-2xl font-black text-slate-900">{study.title}</h3>
-                          <p className="text-slate-500 text-sm font-medium mt-1">{study.client}</p>
+                          <h3 className="text-h2 font-black text-slate-900">{study.title}</h3>
+                          <p className="text-slate-500 text-submenu font-medium mt-1">{study.client}</p>
                        </div>
                     </div>
                   </div>
@@ -188,24 +188,24 @@ export default function RealEstateSmartCrm() {
                   <div className="p-8 md:p-12 grid md:grid-cols-2 gap-12">
                     <div className="space-y-8">
                       <div>
-                        <h4 className="flex items-center gap-2 text-lg font-black text-red-500 mb-4 uppercase tracking-wider">
+                        <h4 className="flex items-center gap-2 text-h3 font-black text-red-500 mb-4 uppercase tracking-wider">
                           Challenge
                         </h4>
                         <ul className="space-y-2">
                           {study.challenge.items.map((item, i) => (
-                            <li key={i} className="text-sm text-slate-600 flex items-start gap-2">
+                            <li key={i} className="text-submenu text-slate-600 flex items-start gap-2">
                               <span className="text-red-400 mt-1">•</span> {item}
                             </li>
                           ))}
                         </ul>
                       </div>
                       <div>
-                        <h4 className="flex items-center gap-2 text-lg font-black text-[#2776ea] mb-4 uppercase tracking-wider">
+                        <h4 className="flex items-center gap-2 text-h3 font-black text-[#2776ea] mb-4 uppercase tracking-wider">
                           Solution
                         </h4>
                         <ul className="space-y-2">
                           {study.solution.items.map((item, i) => (
-                            <li key={i} className="text-sm text-slate-600 flex items-start gap-2">
+                            <li key={i} className="text-submenu text-slate-600 flex items-start gap-2">
                               <CheckCircle2 size={16} className="text-[#2776ea] mt-0.5 shrink-0" /> {item}
                             </li>
                           ))}
@@ -214,12 +214,12 @@ export default function RealEstateSmartCrm() {
                     </div>
 
                     <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
-                      <h4 className="flex items-center gap-2 text-lg font-black text-[#76ea27] mb-6 uppercase tracking-wider">
+                      <h4 className="flex items-center gap-2 text-h3 font-black text-[#76ea27] mb-6 uppercase tracking-wider">
                         Results
                       </h4>
                       <ul className="space-y-3">
                         {study.results.items.map((item, i) => (
-                          <li key={i} className="text-sm font-bold text-slate-700 border-b border-slate-50 last:border-0 pb-2 last:pb-0">
+                          <li key={i} className="text-submenu font-bold text-slate-700 border-b border-slate-50 last:border-0 pb-2 last:pb-0">
                             {item}
                           </li>
                         ))}
@@ -240,13 +240,13 @@ export default function RealEstateSmartCrm() {
                     <div className="p-2 rounded-lg bg-slate-50 text-[#2776ea] group-hover:bg-[#2776ea] group-hover:text-white transition-colors">
                       <cat.icon size={20} />
                     </div>
-                    <h3 className="font-bold text-slate-900 leading-tight">{cat.title}</h3>
+                    <h3 className="font-bold text-slate-900 leading-tight text-h3">{cat.title}</h3>
                   </div>
                   <ul className="space-y-4">
                     {cat.items.map((item, i) => (
                       <li key={i}>
-                        <p className="text-xs text-slate-500 uppercase tracking-wide mb-1">{item.label}</p>
-                        <p className="font-black text-[#2776ea] text-lg">{item.price}</p>
+                        <p className="text-caption text-slate-500 uppercase tracking-wide mb-1">{item.label}</p>
+                        <p className="font-black text-[#2776ea] text-h3">{item.price}</p>
                       </li>
                     ))}
                   </ul>

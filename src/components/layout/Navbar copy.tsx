@@ -27,16 +27,16 @@ import {
 // --- DATA CONFIGURATION ---
 
 // 1. Standalone Links (Home, Projects, etc.)
+// Removed "Products" from here as it is now a dropdown
 const navLinks = [
   { name: "Home", type: "page", id: "/" },
   { name: "Projects", type: "page", href: "/projects" },
-  { name: "Products", type: "page", href: "/products" },
   { name: "Branches", type: "page", href: "/branchs" },
 ];
 
-// 2. Services Group (Updated with "All Services" at the top)
+// 2. Services Group (Removed StoreTech from here)
 const serviceItems = [
-  { name: "All Services", href: "/service", icon: LayoutGrid }, // <--- ADDED HERE
+  { name: "All Services", href: "/service", icon: LayoutGrid },
   {
     name: "Web Development",
     href: "/services?category=web-development",
@@ -68,10 +68,15 @@ const serviceItems = [
     href: "/services?category=data-analytics",
     icon: BarChart3,
   },
-  { name: "StoreTech", href: "/services?category=storetech", icon: Store },
 ];
 
-// 3. Company Group (Existing Dropdown Data)
+// 3. Products Group (NEW - Includes StoreTech)
+const productItems = [
+  { name: "All Products", href: "/products", icon: LayoutGrid },
+  { name: "StoreTech", href: "/product?category=storetech", icon: Store },
+];
+
+// 4. Company Group (Existing Dropdown Data)
 const companyItems = [
   { name: "About Us", type: "page", id: "/about", icon: Info },
   { name: "Industries", type: "page", id: "/industries", icon: Info },
@@ -87,21 +92,20 @@ export default function Navbar() {
   const router = useRouter();
   const path = usePathname();
 
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 30);
+    };
 
-useEffect(() => {
-  const onScroll = () => {
-    setScrolled(window.scrollY > 30);
-  };
+    if (path === "/industries") {
+      setScrolled(true);
+    } else {
+      onScroll();
+      window.addEventListener("scroll", onScroll);
+    }
 
-  if (path === "/industries") {
-    setScrolled(true);
-  } else {
-    onScroll();
-    window.addEventListener("scroll", onScroll);
-  }
-
-  return () => window.removeEventListener("scroll", onScroll);
-}, [path]);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [path]);
 
   // Intersection Observer for section activation
   useEffect(() => {
@@ -208,7 +212,7 @@ useEffect(() => {
               <li className="relative group">
                 <button
                   className={`flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider px-4 py-2 transition-all ${
-                    path.includes("/services")
+                    path.includes("/services") || path.includes("/service")
                       ? "text-[#2776ea]"
                       : "text-slate-600 group-hover:text-slate-900"
                   }`}
@@ -254,7 +258,56 @@ useEffect(() => {
                 </div>
               </li>
 
-              {/* 3. REST OF NAV LINKS (Projects, Products, Branches) */}
+              {/* 3. PRODUCTS DROPDOWN (NEW) */}
+              <li className="relative group">
+                <button
+                  className={`flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider px-4 py-2 transition-all ${
+                    path.includes("/product")
+                      ? "text-[#2776ea]"
+                      : "text-slate-600 group-hover:text-slate-900"
+                  }`}
+                >
+                  Products{" "}
+                  <ChevronDown
+                    size={14}
+                    className="group-hover:rotate-180 transition-transform duration-300"
+                  />
+                </button>
+
+                {/* Products Dropdown Panel */}
+                <div className="absolute top-full left-0 mt-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-3 group-hover:translate-y-0">
+                  <div className="bg-white/95 backdrop-blur-xl border border-slate-100 rounded-2xl p-2 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] flex flex-col gap-1">
+                    {productItems.map((item, index) => (
+                      <button
+                        key={item.name}
+                        onClick={() => handleNavClick(item)}
+                        className={`flex items-center gap-3 w-full p-2.5 rounded-xl text-left transition-all hover:bg-slate-50 group/item ${
+                          index === 0
+                            ? "bg-slate-50/80 border-b border-slate-100 mb-1"
+                            : ""
+                        }`}
+                      >
+                        <div
+                          className={`h-8 w-8 rounded-lg flex items-center justify-center transition-colors ${
+                            index === 0
+                              ? "bg-[#2776ea] text-white"
+                              : "bg-slate-50 text-slate-500 group-hover/item:text-[#2776ea] group-hover/item:bg-[#2776ea]/10"
+                          }`}
+                        >
+                          <item.icon size={16} />
+                        </div>
+                        <span
+                          className={`text-[10px] font-bold uppercase ${index === 0 ? "text-[#2776ea]" : "text-slate-700"}`}
+                        >
+                          {item.name}
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </li>
+
+              {/* 4. REST OF NAV LINKS (Projects, Branches) */}
               {navLinks.slice(1).map((item) => {
                 const active = isLinkActive(item);
                 return (
@@ -273,7 +326,7 @@ useEffect(() => {
                 );
               })}
 
-              {/* 4. COMPANY DROPDOWN (Existing Group) */}
+              {/* 5. COMPANY DROPDOWN (Existing Group) */}
               <li className="relative group">
                 <button className="flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider px-4 py-2 text-slate-600 group-hover:text-slate-900 transition-all">
                   Company{" "}
@@ -367,6 +420,30 @@ useEffect(() => {
           </p>
           <div className="grid grid-cols-2 gap-3 mb-8">
             {serviceItems.map((item, index) => (
+              <button
+                key={item.name}
+                onClick={() => handleNavClick(item)}
+                className={`p-3 bg-slate-50 rounded-xl flex flex-col gap-3 border border-slate-100/50 hover:bg-white hover:border-[#2776ea]/30 transition-all text-left ${index === 0 ? "col-span-2 bg-[#2776ea]/5 border-[#2776ea]/20" : ""}`}
+              >
+                <item.icon
+                  size={20}
+                  className={index === 0 ? "text-[#2776ea]" : "text-slate-500"}
+                />
+                <span
+                  className={`text-[9px] font-bold uppercase tracking-wider leading-tight ${index === 0 ? "text-[#2776ea]" : "text-slate-700"}`}
+                >
+                  {item.name}
+                </span>
+              </button>
+            ))}
+          </div>
+
+          {/* Products Grid (Mobile - NEW) */}
+          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em] mb-4">
+            Products
+          </p>
+          <div className="grid grid-cols-2 gap-3 mb-8">
+            {productItems.map((item, index) => (
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item)}

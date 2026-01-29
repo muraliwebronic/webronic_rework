@@ -47,7 +47,7 @@ export default function UniversalProcess({ data }: { data: ServicePageData['proc
                     {/* --- LEFT: STEP INDICATOR --- */}
                     <div className="flex flex-row md:flex-col items-center gap-4 md:w-20 shrink-0">
                         {/* Number */}
-                        <span className="text-h1 font-black text-slate-200 group-hover:text-[#2776ea]/20 transition-colors">
+                        <span className="text-4xl font-black text-slate-200 group-hover:text-[#2776ea]/20 transition-colors">
                             0{index + 1}
                         </span>
                         
@@ -60,19 +60,19 @@ export default function UniversalProcess({ data }: { data: ServicePageData['proc
                     {/* --- RIGHT: CONTENT --- */}
                     <div className="flex-1 pt-1">
                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
-                            <h3 className="text-h3 font-black text-slate-900">{phase.title}</h3>
+                            <h3 className="text-xl font-black text-slate-900">{phase.title}</h3>
                             
                             {/* Duration Badge */}
                             <div className="flex items-center gap-1.5 px-3 py-1 bg-white rounded-lg border border-slate-200 shadow-sm w-fit">
                                 <Clock size={12} className="text-slate-400" />
-                                <span className="text-caption font-bold text-slate-500 uppercase tracking-wide">{phase.duration}</span>
+                                <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wide">{phase.duration}</span>
                             </div>
                         </div>
 
                         {/* Objectives Grid */}
                         <ul className="grid sm:grid-cols-2 gap-3">
                             {phase.objectives.map((item, i) => (
-                                <li key={i} className="flex items-start gap-2.5 text-caption font-semibold text-slate-600 bg-white p-3 rounded-xl border border-slate-100 shadow-sm group-hover:border-[#2776ea]/10 transition-colors">
+                                <li key={i} className="flex items-start gap-2.5 text-xs font-semibold text-slate-600 bg-white p-3 rounded-xl border border-slate-100 shadow-sm group-hover:border-[#2776ea]/10 transition-colors">
                                     <div className="mt-0.5 w-4 h-4 rounded-full bg-[#2776ea]/10 flex items-center justify-center shrink-0 text-[#2776ea]">
                                         <Check size={8} strokeWidth={4} />
                                     </div>

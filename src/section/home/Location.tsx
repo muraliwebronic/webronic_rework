@@ -5,49 +5,49 @@ import { Globe2, MapPin, Navigation, Building2, LucideIcon, Briefcase } from "lu
 import SectionHeader from "@/components/common/SectionHeader";
 
 // --- CHILD COMPONENT: 3D LOCATION CARD (REDESIGNED) ---
-const LocationCard = ({ 
-    title, 
-    addr, 
-    icon: Icon, 
-    accentColor = "#2776ea", // Default Blue
-    tag
-}: { 
-    title: string, 
-    addr: string, 
-    icon: LucideIcon, 
-    accentColor?: string,
-    tag?: string
+const LocationCard = ({
+  title,
+  addr,
+  icon: Icon,
+  accentColor = "#2776ea", // Default Blue
+  tag,
+}: {
+  title: string;
+  addr: string;
+  icon: LucideIcon;
+  accentColor?: string;
+  tag?: string;
 }) => (
-    // CLEAN, COMPACT & UNIFORM DESIGN
-    <div className="group h-full bg-white rounded-2xl border border-slate-200 p-6 flex flex-col hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-300">
-      
-      <div className="flex items-start justify-between mb-4">
-        {/* Icon Box */}
-        <div 
-            className="h-10 w-10 rounded-lg flex items-center justify-center transition-colors duration-300"
-            style={{ backgroundColor: `${accentColor}15`, color: accentColor }} // 15 = 10% opacity hex
-        >
-            <Icon size={20} strokeWidth={1.5} />
-        </div>
-
-        {/* Tag */}
-        {tag && (
-            <span className="px-2.5 py-1 rounded-md bg-slate-50 border border-slate-100 text-[9px] font-bold uppercase tracking-wider text-slate-500">
-                {tag}
-            </span>
-        )}
+  <div className="group h-full bg-white rounded-2xl border border-slate-200 p-6 flex flex-col hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-300">
+    <div className="flex items-start justify-between mb-4">
+      {/* Icon Box */}
+      <div
+        className="h-10 w-10 rounded-lg flex items-center justify-center transition-colors duration-300"
+        style={{ backgroundColor: `${accentColor}15`, color: accentColor }}
+      >
+        <Icon size={20} strokeWidth={1.5} />
       </div>
 
-      <div className="mt-auto">
-        <h3 className="text-sm font-black text-slate-900 mb-2 leading-tight group-hover:text-[#2776ea] transition-colors">
-            {title}
-        </h3>
-        <p className="text-xs font-medium text-slate-500 leading-relaxed">
-            {addr}
-        </p>
-      </div>
+      {/* Tag */}
+      {tag && (
+        <span className="px-2.5 py-1 rounded-md bg-slate-50 border border-slate-100 text-caption font-bold uppercase tracking-wider text-slate-500">
+          {tag}
+        </span>
+      )}
     </div>
+
+    <div className="mt-auto">
+      <h3 className="text-menu font-black text-slate-900 mb-2 leading-tight group-hover:text-[#2776ea] transition-colors">
+        {title}
+      </h3>
+
+      <p className="text-submenu font-medium text-slate-500 leading-relaxed">
+        {addr}
+      </p>
+    </div>
+  </div>
 );
+
 
 
 export default function Branches() {

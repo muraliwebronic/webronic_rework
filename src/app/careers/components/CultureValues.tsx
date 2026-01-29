@@ -38,10 +38,10 @@ export default function CultureValues() {
                     </div>
                     
                     <div className={value.fullWidth ? "lg:flex-1" : ""}>
-                      <h3 className="text-xl font-black text-slate-900 mb-3 group-hover:text-[#2776ea] transition-colors">
+                      <h3 className="text-h3 font-black text-slate-900 mb-3 group-hover:text-[#2776ea] transition-colors">
                         {value.title}
                       </h3>
-                      <p className="text-sm font-medium text-slate-500 leading-relaxed">
+                      <p className="text-body font-medium text-slate-500 leading-relaxed">
                         {value.description}
                       </p>
                     </div>
@@ -63,7 +63,7 @@ export default function CultureValues() {
             
             {/* Header */}
             <div className="text-center mb-16">
-               <h2 className="text-3xl md:text-4xl font-black mb-6 tracking-tight">
+               <h2 className="text-h2 font-black mb-6 tracking-tight">
                  {culture.environment.title}
                </h2>
                <div className="h-1.5 w-20 bg-white/30 mx-auto rounded-full" />
@@ -80,9 +80,9 @@ export default function CultureValues() {
                         <div className="h-10 w-10 rounded-xl bg-white/20 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
                            <item.icon size={20} strokeWidth={1.5} />
                         </div>
-                        <h3 className="font-bold text-lg leading-tight">{item.title}</h3>
+                        <h3 className="font-bold text-h3 leading-tight">{item.title}</h3>
                      </div>
-                     <p className="text-sm text-blue-50 font-medium leading-relaxed pl-14 opacity-90">
+                     <p className="text-body text-blue-50 font-medium leading-relaxed pl-14 opacity-90">
                         {item.desc}
                      </p>
                   </div>

@@ -30,10 +30,10 @@ export default function UniversalHero({ data }: { data: ServicePageData['hero'] 
 
             {/* Small CTAs */}
             <div className="flex flex-wrap gap-3">
-              <Link href="/consultation" className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-[#2776ea] text-white text-menu font-bold uppercase tracking-wider hover:bg-[#1a5bbd] transition-all shadow-md active:scale-95">
+              <Link href="/consultation" className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-[#2776ea] text-white text-xs font-bold uppercase tracking-wider hover:bg-[#1a5bbd] transition-all shadow-md active:scale-95">
                 {data.ctaPrimary}
               </Link>
-              <Link href="/case-studies" className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-slate-50 border border-slate-100 text-slate-600 text-menu font-bold uppercase tracking-wider hover:bg-white hover:border-[#2776ea]/30 hover:text-[#2776ea] transition-all active:scale-95">
+              <Link href="/case-studies" className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-slate-50 border border-slate-100 text-slate-600 text-xs font-bold uppercase tracking-wider hover:bg-white hover:border-[#2776ea]/30 hover:text-[#2776ea] transition-all active:scale-95">
                 {data.ctaSecondary}
               </Link>
             </div>
@@ -59,7 +59,7 @@ export default function UniversalHero({ data }: { data: ServicePageData['hero'] 
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                       </span>
-                      <span className="text-caption font-bold uppercase tracking-widest text-slate-400">Operational</span>
+                      <span className="text-[9px] font-bold uppercase tracking-widest text-slate-400">Operational</span>
                    </div>
                 </div>
 
@@ -72,19 +72,19 @@ export default function UniversalHero({ data }: { data: ServicePageData['hero'] 
                          <Layers size={24} strokeWidth={1.5} />
                       </div>
                       <div>
-                         <span className="text-caption font-bold text-slate-400 uppercase tracking-widest block mb-1">Architecture</span>
-                         <span className="text-body font-bold text-slate-900 leading-tight block">{data.badge}</span>
+                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Architecture</span>
+                         <span className="text-sm font-bold text-slate-900 leading-tight block">{data.badge}</span>
                       </div>
                    </div>
 
                    {/* Capabilities Stack (Pills) */}
                    <div className="space-y-3">
-                      <p className="text-caption font-bold text-slate-400 uppercase tracking-widest border-b border-slate-50 pb-2">
+                      <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest border-b border-slate-50 pb-2">
                         Active Modules
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {data.features.slice(0, 3).map((feature, i) => (
-                           <span key={i} className="inline-flex items-center px-2.5 py-1 rounded-md bg-slate-50 border border-slate-100 text-caption font-bold text-slate-600 truncate max-w-[100%]">
+                           <span key={i} className="inline-flex items-center px-2.5 py-1 rounded-md bg-slate-50 border border-slate-100 text-[10px] font-bold text-slate-600 truncate max-w-[100%]">
                               {feature}
                            </span>
                         ))}
@@ -103,8 +103,8 @@ export default function UniversalHero({ data }: { data: ServicePageData['hero'] 
                    <Activity size={16} />
                 </div>
                 <div>
-                   <span className="block text-caption font-bold text-slate-400 uppercase">Impact</span>
-                   <span className="block text-caption font-bold text-slate-900">{data.titleHighlight}</span>
+                   <span className="block text-[9px] font-bold text-slate-400 uppercase">Impact</span>
+                   <span className="block text-xs font-bold text-slate-900">{data.titleHighlight}</span>
                 </div>
              </div>
 

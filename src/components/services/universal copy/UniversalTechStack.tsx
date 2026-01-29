@@ -27,13 +27,13 @@ export default function UniversalTechStack({ data }: { data: ServicePageData['te
               <div className="h-10 w-10 rounded-xl bg-[#2776ea]/10 flex items-center justify-center text-[#2776ea]">
                 <Code2 size={20} />
               </div>
-              <h3 className="text-h3 font-black text-slate-900">Frameworks</h3>
+              <h3 className="text-lg font-black text-slate-900">Frameworks</h3>
             </div>
             <div className="space-y-4">
               {data.frameworks.map((item, i) => (
                 <div key={i} className="border-l-2 border-slate-200 pl-4 py-1 hover:border-[#2776ea] transition-colors">
-                  <h4 className="text-submenu font-bold text-slate-900 mb-0.5">{item.name}</h4>
-                  <p className="text-caption font-medium text-slate-500">{item.desc}</p>
+                  <h4 className="text-xs font-bold text-slate-900 mb-0.5">{item.name}</h4>
+                  <p className="text-[10px] font-medium text-slate-500">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -45,16 +45,16 @@ export default function UniversalTechStack({ data }: { data: ServicePageData['te
               <div className="h-10 w-10 rounded-xl bg-[#76ea27]/10 flex items-center justify-center text-[#76ea27]">
                 <Bot size={20} />
               </div>
-              <h3 className="text-h3 font-black text-slate-900">Intelligence</h3>
+              <h3 className="text-lg font-black text-slate-900">Intelligence</h3>
             </div>
             
             <div className="space-y-6">
                {/* LLMs */}
                <div>
-                  <p className="text-caption font-black uppercase tracking-widest text-slate-400 mb-3">Models</p>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-3">Models</p>
                   <ul className="space-y-2">
                     {data.llms.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2 text-caption font-semibold text-slate-600">
+                        <li key={i} className="flex items-start gap-2 text-xs font-semibold text-slate-600">
                             <Check size={14} className="text-[#76ea27] mt-0.5 shrink-0" />
                             <span>{item.name}</span>
                         </li>
@@ -64,10 +64,10 @@ export default function UniversalTechStack({ data }: { data: ServicePageData['te
 
                {/* MLOps Tags */}
                <div>
-                  <p className="text-caption font-black uppercase tracking-widest text-slate-400 mb-3">Operations</p>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-3">Operations</p>
                   <div className="flex flex-wrap gap-2">
                     {data.mlOps.map((tag, i) => (
-                    <span key={i} className="px-2 py-1 rounded-md bg-white border border-slate-200 text-caption font-bold text-slate-500">
+                    <span key={i} className="px-2 py-1 rounded-md bg-white border border-slate-200 text-[10px] font-bold text-slate-500">
                         {tag}
                     </span>
                     ))}
@@ -82,17 +82,17 @@ export default function UniversalTechStack({ data }: { data: ServicePageData['te
                 <div className="h-10 w-10 rounded-xl bg-slate-200/50 flex items-center justify-center text-slate-600">
                    <Cloud size={20} />
                 </div>
-                <h3 className="text-h3 font-black text-slate-900">Cloud & Infra</h3>
+                <h3 className="text-lg font-black text-slate-900">Cloud & Infra</h3>
              </div>
              <div className="space-y-6">
                {data.cloudPlatforms.map((platform, i) => (
                  <div key={i}>
-                   <h4 className={`text-caption font-black uppercase tracking-widest ${platform.color} mb-2`}>
+                   <h4 className={`text-[10px] font-black uppercase tracking-widest ${platform.color} mb-2`}>
                      {platform.provider}
                    </h4>
                    <div className="flex flex-wrap gap-2">
                      {platform.services.map((service, j) => (
-                       <span key={j} className="text-caption font-bold text-slate-600 bg-white px-2 py-1 rounded border border-slate-100">
+                       <span key={j} className="text-[10px] font-bold text-slate-600 bg-white px-2 py-1 rounded border border-slate-100">
                           {service}
                        </span>
                      ))}

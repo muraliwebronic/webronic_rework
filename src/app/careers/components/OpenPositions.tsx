@@ -30,7 +30,7 @@ export default function OpenPositions() {
               <button 
                 key={cat}
                 onClick={() => setActiveCat(cat)}
-                className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${activeCat === cat ? "bg-[#2776ea] text-white shadow-lg shadow-blue-900/20" : "bg-white text-slate-600 border border-slate-200 hover:border-[#2776ea]"}`}
+                className={`px-4 py-2 rounded-full text-menu font-bold transition-all ${activeCat === cat ? "bg-[#2776ea] text-white shadow-lg shadow-blue-900/20" : "bg-white text-slate-600 border border-slate-200 hover:border-[#2776ea]"}`}
               >
                 {cat}
               </button>
@@ -46,9 +46,9 @@ export default function OpenPositions() {
                     className="w-full p-6 text-left flex items-center justify-between"
                  >
                     <div>
-                       <span className="text-[10px] font-bold uppercase text-[#2776ea] tracking-wider mb-1 block">{job.category}</span>
-                       <h3 className="text-lg font-black text-slate-900 mb-2">{job.title}</h3>
-                       <div className="flex gap-4 text-xs font-bold text-slate-400">
+                       <span className="text-caption font-bold uppercase text-[#2776ea] tracking-wider mb-1 block">{job.category}</span>
+                       <h3 className="text-h3 font-black text-slate-900 mb-2">{job.title}</h3>
+                       <div className="flex gap-4 text-caption font-bold text-slate-400">
                           <span className="flex items-center gap-1"><MapPin size={12}/> {job.location}</span>
                           <span className="flex items-center gap-1"><Briefcase size={12}/> {job.experience}</span>
                        </div>
@@ -61,26 +61,26 @@ export default function OpenPositions() {
                  {/* Expanded Details */}
                  {expanded === job.id && (
                     <div className="px-6 pb-8 border-t border-slate-50 bg-slate-50/50 pt-6">
-                       <p className="text-sm text-slate-600 mb-6">{job.description}</p>
+                       <p className="text-body text-slate-600 mb-6">{job.description}</p>
                        <div className="grid md:grid-cols-2 gap-8 mb-8">
                           <div>
-                             <h4 className="font-bold text-slate-900 mb-3 text-xs uppercase">Responsibilities</h4>
+                             <h4 className="font-bold text-slate-900 mb-3 text-caption uppercase">Responsibilities</h4>
                              <ul className="space-y-2">
                                 {job.details.whatYouWillDo.map((item, i) => (
-                                   <li key={i} className="text-xs text-slate-600 flex gap-2"><span className="text-[#2776ea]">•</span> {item}</li>
+                                   <li key={i} className="text-submenu text-slate-600 flex gap-2"><span className="text-[#2776ea]">•</span> {item}</li>
                                 ))}
                              </ul>
                           </div>
                           <div>
-                             <h4 className="font-bold text-slate-900 mb-3 text-xs uppercase">Skills</h4>
+                             <h4 className="font-bold text-slate-900 mb-3 text-caption uppercase">Skills</h4>
                              <div className="flex flex-wrap gap-2">
                                 {job.skills.map((skill, i) => (
-                                   <span key={i} className="px-2 py-1 bg-white border border-slate-200 rounded text-xs font-bold text-slate-600">{skill}</span>
+                                   <span key={i} className="px-2 py-1 bg-white border border-slate-200 rounded text-caption font-bold text-slate-600">{skill}</span>
                                 ))}
                              </div>
                           </div>
                        </div>
-                       <button className="w-full md:w-auto px-8 py-3 bg-[#2776ea] text-white rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-blue-900/20 transition-all flex items-center justify-center gap-2">
+                       <button className="w-full md:w-auto px-8 py-3 bg-[#2776ea] text-white rounded-xl font-bold text-menu hover:shadow-lg hover:shadow-blue-900/20 transition-all flex items-center justify-center gap-2">
                           Apply Now <ArrowRight size={16} />
                        </button>
                     </div>

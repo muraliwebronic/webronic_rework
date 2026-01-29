@@ -44,14 +44,14 @@ export default function LatestInsights() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 {/* Featured Tag */}
-                <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest text-[#2776ea] shadow-sm">
+                <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full  text-caption font-bold uppercase tracking-widest text-[#2776ea] shadow-sm">
                   Featured Insight
                 </div>
               </div>
 
               {/* Content Area */}
               <div className="p-8 md:p-10 bg-white">
-                <div className="flex items-center gap-4 text-xs font-bold text-slate-400 mb-4">
+                <div className="flex items-center gap-4 text-caption font-bold text-slate-400 mb-4">
                   <span className="flex items-center gap-1.5">
                     <Calendar size={14} className="text-[#2776ea]" />
                     {featuredPost.date}
@@ -63,15 +63,15 @@ export default function LatestInsights() {
                   </span>
                 </div>
 
-                <h3 className="text-3xl font-black text-slate-900 mb-4 leading-tight group-hover:text-[#2776ea] transition-colors">
+                <h3 className="text-h2 font-bold text-slate-900 mb-4 leading-tight group-hover:text-[#2776ea] transition-colors">
                   {featuredPost.title}
                 </h3>
 
-                <p className="text-base text-slate-500 font-medium leading-relaxed mb-8 max-w-xl">
+                <p className="text-body text-slate-500 font-medium leading-relaxed mb-8 max-w-xl">
                   {featuredPost.excerpt}
                 </p>
 
-                <div className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-slate-900 group-hover:text-[#2776ea] transition-colors">
+                <div className="inline-flex items-center gap-2 text-menu font-bold uppercase tracking-wider text-slate-900 group-hover:text-[#2776ea] transition-colors">
                   Read Full Story
                   <ArrowUpRight size={18} />
                 </div>
@@ -79,9 +79,8 @@ export default function LatestInsights() {
             </Link>
           </div>
 
-          {/* --- RIGHT COLUMN: RECENT STREAM (5 Columns) --- */}
           <div className="lg:col-span-5 flex flex-col h-full justify-between gap-6">
-            <h4 className="text-sm font-black uppercase tracking-widest text-slate-400 mb-2 border-b border-slate-100 pb-4">
+            <h4 className="text-menu font-black uppercase tracking-widest text-slate-400 mb-2 border-b border-slate-100 pb-4">
               Recent Updates
             </h4>
 
@@ -104,18 +103,17 @@ export default function LatestInsights() {
 
                   {/* Content */}
                   <div>
-                    <div className="text-[10px] font-bold uppercase tracking-wide text-[#2776ea] mb-1">
+                    <div className="text-caption font-bold uppercase tracking-wide text-[#2776ea] mb-1">
                       {post.category}
                     </div>
-                    <h4 className="text-base font-bold text-slate-900 leading-snug mb-2 group-hover:text-[#2776ea] transition-colors">
+                    <h4 className="text-submenu font-bold text-slate-900 leading-snug mb-2 group-hover:text-[#2776ea] transition-colors">
                       {post.title}
                     </h4>
-                    <div className="text-xs font-medium text-slate-400">
+                    <div className="text-caption font-medium text-slate-400">
                       {post.date}
                     </div>
                   </div>
 
-                  {/* Hover Arrow (Only appears on hover) */}
                   <div className="ml-auto opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
                     <ChevronRight size={20} className="text-[#76ea27]" />
                   </div>
@@ -126,7 +124,7 @@ export default function LatestInsights() {
             {/* View All Link */}
             <Link
               href="/insights"
-              className="mt-6 inline-flex items-center justify-center w-full py-4 rounded-xl border border-slate-200 text-sm font-bold text-slate-600 hover:border-[#2776ea] hover:text-[#2776ea] transition-all bg-white shadow-sm"
+              className="mt-6 inline-flex items-center justify-center w-full py-4 rounded-xl border border-slate-200 text-menu font-bold text-slate-600 hover:border-[#2776ea] hover:text-[#2776ea] transition-all bg-white shadow-sm"
             >
               View All Articles
             </Link>

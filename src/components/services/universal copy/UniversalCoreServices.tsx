@@ -40,18 +40,18 @@ export default function UniversalCoreServices({ data }: { data: ServicePageData[
                 </div>
               </div>
 
-              <h3 className="text-h3 font-black text-slate-900 mb-3 group-hover:text-[#2776ea] transition-colors">
+              <h3 className="text-lg font-black text-slate-900 mb-3 group-hover:text-[#2776ea] transition-colors">
                 {card.title}
               </h3>
 
-              <div className="text-body font-medium text-slate-500 leading-relaxed mb-6 flex-grow">
+              <div className="text-sm font-medium text-slate-500 leading-relaxed mb-6 flex-grow">
                 {card.desc}
               </div>
 
               {card.list && (
                 <ul className="space-y-2 pt-4 border-t border-slate-50 mt-auto">
                   {card.list.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-caption font-bold text-slate-600">
+                    <li key={i} className="flex items-start gap-2 text-xs font-bold text-slate-600">
                       <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-[#76ea27] shrink-0" />
                       {item}
                     </li>
@@ -62,7 +62,7 @@ export default function UniversalCoreServices({ data }: { data: ServicePageData[
               {card.tags && (
                 <div className="flex flex-wrap gap-2 mt-auto pt-4">
                   {card.tags.map((tag, i) => (
-                    <span key={i} className="px-2.5 py-1 bg-slate-50 border border-slate-100 rounded-md text-caption font-bold text-slate-500 uppercase tracking-wide group-hover:border-[#2776ea]/20 group-hover:text-[#2776ea] transition-colors">
+                    <span key={i} className="px-2.5 py-1 bg-slate-50 border border-slate-100 rounded-md text-[10px] font-bold text-slate-500 uppercase tracking-wide group-hover:border-[#2776ea]/20 group-hover:text-[#2776ea] transition-colors">
                       {tag}
                     </span>
                   ))}
@@ -80,8 +80,8 @@ export default function UniversalCoreServices({ data }: { data: ServicePageData[
                     <Clock size={24} />
                 </div>
                 <div>
-                    <h4 className="text-caption font-black uppercase tracking-widest text-slate-400 mb-1">{data.footer.left.title}</h4>
-                    <p className="text-h3 font-black text-slate-900 tracking-tight">{data.footer.left.content}</p>
+                    <h4 className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">{data.footer.left.title}</h4>
+                    <p className="text-2xl font-black text-slate-900 tracking-tight">{data.footer.left.content}</p>
                 </div>
             </div>
 
@@ -91,10 +91,10 @@ export default function UniversalCoreServices({ data }: { data: ServicePageData[
                     <Cpu size={24} />
                 </div>
                 <div className="flex-1">
-                    <h4 className="text-caption font-black uppercase tracking-widest text-slate-400 mb-2">{data.footer.right.title}</h4>
+                    <h4 className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">{data.footer.right.title}</h4>
                     <div className="flex flex-wrap gap-2">
                         {Array.isArray(data.footer.right.content) && data.footer.right.content.map((tag: string, i: number) => (
-                            <span key={i} className="px-2 py-1 rounded bg-slate-50 text-caption font-bold text-slate-600 border border-slate-100">
+                            <span key={i} className="px-2 py-1 rounded bg-slate-50 text-[10px] font-bold text-slate-600 border border-slate-100">
                             {tag}
                             </span>
                         ))}

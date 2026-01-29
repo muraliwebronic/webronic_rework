@@ -83,36 +83,36 @@ const EnquiryModal = ({
         </button>
 
         <div className="relative z-10">
-          <h3 className="text-2xl font-black text-slate-900 mb-2">
+          <h3 className="text-h2 font-black text-slate-900 mb-2">
             Let's Build This
           </h3>
-          <p className="text-slate-500 mb-8 font-medium">
+          <p className="text-slate-500 mb-8 font-medium text-body">
             Inquiring about:{" "}
             <span className="text-[#2776ea] font-bold">{service.title}</span>
           </p>
 
           <form className="space-y-5">
             <div>
-              <label className="block text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">
+              <label className="block text-caption font-bold uppercase tracking-widest text-slate-400 mb-2">
                 Work Email
               </label>
               <input
                 type="email"
-                className="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-[#2776ea] focus:ring-1 focus:ring-[#2776ea] font-medium text-slate-800 transition-all"
+                className="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-[#2776ea] focus:ring-1 focus:ring-[#2776ea] font-medium text-body text-slate-800 transition-all"
                 placeholder="name@company.com"
               />
             </div>
             <div>
-              <label className="block text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">
+              <label className="block text-caption font-bold uppercase tracking-widest text-slate-400 mb-2">
                 Project Details
               </label>
               <textarea
                 rows={4}
-                className="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-[#2776ea] focus:ring-1 focus:ring-[#2776ea] font-medium text-slate-800 transition-all resize-none"
+                className="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-[#2776ea] focus:ring-1 focus:ring-[#2776ea] font-medium text-body text-slate-800 transition-all resize-none"
                 placeholder="Briefly describe your requirements.."
               />
             </div>
-            <button className="w-full py-4 bg-[#2776ea] text-white font-bold rounded-xl hover:bg-[#1a65d8] transition-all shadow-lg shadow-[#2776ea]/20 active:scale-[0.98]">
+            <button className="w-full py-4 bg-[#2776ea] text-white text-menu font-bold rounded-xl hover:bg-[#1a65d8] transition-all shadow-lg shadow-[#2776ea]/20 active:scale-[0.98]">
               Request Consultation
             </button>
           </form>

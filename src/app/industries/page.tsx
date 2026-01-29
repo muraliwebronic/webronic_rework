@@ -65,7 +65,7 @@ export default function Page() {
 
   return (
     // Added pt-24 to push everything below your fixed Navbar
-    <main className="min-h-screen bg-[#2776ea] font-sora selection:bg-[#2776ea] selection:text-white pt-24 pb-32">
+    <main className="min-h-screen bg-[#2776ea] font-sora selection:bg-[#2776ea] selection:text-white pt-24 ">
       
       {/* --- INDUSTRY SWITCHER (In-Flow) --- */}
       {/* This container matches the width/padding of your Hero sections so it aligns perfectly */}
