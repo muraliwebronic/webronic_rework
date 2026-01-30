@@ -48,7 +48,7 @@ export default function ManufacturingPricing() {
                           {item.label}
                         </span>
                         <div className="flex flex-wrap items-baseline gap-2">
-                          <span className="text-2xl font-black text-[#2776ea]">
+                          <span className=" font-black text-[#2776ea]">
                             {item.price}
                           </span>
                           {item.sub && (

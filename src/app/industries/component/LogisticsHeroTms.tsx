@@ -171,7 +171,7 @@ export default function LogisticsHeroTms() {
                 <div className="p-3 rounded-2xl bg-[#2776ea]/10 text-[#2776ea]"><tms.freightManagement.icon size={32} /></div>
                 <h3 className="text-h2 font-black text-slate-900">{tms.freightManagement.title}</h3>
               </div>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid md:grid-cols-2 gap-6">
                 {tms.freightManagement.sections.map((sec, idx) => (
                   <div key={idx} className="bg-white p-6 rounded-[2rem] border border-slate-100 hover:border-[#2776ea]/30 transition-colors shadow-sm">
                     <h4 className="font-bold text-slate-900 mb-1">{sec.title}</h4>

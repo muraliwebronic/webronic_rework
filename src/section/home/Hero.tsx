@@ -275,7 +275,6 @@ export default function HeroStacked() {
     startAutoAdvance();
   };
 
-  if (!isMounted) return null;
 
   return (
     <section
@@ -297,20 +296,16 @@ export default function HeroStacked() {
         {/* Base gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-white via-[#f8fafc] to-white" />
 
-        {/* Geometric gradient overlays */}
         <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-[#2776ea]/5 to-transparent" />
         <div className="absolute bottom-0 left-0 w-full h-96 bg-gradient-to-t from-[#76ea27]/5 to-transparent" />
 
-        {/* Angular accent elements */}
-        <div className="absolute top-20 -right-20 w-80 h-80 bg-gradient-to-br from-[#2776ea]/10 to-transparent transform rotate-45" />
+=        <div className="absolute top-20 -right-20 w-80 h-80 bg-gradient-to-br from-[#2776ea]/10 to-transparent transform rotate-45" />
         <div className="absolute bottom-20 -left-20 w-80 h-80 bg-gradient-to-tr from-[#76ea27]/10 to-transparent transform -rotate-45" />
 
-        {/* Refined corner accents */}
         <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-[#2776ea]/10 to-transparent rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-tl from-[#76ea27]/10 to-transparent rounded-full blur-3xl" />
       </div>
 
-      {/* UPDATED: Centered content with slightly reduced padding-bottom */}
       <div className="relative z-10 w-full min-h-[90vh] flex flex-col justify-center pb-8">
         <div className="container relative z-10 mx-auto px-4 sm:px-6 max-w-7xl h-full flex flex-col items-center lg:flex-row gap-12 lg:gap-16">
           <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left order-1">
@@ -347,7 +342,7 @@ export default function HeroStacked() {
                   href="/contact"
                   className="w-full inline-flex items-center justify-center text-slate-700 font-bold border border-[#2776ea]/20 bg-gradient-to-r from-white to-[#2776ea]/[0.02] hover:border-[#2776ea] hover:text-[#2776ea] py-4 px-8 rounded-2xltext-menu uppercase tracking-widest transition-all group"
                 >
-                  Talk to an Expert{" "}
+                  Talk to an Expert
                   <ChevronRight
                     size={16}
                     className="group-hover:translate-x-1 transition-transform"
@@ -366,7 +361,7 @@ export default function HeroStacked() {
                     <CountUp target={item.target} suffix={item.suffix} />
                   </span>
                   <span className="text-caption font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
-                    <item.icon size={12} className="text-[#76ea27]" />{" "}
+                    <item.icon size={12} className="text-[#76ea27]" />
                     {item.label}
                   </span>
                 </div>

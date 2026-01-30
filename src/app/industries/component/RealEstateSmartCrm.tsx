@@ -233,7 +233,7 @@ export default function RealEstateSmartCrm() {
 
           <div>
             <SectionHeader title={pricing.title} centered={true} className="mb-16" />
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2  gap-6">
               {pricing.categories.map((cat, index) => (
                 <div key={index} className="bg-white rounded-[2rem] border border-slate-200 p-6 hover:border-[#2776ea] transition-colors shadow-sm hover:shadow-lg group">
                   <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
@@ -246,7 +246,7 @@ export default function RealEstateSmartCrm() {
                     {cat.items.map((item, i) => (
                       <li key={i}>
                         <p className="text-caption text-slate-500 uppercase tracking-wide mb-1">{item.label}</p>
-                        <p className="font-black text-[#2776ea] text-h3">{item.price}</p>
+                        <p className="font-black text-[#2776ea] ">{item.price}</p>
                       </li>
                     ))}
                   </ul>

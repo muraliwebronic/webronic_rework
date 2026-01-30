@@ -145,7 +145,7 @@ export default function RealEstateSolutions() {
             className="mb-16"
           />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid md:grid-cols-2  gap-8 mb-16">
             {propertyMgmt.modules.map((mod, index) => (
               <div key={index} className="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 hover:bg-white hover:shadow-xl transition-all duration-300">
                 <div className="flex items-center gap-4 mb-6">
